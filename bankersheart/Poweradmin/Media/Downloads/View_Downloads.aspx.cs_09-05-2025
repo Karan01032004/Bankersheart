@@ -1,0 +1,125 @@
+﻿using bankersheart.App_Code;
+using System;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
+using System.Data;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace bankersheart.Poweradmin.Media.Downloads
+{
+    public partial class View_Downloads : System.Web.UI.Page
+    {
+        string TableName = "[bankers_usr].[Downloads]";
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (Session["user_id"] == null)
+            {
+                Response.Redirect(ConfigurationManager.AppSettings["cmspath"].ToString() + "default.aspx");
+            }
+            else
+            {
+                if (!String.IsNullOrEmpty(Request.QueryString["msg"]))
+                {
+                    ltr_Success.Text = Request.QueryString["msg"].ToString();
+                    div_Success.Visible = true;
+                }
+                if (!Page.IsPostBack)
+                {
+                    fill_data();
+                }
+            }
+        }
+
+        private void fill_data()
+        {
+            string query = "select * from " + TableName + " order by id asc";
+            DataTable dt = new DAL().GetDataTable(query, CommandType.Text, null);
+
+            rpt_data.DataSource = dt;
+            rpt_data.DataBind();
+        }
+
+
+
+        protected void rpt_data_ItemCommand(object source, RepeaterCommandEventArgs e)
+        {
+            int rowIndex = int.Parse(e.CommandArgument.ToString());
+            HiddenField hdnID = (HiddenField)rpt_data.Items[rowIndex].FindControl("hdnID");
+            TextBox txt_displayorder = (TextBox)rpt_data.Items[rowIndex].FindControl("txt_displayorder");
+
+            if (e.CommandName == "edit")
+            {
+                Response.Redirect("Manage_Downloads.aspx?id=" + hdnID.Value);
+            }
+
+            if (e.CommandName == "delete")
+            {
+                string sQuery = @"delete from Downloads where id='" + hdnID.Value + "'";
+                new DAL().ExecuteNonQuery(sQuery, CommandType.Text, null);
+
+                ltr_Success.Text = "Downloads deleted.";
+                div_Success.Visible = true;
+
+                fill_data();
+            }
+
+        }
+
+        protected void btnDeleteSelected_Click(object sender, EventArgs e)
+        {
+            // List to store selected IDs
+            List<string> selectedIds = new List<string>();
+
+            // Loop through the Repeater items
+            foreach (RepeaterItem item in rpt_data.Items)
+            {
+                // Find the checkbox control
+                CheckBox checkbox = (CheckBox)item.FindControl("checkboxDelete");
+
+                // If the checkbox is checked, add its value (ID) to the list
+                if (checkbox != null && checkbox.Checked)
+                {
+                    selectedIds.Add(checkbox.Attributes["Value"]);
+                }
+            }
+
+            // If there are selected IDs, proceed with deletion
+            if (selectedIds.Count > 0)
+            {
+                foreach (string id in selectedIds)
+                {
+                    string deleteQuery = "DELETE FROM " + TableName + " WHERE id = @id";
+
+                    // Convert the List<SqlParameter> to SqlParameter[]
+                    var parameters = new List<SqlParameter>
+            {
+                new SqlParameter("@id", id)
+            };
+
+                    // Convert List to array
+                    new DAL().ExecuteNonQuery(deleteQuery, CommandType.Text, parameters.ToArray());
+                }
+
+                // Display success message
+                div_Success.Visible = true;
+                ltr_Success.Text = "Selected records deleted successfully.";
+                fill_data(); // Refresh the data to reflect the changes
+            }
+            else
+            {
+                // No records selected
+                div_Error.Visible = true;
+                ltr_Error.Text = "No records selected for deletion.";
+            }
+        }
+
+        protected void rpt_data_ItemDataBound(object sender, RepeaterItemEventArgs e)
+        {
+
+        }
+    }
+}

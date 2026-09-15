@@ -1,0 +1,392 @@
+﻿<%@ Page Title="Centers of Excellence | Bankers Group of Hospitals" Language="C#" MasterPageFile="~/bankers.Master" AutoEventWireup="true" CodeBehind="centers-bankers-group-of-hospitals.aspx.cs" Inherits="bankersheart.centers_bankers_group_of_hospitals" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+	  <meta name="description" content="Explore Bankers Group of Hospitals, featuring Bankers Heart Institute Surat and other centers of excellence, offering advanced cardiac, multispecialty, and critical care services.">
+		<style>
+		#contact-details .icon-size {
+			background: #CD0001;
+			color: #fff
+		}
+
+		#contact-details .h_contact {
+			min-height: 24%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	</style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+    <section id="inner-banner" class="content-down">
+		<div class="container">
+			<div class="row">
+				<div class="banner-heading">
+					<h2 class="text-white text-center mb-0">Our Centers</h2>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="contact-details">
+		<div class="container py-5">
+
+			<div class="row pt-5">
+				<div class="col-lg-4 col-sm-6 mb-4">
+					<div class="shadow h-100 rounded-bottom-3">
+						<h6 class="mb-0 px-3 py-3 bg-red text-white text-center rounded-top-3 h_contact">Godhra Centre</h6>
+						<div class="p-3 ">
+							<div class="row align-items-center mb-4 ps-lg-3 mx-0">
+								<div class="col-3 icon-size ">
+									<i class="fa fa-user" aria-hidden="true"></i>
+								</div>
+								<div class="col-9 ps-0">
+									<p class=" ps-3 mb-0">
+										Mr. Kaushal Shah
+									</p>
+								</div>
+							</div>
+							<div class="row align-items-center mb-4 ps-lg-3 mx-0">
+								<div class="col-3 icon-size">
+									<i class="fa fa-phone" aria-hidden="true"></i>
+								</div>
+								<div class="col-9 ps-0">
+									<p class=" ps-3 mb-0">
+										<a href="tel:+91  98989 94011" class="pe-sm-3">+91  98989 94011</a>
+
+									</p>
+
+								</div>
+							</div>
+							<div class="row align-items-center mb-4 ps-lg-3 mx-0">
+								<div class="col-3 icon-size">
+									<i class="fa fa-clock-o" aria-hidden="true"></i>
+								</div>
+								<div class="col-9 ps-0">
+									<p class="ps-3 mb-0">
+										Every Monday 11 am to 2 pm
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-sm-6 mb-4">
+					<div class="shadow h-100 rounded-bottom-3">
+						<h6 class="mb-0 px-3 py-3 bg-red text-white text-center rounded-top-3 h_contact">Bharuch, Ankleshwar &  Karjan Centre</h6>
+						<div class="p-3 ">
+							<div class="row align-items-center mb-4 ps-lg-3 mx-0">
+								<div class="col-3 icon-size ">
+									<i class="fa fa-user" aria-hidden="true"></i>
+								</div>
+								<div class="col-9 ps-0">
+									<p class=" ps-3 mb-0">
+										Mr. Kaushal Shah
+									</p>
+								</div>
+							</div>
+							<div class="row align-items-center mb-4 ps-lg-3 mx-0">
+								<div class="col-3 icon-size">
+									<i class="fa fa-phone" aria-hidden="true"></i>
+								</div>
+								<div class="col-9 ps-0">
+									<p class=" ps-3 mb-0">
+										<a href="tel:++91  98989 94011" class="pe-sm-3">+91  98989 94011</a>
+
+									</p>
+
+								</div>
+							</div>
+							<div class="row align-items-center mb-4 ps-lg-3 mx-0">
+								<div class="col-3 icon-size">
+									<i class="fa fa-clock-o" aria-hidden="true"></i>
+								</div>
+								<div class="col-9 ps-0">
+									<p class="ps-3 mb-0">
+										Every Tuesday Bharuch & Ankleshwar 11 am to 2 pm and Karjan - 3 pm to 5 pm
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-sm-6 mb-4">
+					<div class="shadow h-100 rounded-bottom-3">
+						<h6 class="mb-0 px-3 py-3 bg-red text-white text-center rounded-top-3 h_contact">Petlad Centre</h6>
+						<div class="p-3 ">
+							<div class="row align-items-center mb-4 ps-lg-3 mx-0">
+								<div class="col-3 icon-size ">
+									<i class="fa fa-user" aria-hidden="true"></i>
+								</div>
+								<div class="col-9 ps-0">
+									<p class=" ps-3 mb-0">
+										Mr. Hardik Shah								
+									</p>
+								</div>
+							</div>
+							<div class="row align-items-center mb-4 ps-lg-3 mx-0">
+								<div class="col-3 icon-size">
+									<i class="fa fa-phone" aria-hidden="true"></i>
+								</div>
+								<div class="col-9 ps-0">
+									<p class=" ps-3 mb-0">
+										<a href="tel:+91  98989 94011" class="pe-sm-3">+91  98989 94011</a>
+
+									</p>
+
+								</div>
+							</div>
+							<div class="row align-items-center mb-4 ps-lg-3 mx-0">
+								<div class="col-3 icon-size">
+									<i class="fa fa-clock-o" aria-hidden="true"></i>
+								</div>
+								<div class="col-9 ps-0">
+									<p class="ps-3 mb-0">
+										1st & 3rd Wednesday 11 am to 1 pm
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-sm-6 mb-4">
+					<div class="shadow h-100 rounded-bottom-3">
+						<h6 class="mb-0 px-3 py-3 bg-red text-white text-center rounded-top-3 h_contact">Lunawada & Balashinor Centre</h6>
+						<div class="p-3 ">
+							<div class="row align-items-center mb-4 ps-lg-3 mx-0">
+								<div class="col-3 icon-size ">
+									<i class="fa fa-user" aria-hidden="true"></i>
+								</div>
+								<div class="col-9 ps-0">
+									<p class=" ps-3 mb-0">
+										Mr. Kaushal Shah
+									</p>
+								</div>
+							</div>
+							<div class="row align-items-center mb-4 ps-lg-3 mx-0">
+								<div class="col-3 icon-size">
+									<i class="fa fa-phone" aria-hidden="true"></i>
+								</div>
+								<div class="col-9 ps-0">
+									<p class=" ps-3 mb-0">
+										<a href="tel:+91  98989 94011" class="pe-sm-3">+91  98989 94011</a>
+
+									</p>
+
+								</div>
+							</div>
+							<div class="row align-items-center mb-4 ps-lg-3 mx-0">
+								<div class="col-3 icon-size">
+									<i class="fa fa-clock-o" aria-hidden="true"></i>
+								</div>
+								<div class="col-9 ps-0">
+									<p class="ps-3 mb-0">
+										2nd & 4th Wednesday Lunawada 11 am
+to 1 pm and Balashinor - 3 pm to 4 pm
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-sm-6 mb-4">
+					<div class="shadow h-100 rounded-bottom-3">
+						<h6 class="mb-0 px-3 py-3 bg-red text-white text-center rounded-top-3 h_contact">Bodeli & Dabhoi Centre</h6>
+						<div class="p-3 ">
+							<div class="row align-items-center mb-4 ps-lg-3 mx-0">
+								<div class="col-3 icon-size ">
+									<i class="fa fa-user" aria-hidden="true"></i>
+								</div>
+								<div class="col-9 ps-0">
+									<p class=" ps-3 mb-0">
+										Mr. Kaushal Shah
+									</p>
+								</div>
+							</div>
+							<div class="row align-items-center mb-4 ps-lg-3 mx-0">
+								<div class="col-3 icon-size">
+									<i class="fa fa-phone" aria-hidden="true"></i>
+								</div>
+								<div class="col-9 ps-0">
+									<p class=" ps-3 mb-0">
+										<a href="tel:+91  98989 94011" class="pe-sm-3">+91  98989 94011</a>
+
+									</p>
+
+								</div>
+							</div>
+							<div class="row align-items-center mb-4 ps-lg-3 mx-0">
+								<div class="col-3 icon-size">
+									<i class="fa fa-clock-o" aria-hidden="true"></i>
+								</div>
+								<div class="col-9 ps-0">
+									<p class="ps-3 mb-0">
+										Every Thursday 4 pm to 6 pm
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-sm-6 mb-4">
+					<div class="shadow h-100 rounded-bottom-3">
+						<h6 class="mb-0 px-3 py-3 bg-red text-white text-center rounded-top-3 h_contact">Rajpipla Centre</h6>
+						<div class="p-3 ">
+							<div class="row align-items-center mb-4 ps-lg-3 mx-0">
+								<div class="col-3 icon-size ">
+									<i class="fa fa-user" aria-hidden="true"></i>
+								</div>
+								<div class="col-9 ps-0">
+									<p class=" ps-3 mb-0">
+										Mr. Hardik Shah
+									</p>
+								</div>
+							</div>
+							<div class="row align-items-center mb-4 ps-lg-3 mx-0">
+								<div class="col-3 icon-size">
+									<i class="fa fa-phone" aria-hidden="true"></i>
+								</div>
+								<div class="col-9 ps-0">
+									<p class=" ps-3 mb-0">
+										<a href="tel:+91  98989 94010" class="pe-sm-3">+91  98989 94010</a>
+
+									</p>
+
+								</div>
+							</div>
+							<div class="row align-items-center mb-4 ps-lg-3 mx-0">
+								<div class="col-3 icon-size">
+									<i class="fa fa-clock-o" aria-hidden="true"></i>
+								</div>
+								<div class="col-9 ps-0">
+									<p class="ps-3 mb-0">
+										1st & 4th Thursday 11 am to 2 pm
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-sm-6 mb-4">
+					<div class="shadow h-100 rounded-bottom-3">
+						<h6 class="mb-0 px-3 py-3 bg-red text-white text-center rounded-top-3 h_contact">Godhra & Halol Centre</h6>
+						<div class="p-3 ">
+							<div class="row align-items-center mb-4 ps-lg-3 mx-0">
+								<div class="col-3 icon-size ">
+									<i class="fa fa-user" aria-hidden="true"></i>
+								</div>
+								<div class="col-9 ps-0">
+									<p class=" ps-3 mb-0">
+										Mr. Kaushal Shah
+									</p>
+								</div>
+							</div>
+							<div class="row align-items-center mb-4 ps-lg-3 mx-0">
+								<div class="col-3 icon-size">
+									<i class="fa fa-phone" aria-hidden="true"></i>
+								</div>
+								<div class="col-9 ps-0">
+									<p class=" ps-3 mb-0">
+										<a href="tel:+91  98989 94011" class="pe-sm-3">+91  98989 94011</a>
+
+									</p>
+
+								</div>
+							</div>
+							<div class="row align-items-center mb-4 ps-lg-3 mx-0">
+								<div class="col-3 icon-size">
+									<i class="fa fa-clock-o" aria-hidden="true"></i>
+								</div>
+								<div class="col-9 ps-0">
+									<p class="ps-3 mb-0">
+										Every Friday Godhra - 11 am to 2 pm
+and Halol - 3 pm to 4 pm
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-sm-6 mb-4">
+					<div class="shadow h-100 rounded-bottom-3">
+						<h6 class="mb-0 px-3 py-3 bg-red text-white text-center rounded-top-3 h_contact">Ratlam & Javra Centre</h6>
+						<div class="p-3 ">
+							<div class="row align-items-center mb-4 ps-lg-3 mx-0">
+								<div class="col-3 icon-size ">
+									<i class="fa fa-user" aria-hidden="true"></i>
+								</div>
+								<div class="col-9 ps-0">
+									<p class=" ps-3 mb-0">
+										Mr. Kaushal Shah
+									</p>
+								</div>
+							</div>
+							<div class="row align-items-center mb-4 ps-lg-3 mx-0">
+								<div class="col-3 icon-size">
+									<i class="fa fa-phone" aria-hidden="true"></i>
+								</div>
+								<div class="col-9 ps-0">
+									<p class=" ps-3 mb-0">
+										<a href="tel:+91  98989 94011" class="pe-sm-3">+91  98989 94011</a>
+
+									</p>
+
+								</div>
+							</div>
+							<div class="row align-items-center mb-4 ps-lg-3 mx-0">
+								<div class="col-3 icon-size">
+									<i class="fa fa-clock-o" aria-hidden="true"></i>
+								</div>
+								<div class="col-9 ps-0">
+									<p class="ps-3 mb-0">
+										1st & 3rd Saturday 11 am to 2 pm
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-sm-6 mb-4">
+					<div class="shadow h-100 rounded-bottom-3">
+						<h6 class="mb-0 px-3 py-3 bg-red text-white text-center rounded-top-3 h_contact">Barwani Centre</h6>
+						<div class="p-3 ">
+							<div class="row align-items-center mb-4 ps-lg-3 mx-0">
+								<div class="col-3 icon-size ">
+									<i class="fa fa-user" aria-hidden="true"></i>
+								</div>
+								<div class="col-9 ps-0">
+									<p class=" ps-3 mb-0">
+										Mr. Hardik Shah								
+									</p>
+								</div>
+							</div>
+							<div class="row align-items-center mb-4 ps-lg-3 mx-0">
+								<div class="col-3 icon-size">
+									<i class="fa fa-phone" aria-hidden="true"></i>
+								</div>
+								<div class="col-9 ps-0">
+									<p class=" ps-3 mb-0">
+										<a href="tel:+91  70430 74880" class="pe-sm-3">+91  70430 74880</a>
+
+									</p>
+
+								</div>
+							</div>
+							<div class="row align-items-center mb-4 ps-lg-3 mx-0">
+								<div class="col-3 icon-size">
+									<i class="fa fa-clock-o" aria-hidden="true"></i>
+								</div>
+								<div class="col-9 ps-0">
+									<p class="ps-3 mb-0">
+										2nd & 4th Saturday 11 am to 2 pm								
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="extrajs" runat="server">
+</asp:Content>

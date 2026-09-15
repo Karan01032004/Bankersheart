@@ -1,0 +1,331 @@
+﻿<%@ Page Title="Contact Us | Bankers Group of Hospitals" Language="C#" MasterPageFile="~/bankers.Master" AutoEventWireup="true" CodeBehind="contact-bankers-group-of-hospitals.aspx.cs" Inherits="bankersheart.contact_bankers_group_of_hospitals" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <meta name="description" content="Get in touch with Bankers Group of Hospitals for appointments, medical inquiries, and healthcare services. Find our contact details, hospital locations, and support information here.">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+    <section id="inner-banner" class="content-down">
+        <div class="container">
+            <div class="row">
+                <div class="banner-heading">
+                    <h2 class="text-white text-center mb-0">Contact Us</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-details">
+        <div class="container py-5">
+
+            <div class="row pt-5">
+                <div class="col-md-6 mb-4">
+                    <div class="shadow h-100 rounded-bottom-3">
+                        <h6 class="mb-0 px-2 py-3 bg-red text-white text-center rounded-top-3">Bankers Heart Institute, Old Padra Road - Vadodara</h6>
+                        <div class="p-3 ">
+                            <div class="row align-items-center mb-4 ps-lg-3 mx-0">
+                                <div class="col-3 icon-size ">
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                </div>
+                                <div class="col-9 ps-0">
+                                    <h6 class="ps-3 bankers-text mb-1">Bankers Group of Hospitals</h6>
+                                    <p class=" ps-3 mb-0">
+                                        Near Tagore Nagar, Old Padra Road,
+                                        <br class="d-lg-inline-block d-none" />
+                                        Vadodara - 390015, Gujarat, India
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row align-items-center mb-4 ps-lg-3 mx-0">
+                                <div class="col-3 icon-size">
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                </div>
+                                <div class="col-9 ps-0">
+                                    <p class="ps-3 mb-2">
+                                        <a href="tel:+91 265 2607777" class="pe-sm-3">+91 265 2607777</a>
+                                        <br class="d-block d-sm-none d-md-block d-lg-none" />
+
+                                        <a href="tel:+91 265 2324004" class="pe-sm-3">+91 265 2324004</a>
+                                    </p>
+                                    <p class=" ps-3 mb-0">
+                                        <a href="tel:+91 98985 40444" class=" pe-sm-3">+91 98985 40444</a><br class="d-block d-sm-none d-md-block d-lg-none" />
+
+                                        <a href="tel:+91 265 2320404" class=" pe-sm-3">+91 265 2320404</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row align-items-center mb-4 ps-lg-3 mx-0">
+                                <div class="col-3 icon-size">
+                                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                                </div>
+                                <div class="col-9 ps-0">
+                                    <p class="ps-3 mb-0">
+                                        <a href="mailto:info@bankersheart.com">info@bankersheart.com</a>
+                                    </p>
+                                </div>
+                            </div>
+
+
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.4849752719992!2d73.15968877039987!3d22.297491098131605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fc8b16aaaaaab%3A0xe81dd0c96aa5014d!2sBankers%20Heart%20Institute!5e0!3m2!1sen!2sin!4v1738574246491!5m2!1sen!2sin"
+                                height="300" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-100"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4 h-100">
+                    <div class="shadow h-100 rounded-bottom-3">
+                        <h6 class="mb-0 px-2 py-3 bg-red text-white text-center rounded-top-3">Bankers Heart Institute, Opp. Lakeview Garden - Surat</h6>
+                        <div class=" p-3 ">
+                            <div class="row align-items-center mb-4 ps-lg-3 mx-0">
+                                <div class="col-3 icon-size ">
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                </div>
+                                <div class="col-9 ps-0">
+                                    <h6 class="ps-3 bankers-text mb-1">Bankers Group of Hospitals</h6>
+
+                                    <p class=" ps-3 mb-0">
+                                        Opp. Lakeview Garden, Floral Park, Umra,
+                                        <br class="d-lg-inline-block d-none" />
+                                        Surat - 395007, Gujarat - India
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row align-items-center mb-4 ps-lg-3 mx-0">
+                                <div class="col-3 icon-size">
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                </div>
+                                <div class="col-9 ps-0">
+                                    <p class=" ps-3 mb-lg-2 mb-1">
+                                        <a href="tel:+91 261 2293000" class="pe-sm-3">+91 261 2293000</a>
+                                        <br class="d-block d-sm-none d-md-block d-lg-none" />
+                                        <a href="tel:+91 265 2252123" class="pe-sm-3">+91 265 2252123</a>
+
+                                    </p>
+                                    <p class=" ps-3 mb-2">
+
+
+                                        <a href="tel:+91 8511174111" class="pe-sm-3">+91 8511174111</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row align-items-center mb-4 ps-lg-3 mx-0">
+                                <div class="col-3 icon-size">
+                                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                                </div>
+                                <div class="col-9 ps-0">
+                                    <p class="ps-3 mb-0">
+                                        <a href="mailto:surat@bankersheart.com">surat@bankersheart.com</a>
+                                    </p>
+                                </div>
+                            </div>
+
+
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.6132398119084!2d72.77568097401344!3d21.16778458299147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04d94c2bf7265%3A0x3459c22d840404aa!2sDWTI-PGH%20%26%20Bankers%20Heart%20Institute!5e0!3m2!1sen!2sin!4v1738577367795!5m2!1sen!2sin"
+                                height="300" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-100"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="shadow h-100 rounded-bottom-3">
+                        <h6 class="mb-0 px-2 py-3 bg-red text-white text-center rounded-top-3">Bankers Superspeciality Hospital, Manjalpur - Vadodara</h6>
+                        <div class="p-3 ">
+                            <div class="row align-items-center mb-4 ps-lg-3 mx-0">
+                                <div class="col-3 icon-size ">
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                </div>
+                                <div class="col-9 ps-0">
+                                    <h6 class="ps-3 bankers-text mb-1">Bankers Group of Hospitals</h6>
+
+                                    <p class=" ps-3 mb-0">
+                                        Opp. Mahalaxmi Party Plot, Tulsidham-GIDC Road,
+                                        <br class="d-lg-inline-block d-none" />
+                                        Manjalpur, Vadodara - 390011, Gujarat, India
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row align-items-center mb-4 ps-lg-3 mx-0">
+                                <div class="col-3 icon-size">
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                </div>
+                                <div class="col-9 ps-0">
+                                    <p class=" ps-3 mb-2">
+                                        <a href="tel:+91 265 2602602" class="pe-sm-3">+91 265 2602602</a>
+                                        <br class="d-block d-sm-none d-md-block d-lg-none" />
+
+                                        <a href="tel:+91 63549 13335" class=" pe-sm-3">+91 63549 13335</a>
+                                    </p>
+
+                                </div>
+                            </div>
+                            <div class="row align-items-center mb-4 ps-lg-3 mx-0">
+                                <div class="col-3 icon-size">
+                                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                                </div>
+                                <div class="col-9 ps-0">
+                                    <p class="ps-3 mb-0">
+                                        <a href="mailto:bsh@bankersheart.com">bsh@bankersheart.com</a>
+                                    </p>
+                                </div>
+                            </div>
+
+
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3692.375517974744!2d73.19295847404902!3d22.263760744221283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fc5d2e126dceb%3A0x30bedb3d568bb95b!2sBANKERS%20SUPERSPECIALITY%20HOSPITAL!5e0!3m2!1sen!2sin!4v1738577581213!5m2!1sen!2sin"
+                                height="300" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-100"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4 h-100">
+                    <div class="shadow h-100 rounded-bottom-3">
+                        <h6 class="mb-0 px-2 py-3 bg-red text-white text-center rounded-top-3">Bankers Heart and Multi Specialty Hospital, Warasia - Vadodara</h6>
+                        <div class=" p-3 ">
+                            <div class="row align-items-center mb-4 ps-lg-3 mx-0">
+                                <div class="col-3 icon-size ">
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                </div>
+                                <div class="col-9 ps-0">
+                                    <h6 class="ps-3 bankers-text mb-1">Bankers Group of Hospitals</h6>
+                                    <p class=" ps-3 mb-0">
+                                        Harni - Warasia Ring Road, Warasia,
+ <br class="d-lg-inline-block d-none" />
+                                        Vadodara – 390006, Gujarat, India						
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row align-items-center mb-4 ps-lg-3 mx-0">
+                                <div class="col-3 icon-size">
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                </div>
+                                <div class="col-9 ps-0">
+                                    <p class=" ps-3 mb-lg-2 mb-1">
+                                        <a href="tel:+91 265 2530000" class="pe-sm-3">+91 265 2530000</a>
+                                        <br class="d-block d-sm-none d-md-block d-lg-none" />
+
+                                        <a href="tel:+91 265 2530530" class="pe-sm-3">+91 265 2530530</a>
+                                    </p>
+                                    <p class=" ps-3 mb-2">
+                                        <a href="tel:+91 70430 00101" class="pe-sm-3">+91 70430 00101</a>
+                                        <br class="d-block d-sm-none d-md-block d-lg-none" />
+                                    </p>
+
+                                </div>
+                            </div>
+                            <div class="row align-items-center mb-4 ps-lg-3 mx-0">
+                                <div class="col-3 icon-size">
+                                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                                </div>
+                                <div class="col-9 ps-0">
+                                    <p class="ps-3 mb-0">
+                                        <a href="mailto:bhmh@bankersheart.com">bhmh@bankersheart.com</a>
+                                    </p>
+                                </div>
+                            </div>
+
+
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.9565133240017!2d73.2182237740508!3d22.317484342274724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fcf70fe2b8ff5%3A0x34918ee4ca6aac1b!2sBankers%20Heart%20%26%20Multispeciality%20Hospital!5e0!3m2!1sen!2sin!4v1738577679436!5m2!1sen!2sin"
+                                height="300" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-100"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-form">
+        <div class="container py-lg-5 pb-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-9 col-sm-11">
+                    <div class="bg_contact px-2 px-sm-4 py-5 rounded-3">
+                        <h3 class="text-center text-black">Get In Touch</h3>
+                        <p class="text-center">
+                            Just fill in our short project inquiry form and we'll get back to you soon!
+                        </p>
+
+                        <div class="mt-4">
+                            <div class="row g-md-3">
+                                <div class="col-md mb-3">
+                                    <div class="form-floating">
+                                        <%--	<input type="text" class="form-control" id="name" placeholder="Name">
+										<label for="Name">Name</label>--%>
+                                        <asp:TextBox ID="txtName" runat="server" CssClass="form-control" placeholder="Name"></asp:TextBox>
+                                        <label for="txtName">Name</label>
+                                        <asp:RequiredFieldValidator ID="rfvName" runat="server" ControlToValidate="txtName"
+                                            ErrorMessage="Name is required." CssClass="text-danger" Display="Dynamic" />
+                                    </div>
+                                </div>
+                                <div class="col-md mb-3">
+                                    <div class="form-floating">
+                                        <%--       <input type="email" class="form-control" id="Email" placeholder="name@example.com">
+                                        <label for="Email">Email address</label>--%>
+                                        <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" placeholder="name@example.com"></asp:TextBox>
+                                        <label for="txtEmail">Email address</label>
+                                        <asp:RequiredFieldValidator ID="rfvEmail" runat="server" ControlToValidate="txtEmail"
+                                            ErrorMessage="Email is required." CssClass="text-danger" Display="Dynamic" />
+                                        <asp:RegularExpressionValidator ID="revEmail" runat="server" ControlToValidate="txtEmail"
+                                            ErrorMessage="Enter a valid email." CssClass="text-danger" Display="Dynamic"
+                                            ValidationExpression="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row g-2">
+                                <div class="col-12 mb-3">
+                                    <div class="form-floating">
+                                        <%--     <input type="text" class="form-control" id="mobile" placeholder="Mobile no.">
+                                        <label for="mobile">Mobile no.</label>--%>
+                                        <asp:TextBox ID="txtMobile" runat="server" CssClass="form-control" placeholder="Mobile no."></asp:TextBox>
+                                        <label for="txtMobile">Mobile no.</label>
+                                        <asp:RequiredFieldValidator ID="rfvMobile" runat="server" ControlToValidate="txtMobile"
+                                            ErrorMessage="Mobile number is required." CssClass="text-danger" Display="Dynamic" />
+                                        <asp:RegularExpressionValidator ID="revMobile" runat="server" ControlToValidate="txtMobile"
+                                            ErrorMessage="Enter a valid 10-digit mobile number." CssClass="text-danger" Display="Dynamic"
+                                            ValidationExpression="^\d{10}$" />
+                                    </div>
+                                </div>
+                                <section id="targetSection">
+                                    <div class="col-12 mb-3">
+                                        <div class="form-floating">
+                                            <%--   <textarea class="form-control" placeholder="Leave a comment here" id="Message" style="height: 100px"></textarea>
+                                        <label for="Message">Message</label>--%>
+                                            <asp:TextBox ID="txtMessage" runat="server" CssClass="form-control" TextMode="MultiLine" placeholder="Leave a comment here" Style="height: 100px"></asp:TextBox>
+                                            <label for="txtMessage">Message</label>
+                                            <asp:RequiredFieldValidator ID="rfvMessage" runat="server" ControlToValidate="txtMessage"
+                                                ErrorMessage="Message is required." CssClass="text-danger" Display="Dynamic" />
+
+                                        </div>
+                                    </div>
+                                </section>
+                                <div class="col-sm-8 mb-3">
+                                    <div class="form-floating">
+                                        <%--										<input type="text" class="form-control" id="captch" name="cptc" placeholder="Enter captch" required>--%>
+                                        <asp:TextBox ID="txtCaptcha" CssClass="form-control" runat="server" placeholder="Enter Captcha*"></asp:TextBox>
+                                        <asp:RequiredFieldValidator ID="rfvCaptcha" runat="server" ControlToValidate="txtCaptcha" ErrorMessage="Captcha is required." CssClass="text-danger" Display="Dynamic"></asp:RequiredFieldValidator>
+                                        <asp:Label ID="lblERR" runat="server" ForeColor="Red"></asp:Label>
+
+                                        <asp:Label ID="Label1" runat="server" ForeColor="Red"></asp:Label>
+                                        <label for="captch">Enter captcha</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-4 mb-3">
+                                    <div class="form-floating">
+                                        <img src="CImage.aspx" id="capimg" alt="captcha" style="margin-left: 10px" />
+
+                                    </div>
+                                </div>
+                            </div>
+                            <asp:Label ID="lblMessage" runat="server" ForeColor="Red"></asp:Label>
+                        </div>
+
+                        <div class="mt-4 text-lg-start text-center">
+                            <%--                                <a href="#" class="btn-theme btn-blue d-block" style="width: fit-content">Submit</a>--%>
+                            <asp:Button ID="btnSubmit" runat="server" CssClass="btn-theme btn-blue d-lg-block" Text="Submit" OnClick="btnSubmit_Click" />
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="extrajs" runat="server">
+</asp:Content>

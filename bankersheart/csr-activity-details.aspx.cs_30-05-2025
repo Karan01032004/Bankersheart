@@ -1,0 +1,53 @@
+﻿using bankersheart.App_Code;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace bankersheart
+{
+    public partial class csr_activity_details : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!IsPostBack)
+            {
+                if (Request.QueryString["id"] != null)
+                {
+                    rptCSR_Activity.DataSource = null;
+                    rptCSR_Activity.DataBind();
+                    Bindexhibition();
+                }
+                else
+                {
+                    Response.Redirect("default.aspx");
+                }
+            }
+        }
+
+        private void Bindexhibition()
+        {
+            string query = "SELECT e.id AS CSR_ActivityId,e.title,e.description,e.CSR_Activity_Date,i.image AS CSR_ActivityImage " +
+                "FROM [bankers_usr].[CSR_Activity] e " +
+                "LEFT JOIN [bankers_usr].[CSR_Activity_Images] i ON e.id = i.CSR_Activity_id " +
+                "WHERE e.id =" + Request.QueryString["id"];  // Ensure only images for the correct exhibition are retrieved
+
+            DataTable dt = new DAL().GetDataTable(query, CommandType.Text, null);
+
+            // Bind data to the Repeater
+            rptCSR_Activity.DataSource = dt;
+            rptCSR_Activity.DataBind();
+
+            // Display the description if data exists
+            if (dt.Rows.Count > 0)
+            {
+                lblCampDescription.Text = dt.Rows[0]["description"].ToString();
+            }
+        }
+
+
+    }
+}

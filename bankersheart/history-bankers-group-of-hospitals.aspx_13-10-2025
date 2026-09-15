@@ -1,0 +1,777 @@
+﻿<%@ Page Title="History | Bankers Group of Hospitals" Language="C#" MasterPageFile="~/bankers.Master" AutoEventWireup="true" CodeBehind="history-bankers-group-of-hospitals.aspx.cs" Inherits="bankersheart.history_bankers_group_of_hospitals" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+<meta name="keywords" content="Bankers Group of Hospitals, history, Bankers Heart Institute, healthcare in Gujarat, hospital timeline, multi-specialty hospital history, cardiology services Vadodara">
+<meta name="description" content="Explore the legacy and growth of Bankers Group of Hospitals in quality healthcare.">
+<link rel="canonical" href="https://www.bankersheart.com/history-bankers-group-of-hospitals" />
+	<style>
+	    .status-container {
+	        /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
+	        width: 90%;
+	        max-width: 1170px;
+	        margin: 0 auto;
+	    }
+
+	        .status-container::after {
+	            /* clearfix */
+	            content: '';
+	            display: table;
+	            clear: both;
+	        }
+
+	    /* --------------------------------
+
+Main components
+
+-------------------------------- */
+
+
+	    #status-timeline {
+	        position: relative;
+	        padding: 2em 0;
+	        margin-top: 2em;
+	        margin-bottom: 2em;
+	    }
+
+	        #status-timeline::before {
+	            /* this is the vertical line */
+	            content: '';
+	            position: absolute;
+	            top: 0;
+	            left: 18px;
+	            height: 100%;
+	            width: 4px;
+	            background: #CD0001;
+	        }
+
+	    @media only screen and (min-width: 1170px) {
+	        #status-timeline {
+	            margin-top: 3em;
+	            margin-bottom: 3em;
+	        }
+
+	            #status-timeline::before {
+	                left: 50%;
+	                margin-left: -2px;
+	            }
+	    }
+
+	    .status-timeline-block {
+	        position: relative;
+	        margin: 2em 0;
+	    }
+
+	        .status-timeline-block:after {
+	            content: "";
+	            display: table;
+	            clear: both;
+	        }
+
+	        .status-timeline-block:first-child {
+	            margin-top: 0;
+	        }
+
+	        .status-timeline-block:last-child {
+	            margin-bottom: 0;
+	        }
+
+	    @media only screen and (min-width: 1170px) {
+	        .status-timeline-block {
+	            margin: 4em 0;
+	        }
+
+	            .status-timeline-block:first-child {
+	                margin-top: 0;
+	            }
+
+	            .status-timeline-block:last-child {
+	                margin-bottom: 0;
+	            }
+	    }
+
+	    .status-timeline-img {
+	        position: absolute;
+	        top: 0;
+	        left: 0;
+	        width: 40px;
+	        height: 40px;
+	        border-radius: 50%;
+	        box-shadow: 0 0 0 4px white, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+	    }
+
+	        .status-timeline-img img {
+	            display: block;
+	            width: 24px;
+	            height: 24px;
+	            position: relative;
+	            left: 50%;
+	            top: 50%;
+	            margin-left: -12px;
+	            margin-top: -12px;
+	        }
+
+	        .status-timeline-img.status-picture {
+	            background: url(assets/img/history-2.svg);
+	            background-size: cover;
+	            background-position: center center;
+	        }
+
+	        .status-timeline-img.status-movie {
+	            background: url(assets/img/history-3.svg);
+	            background-size: cover;
+	            background-position: center center;
+	        }
+
+	        .status-timeline-img.status-location {
+	            background: url(assets/img/history-1.svg);
+	            background-size: cover;
+	            background-position: center center;
+	        }
+
+	        .status-timeline-img.status-surgery {
+	            background: url(assets/img/history-4.svg);
+	            background-size: cover;
+	            background-position: center center;
+	        }
+
+	        .status-timeline-img.status-recovery {
+	            background: url(assets/img/history-5.svg);
+	            background-size: cover;
+	            background-position: center center;
+	        }
+
+	        .status-timeline-img.status-patient {
+	            background: url(assets/img/history-6.svg);
+	            background-size: cover;
+	            background-position: center center;
+	        }
+
+
+
+	    @media only screen and (min-width: 1170px) {
+	        .status-timeline-img {
+	            width: 60px;
+	            height: 60px;
+	            left: 50%;
+	            margin-left: -30px;
+	            /* Force Hardware Acceleration in WebKit */
+	            -webkit-transform: translateZ(0);
+	            -webkit-backface-visibility: hidden;
+	        }
+
+	        .cssanimations .status-timeline-img.is-hidden {
+	            visibility: hidden;
+	        }
+
+	        .cssanimations .status-timeline-img.bounce-in {
+	            visibility: visible;
+	            -webkit-animation: status-bounce-1 0.6s;
+	            -moz-animation: status-bounce-1 0.6s;
+	            animation: status-bounce-1 0.6s;
+	        }
+	    }
+
+	    @-webkit-keyframes status-bounce-1 {
+	        0% {
+	            opacity: 0;
+	            -webkit-transform: scale(0.5);
+	        }
+
+	        60% {
+	            opacity: 1;
+	            -webkit-transform: scale(1.2);
+	        }
+
+	        100% {
+	            -webkit-transform: scale(1);
+	        }
+	    }
+
+	    @-moz-keyframes status-bounce-1 {
+	        0% {
+	            opacity: 0;
+	            -moz-transform: scale(0.5);
+	        }
+
+	        60% {
+	            opacity: 1;
+	            -moz-transform: scale(1.2);
+	        }
+
+	        100% {
+	            -moz-transform: scale(1);
+	        }
+	    }
+
+	    @keyframes status-bounce-1 {
+	        0% {
+	            opacity: 0;
+	            -webkit-transform: scale(0.5);
+	            -moz-transform: scale(0.5);
+	            -ms-transform: scale(0.5);
+	            -o-transform: scale(0.5);
+	            transform: scale(0.5);
+	        }
+
+	        60% {
+	            opacity: 1;
+	            -webkit-transform: scale(1.2);
+	            -moz-transform: scale(1.2);
+	            -ms-transform: scale(1.2);
+	            -o-transform: scale(1.2);
+	            transform: scale(1.2);
+	        }
+
+	        100% {
+	            -webkit-transform: scale(1);
+	            -moz-transform: scale(1);
+	            -ms-transform: scale(1);
+	            -o-transform: scale(1);
+	            transform: scale(1);
+	        }
+	    }
+
+	    .status-timeline-content {
+	        position: relative;
+	        margin-left: 60px;
+	        background: #F3F3F1;
+	        border-radius: 0.25em;
+	        padding: 1em;
+	        box-shadow: 0 3px 0 #d7e4ed;
+	        border: 1px solid #CD0001;
+	    }
+
+	        .status-timeline-content:after {
+	            content: "";
+	            display: table;
+	            clear: both;
+	        }
+
+	        .status-timeline-content h2 {
+	            color: #303e49;
+	        }
+
+	        .status-timeline-content p,
+	        .status-timeline-content ul,
+	        .status-timeline-content .status-read-more,
+	        .status-timeline-content .status-date {
+	            font-size: 13px;
+	            font-size: 0.8125rem;
+	        }
+
+	        .status-timeline-content .status-read-more,
+	        .status-timeline-content .status-date {
+	            display: inline-block;
+	        }
+
+	        .status-timeline-content p {
+	            margin: 10px 10px;
+	            line-height: 1.6;
+	        }
+
+	    @media(max-width:576px) {
+	        .status-timeline-content p {
+	            margin: 0px 0px;
+	        }
+	    }
+
+	    .status-timeline-content ul {
+	        margin: 1em 0;
+	        line-height: 1.6;
+	    }
+
+	    .status-timeline-content .status-read-more {
+	        float: right;
+	        padding: .8em 1em;
+	        background: #acb7c0;
+	        color: white;
+	        border-radius: 0.25em;
+	    }
+
+	    .no-touch .status-timeline-content .status-read-more:hover {
+	        background-color: #bac4cb;
+	    }
+
+	    .status-timeline-content .status-date {
+	        float: left;
+	        padding: .8em 0;
+	        opacity: .7;
+	    }
+
+	    .status-timeline-content::before {
+	        content: '';
+	        position: absolute;
+	        top: 16px;
+	        right: 100%;
+	        height: 0;
+	        width: 0;
+	        border: 7px solid transparent;
+	        /*  border-right: 7px solid white;*/
+	    }
+
+	    @media only screen and (min-width: 768px) {
+	        .status-timeline-content h2 {
+	            font-size: 20px;
+	            font-size: 1.25rem;
+	        }
+
+	        .status-timeline-content p {
+	            font-size: 16px;
+	            font-size: 1rem;
+	        }
+
+	        .status-timeline-content .status-read-more,
+	        .status-timeline-content .status-date {
+	            font-size: 18px;
+	            font-size: 18px;
+	            font-weight: bold;
+	        }
+	    }
+
+	    @media only screen and (min-width: 1170px) {
+	        .status-timeline-content {
+	            margin-left: 0;
+	            padding: 10px;
+	            width: 45%;
+	        }
+
+	            .status-timeline-content::before {
+	                top: 24px;
+	                left: 100%;
+	                /* border-color: transparent;*/
+	                border-left-color: #CD0001;
+	            }
+
+	            .status-timeline-content .status-read-more {
+	                float: left;
+	            }
+
+	            .status-timeline-content .status-date {
+	                position: absolute;
+	                width: 100%;
+	                left: 120%;
+	                top: -15px;
+	                font-size: 16px;
+	                font-size: 30px;
+	                font-weight: bold;
+	                color: #000000 !important;
+	            }
+
+	        .status-timeline-block:nth-child(even) .status-timeline-content {
+	            float: right;
+	        }
+
+	            .status-timeline-block:nth-child(even) .status-timeline-content::before {
+	                top: 24px;
+	                left: auto;
+	                right: 100%;
+	                border-color: transparent;
+	                border-right-color: #CD0001;
+	            }
+
+	            .status-timeline-block:nth-child(even) .status-timeline-content .status-read-more {
+	                float: right;
+	            }
+
+	            .status-timeline-block:nth-child(even) .status-timeline-content .status-date {
+	                left: auto;
+	                right: 122%;
+	                text-align: right;
+	            }
+
+	        .cssanimations .status-timeline-content.is-hidden {
+	            visibility: hidden;
+	        }
+
+	        .cssanimations .status-timeline-content.bounce-in {
+	            visibility: visible;
+	            -webkit-animation: status-bounce-2 0.6s;
+	            -moz-animation: status-bounce-2 0.6s;
+	            animation: status-bounce-2 0.6s;
+	        }
+	    }
+
+	    @media only screen and (min-width: 1170px) {
+
+	        /* inverse bounce effect on even content blocks */
+	        .cssanimations .status-timeline-block:nth-child(even) .status-timeline-content.bounce-in {
+	            -webkit-animation: status-bounce-2-inverse 0.6s;
+	            -moz-animation: status-bounce-2-inverse 0.6s;
+	            animation: status-bounce-2-inverse 0.6s;
+	        }
+	    }
+
+	    @-webkit-keyframes status-bounce-2 {
+	        0% {
+	            opacity: 0;
+	            -webkit-transform: translateX(-100px);
+	        }
+
+	        60% {
+	            opacity: 1;
+	            -webkit-transform: translateX(20px);
+	        }
+
+	        100% {
+	            -webkit-transform: translateX(0);
+	        }
+	    }
+
+	    @-moz-keyframes status-bounce-2 {
+	        0% {
+	            opacity: 0;
+	            -moz-transform: translateX(-100px);
+	        }
+
+	        60% {
+	            opacity: 1;
+	            -moz-transform: translateX(20px);
+	        }
+
+	        100% {
+	            -moz-transform: translateX(0);
+	        }
+	    }
+
+	    @keyframes status-bounce-2 {
+	        0% {
+	            opacity: 0;
+	            -webkit-transform: translateX(-100px);
+	            -moz-transform: translateX(-100px);
+	            -ms-transform: translateX(-100px);
+	            -o-transform: translateX(-100px);
+	            transform: translateX(-100px);
+	        }
+
+	        60% {
+	            opacity: 1;
+	            -webkit-transform: translateX(20px);
+	            -moz-transform: translateX(20px);
+	            -ms-transform: translateX(20px);
+	            -o-transform: translateX(20px);
+	            transform: translateX(20px);
+	        }
+
+	        100% {
+	            -webkit-transform: translateX(0);
+	            -moz-transform: translateX(0);
+	            -ms-transform: translateX(0);
+	            -o-transform: translateX(0);
+	            transform: translateX(0);
+	        }
+	    }
+
+	    @-webkit-keyframes status-bounce-2-inverse {
+	        0% {
+	            opacity: 0;
+	            -webkit-transform: translateX(100px);
+	        }
+
+	        60% {
+	            opacity: 1;
+	            -webkit-transform: translateX(-20px);
+	        }
+
+	        100% {
+	            -webkit-transform: translateX(0);
+	        }
+	    }
+
+	    @-moz-keyframes status-bounce-2-inverse {
+	        0% {
+	            opacity: 0;
+	            -moz-transform: translateX(100px);
+	        }
+
+	        60% {
+	            opacity: 1;
+	            -moz-transform: translateX(-20px);
+	        }
+
+	        100% {
+	            -moz-transform: translateX(0);
+	        }
+	    }
+
+	    @keyframes status-bounce-2-inverse {
+	        0% {
+	            opacity: 0;
+	            -webkit-transform: translateX(100px);
+	            -moz-transform: translateX(100px);
+	            -ms-transform: translateX(100px);
+	            -o-transform: translateX(100px);
+	            transform: translateX(100px);
+	        }
+
+	        60% {
+	            opacity: 1;
+	            -webkit-transform: translateX(-20px);
+	            -moz-transform: translateX(-20px);
+	            -ms-transform: translateX(-20px);
+	            -o-transform: translateX(-20px);
+	            transform: translateX(-20px);
+	        }
+
+	        100% {
+	            -webkit-transform: translateX(0);
+	            -moz-transform: translateX(0);
+	            -ms-transform: translateX(0);
+	            -o-transform: translateX(0);
+	            transform: translateX(0);
+	        }
+	    }
+	</style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+	<section id="inner-banner" class="content-down">
+		<div class="container">
+			<div class="row">
+				<div class="banner-heading">
+															<h1 class="sr-only">Historys</h1>
+
+					<h2 class="text-white text-center mb-0">History</h2>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div id="our-journey">
+		<div class="container ">
+			<div class="row py-5 text-lg-start text-center">
+				<div class="col-12">
+
+					<section id="status-timeline" class="status-container">
+						<div class="status-timeline-block">
+							<div class="status-timeline-img status-location">
+							</div>
+
+							<div class="status-timeline-content">
+
+								<p class="mb-0">
+									Inception: 2004 as a 40 bedded Heart Hospital in Vadodara Gujarat with a team of 20 
+								</p>
+
+								<%--  <span class="status-date">1</span>--%>
+							</div>
+							<!-- status-timeline-content -->
+						</div>
+						<div class="status-timeline-block">
+							<div class="status-timeline-img status-picture">
+							</div>
+
+							<div class="status-timeline-content">
+
+								<p class="mb-0">
+									In 2012, Opened A 75 beaded hospital second Hospital in Surat, Gujarat 
+								</p>
+
+
+								<%-- <span class="status-date">2</span>--%>
+							</div>
+						</div>
+
+						<div class="status-timeline-block">
+							<div class="status-timeline-img status-movie">
+							</div>
+
+
+							<div class="status-timeline-content">
+
+								<p class="mb-0">
+									2014, Bankers group opened a Second Hospital in Vadodara which had 90 beds 
+								</p>
+
+								<%-- <span class="status-date">3</span>--%>
+							</div>
+							<!-- status-timeline-content -->
+						</div>
+
+						<div class="status-timeline-block">
+							<div class="status-timeline-img status-surgery">
+							</div>
+
+							<div class="status-timeline-content">
+
+								<p class="mb-0">
+									Currently, We have a staff of 700+ and Around 500 beds spread across 2 cities 
+								</p>
+
+								<%--  <span class="status-date">4</span>--%>
+							</div>
+							<!-- status-timeline-content -->
+						</div>
+
+						<div class="status-timeline-block">
+							<div class="status-timeline-img status-recovery">
+							</div>
+
+
+							<div class="status-timeline-content">
+
+								<p class="mb-0">
+									In 2018, A third hospital was opened in Vadodara, Taking the Total Bed capacity to 400 in Vadodara 
+								</p>
+
+								<%--  <span class="status-date">5</span>--%>
+							</div>
+						</div>
+
+						<div class="status-timeline-block">
+							<div class="status-timeline-img status-patient">
+							</div>
+
+							<div class="status-timeline-content">
+
+								<p class="mb-0">
+								In 2015, The First Hospital was expanded and has a capacity of 115 beds now
+								</p>
+								<%-- <span class="status-date">6</span>--%>
+							</div>
+						</div>
+
+
+
+
+
+
+					</section>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="admission-process" class="d-none">
+		<div class="container py-5">
+			<div class="row pb-5">
+				<div class="col-md-6 pt-5">
+					<div class="box-shadow-date h-100 p-3">
+						<div class="row">
+							<div class="col-2 text-center px-lg-2 px-0">
+								<picture>
+									<source srcset="https://www.bankersheart.com/assets/img/consultant-icon.svg" type="image/webp">
+									<source srcset="https://www.bankersheart.com/assets/img/consultant-icon.svg" type="image/png">
+									<img class="img-fluid" src="https://www.bankersheart.com/assets/img/consultant-icon.svg" alt="Consultation">
+								</picture>
+							</div>
+							<div class="col-10">
+								<h5 class="fw-semibold clr-black">Consultation:</h5>
+								<p class="mb-0">
+									The first step begins with a consultation with our OPD doctors. 
+                                    Based on the initial consult, more tests may be prescribed or the 
+                                    treatment path will be finalized.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 pt-5">
+					<div class="box-shadow-date h-100 p-3">
+						<div class="row">
+							<div class="col-2 text-center px-lg-2 px-0">
+								<picture>
+									<source srcset="https://www.bankersheart.com/assets/img/admission-icon.svg" type="image/webp">
+									<source srcset="https://www.bankersheart.com/assets/img/admission-icon.svg" type="image/png">
+									<img class="img-fluid" src="https://www.bankersheart.com/assets/img/admission-icon.svg" alt="Consultation">
+								</picture>
+							</div>
+							<div class="col-10">
+								<h5 class="fw-semibold clr-black">Admission:</h5>
+								<p class="mb-0">
+									Once the treatment plan has been finalized, formalities for
+                                    taking admission in the hospital need to be completed. We strive to ensure
+                                    that preplanned admissions require the least possible wait time.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-6 pt-5">
+					<div class="box-shadow-date h-100 p-3">
+						<div class="row">
+							<div class="col-2 text-center px-lg-2 px-0">
+								<picture>
+									<source srcset="https://www.bankersheart.com/assets/img/pre-operation-consultant-img.svg" type="image/webp">
+									<source srcset="https://www.bankersheart.com/assets/img/pre-operation-consultant-img.svg" type="image/png">
+									<img class="img-fluid" src="https://www.bankersheart.com/assets/img/pre-operation-consultant-img.svg" alt="Consultation">
+								</picture>
+							</div>
+							<div class="col-10">
+								<h5 class="fw-semibold clr-black">Pre-Operation Consult:</h5>
+								<p class="mb-0">
+									The operating doctor and his team will hold a pre-operation 
+                                    consult with the patient and his or her relatives to explain the procedure 
+                                    and to answer any questions you may have regarding the procedure.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 pt-5">
+					<div class="box-shadow-date h-100 p-3">
+						<div class="row">
+							<div class="col-2 text-center px-lg-2 px-0">
+								<picture>
+									<source srcset="https://www.bankersheart.com/assets/img/surgery-icon.svg" type="image/webp">
+									<source srcset="https://www.bankersheart.com/assets/img/surgery-icon.svg" type="image/png">
+									<img class="img-fluid" src="https://www.bankersheart.com/assets/img/surgery-icon.svg" alt="Consultation">
+								</picture>
+							</div>
+							<div class="col-10">
+								<h5 class="fw-semibold clr-black">Surgery:</h5>
+								<p class="mb-0">
+									Conducted in one of our 4, modularly designed Ots, your surgery 
+                                    will be conducted in the safest and most sterile environment.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 pt-5">
+					<div class="box-shadow-date h-100 p-3">
+						<div class="row">
+							<div class="col-2 text-center px-lg-2 px-0">
+								<picture>
+									<source srcset="https://www.bankersheart.com/assets/img/post-op-icon.svg" type="image/webp">
+									<source srcset="https://www.bankersheart.com/assets/img/post-op-icon.svg" type="image/png">
+									<img class="img-fluid" src="https://www.bankersheart.com/assets/img/post-op-icon.svg" alt="Consultation">
+								</picture>
+							</div>
+							<div class="col-10">
+								<h5 class="fw-semibold clr-black">Post Op Recovery:</h5>
+								<p class="mb-0">
+									Immediately after the surgery, the patient will be transferred to 
+                                    the post op recovery room, where they will be under strict observation. Once doctors 
+                                    are satisfied with the patient’s recovery, they will be transferred to the room of their
+                                    choice for full and complete recovery.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 pt-5">
+					<div class="box-shadow-date h-100 p-3">
+						<div class="row">
+							<div class="col-2 text-center px-lg-2 px-0">
+								<picture>
+									<source srcset="https://www.bankersheart.com/assets/img/patients-icon.svg" type="image/webp">
+									<source srcset="https://www.bankersheart.com/assets/img/patients-icon.svg" type="image/png">
+									<img class="img-fluid" src="https://www.bankersheart.com/assets/img/patients-icon.svg" alt="Patient Rehabilitation">
+								</picture>
+							</div>
+							<div class="col-10">
+								<h5 class="fw-semibold clr-black">Patient Rehabilitation:</h5>
+								<p class="mb-0">
+									Immediately after the surgery, the patient will be transferred to 
+                                    the post op recovery room, where they will be under strict observation. Once doctors 
+                                    are satisfied with the patient’s recovery, they will be transferred to the room of their
+                                    choice for full and complete recovery.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="extrajs" runat="server">
+</asp:Content>

@@ -1,0 +1,67 @@
+﻿<%@ Page Title="International Patient Care" Language="C#" MasterPageFile="~/bankers.Master" AutoEventWireup="true" CodeBehind="international-patients.aspx.cs" Inherits="bankersheart.international_patients" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+      <meta name="description" content="Bankers Group of Hospitals offers specialized care for international patients, including airport pickup, life-support ambulances, trained staff, accommodation, interpreters, and telemedicine for a seamless healthcare experience.">
+    <style>
+        @media(min-width:992px){
+             #hospital-details .inner-img {
+    float: right;
+    width: 35%;
+    min-width: 300px;
+    margin-left: 90px;
+}
+        }
+
+       
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+    <section id="inner-banner" class="content-down">
+        <div class="container">
+            <div class="row">
+                <div class="banner-heading">
+                    <h2 class="text-white text-center mb-0">International Patients</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="hospital-details" class="py-5">
+        <div class="container py-lg-4">
+            <div class="blog-container text-lg-start text-center pt-lg-3">
+                <%--<h2 class="clr-black fw-bold d-lg-none d-block pb-3">International Patients</h2>--%>
+                <div class="inner-img ">
+                      <picture>
+                        <source srcset="assets/img/international-patients-img.webp" type="image/webp">
+                        <source srcset="assets/img/international-patients-img.png" type="image/png">
+                        <img class="img-fluid  rounded-4 mb-4" src="assets/img/international-patients-img.png" alt="Blog-details">
+                    </picture>
+                </div>
+                <div class="blogs-content">
+                   <h2 class="clr-black fw-bold d-lg-block d-none">International Patients</h2>
+                   
+                    <p>We have a special team to look after the needs of International Patients and make
+                        their stay comfortable while making them feel at home. Our team themselves go to 
+                        the airport to receive patient. We can arrange to send a life support ambulance
+                        incase the patient needs it. International patients are looked after by specially
+                        trained nurses, and support staff for any special requirements like accommodation 
+                        for the Companion, Shopping, Interpreters, Currency Exchange, Tourism Packages etc.</p>
+                    <p>We have dedicated prayer rooms in all our hospitals for relatives of our patients.
+                        One of our key new features is wi-fi connectivity and tele medicine systems. We 
+                        can also arrange for audio and video tele conferences. With these facilities the
+                        patients can stay connected with their loved ones and share their progress from
+                        their own bed.</p>
+                    <div class="pt-4 mb-5">
+                        <a href="<%=ConfigurationManager.AppSettings["siteurl"].ToString() %>appointment-bankers-group-of-hospitals.aspx" class="btn-theme btn-blue">Book An Appointment </a>
+                    </div>
+                  
+                </div>
+                
+                
+            </div>
+
+        </div>
+    </section>
+
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="extrajs" runat="server">
+</asp:Content>

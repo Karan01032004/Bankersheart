@@ -1,0 +1,75 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/bankers.Master" AutoEventWireup="true" CodeBehind="blog-details.aspx.cs" Inherits="bankersheart.blog_details" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style>
+        .blog-img{
+            height:350px;
+            width:100%;
+            object-fit:cover;
+        }
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+    <section id="inner-banner" class="content-down">
+        <div class="container">
+            <div class="row">
+                <div class="banner-heading">
+                    <h2 class="text-white text-center mb-0">Blog Detail</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="hospital-details" class="py-5">
+          <asp:Repeater ID="rpt_data" runat="server">
+      <ItemTemplate>
+        <div class="container py-lg-4">
+            <div class="blog-container text-lg-start text-center pt-lg-3">
+                <h2 class="clr-black fw-bold d-lg-none d-block">CARDCON-2024 Initiative by Bankers Group of Hospitals</h2>
+                <div class="inner-img mb-lg-0 mb-4">
+                     <%-- <picture>
+                        <source srcset="assets/img/blog-details-img.webp" type="image/webp">
+                        <source srcset="assets/img/blog-details-img.png" type="image/png">
+                        <img class="img-fluid  rounded-4" src="assets/img/blog-details-img.png" alt="Blog-details">
+                    </picture>--%>
+                      <picture>
+      <source srcset='<%# ResolveUrl("~/poweradmin/webfiles/BlogManagement/") + Eval("image") %>' type="image/webp">
+      <source srcset='<%# ResolveUrl("~/poweradmin/webfiles/BlogManagement/") + Eval("image") %>' type="image/png">
+      <img class="img-fluid  rounded-4 blog-img"
+          src='<%# ResolveUrl("~/poweradmin/webfiles/BlogManagement/") + Eval("image") %>'
+          alt='<%# Eval("title") %>'>
+  </picture>
+                </div>
+                <div class="blogs-content">
+                   <h2 class="clr-black fw-bold d-lg-block d-none"><%# Eval("title") %></h2>
+                   <p><%# Eval("description") %></p>
+
+                  <%--  <p>Hypertension, commonly known as high blood pressure, is a prevalent medical condition that 
+                        affects millions of people worldwide. It occurs when the force of blood against the
+                        artery walls is consistently too high, putting added strain on the heart and blood vessels.</p>
+                    <p>Various factors contribute to hypertension, including genetics, lifestyle choices, and underlying health
+                        conditions. A sedentary lifestyle, excessive salt intake, smoking.</p>
+                    <p>Monotonectally unleash sustainable products whereas timely infrastructures. Synergistically is 
+                        enhance strategic synergy for highly efficient process improvements. Continually integrate the
+                        backend niches rather than holistic leadership skills. Collaboratively unleash e-business marketing-driven 
+                        schemas interactively. Progressively target highly efficient business for distributed interfaces. Globally 
+                        evisculate pand networks rather than viral collaboration and idea-sharing. Continually utilize turnkey networks 
+                        via productize intuitive information whereas</p>
+                    <p>Dynamically optimize leading-edge value via pandemic manufactured products. Conveniently 
+                        seize sticky growth strategies and ethical potentialities. Professionally create high-quality 
+                        rather than intuitive portals.</p>--%>
+
+                  
+                </div>
+                
+                
+            </div>
+
+        </div>
+      </ItemTemplate>
+ </asp:Repeater>
+          </section>
+
+
+
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="extrajs" runat="server">
+</asp:Content>

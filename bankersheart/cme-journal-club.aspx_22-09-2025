@@ -1,0 +1,157 @@
+﻿<%@ Page Title="CME & Journal Club | Bankers Heart Institute" Language="C#" MasterPageFile="~/bankers.Master" AutoEventWireup="true" CodeBehind="cme-journal-club.aspx.cs" Inherits="bankersheart.cme_journal_club" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+<meta name="keywords" content="CME sessions, Journal Club Vadodara, cardiology updates, heart care education, Bankers Heart Institute, cardiovascular learning, clinical research cardiology, doctor training, medical seminars">
+<meta name="description" content="Join expert-led CME sessions at Bankers Heart Institute to explore the latest in cardiology, research, and clinical practice.">
+<link rel="canonical" href="https://www.bankersheart.com/cme-journal-club" /> 
+    <meta property="og:title" content="CME & Journal Club | Bankers Heart Institute" />
+<meta property="og:description" content="Join expert-led CME sessions at Bankers Heart Institute to explore the latest in cardiology, research, and clinical practice." />
+<meta property="og:url" content="https://www.bankersheart.com/cme-journal-club" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Bankers Group of Hospitals" />
+<meta property="og:image" content="https://www.bankersheart.com/bankers-group-of-hospitals-og.png" />
+<meta property="og:image:alt" content="CME & Journal Club - Bankers Heart Institute" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="CME & Journal Club | Bankers Heart Institute" />
+<meta name="twitter:description" content="Join expert-led CME sessions at Bankers Heart Institute to explore the latest in cardiology, research, and clinical practice." />
+<meta name="twitter:image" content="https://www.bankersheart.com/bankers-group-of-hospitals-og.png" />
+<meta name="twitter:image:alt" content="CME & Journal Club - Bankers Heart Institute" />
+<meta name="twitter:site" content="@BankersHospitals" />
+
+    <style>
+        .club-height{
+            height:140px;
+            object-fit:cover;
+            width:100%;
+            border-top-left-radius:8px;
+            border-top-right-radius:8px;
+        }
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+
+     <section id="inner-banner" class="content-down">
+        <div class="container">
+            <div class="row">
+                <div class="banner-heading">
+                    <h1 class="text-white text-center h2 mb-0">CME and Journal Club</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="hospital-details" class="pt-5">
+        <div class="container py-lg-4">
+            <div class="blog-container text-lg-start text-center pt-lg-3">
+                <h2 class="clr-black fw-bold d-lg-none d-block pb-lg-0 pb-3">CME <%-- <span class="invisible position-absolute">Bankers</span>--%></h2>
+                <div class="inner-img inner-img-2">
+                      <picture>
+                        <source srcset="https://www.bankersheart.com/assets/img/cme-img.webp" type="image/webp">
+                        <source srcset="https://www.bankersheart.com/assets/img/cme-img.png" type="image/png">
+                        <img class="img-fluid  rounded-4 mb-4" src="https://www.bankersheart.com/assets/img/cme-img.png" alt="CME (Continuous Medical Education)" loading="lazy">
+                    </picture>
+                </div>
+                <div class="blogs-content">
+                   <h2 class="clr-black fw-bold d-lg-block d-none">CME.</h2>
+                   <p>Since the inspection of Banker Heart Institute in March, 2004. We have hosted more 
+                       than 100 CME (Continuous Medical Education) Programs to share and broaden our 
+                       knowledge and perspective in the field of medicine and cardiology. ”Cardcon”,
+                       a national CME, is being conducted by BHI regularly for the last 5 years. Around 
+                       500 physicians from all over country participate in Cardcon. Dr.S.S.Bhattacharya, Dr. Yash 
+                       Lokhandwala, Dr. Suresh Rao, Dr. Anil Tendolkar, Dr. Amit Vora and many more cardiologists 
+                       and cardiac surgeons of international repute are amongst the speakers. Other CME’s are also
+                       held In Vadodara, its peripheral towns as well as all over Gujarat includes, Surat, Bharuch,
+                       Nadiad, Anand, Halol Godhra and Dahod. Outside Gujarat we have organized CME’s in Bhopal,
+                       Barwani in Madhya Pradesh, Banswara in Rajasthan. This year we held a CME Program in Mauritius, 
+                       which was attended by around fifty eminent physicians from all over Gujarat.</p>
+                   
+                  
+                   
+                   
+                </div>
+                
+                
+            </div>
+
+        </div>
+    </section>
+
+    <div id="journal-club" class="mb-5">
+        <div class="container pb-5">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="clr-black fw-semibold text-lg-start text-center">Journal Club</h2>
+                    <p class="text-lg-start text-center pt-3">
+                        Banker Heart Institute Functions actively in academic grounds.
+                        Every Wednesday we organize a journal club to share and broaden our
+                        knowledge. Our estimated team of cardiologists as well as colleagues physicians
+                        present different scientific articles and case report from international journals, 
+                        which is attended by many practicing physicians from in and around city, the focus is on 
+                        scientific know-how, Controversies and grey areas in clinical practices and theoretical research.</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <asp:Repeater ID="rptJournalClub" runat="server">
+    <ItemTemplate>
+                <div class="col-lg-4 col-md-6 pt-5">
+                    <div class="box-shadow-date h-100">
+                   <%--     <a href="assets/img/journa-club-img-1.webp" data-fancybox="gallery">
+                        <picture>
+                            <source srcset="assets/img/journa-club-img-1.webp" type="image/webp">
+                            <source srcset="assets/img/journa-club-img-1.png" type="image/png">
+                            <img class="img-fluid club-height" src="assets/img/journa-club-img-1.png" alt="Dr. Vikramsinh Anand">
+                        </picture>
+                            </a>--%>
+                          <a href='<%# ResolveUrl("~/poweradmin/webfiles/JournalClubDetial/") + Eval("image") %>' data-fancybox="gallery">
+                        <picture>
+                            <source srcset='<%# ResolveUrl("~/poweradmin/webfiles/JournalClubDetial/") + Eval("image") %>' type="image/webp">
+                            <source srcset='<%# ResolveUrl("~/poweradmin/webfiles/JournalClubDetial/") + Eval("image") %>' type="image/png">
+                            <img class="img-fluid club-height" src='<%# ResolveUrl("~/poweradmin/webfiles/JournalClubDetial/") + Eval("image") %>' alt='<%# Eval("Speaker") %>'>
+                        </picture>
+                    </a>
+                        <div class="p-3">
+                           <%--  <p>Review of 2024 AHA Guideline for Peri Operative Cardio
+                            Vascular Mngt for Non Cardiac Surgery PART-2</p>--%>
+                              <p><%# Eval("title") %></p>
+                   <p class="fs-6 mb-0"><%# Eval("Speaker") %></p>
+                              <div class="row justify-content-between align-items-center">
+                            <div class="col-7">
+                                  
+                        <%--        <p class="red mb-0">11 December 2024</p>--%>
+         <p class="red mb-0"><%# Eval("Journal_Date", "{0:dd MMMM yyyy}") %></p>
+
+                            </div>
+                                  <div class="col-2">
+                                      <%--<a href="#" target="_blank">
+                                      <picture>
+                                          <source srcset="assets/img/youtube-icon.svg" type="image/webp">
+                                          <source srcset="assets/img/youtube-icon.svg" type="image/png">
+                                          <img class="img-fluid" src="assets/img/youtube-icon.svg" alt="youtube icon">
+                                      </picture>
+                                          </a>--%>
+                                       <a href='<%# Eval("YoutubeLink") %>' target="_blank">
+                                    <picture>
+                                        <source srcset="assets/img/youtube-icon.svg" type="image/webp">
+                                        <source srcset="assets/img/youtube-icon.svg" type="image/png">
+                                        <img class="img-fluid" src="assets/img/youtube-icon.svg" alt="YouTube Icon">
+                                    </picture>
+                                </a>
+                                  </div>
+                        </div>
+                        </div>
+                      
+                       
+                    </div>
+                </div>
+           </ItemTemplate>
+</asp:Repeater>
+            </div>
+                        <div class="row pt-5 mt-3 justify-content-center text-center">
+    <asp:PlaceHolder ID="PaginationJournalClubPlaceholder" runat="server"></asp:PlaceHolder>
+</div>
+        </div>
+    </div>
+
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="extrajs" runat="server">
+</asp:Content>

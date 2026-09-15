@@ -1,0 +1,76 @@
+﻿using bankersheart.App_Code;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
+
+namespace bankersheart
+{
+    public partial class doctors_details : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!IsPostBack)
+            {
+                BindBlogDetails();
+                BindAwards();
+
+            }
+        }
+
+
+        private void BindBlogDetails()
+        {
+            string id = Request.QueryString["id"];
+            if (!string.IsNullOrEmpty(id))
+            {
+                string query = "SELECT id, Name, profession, specialties, description, image FROM [bankers_usr].[DoctorDetails] WHERE id = " + id;
+                DataTable dt = new DAL().GetDataTable(query, CommandType.Text, null);
+
+                if (dt.Rows.Count > 0)
+                {
+                    rpt_data.DataSource = dt;
+                    rpt_data.DataBind();
+
+                    // ✅ Set unique page title
+                    string doctorName = dt.Rows[0]["Name"].ToString();
+                    string profession = dt.Rows[0]["profession"].ToString();
+                    Page.Title = doctorName + " - " + profession + " | Bankers Heart Hospital";
+                    // ✅ Dynamic H1 (hidden)
+                    pageH1.InnerText = doctorName + " - " + profession;
+                    // ✅ Optional: Set meta description for SEO
+                    HtmlMeta metaDesc = new HtmlMeta();
+                    metaDesc.Name = "description";
+                    metaDesc.Content = dt.Rows[0]["specialties"].ToString();
+                    Page.Header.Controls.Add(metaDesc);
+                }
+                else
+                {
+                    Page.Title = "Doctor Details | Bankers Heart Hospital";
+                    pageH1.InnerText = "Doctors Detail";
+                }
+            }
+            else
+            {
+                Page.Title = "Doctor Details | Bankers Heart Hospital";
+                pageH1.InnerText = "Doctor Detail";
+            }
+        }
+
+        private void BindAwards()
+        {
+            string query = "SELECT [id], [Name], [image], [profession],[specialties] " +
+                        "FROM [bankers_usr].[DoctorDetails]";
+
+            DataTable dt = new DAL().GetDataTable(query, CommandType.Text, null);
+            rpt_MedicalCamps.DataSource = dt;
+            rpt_MedicalCamps.DataBind();
+
+        }
+
+    }
+}

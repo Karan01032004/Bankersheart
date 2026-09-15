@@ -1,0 +1,209 @@
+﻿<%@ Page Title="Careers at Bankers Group of Hospitals | Join Our Healthcare Team" Language="C#" MasterPageFile="~/bankers.Master" AutoEventWireup="true" CodeBehind="career.aspx.cs" Inherits="bankersheart.career" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+<link rel="canonical" href="https://www.bankersheart.com/career" />
+<meta name="description" content="Explore rewarding career opportunities at Bankers Group of Hospitals. Join our dedicated team of healthcare professionals and make a difference in patient lives." />
+<meta property="og:title" content="Careers at Bankers Group of Hospitals | Join Our Healthcare Team" />
+<meta property="og:description" content="Explore rewarding career opportunities at Bankers Group of Hospitals. Join our dedicated team of healthcare professionals and make a difference in patient lives." />
+<meta property="og:url" content="https://www.bankersheart.com/career" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Bankers Group of Hospitals" />
+<meta property="og:image" content="https://www.bankersheart.com/bankers-group-of-hospitals-og.png" />
+<meta property="og:image:alt" content="Careers at Bankers Group of Hospitals" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Careers at Bankers Group of Hospitals | Join Our Healthcare Team" />
+<meta name="twitter:description" content="Explore rewarding career opportunities at Bankers Group of Hospitals. Join our dedicated team of healthcare professionals and make a difference in patient lives." />
+<meta name="twitter:image" content="https://www.bankersheart.com/bankers-group-of-hospitals-og.png" />
+<meta name="twitter:image:alt" content="Careers at Bankers Group of Hospitals" />
+<meta name="twitter:site" content="@BankersHospitals" />
+
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+    <section id="inner-banner" class="content-down">
+        <div class="container">
+            <div class="row">
+                <div class="banner-heading">
+                    <h1 class="text-white h2 text-center mb-0">Career  <%--<span class="position-absolute invisible">Bankers</span>--%></h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="career">
+        <div class="container py-5">
+            <div class="row py-5 justify-content-center">
+                <p class="pb-4 text-center">
+                    We are a team of dedicated healthcare professionals committed to making a meaningful
+					difference in patients' lives. If you share our passion for compassionate care and 
+					are ready to thrive in a dynamic, fast-paced hospital environment, you might be exactly
+					the kind of team member we’re looking for
+                </p>
+                <div class="col-md-8 col-sm-11">
+                    <asp:ScriptManager ID="ScriptManager1" runat="server" />
+                    <div class="bg_contact px-2 px-sm-4 py-5 rounded-3">
+                        <h2 class="text-center text-black h3">Career  </h2>
+                        <%--<p class="text-center">
+							Just fill in our short project inquiry form and we'll get back to you soon!
+						</p>--%>
+                        <div class="mt-4">
+                            <div class="row g-md-3">
+                                <div class="col-md mb-3">
+                                    <div class="form-floating">
+                                        <%--	<input type="text" class="form-control" id="name" placeholder="Name">
+										<label for="Name">Name</label>--%>
+                                        <asp:TextBox ID="txtName" runat="server" CssClass="form-control" placeholder="Name" oninput="removeHttpHttps(this)"></asp:TextBox>
+                                        <label for="txtName">Name</label>
+                                        <asp:RequiredFieldValidator ID="rfvName" runat="server" ControlToValidate="txtName"
+                                            ErrorMessage="Name is required" CssClass="text-danger" Display="Dynamic" />
+                                    </div>
+                                </div>
+                                <div class="col-md mb-3">
+                                    <div class="form-floating">
+                                        <%--		<input type="email" class="form-control" id="Email" placeholder="name@example.com">
+										<label for="Email">Email address</label>--%>
+                                        <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" placeholder="Email"></asp:TextBox>
+                                        <label for="txtEmail">Email address</label>
+                                        <asp:RequiredFieldValidator ID="rfvEmail" runat="server" ControlToValidate="txtEmail"
+                                            ErrorMessage="Email is required" CssClass="text-danger" Display="Dynamic" />
+                                        <asp:RegularExpressionValidator ID="revEmail" runat="server" ControlToValidate="txtEmail"
+                                            ErrorMessage="Invalid email format" CssClass="text-danger" Display="Dynamic"
+                                            ValidationExpression="^[^@\s]+@[^@\s]+\.[^@\s]+$" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row g-2">
+                                <div class="col-sm-6 mb-3">
+                                    <div class="form-floating">
+                                        <%--		<input type="text" class="form-control" id="mobile" placeholder="Mobile no.">
+										<label for="mobile">Mobile no.</label>--%>
+                                        <asp:TextBox ID="txtMobile" runat="server" CssClass="form-control" placeholder="Mobile no." oninput="removeHttpHttps(this)"></asp:TextBox>
+                                        <label for="txtMobile">Mobile no.</label>
+                                        <asp:RequiredFieldValidator ID="rfvMobile" runat="server" ControlToValidate="txtMobile"
+                                            ErrorMessage="Mobile number is required" CssClass="text-danger" Display="Dynamic" />
+                                        <asp:RegularExpressionValidator ID="revMobile" runat="server" ControlToValidate="txtMobile"
+                                            ErrorMessage="Invalid mobile number" CssClass="text-danger" Display="Dynamic"
+                                            ValidationExpression="^\d{10}$" />
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 mb-3">
+                                    <div class="form-floating">
+                                        <%--			<input type="text" class="form-control" id="mobile" placeholder="Mobile no.">
+										<label for="mobile">Position</label>--%>
+                                        <%--<asp:TextBox ID="txtPosition" runat="server" CssClass="form-control" placeholder="Position"></asp:TextBox>
+                    <label for="txtPosition">Position</label>
+										 <asp:RequiredFieldValidator ID="rfvPosition" runat="server" ControlToValidate="txtPosition" ErrorMessage="Position is required" CssClass="text-danger" Display="Dynamic" />--%>
+
+                                        <asp:TextBox ID="txtPosition" runat="server" CssClass="form-control" placeholder="Position" oninput="removeHttpHttps(this)"></asp:TextBox>
+                                        <label for="txtPosition">Position</label>
+                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtPosition" ErrorMessage="Position is required" CssClass="text-danger" Display="Dynamic" />
+                                        <%-- <asp:DropDownList ID="ddlPosition" runat="server" CssClass="form-control" AppendDataBoundItems="true">
+                                        </asp:DropDownList>
+                                        <label for="ddlPosition">Position</label>
+                                        <asp:RequiredFieldValidator ID="rfvPosition" runat="server" ControlToValidate="ddlPosition"
+                                            ErrorMessage="Position is required" CssClass="text-danger" Display="Dynamic" InitialValue="" />--%>
+                                    </div>
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <label for="resume" class="ps-2">Upload Resume</label>
+                                    <div class="form-floating">
+                                        <asp:FileUpload ID="fuResume" runat="server" CssClass="form-control" accept=".doc,.docx,.pdf" onchange="validateFileUpload()" />
+                                        <small class="file-info">[Note: Accepted file types: DOC, DOCX, PDF
+                                    <br />
+                                            File Size: Up to 5MB]
+                                        </small>
+                                        <asp:RequiredFieldValidator ID="rfvResume" runat="server" ControlToValidate="fuResume"
+                                            ErrorMessage="Resume is required" CssClass="text-danger" Display="Dynamic" />
+                                        <%--										<input type="file" class="form-control" id="resume" placeholder="Upload Resume">--%>
+                                        <asp:Label ID="Label1" runat="server" ForeColor="Red"></asp:Label>
+
+                                    </div>
+                                </div>
+                                <section id="targetSection">
+                                    <div class="col-12 mb-3">
+                                        <div class="form-floating">
+                                            <%--			<textarea class="form-control" placeholder="Leave a comment here" id="Message" style="height: 100px"></textarea>
+										<label for="Message">Message</label>--%>
+                                            <asp:TextBox ID="txtMessage" runat="server" CssClass="form-control" placeholder="Message" TextMode="MultiLine" Height="100" oninput="removeHttpHttps(this)"></asp:TextBox>
+                                            <label for="txtMessage">Message</label>
+                                        </div>
+                                    </div>
+                                </section>
+                                <div class="col-sm-7 mb-3">
+                                    <div class="form-floating">
+                                        <div class="form-floating">
+                                            <asp:TextBox ID="txtCaptcha" runat="server" CssClass="form-control" placeholder="Enter Captcha" oninput="removeHttpHttps(this)"></asp:TextBox>
+                                            <label for="txtCaptcha" class="ps-2">Enter Captcha</label>
+                                            <asp:RequiredFieldValidator ID="rfvCaptcha" runat="server" ControlToValidate="txtCaptcha"
+                                                ErrorMessage="Captcha is required" CssClass="text-danger" Display="Dynamic" />
+
+                                            <asp:Label ID="lblERR" runat="server" ForeColor="Red"></asp:Label>
+                                            <%--	<input type="text" class="form-control" id="cpth" placeholder="">
+										<label for="resume" class="ps-2">Enter Captch</label>--%>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-5 mb-3">
+                                    <div class="">
+                                        <%--										<input type="text" class="form-control" id="captch" placeholder="">--%>
+                                        <img src="CImage.aspx" id="capimg" class="ml-2" alt="Captcha Code" style="margin-left: 10px;" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4 text-lg-start text-center">
+                                <%--								<a href="#" class="btn-theme btn-blue d-block" style="width: fit-content">Submit</a>--%>
+                                <asp:Button ID="btnSubmit" runat="server" CssClass="btn-theme btn-blue d-lg-block" Text="Submit" OnClick="btnSubmit_Click" />
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="extrajs" runat="server">
+    <script type="text/javascript">
+        function validateFileUpload() {
+            var fileUpload = document.getElementById('<%= fuResume.ClientID %>');
+            var filePath = fileUpload.value;
+            var file = fileUpload.files[0];
+            var allowedExtensions = /(\.doc|\.docx|\.pdf)$/i;
+            var maxSizeMB = 5;
+            var maxSizeBytes = maxSizeMB * 1024 * 1024; // 5MB in bytes
+
+            if (file) {
+                if (!allowedExtensions.exec(filePath)) {
+                    alert('Invalid file type. Only .doc, .docx, and .pdf files are allowed.');
+                    fileUpload.value = ''; // Clear the file upload control
+                    return false;
+                }
+
+                if (file.size > maxSizeBytes) {
+                    alert('File size exceeds the 5MB limit.');
+                    fileUpload.value = ''; // Clear the file upload control
+                    return false;
+                }
+            }
+
+            return true;
+        }
+    </script>
+     <script>
+         function removeHttpHttps(textbox) {
+             var currentValue = textbox.value;
+
+             // Remove URLs and domain-like patterns
+             var urlPattern = /\b(http|https|www|localhost|[a-zA-Z0-9\-]+\.[a-zA-Z]{2,})\b/gi;
+             currentValue = currentValue.replace(urlPattern, "");
+
+             // Remove HTML tags
+             var htmlTagPattern = /<[^>]*>/gi;
+             currentValue = currentValue.replace(htmlTagPattern, "");
+
+             // Remove coding-related keywords (html, script, iframe, style, etc.)
+             var codeWordsPattern = /\b(html|script|iframe|style|body|head|title|meta|link|div|span|form|input|textarea|button)\b/gi;
+             currentValue = currentValue.replace(codeWordsPattern, "");
+
+             textbox.value = currentValue;
+         }
+     </script>
+</asp:Content>

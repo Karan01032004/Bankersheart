@@ -1,0 +1,83 @@
+﻿<%@ Page Title="Membership Cards | Exclusive Healthcare Benefits at Bankers Hospitals" Language="C#" MasterPageFile="~/bankers.Master" AutoEventWireup="true" CodeBehind="membership-cards.aspx.cs" Inherits="bankersheart.membership_cards" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+      <meta name="description" content="Get exclusive healthcare benefits with Bankers Hospital Membership Cards. Enjoy priority services, discounts on treatments, health check-ups, and personalized medical care.">
+   <%-- <style>
+        .memb-height{
+            height:500px;
+            object-fit:cover;
+            width:100%;
+        }
+        @media(max-width:768px){
+             .memb-height{
+            height:350px;
+            object-fit:cover;
+            width:100%;
+        }
+        }--%>
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+    <section id="inner-banner" class="content-down">
+        <div class="container">
+            <div class="row">
+                <div class="banner-heading">
+                    <h2 class="text-white text-center mb-0">Membership Cards</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="membership">
+        <div class="container py-5">
+            <div class="row pb-5">
+                <div class="col-lg-4 col-sm-6 pt-5">
+                    <div class="press-box h-100 text-center">
+                         <a href="assets/img/membership-card-1.png" data-fancybox="gallery">
+                        <picture>
+                            <source srcset="assets/img/membership-card-1.webp" type="image/webp">
+                            <source srcset="assets/img/membership-card-1.png" type="image/png">
+                            <img class="img-fluid p-3 memb-height" src="assets/img/membership-card-1.png" alt="Membership Cards">
+                        </picture>
+                             </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-sm-6 pt-5">
+                    <div class="press-box h-100 text-center">
+                        <a href="assets/img/membership-card-2.png" data-fancybox="galler2">
+                        <picture>
+                            <source srcset="assets/img/membership-card-2.webp" type="image/webp">
+                            <source srcset="assets/img/membership-card-2.png" type="image/png">
+                            <img class="img-fluid p-3 memb-height" src="assets/img/membership-card-2.png" alt="Membership Cards">
+                        </picture>
+                            </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 pt-5">
+                    <div class="press-box h-100 text-center">
+                        <a href="assets/img/membership-card-3.png" data-fancybox="galler3">
+                        <picture>
+                            <source srcset="assets/img/membership-card-3.webp" type="image/webp">
+                            <source srcset="assets/img/membership-card-3.png" type="image/png">
+                            <img class="img-fluid p-3 memb-height" src="assets/img/membership-card-3.png" alt="Membership Cards">
+                        </picture>
+                            </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 pt-5">
+                    <div class="press-box h-100 text-center">
+                        <a href="assets/img/membership-card-4.png" data-fancybox="galler4">
+                        <picture>
+                            <source srcset="assets/img/membership-card-4.webp" type="image/webp">
+                            <source srcset="assets/img/membership-card-4.png" type="image/png">
+                            <img class="img-fluid p-3 memb-height" src="assets/img/membership-card-4.png" alt="Membership Cards">
+                        </picture>
+                            </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="extrajs" runat="server">
+</asp:Content>

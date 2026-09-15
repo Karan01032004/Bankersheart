@@ -1,0 +1,583 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/bankers.Master" AutoEventWireup="true" CodeBehind="virtual-gallery.aspx.cs" Inherits="bankersheart.virtual_gallery" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <link rel="canonical" href="https://www.bankersheart.com/virtual-gallery">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+     <section id="inner-banner" class="content-down">
+        <div class="container">
+            <div class="row">
+                <div class="banner-heading">
+                    <h2 class="text-white text-center mb-0">Virtual Gallery</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="events-bankers">
+        <div class="container py-5">
+            <div class="row py-5">
+                <div class="col-12">
+                    <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+                         <li class="nav-item nav-item-2" role="presentation" >
+                            <button class="nav-link active" id="infras-tab" data-bs-toggle="tab" data-bs-target="#infras" type="button" role="tab" aria-controls="home" aria-selected="true">Infrastructure</button>
+                        </li>
+                        <li class="nav-item nav-item-2" role="presentation" >
+                            <button class="nav-link" id="camps-tab" data-bs-toggle="tab" data-bs-target="#camps" type="button" role="tab" aria-controls="home" aria-selected="true">Camps</button>
+                        </li>
+                        <li class="nav-item nav-item-2" role="presentation" >
+                            <button class="nav-link " id="exhibition-tab" data-bs-toggle="tab" data-bs-target="#exhibition" type="button" role="tab" aria-controls="home" aria-selected="true">Exhibition</button>
+                        </li>
+                        <li class="nav-item" role="presentation" style="">
+                            <button class="nav-link" id="lecture-tab" data-bs-toggle="tab" data-bs-target="#lecture" type="button" role="tab" aria-controls="profile" aria-selected="false" tabindex="-1">Lectures</button>
+                        </li>
+                        <li class="nav-item" role="presentation" style="">
+                            <button class="nav-link" id="rally-tab" data-bs-toggle="tab" data-bs-target="#rally" type="button" role="tab" aria-controls="contact" aria-selected="false" tabindex="-1">Rally</button>
+                        </li>
+                        <li class="nav-item" role="presentation" style="">
+                            <button class="nav-link" id="conference-tab" data-bs-toggle="tab" data-bs-target="#conference" type="button" role="tab" aria-controls="contact" aria-selected="false" tabindex="-1">Conference</button>
+                        </li>
+                        <li class="nav-item" role="presentation" style="">
+                            <button class="nav-link" id="card-tab" data-bs-toggle="tab" data-bs-target="#card" type="button" role="tab" aria-controls="contact" aria-selected="false" tabindex="-1">Play Cards</button>
+                        </li>
+                          <li class="nav-item" role="presentation" style="">
+                            <button class="nav-link" id="video-tab" data-bs-toggle="tab" data-bs-target="#video" type="button" role="tab" aria-controls="contact" aria-selected="false" tabindex="-1">Video</button>
+                        </li>
+     
+                    
+                    </ul>
+
+                    <div class="tab-content py-3" id="myTabContent">
+                        <div class="tab-pane fade active show" id="events" role="tabpanel" aria-labelledby="events-tab">
+                         <div class="row">
+                             <div class="col-lg-4 col-md-6 pt-5">
+                                 <a href="javascript:void(0)">
+                                 <div class="box-shadow-date text-center p-3 h-100">
+                                     <picture>
+                                         <source srcset="https://www.bankersheart.com/assets/img/events-bankers-img-1.webp" type="image/webp">
+                                         <source srcset="https://www.bankersheart.com/assets/img/events-bankers-img-1.png" type="image/png">
+                                         <img class="img-fluid  rounded-4" src="https://www.bankersheart.com/assets/img/events-bankers-img-1.png" alt="Blog-details">
+                                     </picture>
+                                     <div class="pb-4">
+                                         <h6 class="pt-3  clr-black fw-semibold clamped-text">Republic Day Celebration at Bankers Group</h6>
+                                         <div class="mt-4"><a href="javascript:void(0)" class="btn-theme btn-blue">Know More</a></div>
+                                     
+                                     </div>
+                                     
+                                 </div>
+
+                                     </a>
+                             </div>
+                             <div class="col-lg-4 col-md-6 pt-5">
+                                 <a href="javascript:void(0)">
+                                 <div class="box-shadow-date text-center p-3 h-100">
+                                     <picture>
+                                         <source srcset="https://www.bankersheart.com/assets/img/events-bankers-img-2.webp" type="image/webp">
+                                         <source srcset="https://www.bankersheart.com/assets/img/events-bankers-img-2.png" type="image/png">
+                                         <img class="img-fluid  rounded-4" src="https://www.bankersheart.com/assets/img/events-bankers-img-2.png" alt="Blog-details">
+                                     </picture>
+                                     <div class="pb-4">
+                                         <h6 class="pt-3 clr-black fw-semibold clamped-text">Chappan Bhog celebration on the occasion of Ganesh - Mahotsav</h6>
+                                     <div class="mt-4"><a href="javascript:void(0)" class="btn-theme btn-blue">Know More</a></div>
+                                     </div>
+                                     
+                                 </div>
+
+                                     </a>
+                             </div>
+                             <div class="col-lg-4 col-md-6 pt-5">
+                                 <a href="javascript:void(0)">
+                                 <div class="box-shadow-date text-center p-3 h-100">
+                                     <picture>
+                                         <source srcset="https://www.bankersheart.com/assets/img/blog-3-img.webp" type="image/webp">
+                                         <source srcset="https://www.bankersheart.com/assets/img/blog-3-img.png" type="image/png">
+                                         <img class="img-fluid  rounded-4" src="https://www.bankersheart.com/assets/img/blog-3-img.png" alt="Blog-details">
+                                     </picture>
+                                     <div class="pb-4">
+                                         <h6 class="pt-3 clr-black fw-semibold clamped-text">Celebrating Dr. Darshan Bankers Birthday at Bankers 
+                                             Group of Hospitals ay at Bankers Group of Hospital Group of Hospitals ay at Bankers Group of Hospital  Group of Hospital Group of Hospitals ay at Bankers Group </h6>
+                                    <div class="mt-4"><a href="javascript:void(0)" class="btn-theme btn-blue">Know More</a></div>
+                                     </div>
+                                     
+                                 </div>
+
+                                     </a>
+                             </div>
+                               <div class="col-lg-4 col-md-6 pt-5">
+                                 <a href="javascript:void(0)">
+                                 <div class="box-shadow-date text-center p-3 h-100">
+                                     <picture>
+                                         <source srcset="https://www.bankersheart.com/assets/img/events-bankers-img-1.webp" type="image/webp">
+                                         <source srcset="https://www.bankersheart.com/assets/img/events-bankers-img-1.png" type="image/png">
+                                         <img class="img-fluid  rounded-4" src="https://www.bankersheart.com/assets/img/events-bankers-img-1.png" alt="Blog-details">
+                                     </picture>
+                                     <div class="pb-4">
+                                         <h6 class="pt-3  clr-black fw-semibold clamped-text">Republic Day Celebration at Bankers Group</h6>
+                                         <div class="mt-4"><a href="javascript:void(0)" class="btn-theme btn-blue">Know More</a></div>
+                                     
+                                     </div>
+                                     
+                                 </div>
+
+                                     </a>
+                             </div>
+                             <div class="col-lg-4 col-md-6 pt-5">
+                                 <a href="">
+                                 <div class="box-shadow-date text-center p-3 h-100">
+                                     <picture>
+                                         <source srcset="https://www.bankersheart.com/assets/img/events-bankers-img-2.webp" type="image/webp">
+                                         <source srcset="https://www.bankersheart.com/assets/img/events-bankers-img-2.png" type="image/png">
+                                         <img class="img-fluid  rounded-4" src="https://www.bankersheart.com/assets/img/events-bankers-img-2.png" alt="Blog-details">
+                                     </picture>
+                                     <div class="pb-4">
+                                         <h6 class="pt-3 clr-black fw-semibold clamped-text">Chappan Bhog celebration on the occasion of Ganesh - Mahotsav</h6>
+                                     <div class="mt-4"><a href="javascript:void(0)" class="btn-theme btn-blue">Know More</a></div>
+                                     </div>
+                                     
+                                 </div>
+
+                                     </a>
+                             </div>
+                             <div class="col-lg-4 col-md-6 pt-5">
+                                 <a href="javascript:void(0)">
+                                 <div class="box-shadow-date text-center p-3 h-100">
+                                     <picture>
+                                         <source srcset="https://www.bankersheart.com/assets/img/blog-3-img.webp" type="image/webp">
+                                         <source srcset="https://www.bankersheart.com/assets/img/blog-3-img.png" type="image/png">
+                                         <img class="img-fluid  rounded-4" src="https://www.bankersheart.com/assets/img/blog-3-img.png" alt="Blog-details">
+                                     </picture>
+                                     <div class="pb-4">
+                                         <h6 class="pt-3 clr-black fw-semibold clamped-text">Celebrating Dr. Darshan Bankers Birthday at Bankers 
+                                             Group of Hospitals ay at Bankers Group of Hospital Group of Hospitals ay at Bankers Group of Hospital  Group of Hospital Group of Hospitals ay at Bankers Group </h6>
+                                    <div class="mt-4"><a href="javascript:void(0)" class="btn-theme btn-blue">Know More</a></div>
+                                     </div>
+                                     
+                                 </div>
+
+                                     </a>
+                             </div>
+                         </div>
+
+                            <div class="row pt-5 mt-3 justify-content-center text-center">
+              
+                    <div class="col-12 carousal-arrow">
+                    <a href="javascript:void(0)" ><i class="fa fa-long-arrow-left "></i></a>
+
+                     <a href="javascript:void(0)" class="px-3">1</a>
+                        <a href="javascript:void(0)" class="px-3">2</a>
+
+                   <a href="javascript:void(0)"> <i class="fa fa-long-arrow-right"></i></a>
+                </div>
+                
+            </div>
+                        </div>
+                        <div class="tab-pane fade" id="lecture" role="tabpanel" aria-labelledby="lecture-tab">
+                              <div class="row">
+                             <div class="col-lg-4 col-md-6 pt-5">
+                                 <a href="javascript:void(0)">
+                                 <div class="box-shadow-date text-center p-3 h-100">
+                                     <picture>
+                                         <source srcset="https://www.bankersheart.com/assets/img/events-bankers-img-1.webp" type="image/webp">
+                                         <source srcset="https://www.bankersheart.com/assets/img/events-bankers-img-1.png" type="image/png">
+                                         <img class="img-fluid  rounded-4" src="https://www.bankersheart.com/assets/img/events-bankers-img-1.png" alt="Blog-details">
+                                     </picture>
+                                     <div class="pb-4">
+                                         <h6 class="pt-3  clr-black fw-semibold clamped-text">Republic Day Celebration at Bankers Group</h6>
+                                         <div class="mt-4"><a href="javascript:void(0)" class="btn-theme btn-blue">Know More</a></div>
+                                     
+                                     </div>
+                                     
+                                 </div>
+
+                                     </a>
+                             </div>
+                             <div class="col-lg-4 col-md-6 pt-5">
+                                 <a href="javascript:void(0)">
+                                 <div class="box-shadow-date text-center p-3 h-100">
+                                     <picture>
+                                         <source srcset="https://www.bankersheart.com/assets/img/events-bankers-img-2.webp" type="image/webp">
+                                         <source srcset="https://www.bankersheart.com/assets/img/events-bankers-img-2.png" type="image/png">
+                                         <img class="img-fluid  rounded-4" src="https://www.bankersheart.com/assets/img/events-bankers-img-2.png" alt="Blog-details">
+                                     </picture>
+                                     <div class="pb-4">
+                                         <h6 class="pt-3 clr-black fw-semibold clamped-text">Chappan Bhog celebration on the occasion of Ganesh - Mahotsav</h6>
+                                     <div class="mt-4"><a href="javascript:void(0)" class="btn-theme btn-blue">Know More</a></div>
+                                     </div>
+                                     
+                                 </div>
+
+                                     </a>
+                             </div>
+                             <div class="col-lg-4 col-md-6 pt-5">
+                                 <a href="javascript:void(0)">
+                                 <div class="box-shadow-date text-center p-3 h-100">
+                                     <picture>
+                                         <source srcset="https://www.bankersheart.com/assets/img/blog-3-img.webp" type="image/webp">
+                                         <source srcset="https://www.bankersheart.com/assets/img/blog-3-img.png" type="image/png">
+                                         <img class="img-fluid  rounded-4" src="https://www.bankersheart.com/assets/img/blog-3-img.png" alt="Blog-details">
+                                     </picture>
+                                     <div class="pb-4">
+                                         <h6 class="pt-3 clr-black fw-semibold clamped-text">Celebrating Dr. Darshan Bankers Birthday at Bankers 
+                                             Group of Hospitals ay at Bankers Group of Hospital Group of Hospitals ay at Bankers Group of Hospital  Group of Hospital Group of Hospitals ay at Bankers Group </h6>
+                                    <div class="mt-4"><a href="javascript:void(0)" class="btn-theme btn-blue">Know More</a></div>
+                                     </div>
+                                     
+                                 </div>
+
+                                     </a>
+                             </div>
+                               <div class="col-lg-4 col-md-6 pt-5">
+                                 <a href="javascript:void(0)">
+                                 <div class="box-shadow-date text-center p-3 h-100">
+                                     <picture>
+                                         <source srcset="https://www.bankersheart.com/assets/img/events-bankers-img-1.webp" type="image/webp">
+                                         <source srcset="https://www.bankersheart.com/assets/img/events-bankers-img-1.png" type="image/png">
+                                         <img class="img-fluid  rounded-4" src="https://www.bankersheart.com/assets/img/events-bankers-img-1.png" alt="Blog-details">
+                                     </picture>
+                                     <div class="pb-4">
+                                         <h6 class="pt-3  clr-black fw-semibold clamped-text">Republic Day Celebration at Bankers Group</h6>
+                                         <div class="mt-4"><a href="javascript:void(0)" class="btn-theme btn-blue">Know More</a></div>
+                                     
+                                     </div>
+                                     
+                                 </div>
+
+                                     </a>
+                             </div>
+                             <div class="col-lg-4 col-md-6 pt-5">
+                                 <a href="javascript:void(0)">
+                                 <div class="box-shadow-date text-center p-3 h-100">
+                                     <picture>
+                                         <source srcset="https://www.bankersheart.com/assets/img/events-bankers-img-2.webp" type="image/webp">
+                                         <source srcset="https://www.bankersheart.com/assets/img/events-bankers-img-2.png" type="image/png">
+                                         <img class="img-fluid  rounded-4" src="https://www.bankersheart.com/assets/img/events-bankers-img-2.png" alt="Blog-details">
+                                     </picture>
+                                     <div class="pb-4">
+                                         <h6 class="pt-3 clr-black fw-semibold clamped-text">Chappan Bhog celebration on the occasion of Ganesh - Mahotsav</h6>
+                                     <div class="mt-4"><a href="javascript:void(0)" class="btn-theme btn-blue">Know More</a></div>
+                                     </div>
+                                     
+                                 </div>
+
+                                     </a>
+                             </div>
+                             <div class="col-lg-4 col-md-6 pt-5">
+                                 <a href="javascript:void(0)">
+                                 <div class="box-shadow-date text-center p-3 h-100">
+                                     <picture>
+                                         <source srcset="https://www.bankersheart.com/assets/img/blog-3-img.webp" type="image/webp">
+                                         <source srcset="https://www.bankersheart.com/assets/img/blog-3-img.png" type="image/png">
+                                         <img class="img-fluid  rounded-4" src="https://www.bankersheart.com/assets/img/blog-3-img.png" alt="Blog-details">
+                                     </picture>
+                                     <div class="pb-4">
+                                         <h6 class="pt-3 clr-black fw-semibold clamped-text">Celebrating Dr. Darshan Bankers Birthday at Bankers 
+                                             Group of Hospitals ay at Bankers Group of Hospital Group of Hospitals ay at Bankers Group of Hospital  Group of Hospital Group of Hospitals ay at Bankers Group </h6>
+                                    <div class="mt-4"><a href="javascript:void(0)" class="btn-theme btn-blue">Know More</a></div>
+                                     </div>
+                                     
+                                 </div>
+
+                                     </a>
+                             </div>
+                         </div>
+
+                            <div class="row pt-5 mt-3 justify-content-center text-center">
+              
+                    <div class="col-12 carousal-arrow">
+                    <a href="javascript:void(0)" ><i class="fa fa-long-arrow-left "></i></a>
+
+                     <a href="javascript:void(0)" class="px-3">1</a>
+                        <a href="javascript:void(0)" class="px-3">2</a>
+
+                   <a href="javascript:void(0)"> <i class="fa fa-long-arrow-right"></i></a>
+                </div>
+                
+            </div>
+                        </div>
+                        <div class="tab-pane fade" id="rally" role="tabpanel" aria-labelledby="rally-tab">
+                               <div class="row">
+                             <div class="col-lg-4 col-md-6 pt-5">
+                                 <a href="javascript:void(0)">
+                                 <div class="box-shadow-date text-center p-3 h-100">
+                                     <picture>
+                                         <source srcset="https://www.bankersheart.com/assets/img/events-bankers-img-1.webp" type="image/webp">
+                                         <source srcset="https://www.bankersheart.com/assets/img/events-bankers-img-1.png" type="image/png">
+                                         <img class="img-fluid  rounded-4" src="https://www.bankersheart.com/assets/img/events-bankers-img-1.png" alt="Blog-details">
+                                     </picture>
+                                     <div class="pb-4">
+                                         <h6 class="pt-3  clr-black fw-semibold clamped-text">Republic Day Celebration at Bankers Group</h6>
+                                         <div class="mt-4"><a href="javascript:void(0)" class="btn-theme btn-blue">Know More</a></div>
+                                     
+                                     </div>
+                                     
+                                 </div>
+
+                                     </a>
+                             </div>
+                             <div class="col-lg-4 col-md-6 pt-5">
+                                 <a href="javascript:void(0)">
+                                 <div class="box-shadow-date text-center p-3 h-100">
+                                     <picture>
+                                         <source srcset="https://www.bankersheart.com/assets/img/events-bankers-img-2.webp" type="image/webp">
+                                         <source srcset="https://www.bankersheart.com/assets/img/events-bankers-img-2.png" type="image/png">
+                                         <img class="img-fluid  rounded-4" src="https://www.bankersheart.com/assets/img/events-bankers-img-2.png" alt="Blog-details">
+                                     </picture>
+                                     <div class="pb-4">
+                                         <h6 class="pt-3 clr-black fw-semibold clamped-text">Chappan Bhog celebration on the occasion of Ganesh - Mahotsav</h6>
+                                     <div class="mt-4"><a href="javascript:void(0)" class="btn-theme btn-blue">Know More</a></div>
+                                     </div>
+                                     
+                                 </div>
+
+                                     </a>
+                             </div>
+                             <div class="col-lg-4 col-md-6 pt-5">
+                                 <a href="javascript:void(0)">
+                                 <div class="box-shadow-date text-center p-3 h-100">
+                                     <picture>
+                                         <source srcset="https://www.bankersheart.com/assets/img/blog-3-img.webp" type="image/webp">
+                                         <source srcset="https://www.bankersheart.com/assets/img/blog-3-img.png" type="image/png">
+                                         <img class="img-fluid  rounded-4" src="https://www.bankersheart.com/assets/img/blog-3-img.png" alt="Blog-details">
+                                     </picture>
+                                     <div class="pb-4">
+                                         <h6 class="pt-3 clr-black fw-semibold clamped-text">Celebrating Dr. Darshan Bankers Birthday at Bankers 
+                                             Group of Hospitals ay at Bankers Group of Hospital Group of Hospitals ay at Bankers Group of Hospital  Group of Hospital Group of Hospitals ay at Bankers Group </h6>
+                                    <div class="mt-4"><a href="javascript:void(0)" class="btn-theme btn-blue">Know More</a></div>
+                                     </div>
+                                     
+                                 </div>
+
+                                     </a>
+                             </div>
+                               <div class="col-lg-4 col-md-6 pt-5">
+                                 <a href="javascript:void(0)">
+                                 <div class="box-shadow-date text-center p-3 h-100">
+                                     <picture>
+                                         <source srcset="https://www.bankersheart.com/assets/img/events-bankers-img-1.webp" type="image/webp">
+                                         <source srcset="https://www.bankersheart.com/assets/img/events-bankers-img-1.png" type="image/png">
+                                         <img class="img-fluid  rounded-4" src="https://www.bankersheart.com/assets/img/events-bankers-img-1.png" alt="Blog-details">
+                                     </picture>
+                                     <div class="pb-4">
+                                         <h6 class="pt-3  clr-black fw-semibold clamped-text">Republic Day Celebration at Bankers Group</h6>
+                                         <div class="mt-4"><a href="javascript:void(0)" class="btn-theme btn-blue">Know More</a></div>
+                                     
+                                     </div>
+                                     
+                                 </div>
+
+                                     </a>
+                             </div>
+                             <div class="col-lg-4 col-md-6 pt-5">
+                                 <a href="javascript:void(0)">
+                                 <div class="box-shadow-date text-center p-3 h-100">
+                                     <picture>
+                                         <source srcset="https://www.bankersheart.com/assets/img/events-bankers-img-2.webp" type="image/webp">
+                                         <source srcset="https://www.bankersheart.com/assets/img/events-bankers-img-2.png" type="image/png">
+                                         <img class="img-fluid  rounded-4" src="https://www.bankersheart.com/assets/img/events-bankers-img-2.png" alt="Blog-details">
+                                     </picture>
+                                     <div class="pb-4">
+                                         <h6 class="pt-3 clr-black fw-semibold clamped-text">Chappan Bhog celebration on the occasion of Ganesh - Mahotsav</h6>
+                                     <div class="mt-4"><a href="javascript:void(0)" class="btn-theme btn-blue">Know More</a></div>
+                                     </div>
+                                     
+                                 </div>
+
+                                     </a>
+                             </div>
+                             <div class="col-lg-4 col-md-6 pt-5">
+                                 <a href="javascript:void(0)">
+                                 <div class="box-shadow-date text-center p-3 h-100">
+                                     <picture>
+                                         <source srcset="https://www.bankersheart.com/assets/img/blog-3-img.webp" type="image/webp">
+                                         <source srcset="https://www.bankersheart.com/assets/img/blog-3-img.png" type="image/png">
+                                         <img class="img-fluid  rounded-4" src="https://www.bankersheart.com/assets/img/blog-3-img.png" alt="Blog-details">
+                                     </picture>
+                                     <div class="pb-4">
+                                         <h6 class="pt-3 clr-black fw-semibold clamped-text">Celebrating Dr. Darshan Bankers Birthday at Bankers 
+                                             Group of Hospitals ay at Bankers Group of Hospital Group of Hospitals ay at Bankers Group of Hospital  Group of Hospital Group of Hospitals ay at Bankers Group </h6>
+                                    <div class="mt-4"><a href="javascript:void(0)" class="btn-theme btn-blue">Know More</a></div>
+                                     </div>
+                                     
+                                 </div>
+
+                                     </a>
+                             </div>
+                         </div>
+
+                            <div class="row pt-5 mt-3 justify-content-center text-center">
+              
+                    <div class="col-12 carousal-arrow">
+                    <a href="javascript:void(0)" ><i class="fa fa-long-arrow-left "></i></a>
+
+                     <a href="javascript:void(0)" class="px-3">1</a>
+                        <a href="javascript:void(0)" class="px-3">2</a>
+
+                   <a href="javascript:void(0)"> <i class="fa fa-long-arrow-right"></i></a>
+                </div>
+                
+            </div>
+                        </div>
+                        <div class="tab-pane fade" id="conference" role="tabpanel" aria-labelledby="conference">
+                              <div class="row">
+                             <div class="col-lg-4 col-md-6 pt-5">
+                                 <a href="javascript:void(0)">
+                                 <div class="box-shadow-date text-center p-3 h-100">
+                                     <picture>
+                                         <source srcset="https://www.bankersheart.com/assets/img/events-bankers-img-1.webp" type="image/webp">
+                                         <source srcset="https://www.bankersheart.com/assets/img/events-bankers-img-1.png" type="image/png">
+                                         <img class="img-fluid  rounded-4" src="https://www.bankersheart.com/assets/img/events-bankers-img-1.png" alt="Blog-details">
+                                     </picture>
+                                     <div class="pb-4">
+                                         <h6 class="pt-3  clr-black fw-semibold clamped-text">Republic Day Celebration at Bankers Group</h6>
+                                         <div class="mt-4"><a href="javascript:void(0)" class="btn-theme btn-blue">Know More</a></div>
+                                     
+                                     </div>
+                                     
+                                 </div>
+
+                                     </a>
+                             </div>
+                             <div class="col-lg-4 col-md-6 pt-5">
+                                 <a href="javascript:void(0)">
+                                 <div class="box-shadow-date text-center p-3 h-100">
+                                     <picture>
+                                         <source srcset="https://www.bankersheart.com/assets/img/events-bankers-img-2.webp" type="image/webp">
+                                         <source srcset="https://www.bankersheart.com/assets/img/events-bankers-img-2.png" type="image/png">
+                                         <img class="img-fluid  rounded-4" src="https://www.bankersheart.com/assets/img/events-bankers-img-2.png" alt="Blog-details">
+                                     </picture>
+                                     <div class="pb-4">
+                                         <h6 class="pt-3 clr-black fw-semibold clamped-text">Chappan Bhog celebration on the occasion of Ganesh - Mahotsav</h6>
+                                     <div class="mt-4"><a href="javascript:void(0)" class="btn-theme btn-blue">Know More</a></div>
+                                     </div>
+                                     
+                                 </div>
+
+                                     </a>
+                             </div>
+                             <div class="col-lg-4 col-md-6 pt-5">
+                                 <a href="javascript:void(0)">
+                                 <div class="box-shadow-date text-center p-3 h-100">
+                                     <picture>
+                                         <source srcset="https://www.bankersheart.com/assets/img/blog-3-img.webp" type="image/webp">
+                                         <source srcset="https://www.bankersheart.com/assets/img/blog-3-img.png" type="image/png">
+                                         <img class="img-fluid  rounded-4" src="https://www.bankersheart.com/assets/img/blog-3-img.png" alt="Blog-details">
+                                     </picture>
+                                     <div class="pb-4">
+                                         <h6 class="pt-3 clr-black fw-semibold clamped-text">Celebrating Dr. Darshan Bankers Birthday at Bankers 
+                                             Group of Hospitals ay at Bankers Group of Hospital Group of Hospitals ay at Bankers Group of Hospital  Group of Hospital Group of Hospitals ay at Bankers Group </h6>
+                                    <div class="mt-4"><a href="javascript:void(0)" class="btn-theme btn-blue">Know More</a></div>
+                                     </div>
+                                     
+                                 </div>
+
+                                     </a>
+                             </div>
+                               <div class="col-lg-4 col-md-6 pt-5">
+                                 <a href="javascript:void(0)">
+                                 <div class="box-shadow-date text-center p-3 h-100">
+                                     <picture>
+                                         <source srcset="https://www.bankersheart.com/assets/img/events-bankers-img-1.webp" type="image/webp">
+                                         <source srcset="https://www.bankersheart.com/assets/img/events-bankers-img-1.png" type="image/png">
+                                         <img class="img-fluid  rounded-4" src="https://www.bankersheart.com/assets/img/events-bankers-img-1.png" alt="Blog-details">
+                                     </picture>
+                                     <div class="pb-4">
+                                         <h6 class="pt-3  clr-black fw-semibold clamped-text">Republic Day Celebration at Bankers Group</h6>
+                                         <div class="mt-4"><a href="javascript:void(0)" class="btn-theme btn-blue">Know More</a></div>
+                                     
+                                     </div>
+                                     
+                                 </div>
+
+                                     </a>
+                             </div>
+                             <div class="col-lg-4 col-md-6 pt-5">
+                                 <a href="javascript:void(0)">
+                                 <div class="box-shadow-date text-center p-3 h-100">
+                                     <picture>
+                                         <source srcset="https://www.bankersheart.com/assets/img/events-bankers-img-2.webp" type="image/webp">
+                                         <source srcset="https://www.bankersheart.com/assets/img/events-bankers-img-2.png" type="image/png">
+                                         <img class="img-fluid  rounded-4" src="https://www.bankersheart.com/assets/img/events-bankers-img-2.png" alt="Blog-details">
+                                     </picture>
+                                     <div class="pb-4">
+                                         <h6 class="pt-3 clr-black fw-semibold clamped-text">Chappan Bhog celebration on the occasion of Ganesh - Mahotsav</h6>
+                                     <div class="mt-4"><a href="javascript:void(0)" class="btn-theme btn-blue">Know More</a></div>
+                                     </div>
+                                     
+                                 </div>
+
+                                     </a>
+                             </div>
+                             <div class="col-lg-4 col-md-6 pt-5">
+                                 <a href="javascript:void(0)">
+                                 <div class="box-shadow-date text-center p-3 h-100">
+                                     <picture>
+                                         <source srcset="https://www.bankersheart.com/assets/img/blog-3-img.webp" type="image/webp">
+                                         <source srcset="https://www.bankersheart.com/assets/img/blog-3-img.png" type="image/png">
+                                         <img class="img-fluid  rounded-4" src="https://www.bankersheart.com/assets/img/blog-3-img.png" alt="Blog-details">
+                                     </picture>
+                                     <div class="pb-4">
+                                         <h6 class="pt-3 clr-black fw-semibold clamped-text">Celebrating Dr. Darshan Bankers Birthday at Bankers 
+                                             Group of Hospitals ay at Bankers Group of Hospital Group of Hospitals ay at Bankers Group of Hospital  Group of Hospital Group of Hospitals ay at Bankers Group </h6>
+                                    <div class="mt-4"><a href="javascript:void(0)" class="btn-theme btn-blue">Know More</a></div>
+                                     </div>
+                                     
+                                 </div>
+
+                                     </a>
+                             </div>
+                         </div>
+
+                            <div class="row pt-5 mt-3 justify-content-center text-center">
+              
+                    <div class="col-12 carousal-arrow">
+                    <a href="javascript:void(0)" ><i class="fa fa-long-arrow-left "></i></a>
+
+                     <a href="javascript:void(0)" class="px-3">1</a>
+                        <a href="javascript:void(0)" class="px-3">2</a>
+
+                   <a href="javascript:void(0)"> <i class="fa fa-long-arrow-right"></i></a>
+                </div>
+                
+            </div>
+                        </div>
+                        <div class="tab-pane fade" id="card" role="tabpanel" aria-labelledby="card-tab">
+                            <div class="row justify-content-center d-flex pt-5">
+                                <div class="col-lg-10">
+                                    <div class="text-center">
+
+                                    
+                                    <picture>
+                                        <source srcset="https://www.bankersheart.com/assets/img/Cardcon.webp" type="image/webp">
+                                        <source srcset="https://www.bankersheart.com/assets/img/Cardcon.jpg" type="image/png">
+                                        <img class="img-fluid  rounded-4" src="https://www.bankersheart.com/assets/img/Cardcon.jpg" alt="Blog-details">
+                                    </picture>
+                                        </div>
+                                    <p class="pt-3"><b>Banker's Group Of Hospitals</b> is successfuly organizing Cardiac Conferences since 2005.
+                                        This is our humble attempt towards clinical cardiology training and updates.</p>
+                                    <p><b>The Bankers Group of Hospitals</b> has been organizing a symposium to discuss various cardiological advances,
+                                        as well as challenges, since many years. The aim of this Cardiological Conference is to provide a platform
+                                        for cardiologists, cardiac surgeons and doctors of other specialities to deliberate over various topics pertaining 
+                                        to cardiac health.</p>
+                                    <p><b>The CardCon 2015</b> aimed at studying the gaps in clinical cardiology and trying to arrive at a 
+                                        solution to bridge those gaps. This year's conference was attended by over 650 doctors from Gujarat, Madhya Pradesh and Uttar Pradesh. 
+                                        The conference covered basic subjects like emergencies, ECGs, Echocardiography and the daily clinical challenges faced by the surgeons.
+                                        Renowned surgeons and doctors shared their real life experiences and learnings with other participants of the conference.
+                                        The enthused crowd appreciated each session organized by the hospital and there were lively discussions throughout the conference.</p>
+                                    <p>This year's CardCon felicitated Dr Darshan Banker and his outstanding academic performance. It is a matter
+                                        of great pride for us that his article has been published in the most prestigious medical journal, The New 
+                                        England Journal of Medicine.</p>
+                                </div>
+                            </div>
+
+                            
+                        </div>
+
+
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="extrajs" runat="server">
+</asp:Content>

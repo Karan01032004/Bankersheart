@@ -1,0 +1,53 @@
+﻿using bankersheart.App_Code;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace bankersheart
+{
+    public partial class news_at_bankers_details : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!IsPostBack)
+            {
+                if (Request.QueryString["id"] != null)
+                {
+                    rptExhibitions.DataSource = null;
+                    rptExhibitions.DataBind();
+                    Bindexhibition();
+                }
+                else
+                {
+                    Response.Redirect("default.aspx");
+                }
+            }
+        }
+
+        private void Bindexhibition()
+        {
+            string query = "SELECT e.id AS NewsatBankersId,e.title,e.description,e.shortdescription,e.NewsatBankers_Date,i.image AS NewsatBankersImage " +
+                "FROM [bankers_usr].[NewsatBankers] e " +
+                "LEFT JOIN [bankers_usr].[NewsatBankers_Images] i ON e.id = i.NewsatBankers_id " +
+                "WHERE e.id =" + Request.QueryString["id"];  // Ensure only images for the correct exhibition are retrieved
+
+            DataTable dt = new DAL().GetDataTable(query, CommandType.Text, null);
+
+            // Bind data to the Repeater
+            rptExhibitions.DataSource = dt;
+            rptExhibitions.DataBind();
+
+            // Display the description if data exists
+            if (dt.Rows.Count > 0)
+            {
+                lblCampDescription.Text = dt.Rows[0]["description"].ToString();
+            }
+        }
+
+
+    }
+}

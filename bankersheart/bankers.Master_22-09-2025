@@ -1,0 +1,265 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="bankers.master.cs" Inherits="bankersheart.bankers" %>
+
+
+<%@ Register Src="~/includes/footer.ascx" TagPrefix="uc1" TagName="footer" %>
+<%@ Register Src="~/includes/header.ascx" TagPrefix="uc1" TagName="header" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bankers</title>
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Bankers Group of Hospitals" />
+    <meta name="publisher" content="Bankers Group of Hospitals" />
+    <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <meta name="google-site-verification" content="6A93wirj9lBDlE1gdq4V7WtRcI80vZQxz1Ur7bkfvvo" /> 
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <%--<link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">--%>
+    <link href="https://www.bankersheart.com/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="https://www.bankersheart.com/assets/css/base.css" rel="stylesheet" />
+    <link href="https://www.bankersheart.com/assets/animation/aos.css" rel="stylesheet" />
+    <link href="https://www.bankersheart.com/assets/css/owl.carousel.min.css" rel="stylesheet" />
+    <link href="https://www.bankersheart.com/assets/css/owl.theme.default.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" rel="stylesheet" />
+
+     <script type="application/ld+json">
+{
+
+  "@context": "https://schema.org",
+
+  "@type": "WebSite",
+
+  "name" : "Bankers Heart",
+
+  "url": "https://www.bankersheart.com/",
+
+  "headline" : "Cardiac Hospital in Vadodara",
+
+  "keywords" : ["cardiac hospital", "Best Cardiac Care Centre in Vadodara", "Cardiology Hospital in Gujarat", "Heart Transplant Hospital in Vadodara", "Heart transplant Hospital in Vadodara", "Urgent heart treatment hospital in Baroda", "24/7 heart hospital near me", "Immediate heart surgeon near me","Heart hospital with icu in Gujarat"], 
+
+  
+
+  "about" : {
+
+    "@type" : "LocalBusiness",
+
+    "name" : "Bankers Heart",
+
+    "logo" : "https://www.bankersheart.com/assets/img/bankers-logo.webp",
+"image" : "https://www.bankersheart.com/assets/img/bankers-logo.webp",
+    
+"address": {
+"@type": "PostalAddress",
+"addressLocality": "Vadodara",
+"addressRegion": "Gujarat",
+"streetAddress": "Old Padra Rd, near Tagore Nagar, Sukrutinagar, Diwalipura",
+"postalCode": "390007"
+},
+ "telephone" : "265 260 7777",
+ "priceRange" : "on enquiry only",
+          "geo": {
+
+    "@type": "GeoCoordinates",
+
+    "latitude": "22.3152",
+
+    "longitude": "73.1818"
+
+  },
+          "openingHoursSpecification": [
+
+    {
+
+      "@type": "OpeningHoursSpecification",
+
+      "dayOfWeek": [
+
+        "Monday",
+
+        "Tuesday",
+
+        "Wednesday",
+
+        "Thursday",
+
+        "Friday",
+
+        "Saturday",
+
+        "Sunday"
+
+      ],
+
+      "opens": "24:00"
+
+    }
+
+  ],
+
+          
+
+  "contactPoint" : 
+
+    [    
+
+    {
+
+      "@type" : "ContactPoint",
+
+      "contactType" : "Sales",
+
+      "telephone" : "265 260 7777"
+
+      }     
+
+    ],
+
+      "email": "info@bankersheart.com",
+
+      "sameAs" : [ "https://www.facebook.com/bankersgroupofhospitals?rdid=r4VXcvtjwqlgvd2M&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1A8k39GqKf%2F#"],
+
+
+      "url" : "https://www.bankersheart.com/"
+
+    } 
+
+  }
+</script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    
+<!-- Google tag (gtag.js) -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MC5F4YCSL8"></script>
+
+<script>
+
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() { dataLayer.push(arguments); }
+
+    gtag('js', new Date())
+
+    gtag('config', 'G-MC5F4YCSL8');
+
+</script>
+
+</head>
+<body>
+    <div class="ambulane-icon">
+        <a href="tel: +91 265 2324004">
+            <div class=" mb-3">
+                <img src="https://www.bankersheart.com/assets/img/ambulance-gif.gif" class="img-fluid" alt="ambulance" height="110" width="110" />
+
+            </div>
+        </a>
+    </div>
+    <div class="sticky-social-icon">
+
+        <a href="https://www.facebook.com/share/1A8k39GqKf/" target="_blank">
+            <div class="icon-bg mb-3">
+                <i class="fa fa-facebook text-white fs-4" aria-hidden="true"></i>
+            </div>
+        </a>
+        <a href="https://www.instagram.com/bankersgroupofhospitals?igsh=MXhzcHd6OHFlMzRjcA==" target="_blank">
+            <div class="icon-bg mb-3">
+                <i class="fa fa-instagram text-white fs-4" aria-hidden="true"></i>
+            </div>
+        </a>
+        <a href="https://www.linkedin.com/school/bankers-heart-institute/posts/?feedView=all" target="_blank">
+            <div class="icon-bg mb-3">
+                <i class="fa fa-linkedin text-white fs-4" aria-hidden="true"></i>
+            </div>
+        </a>
+       <%-- <a href="" target="_blank">
+            <div class="icon-bg mb-3">
+                <i class="fa fa-search text-white fs-4" aria-hidden="true"></i>
+            </div>
+        </a>--%>
+    </div>
+
+    <form id="form1" runat="server">
+        <uc1:header runat="server" ID="header" />
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+        </asp:ContentPlaceHolder>
+        <uc1:footer runat="server" ID="footer" />
+    </form>
+    <script src="https://www.bankersheart.com/assets/js/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <%--  <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>--%>
+    <script src="https://www.bankersheart.com/assets/animation/aos.js"></script>
+    <script src="https://www.bankersheart.com/assets/js/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <%-- <script>
+        window.addEventListener("scroll", function () {
+            const navbar = document.querySelector(".navbar");
+            if (window.scrollY > 120) {
+                navbar.classList.add("fixed");
+            } else {
+                navbar.classList.remove("fixed");
+            }
+        });
+    </script>--%>
+    <script>
+        var current_url = window.location.pathname.substring(window.location.pathname.lastIndexOf('/') + 1);
+
+        jQuery(function ($) {
+            var path = window.location.href;
+
+            $(".home_default").removeClass('active');
+
+            $('.nav-link, .dropdown-item ,#footer ul li a').each(function () {
+                if (this.href === path) {
+                    $(this).addClass('active');
+                    $(this).closest('.dropdown').find('.dropdown-toggle').addClass('active');
+                }
+            });
+
+            if (current_url === '') {
+                $(".home_link").addClass('active');
+            }
+        });
+    </script>
+    <%--    <script>
+        window.addEventListener("scroll", function () {
+            let header = document.getElementById("header");
+            if (window.scrollY > 50) {
+                header.classList.add("sticky", "active");
+            } else {
+                header.classList.remove("sticky", "active");
+            }
+        });
+    </script>--%>
+    <script>
+        Fancybox.bind("[data-fancybox]", {
+            // Your custom options
+        });
+    </script>
+    <asp:ContentPlaceHolder ID="extrajs" runat="server">
+    </asp:ContentPlaceHolder>
+</body>
+</html>

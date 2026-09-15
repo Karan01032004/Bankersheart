@@ -1,0 +1,84 @@
+D:\Priti\Bankersheart\bankersheart\bankersheart\obj\Debug\bankersheart.csproj.AssemblyReference.cache
+D:\Priti\Bankersheart\bankersheart\bankersheart\obj\Debug\bankersheart.csproj.CoreCompileInputs.cache
+D:\Priti\Bankersheart\bankersheart\bankersheart\bin\bankersheart.dll.config
+D:\Priti\Bankersheart\bankersheart\bankersheart\bin\bankersheart.dll
+D:\Priti\Bankersheart\bankersheart\bankersheart\bin\bankersheart.pdb
+D:\Priti\Bankersheart\bankersheart\bankersheart\bin\roslyn\csc.exe
+D:\Priti\Bankersheart\bankersheart\bankersheart\bin\roslyn\csc.exe.config
+D:\Priti\Bankersheart\bankersheart\bankersheart\bin\roslyn\csc.rsp
+D:\Priti\Bankersheart\bankersheart\bankersheart\bin\roslyn\csi.exe
+D:\Priti\Bankersheart\bankersheart\bankersheart\bin\roslyn\csi.exe.config
+D:\Priti\Bankersheart\bankersheart\bankersheart\bin\roslyn\csi.rsp
+D:\Priti\Bankersheart\bankersheart\bankersheart\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Priti\Bankersheart\bankersheart\bankersheart\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Priti\Bankersheart\bankersheart\bankersheart\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Priti\Bankersheart\bankersheart\bankersheart\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Priti\Bankersheart\bankersheart\bankersheart\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Priti\Bankersheart\bankersheart\bankersheart\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Priti\Bankersheart\bankersheart\bankersheart\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Priti\Bankersheart\bankersheart\bankersheart\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Priti\Bankersheart\bankersheart\bankersheart\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Priti\Bankersheart\bankersheart\bankersheart\bin\roslyn\Microsoft.Managed.Core.CurrentVersions.targets
+D:\Priti\Bankersheart\bankersheart\bankersheart\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Priti\Bankersheart\bankersheart\bankersheart\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Priti\Bankersheart\bankersheart\bankersheart\bin\roslyn\System.Buffers.dll
+D:\Priti\Bankersheart\bankersheart\bankersheart\bin\roslyn\System.Collections.Immutable.dll
+D:\Priti\Bankersheart\bankersheart\bankersheart\bin\roslyn\System.Memory.dll
+D:\Priti\Bankersheart\bankersheart\bankersheart\bin\roslyn\System.Numerics.Vectors.dll
+D:\Priti\Bankersheart\bankersheart\bankersheart\bin\roslyn\System.Reflection.Metadata.dll
+D:\Priti\Bankersheart\bankersheart\bankersheart\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+D:\Priti\Bankersheart\bankersheart\bankersheart\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Priti\Bankersheart\bankersheart\bankersheart\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\Priti\Bankersheart\bankersheart\bankersheart\bin\roslyn\vbc.exe
+D:\Priti\Bankersheart\bankersheart\bankersheart\bin\roslyn\vbc.exe.config
+D:\Priti\Bankersheart\bankersheart\bankersheart\bin\roslyn\vbc.rsp
+D:\Priti\Bankersheart\bankersheart\bankersheart\bin\roslyn\VBCSCompiler.exe
+D:\Priti\Bankersheart\bankersheart\bankersheart\bin\roslyn\VBCSCompiler.exe.config
+D:\Priti\Bankersheart\bankersheart\bankersheart\bin\System.ValueTuple.dll
+D:\Priti\Bankersheart\bankersheart\bankersheart\bin\System.Memory.dll
+D:\Priti\Bankersheart\bankersheart\bankersheart\bin\System.Numerics.Vectors.dll
+D:\Priti\Bankersheart\bankersheart\bankersheart\obj\Debug\bankersh.82D985E9.Up2Date
+D:\Priti\Bankersheart\bankersheart\bankersheart\obj\Debug\bankersheart.dll
+D:\Priti\Bankersheart\bankersheart\bankersheart\obj\Debug\bankersheart.pdb
+C:\Drashti Backup\2026\New\working_banker\working_banker\Bankersheart\bankersheart\bankersheart\bin\bankersheart.dll.config
+C:\Drashti Backup\2026\New\working_banker\working_banker\Bankersheart\bankersheart\bankersheart\bin\bankersheart.dll
+C:\Drashti Backup\2026\New\working_banker\working_banker\Bankersheart\bankersheart\bankersheart\bin\bankersheart.pdb
+C:\Drashti Backup\2026\New\working_banker\working_banker\Bankersheart\bankersheart\bankersheart\bin\roslyn\csc.exe
+C:\Drashti Backup\2026\New\working_banker\working_banker\Bankersheart\bankersheart\bankersheart\bin\roslyn\csc.exe.config
+C:\Drashti Backup\2026\New\working_banker\working_banker\Bankersheart\bankersheart\bankersheart\bin\roslyn\csc.rsp
+C:\Drashti Backup\2026\New\working_banker\working_banker\Bankersheart\bankersheart\bankersheart\bin\roslyn\csi.exe
+C:\Drashti Backup\2026\New\working_banker\working_banker\Bankersheart\bankersheart\bankersheart\bin\roslyn\csi.exe.config
+C:\Drashti Backup\2026\New\working_banker\working_banker\Bankersheart\bankersheart\bankersheart\bin\roslyn\csi.rsp
+C:\Drashti Backup\2026\New\working_banker\working_banker\Bankersheart\bankersheart\bankersheart\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Drashti Backup\2026\New\working_banker\working_banker\Bankersheart\bankersheart\bankersheart\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Drashti Backup\2026\New\working_banker\working_banker\Bankersheart\bankersheart\bankersheart\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Drashti Backup\2026\New\working_banker\working_banker\Bankersheart\bankersheart\bankersheart\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Drashti Backup\2026\New\working_banker\working_banker\Bankersheart\bankersheart\bankersheart\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Drashti Backup\2026\New\working_banker\working_banker\Bankersheart\bankersheart\bankersheart\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Drashti Backup\2026\New\working_banker\working_banker\Bankersheart\bankersheart\bankersheart\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Drashti Backup\2026\New\working_banker\working_banker\Bankersheart\bankersheart\bankersheart\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Drashti Backup\2026\New\working_banker\working_banker\Bankersheart\bankersheart\bankersheart\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Drashti Backup\2026\New\working_banker\working_banker\Bankersheart\bankersheart\bankersheart\bin\roslyn\Microsoft.Managed.Core.CurrentVersions.targets
+C:\Drashti Backup\2026\New\working_banker\working_banker\Bankersheart\bankersheart\bankersheart\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Drashti Backup\2026\New\working_banker\working_banker\Bankersheart\bankersheart\bankersheart\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Drashti Backup\2026\New\working_banker\working_banker\Bankersheart\bankersheart\bankersheart\bin\roslyn\System.Buffers.dll
+C:\Drashti Backup\2026\New\working_banker\working_banker\Bankersheart\bankersheart\bankersheart\bin\roslyn\System.Collections.Immutable.dll
+C:\Drashti Backup\2026\New\working_banker\working_banker\Bankersheart\bankersheart\bankersheart\bin\roslyn\System.Memory.dll
+C:\Drashti Backup\2026\New\working_banker\working_banker\Bankersheart\bankersheart\bankersheart\bin\roslyn\System.Numerics.Vectors.dll
+C:\Drashti Backup\2026\New\working_banker\working_banker\Bankersheart\bankersheart\bankersheart\bin\roslyn\System.Reflection.Metadata.dll
+C:\Drashti Backup\2026\New\working_banker\working_banker\Bankersheart\bankersheart\bankersheart\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+C:\Drashti Backup\2026\New\working_banker\working_banker\Bankersheart\bankersheart\bankersheart\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Drashti Backup\2026\New\working_banker\working_banker\Bankersheart\bankersheart\bankersheart\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Drashti Backup\2026\New\working_banker\working_banker\Bankersheart\bankersheart\bankersheart\bin\roslyn\vbc.exe
+C:\Drashti Backup\2026\New\working_banker\working_banker\Bankersheart\bankersheart\bankersheart\bin\roslyn\vbc.exe.config
+C:\Drashti Backup\2026\New\working_banker\working_banker\Bankersheart\bankersheart\bankersheart\bin\roslyn\vbc.rsp
+C:\Drashti Backup\2026\New\working_banker\working_banker\Bankersheart\bankersheart\bankersheart\bin\roslyn\VBCSCompiler.exe
+C:\Drashti Backup\2026\New\working_banker\working_banker\Bankersheart\bankersheart\bankersheart\bin\roslyn\VBCSCompiler.exe.config
+C:\Drashti Backup\2026\New\working_banker\working_banker\Bankersheart\bankersheart\bankersheart\bin\System.ValueTuple.dll
+C:\Drashti Backup\2026\New\working_banker\working_banker\Bankersheart\bankersheart\bankersheart\bin\System.Memory.dll
+C:\Drashti Backup\2026\New\working_banker\working_banker\Bankersheart\bankersheart\bankersheart\bin\System.Numerics.Vectors.dll
+C:\Drashti Backup\2026\New\working_banker\working_banker\Bankersheart\bankersheart\bankersheart\obj\Debug\bankersheart.csproj.AssemblyReference.cache
+C:\Drashti Backup\2026\New\working_banker\working_banker\Bankersheart\bankersheart\bankersheart\obj\Debug\bankersheart.csproj.CoreCompileInputs.cache
+C:\Drashti Backup\2026\New\working_banker\working_banker\Bankersheart\bankersheart\bankersheart\obj\Debug\bankersh.82D985E9.Up2Date
+C:\Drashti Backup\2026\New\working_banker\working_banker\Bankersheart\bankersheart\bankersheart\obj\Debug\bankersheart.dll
+C:\Drashti Backup\2026\New\working_banker\working_banker\Bankersheart\bankersheart\bankersheart\obj\Debug\bankersheart.pdb

@@ -1,0 +1,84 @@
+﻿<%@ Page Title="PGDCC & DNB Programs | Bankers Heart Institute" Language="C#" MasterPageFile="~/bankers.Master" AutoEventWireup="true" CodeBehind="pgdcc.aspx.cs" Inherits="bankersheart.pgdcc" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <meta name="keywords" content="PGDCC, Non-Invasive Cardiology, Fellowship, Texila American University, Bankers Heart Institute, Vadodara, Cardiology Training, MBBS, Clinical Cardiology, Cardiovascular Diseases, Medical Education, Gujarat" />
+    <meta name="description" content="Bankers Heart Institute offers a Fellowship in Non-Invasive Cardiology (PGDCC) approved by Texila American University and a DNB super-specialty course in Cardiology, providing advanced training for medical graduates.">
+    <link rel="canonical" href="https://www.bankersheart.com/pgdcc" />
+    <style>
+        @media(min-width:992px) {
+            #hospital-details .inner-img-2 {
+                float: right;
+                width: 40%;
+                min-width: 300px;
+                margin-left: 90px;
+            }
+        }
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+    <section id="inner-banner" class="content-down">
+        <div class="container">
+            <div class="row">
+                <div class="banner-heading">
+                    <h1 class="sr-only">DNB Cardiolog</h1>
+
+                    <h2 class="text-white text-center mb-0">PGDCC, DNB Cardiology</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="hospital-details" class="pt-5">
+        <div class="container py-lg-4">
+            <div class="blog-container text-lg-start text-center pt-lg-3">
+                <h2 class="clr-black fw-bold d-lg-none d-block pb-lg-0 pb-3">PGDCC</h2>
+                <div class="inner-img inner-img-2">
+                    <picture>
+                        <source srcset="https://www.bankersheart.com/assets/img/pgdcc-img.webp" type="image/webp">
+                        <source srcset="https://www.bankersheart.com/assets/img/pgdcc-img.png" type="image/png">
+                        <img class="img-fluid  rounded-4 mb-4" src="https://www.bankersheart.com/assets/img/pgdcc-img.png" alt="Blog-details">
+                    </picture>
+                </div>
+                <div class="blogs-content">
+                    <h2 class="clr-black fw-bold d-lg-block d-none">PGDCC.</h2>
+
+
+                    <ul class="ps-4">
+                        <li>Bankers Heart Institute is approved by Taxila American University for Fellowship in Non-Invasive Cardiology.</li>
+                        <li>Main objective of the course is to train large number of medical graduates in clinical cardiology to deal effectively with early recognition, management and prevention of common cardiovascular diseases(Non invasive Cardiology).</li>
+                        <li>Eligibility: MBBS (MCI recognized).</li>
+                        <li>Duration: 2 years.</li>
+                        <li>Fees as per guidelines of Texila American University.</li>
+                    </ul>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </section>
+
+    <div id="dbd">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="clr-black fw-semibold">DNB</h2>
+                    <h3></h3>
+                    <h4></h4>
+                    <h5></h5>
+                    <ul style="list-style: disc;" class="ps-4">
+                        <li>Bankers Heart Institute is the first hospital in Vadodara and third hospital 
+                            in Gujarat to have been recognized by the National Board of Examinations for a super 
+                            specialty course in Cardiology. It is indeed a feather in the cap of this institute to 
+                            have achieved such a reputation in a short span of time.</li>
+                        <li>The National Board notifies that Bankers Heart Institute has achieved top priority status in its field and is equipped with the latest in technology and clinical research. Bankers Heart Institute has been granted the approval for this by DNB.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="extrajs" runat="server">
+</asp:Content>

@@ -1,0 +1,68 @@
+﻿<%@ Page Title="Citizen’s Charter | Bankers Heart Institute" Language="C#" MasterPageFile="~/bankers.Master" AutoEventWireup="true" CodeBehind="citizen-charter.aspx.cs" Inherits="bankersheart.citizen_charter" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+<meta name="keywords" content="patient charter, citizen charter hospital, ethical healthcare, hospital service charter, cardiology hospital Gujarat, Bankers Heart Institute">
+<meta name="description" content="At Bankers Heart Institute, our Citizen Charter guarantees patient rights, transparency, and quality healthcare services.">
+<link rel="canonical" href="https://www.bankersheart.com/citizen-charter" />    <style>
+        @media(min-width:992px){
+             #hospital-details .inner-img-2 {
+   
+  float: right;
+    width: 35%;
+    min-width: 300px;
+    margin-left: 90px;
+}
+        }
+       
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+     <section id="inner-banner" class="content-down">
+        <div class="container">
+            <div class="row">
+                <div class="banner-heading">
+                    <h1 class=sr-only> Bankers Heart Citizen Charter</h1>
+                    <h2 class="text-white text-center mb-0">Citizen’s Charter</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="hospital-details" class="py-5">
+        <div class="container py-lg-4">
+            <div class="blog-container text-lg-start text-center pt-lg-3">
+               <%-- <h2 class="clr-black fw-bold d-lg-none d-block pb-lg-0 pb-3">Citizen’s Charter</h2>--%>
+                <div class="inner-img inner-img-2">
+                      <picture>
+                        <source srcset="assets/img/citizen-charters-img.webp" type="image/webp">
+                        <source srcset="assets/img/citizen-charters-img.png" type="image/png">
+                        <img class="img-fluid  rounded-4 mb-4" src="assets/img/citizen-charters-img.png" alt="Blog-details">
+                    </picture>
+                </div>
+                <div class="blogs-content">
+                   <h2 class="clr-black fw-bold d-lg-block d-none">Citizen’s Charter</h2>
+                   
+                    <p>The Citizen’s Charter is an expression of our commitment towards improving our services
+                        offered to make them more efficient and responsive and at the same time making our working more 
+                        transparent to our valued patients. This Citizen’s Charter is an attempt to bring the institute
+                        closer to its patients in the society. This Charter is made to provide a framework, which enables 
+                        our users to know:</p>
+                    <ul  class="ps-3">
+                        <li>What services are available in this institute?</li>
+                        <li>The quality of services they are entitled to.</li>
+                        <li>The means through which complaints regarding denial or poor quality of service will be redressed.</li>
+                    </ul>
+                   
+                    <div class="pt-4 mb-lg-0 mb-5">
+                        <a href="assets/pdf/Citizens_Charter.pdf" class="btn-theme btn-blue" download="">Download PDF</a>
+                    </div>
+                  
+                </div>
+                
+                
+            </div>
+
+        </div>
+    </section>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="extrajs" runat="server">
+</asp:Content>

@@ -1,0 +1,105 @@
+﻿using bankersheart.App_Code;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace bankersheart
+{
+    public partial class bankers_heart_institute_surat : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!IsPostBack)
+            {
+                BindAwards();
+                Facilities();
+                Services();
+            }
+        }
+        private void BindAwards()
+        {
+            //string query = @"SELECT id, title, image, description 
+            //   FROM [bankers_usr].[Hospitals] 
+            //   WHERE title = 'Bankers Heart Institute, Surat' 
+            //   ORDER BY added_date DESC";
+
+            string hospitalName = "Bankers Heart Institute, Surat"; // Change this as needed
+
+            string query = $@"SELECT id, title, image, description 
+               FROM [bankers_usr].[Hospitals] 
+               WHERE '|' + title + '|' LIKE '%|{hospitalName}|%' 
+         ORDER BY added_date DESC";
+
+            DataTable dt = new DAL().GetDataTable(query, CommandType.Text, null);
+            if (dt.Rows.Count > 0)
+            {
+                rptHospitals.DataSource = dt;
+                rptHospitals.DataBind();
+            }
+        }
+        private void Facilities()
+        {
+            //string query = @"SELECT id, title, image 
+            //   FROM [bankers_usr].[Facility] 
+            //   WHERE HospitalName = 'Bankers Heart Institute, Surat' 
+            //   ORDER BY added_date DESC";
+
+
+            string hospitalName = "Bankers Heart Institute, Surat"; // Change this as needed
+
+            string query = $@"SELECT id, title, image 
+               FROM [bankers_usr].[Facility] 
+               WHERE '|' + HospitalName + '|' LIKE '%|{hospitalName}|%' 
+         ORDER BY added_date DESC";
+
+            DataTable dt = new DAL().GetDataTable(query, CommandType.Text, null);
+            if (dt.Rows.Count > 0)
+            {
+                rptFacilities.DataSource = dt;
+                rptFacilities.DataBind();
+            }
+        }  
+        //private void Services()
+        //{
+        //    string hospitalName = "Bankers Heart Institute, Surat"; // Change this as needed
+
+        //    string query = $@"SELECT id, title, description 
+        // FROM [bankers_usr].[Service] 
+        // WHERE '|' + HospitalName + '|' LIKE '%|{hospitalName}|%' 
+        // ORDER BY added_date DESC";
+
+
+        //    DataTable dt = new DAL().GetDataTable(query, CommandType.Text, null);
+        //    if (dt.Rows.Count > 0)
+        //    {
+        //        rptServices.DataSource = dt;
+        //        rptServices.DataBind();
+        //    }
+        //}
+        private void Services()
+        {
+            string hospitalName = "Bankers Heart Institute, Surat"; // Change this as needed
+
+            string query = $@"
+        SELECT s.id, 
+               s.description, 
+               sn.title AS ServiceName
+        FROM [bankers_usr].[Service] s
+        LEFT JOIN [bankers_usr].[ServiceName] sn ON s.ServiceNameID = sn.id
+        WHERE '|' + s.HospitalName + '|' LIKE '%|{hospitalName}|%'
+        ORDER BY s.sortorder asc";
+
+            DataTable dt = new DAL().GetDataTable(query, CommandType.Text, null);
+            if (dt.Rows.Count > 0)
+            {
+                rptServices.DataSource = dt;
+                rptServices.DataBind();
+            }
+        }
+
+    }
+}

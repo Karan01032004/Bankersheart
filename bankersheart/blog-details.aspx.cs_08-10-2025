@@ -1,0 +1,65 @@
+﻿using bankersheart.App_Code;
+using MySql.Data.MySqlClient;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace bankersheart
+{
+    public partial class blog_details : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!IsPostBack)
+            {
+                BindBlogDetails();
+            }
+        }
+
+        private void BindBlogDetails()
+        {
+            string id = Request.QueryString["id"];
+            if (!string.IsNullOrEmpty(id))
+            {
+                string query = "SELECT title, description, image FROM [bankers_usr].[BlogManagement] WHERE id = @id";
+                SqlParameter[] parameters = { new SqlParameter("@id", id) }; // Use SqlParameter for SQL Server
+
+                DataTable dt = new DAL().GetDataTable(query, CommandType.Text, parameters);
+
+                if (dt.Rows.Count > 0)
+                {
+                    rpt_data.DataSource = dt;
+                    rpt_data.DataBind();
+
+                    string blogTitle = dt.Rows[0]["title"].ToString();
+                    pageH1.InnerText = blogTitle;
+
+                    // Meta Title
+                    pageTitle.InnerText = blogTitle;
+
+                    // Meta Description
+                    string blogDescription = dt.Rows[0]["description"].ToString();
+                    if (blogDescription.Length > 160)
+                        blogDescription = blogDescription.Substring(0, 157) + "...";
+                    metaDescription.Attributes["content"] = blogDescription;
+
+                    // Canonical URL
+                    canonicalLink.Attributes["href"] = Request.Url.Scheme + "://" + Request.Url.Host + Request.Url.AbsolutePath + "?id=" + id;
+                }
+                else
+                {
+                    pageTitle.InnerText = "Blog Not Found";
+                    metaDescription.Attributes["content"] = "Blog not found.";
+                }
+            }
+        }
+
+
+
+    }
+}

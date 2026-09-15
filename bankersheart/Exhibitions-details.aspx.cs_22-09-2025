@@ -1,0 +1,59 @@
+﻿using bankersheart.App_Code;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace bankersheart
+{
+    public partial class Exhibitions_details : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!IsPostBack)
+            {
+                if (Request.QueryString["id"] != null)
+                {
+                    rptExhibitions.DataSource = null;
+                    rptExhibitions.DataBind();
+                    Bindexhibition();
+                }
+                else
+                {
+                    Response.Redirect("default.aspx");
+                }
+            }
+        }
+
+        private void Bindexhibition()
+        {
+            string query = "SELECT e.id AS ExhibitionId,e.title,e.description,e.Exhibition_Date,i.image AS ExhibitionImage " +
+                "FROM [bankers_usr].[Exhibition] e " +
+                "LEFT JOIN [bankers_usr].[Exhibition_Images] i ON e.id = i.Exhibition_id " +
+                "WHERE e.id =" + Request.QueryString["id"];  // Ensure only images for the correct exhibition are retrieved
+
+            DataTable dt = new DAL().GetDataTable(query, CommandType.Text, null);
+
+            // Bind data to the Repeater
+            rptExhibitions.DataSource = dt;
+            rptExhibitions.DataBind();
+
+            // Display the description if data exists
+            if (dt.Rows.Count > 0)
+            {
+                string exhibitionTitle = dt.Rows[0]["title"].ToString();
+
+                // ✅ Set H1 text (SEO-friendly but hidden visually)
+                pageH1.InnerText = exhibitionTitle;
+
+                lblCampDescription.Text = dt.Rows[0]["description"].ToString();
+            }
+        }
+
+
+    }
+}

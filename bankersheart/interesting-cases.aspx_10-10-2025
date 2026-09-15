@@ -1,0 +1,107 @@
+﻿<%@ Page Title="Innovative Cardiology Cases at Bankers Heart Institute" Language="C#" MasterPageFile="~/bankers.Master" AutoEventWireup="true" CodeBehind="interesting-cases.aspx.cs" Inherits="bankersheart.interesting_cases" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+<meta name="keywords" content="cardiology cases, Bankers Heart Institute, cardiac interventions, innovative heart care, rare heart conditions, cardiology expertise, advanced heart procedures">
+<meta name="description" content="Discover rare and complex cardiology cases treated at Bankers Heart Institute with expert care and innovative techniques.">
+<link rel="canonical" href="https://www.bankersheart.com/interesting-cases" />   
+    <meta property="og:title" content="Interesting Cardiology Cases | Bankers Heart Institute – Rare & Complex Heart Treatments" />
+<meta property="og:description" content="Discover rare and complex cardiology cases treated at Bankers Heart Institute with expert care and innovative techniques." />
+<meta property="og:url" content="https://www.bankersheart.com/interesting-cases" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Bankers Group of Hospitals" />
+<meta property="og:image" content="https://www.bankersheart.com/bankers-group-of-hospitals-og.png" />
+<meta property="og:image:alt" content="Rare & Complex Cardiology Cases – Bankers Heart Institute" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Interesting Cardiology Cases | Bankers Heart Institute – Rare & Complex Heart Treatments" />
+<meta name="twitter:description" content="Discover rare and complex cardiology cases treated at Bankers Heart Institute with expert care and innovative techniques." />
+<meta name="twitter:image" content="https://www.bankersheart.com/bankers-group-of-hospitals-og.png" />
+<meta name="twitter:image:alt" content="Rare & Complex Cardiology Cases – Bankers Heart Institute" />
+<meta name="twitter:site" content="@BankersHospitals" />
+
+    <style>
+    .cases-height{
+        height:250px;
+        object-fit:cover;
+        width:100%;
+
+    }
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+     <section id="inner-banner" class="content-down">
+        <div class="container">
+            <div class="row">
+                <div class="banner-heading">
+                    <h1 class="text-white text-center h2 mb-0">Interesting Cases</h1>
+                    <h2 class="invisible position-absolute">Bankers career in nursing</h2>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="interest-cases">
+        <div class="container">
+            <div class="row py-5">
+                                <asp:Repeater ID="rpt_Exhibitions" runat="server">
+        <ItemTemplate>
+                <div class="col-lg-6 pt-5">
+                    <div class="box-shadow-date p-sm-0 p-2 h-100">
+                        <div class="row align-items-center">
+                            <div class="col-5">
+                              <%--  <a href="assets/img/interesting-case-2.webp" data-fancybox="gallery2">
+                                    <picture>
+                                        <source srcset="https://www.bankersheart.com/assets/img/interesting-case-2.webp" type="image/webp">
+                                        <source srcset="https://www.bankersheart.com/assets/img/interesting-case-2.png" type="image/png">
+                                        <img class="img-fluid cases-height" src="https://www.bankersheart.com/assets/img/interesting-case-2.png" alt="Twiddlers Syndrome">
+                                    </picture>
+                                </a>--%>
+                                 <a href='<%# ResolveUrl("~/poweradmin/webfiles/InterestingCasesCategory/") + Eval("image") %>' data-fancybox="gallery">
+                              <%--  <picture>
+                                    <source srcset="https://www.bankersheart.com/assets/img/interesting-case-1.webp" type="image/webp">
+                                    <source srcset="https://www.bankersheart.com/assets/img/interesting-case-1.png" type="image/png">
+                                    <img class="img-fluid cases-height" src="https://www.bankersheart.com/assets/img/interesting-case-1.png" alt="Twiddlers Syndrome">
+                                </picture>--%>
+                                      <picture>
+      <source srcset='<%# ResolveUrl("~/poweradmin/webfiles/InterestingCasesCategory/") + Eval("image") %>' type="image/webp">
+      <source srcset='<%# ResolveUrl("~/poweradmin/webfiles/InterestingCasesCategory/") + Eval("image") %>' type="image/png">
+      <img class="img-fluid cases-height"
+          src='<%# ResolveUrl("~/poweradmin/webfiles/InterestingCasesCategory/") + Eval("image") %>'
+          alt='<%# Eval("title") %>'>
+  </picture>
+                                    </a>
+                            </div>
+                            <div class="col-7 py-sm-0 py-4">
+                                <h6 class="red mb-0"><%# Eval("title") %></p></h6><%--<h6 class="red mb-0">Dr Tejas Kakkad</h6>--%>
+                               <%-- <p class="mb-0 py-sm-2 py-1 clamped-text">45 years old male patient presented with recently...</p>--%>
+                            <p class="mb-0  clamped-text ">   <%# Eval("shortdescription") %></p>
+                                <%--  <p class="red">29 January 2016</p>--%>
+                                 <p class="red mt-2"><%--14 June 2016--%>      
+                                    <%# Convert.ToDateTime(Eval("InterestingCases_Date")).ToString("dd") %>
+                                    <%# Convert.ToDateTime(Eval("InterestingCases_Date")).ToString("MMM") %>
+                                    <%# Convert.ToDateTime(Eval("InterestingCases_Date")).ToString("yyyy") %></p>
+                              <%--  <div class="pt-3">
+                                        <a href="https://www.bankersheart.com/interesting-case-details" class="btn-theme btn-blue">Know More</a>
+                                    </div>--%>
+                                <div class="pt-3">
+<%--                                        <a href="https://www.bankersheart.com/interesting-case-details" class="btn-theme btn-blue">Know More</a>--%>
+                               <%--<a href='interesting-case-details.aspx?id=<%# Eval("id") %>' class="btn-theme btn-blue">Know More</a>--%>
+                                <a href='<%# GetRouteUrl("interesting-cases", new { titlelink = Eval("titlelink") }) %>' class="btn-theme btn-blue">Know More</a>
+
+
+                                    </div>
+                           
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               </ItemTemplate>
+    </asp:Repeater>
+            </div>
+                                    <div class="row pt-5 mt-3 justify-content-center text-center">
+    <asp:PlaceHolder ID="Paginationinteresting_casesPlaceholder" runat="server"></asp:PlaceHolder>
+</div>
+            <br />
+        </div>
+    </div>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="extrajs" runat="server">
+</asp:Content>

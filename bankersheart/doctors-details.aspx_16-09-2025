@@ -1,0 +1,141 @@
+﻿<%@ Page Language="C#" MasterPageFile="~/bankers.Master" AutoEventWireup="true" CodeBehind="doctors-details.aspx.cs" Inherits="bankersheart.doctors_details" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style>
+        .doctor-img-size {
+    height: 300px;
+    object-fit: contain;
+    width: 100%;
+}
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+    <section id="inner-banner" class="content-down">
+        <div class="container">
+            <div class="row">
+                <div class="banner-heading">
+                    <h1 class=sr-only> Meet our Hospital Doctors</h1>
+                    <h2 class="text-white text-center mb-0">Meet our Doctors</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="doctors-details">
+        <asp:Repeater ID="rpt_data" runat="server">
+            <ItemTemplate>
+                <div class="container py-5">
+                    <div class="row pt-5 justify-content-between">
+                        <h2 class="clr-black fw-bold d-lg-none d-block text-center"><%# Eval("Name") %> <%--Dr. Elizabeth Foster--%></h2>
+                        <p class="red fw-medium d-lg-none d-block text-center mb-0"><%# Eval("profession") %> <%--Family Physician--%></p>
+                        <div class="col-lg-4 col-md-9 m-auto my-lg-0 my-4">
+
+                            <div class="doctors-shaow text-center pt-4">
+                                <%-- <picture>
+                                <source srcset="assets/img/doctors-img.webp" type="image/webp">
+                                <source srcset="assets/img/doctors-img.png" type="image/png">
+                                <img class="img-fluid  rounded-4 " src="assets/img/doctors-img.png" alt="Blog-details">
+                            </picture>--%>
+                                <picture>
+                                    <source srcset='<%# ResolveUrl("~/poweradmin/webfiles/DoctorDetails/") + Eval("image") %>' type="image/webp">
+                                    <source srcset='<%# ResolveUrl("~/poweradmin/webfiles/DoctorDetails/") + Eval("image") %>' type="image/png">
+                                    <img class="img-fluid  rounded-4 doctor-img-size"
+                                        src='<%# ResolveUrl("~/poweradmin/webfiles/DoctorDetails/") + Eval("image") %>'
+                                        alt='<%# Eval("Name") %>'>
+                                </picture>
+                            </div>
+                        </div>
+                        <div class="col-lg-7 text-lg-start text-center">
+                            <h2 class="clr-black fw-bold d-lg-block d-none "><%# Eval("Name") %> <%--Dr. Elizabeth Foster--%></h2>
+                            <p class="red fw-medium d-lg-block d-none"><%# Eval("profession")%> <%--Family Physician--%></p>
+                            <%# Eval("description")%>
+                            <%--<p>Howard was born and raised in Los Angeles, California. He graduated from the University of 
+                        California, where he completed is bachelor’s degree. His admission to the State Bar of California took 
+                        place on the 22nd of July, 1985.</p>
+                    <p>Weebles wobble but they don’t fall down. Weebles are around, don’t fall down! Weeble wobble, Weeble wobble, 
+                        Weeble wobble, Weeble wobble, Weeble wobble, Weeble wobble. Don’t fall down!</p>
+                            --%>
+                            <div class="mt-4">
+                                <a href='appointment-bankers-group-of-hospitals.aspx?id=<%# Eval("id") %>' class="btn-theme btn-blue">Make An Appoinment </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ItemTemplate>
+        </asp:Repeater>
+    </div>
+
+    <div id="other-doctors">
+        <div class="container pb-5">
+            <div class="row pb-5">
+                <asp:Repeater ID="rpt_MedicalCamps" runat="server">
+                    <ItemTemplate>
+                        <div class="col-lg-6 col-md-6 pt-5">
+
+                            <div class="box-shadow-date p-sm-0 p-2 h-100">
+                                <div class="row align-items-center" >
+                                      <div class="col-5">
+                                    <picture>
+                                        <source srcset='<%# ResolveUrl("~/poweradmin/webfiles/DoctorDetails/") + Eval("image") %>' type="image/webp">
+                                        <source srcset='<%# ResolveUrl("~/poweradmin/webfiles/DoctorDetails/") + Eval("image") %>' type="image/png">
+                                        <img class="img-fluid doctor-img-size p-3"
+                                            src='<%# ResolveUrl("~/poweradmin/webfiles/DoctorDetails/") + Eval("image") %>'
+                                            alt='<%# Eval("Name") %>'>
+                                    </picture>
+                                </div>
+                                <div class="col-7">
+                                     <p class="red mb-0 pt-3"><%# Eval("profession") %> <%--Family Physician--%></p>
+                                        <h6 class="fw-semibold cnt-black"><%# Eval("Name") %><%--Dr. Elizabeth Foster--%></h6>
+                                        <p class="mb-0"><%# Eval("specialties") %> <%--Compassionate care for all ages.--%></p>
+                                        <div class="mt-4"><a href='doctors-details.aspx?id=<%# Eval("id") %>' class="btn-theme btn-blue">Know More</a></div>
+                                </div>
+                                </div>
+                              
+               <%-- <a href='doctors-details.aspx?id=<%# Eval("id") %>'>
+
+                                     <picture>
+                                <source srcset="assets/img/doctors-img.webp" type="image/webp">
+                                <source srcset="assets/img/doctors-img.png" type="image/png">
+                                <img class="img-fluid  rounded-4 px-3 pt-3" src="assets/img/doctors-img.png" alt="Blog-details">
+                            </picture>
+
+                                    
+                                    <div class="pb-4 " style="border-top: 1px solid #CD0001;">
+                                       
+
+                                    </div>
+                                </a>--%>
+
+                            </div>
+
+
+                        </div>
+                    </ItemTemplate>
+                </asp:Repeater>
+                <%--   <div class="box-shadow-date text-center  h-100 pb-2">
+                        <a href="doctors-details.aspx">
+
+                            <picture>
+                                <source srcset="assets/img/doctors-img.webp" type="image/webp">
+                                <source srcset="assets/img/doctors-img.png" type="image/png">
+                                <img class="img-fluid  rounded-4 px-3 pt-3" src="assets/img/doctors-img.png" alt="Blog-details">
+                            </picture>
+
+
+                            <div class="pb-4 " style="border-top: 1px solid #CD0001;">
+                                <p class="red mb-0 pt-3">Family Physician</p>
+                                <h6 class="fw-semibold cnt-black">Dr. Elizabeth Foster</h6>
+                                <p class="mb-0">Compassionate care for all ages.</p>
+                                <div class="mt-4"><a href="doctors-details.aspx" class="btn-theme btn-blue">Make An Appoinment </a></div>
+
+                            </div>
+                        </a>
+
+                    </div>--%>
+            </div>
+        </div>
+    </div>
+
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="extrajs" runat="server">
+</asp:Content>

@@ -1,0 +1,65 @@
+﻿<%@ Page Title="CSR Policy | Bankers Group of Hospitals" Language="C#" MasterPageFile="~/bankers.Master" AutoEventWireup="true" CodeBehind="csr-policy.aspx.cs" Inherits="bankersheart.csr_policy" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
+
+    <meta name="description" content="Bankers Group of Hospitals' CSR policy promotes healthcare, education, and sustainability to support community development.">
+    <meta name="keywords" content="CSR policy, community welfare, healthcare access, education support, environmental sustainability, corporate social responsibility, Bankers Group of Hospitals">
+    <link rel="canonical" href="https://www.bankersheart.com/csr-policy">
+    <style>
+        iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+        }
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+    <section id="inner-banner" class="content-down">
+        <div class="container">
+            <div class="row">
+                <div class="banner-heading">
+                    <h1 class="sr-only">Policy</h1>
+
+                    <h2 class="text-white text-center mb-0">CSR Policy
+
+                    </h2>
+                    <h3></h3>
+                    <h4></h4>
+                    <h5></h5>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="charitable-trust">
+        <div class="container py-5">
+            <div class="row py-5 justify-content-center">
+                <%--  <div class="col-9">
+                    <iframe id="pdfViewer" src="https://www.bankersheart.com/assets/pdf/yesh-charitabl-book-final.pdf#page=1&view=fit"></iframe>
+                </div>--%>
+                <div class="col-9 d-md-block d-none">
+                    <iframe id="pdfViewer" src="https://www.bankersheart.com/assets/pdf/csr-policy-bankers-cardiology.pdf#page=1&view=fit" oncontextmenu="return false;"></iframe>
+                </div>
+                <div class="col-sm-6 d-md-none d-block">
+                    <div class="box-shadow-date h-100">
+
+                        <picture>
+                            <source srcset="https://www.bankersheart.com/assets/img/csr-policy-bankers-cardiology.webp" type="image/webp">
+                            <source srcset="https://www.bankersheart.com/assets/img/csr-policy-bankers-cardiology.png" type="image/png">
+                            <img class="img-fluid object-fit-cover" src="https://www.bankersheart.com/assets/img/csr-policy-bankers-cardiology.png" alt="CSR">
+                        </picture>
+
+                        <div class="my-5 text-center">
+                            <a href="https://www.bankersheart.com/assets/pdf/yash-charitabl-book-final.pdf" class="btn-theme btn-blue" target="_blank" download="">Download Pdf</a>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="extrajs" runat="server">
+</asp:Content>

@@ -1,0 +1,518 @@
+﻿<%@ Page Title="Health Check-Up Plans | Bankers Heart Institute" Language="C#" MasterPageFile="~/bankers.Master" AutoEventWireup="true" CodeBehind="health-check-up-plans.aspx.cs" Inherits="bankersheart.health_check_up_plans" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
+	<meta name="keywords" content="Bankers Heart health packages, heart check-up plans, diagnostic health packages, Multi-specialty Hospital Gujarat">
+<meta name="description" content="Bankers Heart Institute offers preventive health check-ups to help you stay on top of your wellness.">
+<link rel="canonical" href="https://www.bankersheart.com/health-check-up-plans" />
+	<style>
+		th, td {
+			vertical-align: middle;
+			text-align: center;
+			font-family: "Archivo", serif;
+		}
+
+		.table-dark-header th {
+			background-color: #CD0001 !important;
+			color: #fff;
+		}
+
+		td:first-child {
+			text-align: left
+		}
+		.list_disc{
+			list-style:disc;
+			padding-left:30px;
+		}
+		td:first-child, th:first-child {
+			padding-left: 20px;
+		}
+
+		.table-dark-header {
+			background-color: #252525 !important;
+			color: #fff !important;
+			text-align: left !important;
+		}
+	</style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+	<section id="inner-banner" class="content-down">
+		<div class="container">
+			<div class="row">
+				<div class="banner-heading">
+					<h2 class="text-white text-center mb-0">Health Check Up Plans</h2>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="pt-4">
+		<div class="container py-5">
+			<h3 class="text-center mb-0 clr-black mb-5">Comprehensive Cardiac Health Check-up Programs</h3>
+			<div class="table-responsive">
+				<table class="table table-bordered">
+					<thead class="table-dark-header">
+						<tr>
+							<th class="text-start">Parameter</th>
+							<th>Senior Citizens
+								<br />
+								@Rs. 2750</th>
+							<th>Healthy Heart 
+								<br />
+								@Rs. 3500</th>
+							<th>Executive 
+								<br />
+								@Rs. 5000</th>
+							<th>Comprehensive 
+								<br />
+								@Rs. 7000</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th colspan="5" class="table-dark-header text-center">General</th>
+						</tr>
+						<tr>
+							<td>Complete Blood Count</td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+						</tr>
+						<tr>
+							<td>ESR</td>
+							<td><i class="fa fa-times text-danger"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+						</tr>
+						<tr>
+							<td>Serum Electrolytes</td>
+							<td><i class="fa fa-times text-danger"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+						</tr>
+						<tr>
+							<td>Urine Routine Examination</td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+						</tr>
+						<tr>
+							<td>Blood Pressure</td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+						</tr>
+						<tr>
+							<td>Height</td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+						</tr>
+						<tr>
+							<td>Weight</td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+						</tr>
+						<tr>
+							<td>Body Mass Index</td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+						</tr>
+						<tr>
+							<td>Chest X-Ray</td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+						</tr>
+						<tr>
+							<td>USG Abdomen with Pelvis</td>
+							<td><i class="fa fa-times text-danger"></i></td>
+							<td><i class="fa fa-times text-danger"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+						</tr>
+						<tr>
+							<td>Pulmonary Function Test</td>
+							<td><i class="fa fa-times text-danger"></i></td>
+							<td><i class="fa fa-times text-danger"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+						</tr>
+						<tr>
+							<th colspan="5" class="table-dark-header text-center">Liver Function Test</th>
+						</tr>
+						<tr>
+							<td>SGPT</td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+						</tr>
+						<tr>
+							<td>SGOT</td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+						</tr>
+						<tr>
+							<td>Total Bilirubin</td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+						</tr>
+
+						<tr>
+							<td>Indirect Billirubin</td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+						</tr>
+						<tr>
+							<td>Total Protein</td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+						</tr>
+						<tr>
+							<td>S. Alkaline Phosphates</td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+						</tr>
+						<tr>
+							<td>Albumin</td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+						</tr>
+						<tr>
+							<td>Globulin</td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+						</tr>
+						<tr>
+							<td>A/G Ratio</td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+						</tr>
+						<tr>
+							<td>Gamma GT</td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+						</tr>
+						<tr>
+							<th colspan="5" class="table-dark-header text-center">Diabetes</th>
+						</tr>
+						<tr>
+							<td>Fasting Blood Sugar</td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+						</tr>
+						<tr>
+							<td>Post-Prandial Blood Sugar</td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+						</tr>
+						<tr>
+							<td>HbAlc</td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+						</tr>
+						<tr>
+							<th colspan="5" class="table-dark-header text-center">Kidney Profile</th>
+						</tr>
+						<tr>
+							<td>Serum Creatinine</td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+						</tr>
+						<tr>
+							<td>Uric Acid</td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+						</tr>
+						<tr>
+							<td>Blood Urea</td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+						</tr>
+						<tr>
+							<td>Serum Calcium</td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+						</tr>
+						<tr>
+							<th colspan="5" class="table-dark-header text-center">Lipid Profile</th>
+						</tr>
+						<tr>
+							<td>Total Cholesterol</td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+						</tr>
+						<tr>
+							<td>HDL Cholesterol</td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+						</tr>
+						<tr>
+							<td>LDL Cholesterol</td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+						</tr>
+						<tr>
+							<td>Triglycerides</td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+						</tr>
+						<tr>
+							<td>VLDL Cholesterol</td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+						</tr>
+						<tr>
+							<td>Total Cholesterol-HDL Ratio</td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+						</tr>
+						<tr>
+							<td>LDL / HDL Ratio</td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+						</tr>
+						<tr>
+							<th colspan="5" class="table-dark-header text-center">Cardiac Check</th>
+						</tr>
+						<tr>
+							<td>ECG</td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+						</tr>
+						<tr>
+							<td>Carotid Doppler Screening</td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-times text-danger"></i></td>
+							<td><i class="fa fa-times text-danger"></i></td>
+							<td><i class="fa fa-times text-danger"></i></td>
+						</tr>
+						<tr>
+							<td>2D ECHO Cardiography</td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+						</tr>
+						<tr>
+							<td>Tread Mail Test(TMT)</td>
+							<td><i class="fa fa-times text-danger"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+						</tr>
+						<tr>
+							<th colspan="5" class="table-dark-header text-center">Thyrold Profile & Vitamin</th>
+						</tr>
+						<tr>
+							<td>T3</td>
+							<td><i class="fa fa-times text-danger"></i></td>
+							<td><i class="fa fa-times text-danger"></i></td>
+							<td><i class="fa fa-times text-danger"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+						</tr>
+						<tr>
+							<td>T4</td>
+							<td><i class="fa fa-times text-danger"></i></td>
+							<td><i class="fa fa-times text-danger"></i></td>
+							<td><i class="fa fa-times text-danger"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+						</tr>
+						<tr>
+							<td>TSH</td>
+							<td><i class="fa fa-times text-danger"></i></td>
+							<td><i class="fa fa-times text-danger"></i></td>
+							<td><i class="fa fa-times text-danger"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+						</tr>
+						<tr>
+							<td>Vitamin D-3</td>
+							<td><i class="fa fa-times text-danger"></i></td>
+							<td><i class="fa fa-times text-danger"></i></td>
+							<td><i class="fa fa-times text-danger"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+						</tr>
+						<tr>
+							<td>Vitamin B-12</td>
+							<td><i class="fa fa-times text-danger"></i></td>
+							<td><i class="fa fa-times text-danger"></i></td>
+							<td><i class="fa fa-times text-danger"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+						</tr>
+						<tr>
+							<th colspan="5" class="table-dark-header text-center">Consulotion</th>
+						</tr>
+						<tr>
+							<td>Cardiologist</td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+						</tr>
+						<tr>
+							<td>Dietitian</td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+						</tr>
+						<tr>
+							<td>Physionerapist</td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+						</tr>
+						<tr>
+							<td>Orthopedic</td>
+							<td><i class="fa fa-times text-danger"></i></td>
+							<td><i class="fa fa-times text-danger"></i></td>
+							<td><i class="fa fa-times text-danger"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+						</tr>
+						<tr>
+							<td>Opthalmologist</td>
+							<td><i class="fa fa-times text-danger"></i></td>
+							<td><i class="fa fa-times text-danger"></i></td>
+							<td><i class="fa fa-times text-danger"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+						</tr>
+						<tr>
+							<td>ENT</td>
+							<td><i class="fa fa-times text-danger"></i></td>
+							<td><i class="fa fa-times text-danger"></i></td>
+							<td><i class="fa fa-times text-danger"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+						</tr>
+						<tr>
+							<td>General Surgeon</td>
+							<td><i class="fa fa-times text-danger"></i></td>
+							<td><i class="fa fa-times text-danger"></i></td>
+							<td><i class="fa fa-times text-danger"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+						</tr>
+						<tr>
+							<td>Additional Gynecologist With PAP Smear  Rs. 1000/-</td>
+							<td><i class="fa fa-times text-danger"></i></td>
+							<td><i class="fa fa-times text-danger"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+							<td><i class="fa fa-check text-success"></i></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="d-flex gap-3 flex-wrap justify-content-center align-items-center">
+				<p>
+			<i class="fa fa-times text-danger pe-2"></i> Excluded
+			</p>
+			<p>
+			<i class="fa fa-check text-success pe-2"></i>Included
+			</p>
+			</div>
+			
+		</div>
+	</section>
+
+		<div class="container pb-5">
+			<p>
+				Striving to achieve the highest standards of Cardiac Care, <strong>Bankers Group of Hospitals</strong> has laid special focus on preventive care by offering a wide array of Health Checkup Programmes.
+ 
+			</p>
+			<p>
+				Keeping in mind the busy schedules and hectic lifestyles, our checkups are very precisely designed to check all the major systems of our body comprehensively.
+ 
+			</p>
+			<p>
+				Proactive Cardiac rehabilitation at our Centre under the banner of <strong>"Healthy Heart"</strong> will try to guide you for a longer and better life.
+ 
+			</p>
+			<p>
+				All people undergoing checkup at Bankers Group of Hospitals will be provided with exclusive dietary & physiotherapy training.
+ 
+			</p>
+
+			<h6 class="text-red">Do You Know..? You Can Have</h6>
+		<ul class="list_disc mb-3">
+				<li>Hypertension</li>
+				<li>Diabetes</li>
+				<li>Cholesterol Problem</li>
+				<li>Heart Disorder</li>
+			</ul>
+			<h6 class="text-red">...Without symptoms!!!</h6>
+			<p>...We will help you to get the correct answer.</p>
+
+			<div class="important-instructions">
+				<h6 class="text-red">Important Instructions for Health Checkup:</h6>
+				<ul class="list_disc">
+					<li>Packages include Consultations & Diagnostic fees (against ticked) only.</li>
+					<li>Consultation with Doctors will be done on the same day with all the reports or next day.</li>
+					<li>Patients are requested to report for checkup at the allocated appointment time.</li>
+					<li>Please bring along all your earlier medical records when you come for the checkup.</li>
+					<li>Please come empty stomach for the health checkup, consume only 2-3 glasses of water.</li>
+					<li>You may consume your medicine as per the schedule. Kindly bring your medicine along with you.</li>
+				</ul>
+			</div>
+		</div>
+	
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="extrajs" runat="server">
+</asp:Content>

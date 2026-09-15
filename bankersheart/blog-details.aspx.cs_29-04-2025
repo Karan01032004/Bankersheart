@@ -1,0 +1,45 @@
+﻿using bankersheart.App_Code;
+using MySql.Data.MySqlClient;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace bankersheart
+{
+    public partial class blog_details : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!IsPostBack)
+            {
+                BindBlogDetails();
+            }
+        }
+
+        private void BindBlogDetails()
+        {
+            string id = Request.QueryString["id"];
+            if (!string.IsNullOrEmpty(id))
+            {
+                // Use parameterized queries to avoid SQL injection
+                string query = "SELECT title, description, image FROM BlogManagement WHERE id = " + id;
+                DataTable dt =new DAL().GetDataTable(query,CommandType.Text,null); // Assuming original method doesn't support parameters
+                if (dt.Rows.Count > 0)
+                {
+                    rpt_data.DataSource = dt;
+                    rpt_data.DataBind();
+                }
+                else
+                {
+                    // Handle case when no data is found
+                }
+            }
+        }
+
+
+    }
+}

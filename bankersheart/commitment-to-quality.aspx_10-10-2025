@@ -1,0 +1,213 @@
+﻿<%@ Page Title="Commitment to Quality | Excellence in Healthcare at Bankers Hospitals" Language="C#" MasterPageFile="~/bankers.Master" AutoEventWireup="true" CodeBehind="commitment-to-quality.aspx.cs" Inherits="bankersheart.commitment_to_quality" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <meta name="keywords" content="healthcare quality management, healthcare improvement initiatives, multi-specialty hospital Vadodara, patient-centred care Bankers Group">
+<meta name="description" content="Discover Bankers Group of Hospitals' unwavering commitment to quality care, patient safety, and continuous medical education.">
+<link rel="canonical" href="https://www.bankersheart.com/commitment-to-quality" />
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+    <section id="inner-banner" class="content-down">
+        <div class="container">
+            <div class="row">
+                <div class="banner-heading">
+                    					<h1 class="sr-only">Quality</h1>
+
+                    <h2 class="text-white text-center mb-0">Commitment to Quality</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="commitment-quality">
+        <div class="container py-5">
+            <div class="row pt-5 justify-content-between align-items-center">
+                <div class="col-lg-6 text-lg-start text-center">
+                    <h3 class="clr-black fw-semibold">Some of Our Committees Are:</h3>
+                    <div class="row d-lg-none d-block">
+
+
+                        <div class="col-lg-6 col-md-8 m-auto">
+                            <picture>
+                                <source srcset="https://www.bankersheart.com/assets/img/commitment-quality-img.webp" type="image/webp">
+                                <source srcset="https://www.bankersheart.com/assets/img/commitment-quality-img.png" type="image/png">
+                                <img class="img-fluid rounded-4 py-4" src="https://www.bankersheart.com/assets/img/commitment-quality-img.png" alt="Founder Message">
+                            </picture>
+
+                        </div>
+                    </div>
+                    <ul class="ps-4">
+                        <li>Management Committee</li>
+                        <li>Hospital Infection Control committee</li>
+                        <li>Drug regulation / Pharmacy committee</li>
+                        <li>Multidisciplinary committee for CPR</li>
+                        <li>Medical Audit committee</li>
+                        <li>Hospital Safety committee</li>
+                        <li>Internal Complaint Committee</li>
+                        <li>Patient Safety & Quality Assurance Committee</li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-6 col-md-8 d-lg-block d-none">
+                    <picture>
+                        <source srcset="https://www.bankersheart.com/assets/img/commitment-quality-img.webp" type="image/webp">
+                        <source srcset="https://www.bankersheart.com/assets/img/commitment-quality-img.png" type="image/png">
+                        <img class="img-fluid rounded-4" src="https://www.bankersheart.com/assets/img/commitment-quality-img.png" alt="Founder Message">
+                    </picture>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="quality-product-details">
+        <div class="container pb-5">
+            <div class="row pb-5">
+
+                <div class="col-lg-4 col-sm-6  pt-sm-5 pt-0">
+                    <div class="press-box h-100">
+                        <a href="https://www.bankersheart.com/assets/img/quality-img-1.png" data-fancybox="gallery">
+                            <picture>
+                                <source srcset="https://www.bankersheart.com/assets/img/quality-img-1.webp" type="image/webp">
+                                <source srcset="https://www.bankersheart.com/assets/img/quality-img-1.png" type="image/png">
+                                <img class="img-fluid p-3" src="https://www.bankersheart.com/assets/img/quality-img-1.png" alt=" Associated Pneumonia Rate">
+                            </picture>
+                        </a>
+                        <div class="bg-red py-3 px-2 h-100">
+                            <p class="text-center text-white mb-0">Ventilator Associated Pneumonia Rate</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-sm-6  pt-5">
+                    <div class="press-box h-100">
+                        <a href="https://www.bankersheart.com/assets/img/quality-img-2.png" data-fancybox="galler2">
+                            <picture>
+                                <source srcset="https://www.bankersheart.com/assets/img/quality-img-2.webp" type="image/webp">
+                                <source srcset="https://www.bankersheart.com/assets/img/quality-img-2.png" type="image/png">
+                                <img class="img-fluid p-3" src="https://www.bankersheart.com/assets/img/quality-img-2.png" alt=" Associated Pneumonia Rate">
+                            </picture>
+                        </a>
+                        <div class="bg-red py-3 px-2 h-100">
+                            <p class="text-center text-white mb-0">Blood stream infection rate</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-sm-6  pt-5">
+                    <div class="press-box h-100">
+                        <a href="https://www.bankersheart.com/assets/img/quality-img-3.png" data-fancybox="galler3">
+                            <picture>
+                                <source srcset="https://www.bankersheart.com/assets/img/quality-img-3.webp" type="image/webp">
+                                <source srcset="https://www.bankersheart.com/assets/img/quality-img-3.png" type="image/png">
+                                <img class="img-fluid p-3" src="https://www.bankersheart.com/assets/img/quality-img-3.png" alt="Catheter associated ">
+                            </picture>
+                        </a>
+                        <div class="bg-red py-3 px-2 h-100">
+                            <p class="text-center text-white mb-0">Catheter associated urinary tract infection rate</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6  pt-5">
+                    <div class="press-box h-100">
+                        <a href="https://www.bankersheart.com/assets/img/quality-img-4.png" data-fancybox="galler4">
+                            <picture>
+                                <source srcset="https://www.bankersheart.com/assets/img/quality-img-4.webp" type="image/webp">
+                                <source srcset="https://www.bankersheart.com/assets/img/quality-img-4.png" type="image/png">
+                                <img class="img-fluid p-3" src="https://www.bankersheart.com/assets/img/quality-img-4.png" alt="Catheter associated ">
+                            </picture>
+                        </a>
+                        <div class="bg-red py-3 px-2 h-100">
+                            <p class="text-center text-white mb-0">Surgical site infection rate</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6  pt-5">
+                    <div class="press-box h-100">
+                        <a href="https://www.bankersheart.com/assets/img/quality-img-5.png" data-fancybox="galler5">
+                            <picture>
+                                <source srcset="https://www.bankersheart.com/assets/img/quality-img-5.webp" type="image/webp">
+                                <source srcset="https://www.bankersheart.com/assets/img/quality-img-5.png" type="image/png">
+                                <img class="img-fluid p-3" src="https://www.bankersheart.com/assets/img/quality-img-5.png" alt="Patient fall rate">
+                            </picture>
+                        </a>
+                        <div class="bg-red py-3 px-2 h-100">
+                            <p class="text-center text-white mb-0">Patient fall rate</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6  pt-5">
+                    <div class="press-box h-100">
+                        <a href="https://www.bankersheart.com/assets/img/quality-img-6.png" data-fancybox="galler6">
+                            <picture>
+                                <source srcset="https://www.bankersheart.com/assets/img/quality-img-6.webp" type="image/webp">
+                                <source srcset="https://www.bankersheart.com/assets/img/quality-img-6.png" type="image/png">
+                                <img class="img-fluid p-3" src="https://www.bankersheart.com/assets/img/quality-img-6.png" alt="Patient fall rate">
+                            </picture>
+                        </a>
+                        <div class="bg-red py-3 px-2 h-100">
+                            <p class="text-center text-white mb-0">Hand hygiene compliance rate</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6  pt-5">
+                    <div class="press-box h-100">
+                        <a href="https://www.bankersheart.com/assets/img/quality-img-7.png" data-fancybox="galler7">
+                            <picture>
+                                <source srcset="https://www.bankersheart.com/assets/img/quality-img-7.webp" type="image/webp">
+                                <source srcset="https://www.bankersheart.com/assets/img/quality-img-7.png" type="image/png">
+                                <img class="img-fluid p-3" src="https://www.bankersheart.com/assets/img/quality-img-7.png" alt="In patient satisfaction index">
+                            </picture>
+                        </a>
+                        <div class="bg-red py-3 px-2 h-100">
+                            <p class="text-center text-white mb-0">In patient satisfaction index</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-sm-6  pt-5">
+                    <div class="press-box h-100">
+                        <a href="https://www.bankersheart.com/assets/img/quality-img-8.png" data-fancybox="galler8">
+                            <picture>
+                                <source srcset="https://www.bankersheart.com/assets/img/quality-img-8.webp" type="image/webp">
+                                <source srcset="https://www.bankersheart.com/assets/img/quality-img-8.png" type="image/png">
+                                <img class="img-fluid p-3" src="https://www.bankersheart.com/assets/img/quality-img-8.png" alt="In patient satisfaction index">
+                            </picture>
+                        </a>
+                        <div class="bg-red py-3 px-2 h-100">
+                            <p class="text-center text-white mb-0">Out patient satisfaction index</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-sm-6  pt-5">
+                    <div class="press-box h-100">
+                        <a href="https://www.bankersheart.com/assets/img/quality-img-9.png" data-fancybox="galler9">
+                            <picture>
+                                <source srcset="https://www.bankersheart.com/assets/img/quality-img-9.webp" type="image/webp">
+                                <source srcset="https://www.bankersheart.com/assets/img/quality-img-9.png" type="image/png">
+                                <img class="img-fluid p-3" src="https://www.bankersheart.com/assets/img/quality-img-9.png" alt="In patient satisfaction index">
+                            </picture>
+                        </a>
+                        <div class="bg-red py-3 px-2 h-100">
+                            <p class="text-center text-white mb-0">Employee satisfaction index</p>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="extrajs" runat="server">
+</asp:Content>

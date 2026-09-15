@@ -1,0 +1,181 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="header.ascx.cs" Inherits="bankersheart.includes.header" %>
+<header>
+    <nav class="navbar navbar-expand-lg bg-white pb-lg-3 fixed-top shadow-sm" id="header">
+        <div class="container">
+            <a class="navbar-brand logo" href="default.aspx">
+                <picture>
+                    <source srcset="assets/img/bankers-logo.webp" type="image/webp">
+                    <source srcset="assets/img/bankers-logo.png" type="image/png">
+                    <img class="img-fluid" src="assets/img/bankers-logo.png" width="150" alt="Bankers group of hospital logo">
+                </picture>
+            </a>
+			<a href="tel: +91 265 260 7777" class="d-block d-lg-none">
+				<div class=" mb-3" bis_skin_checked="1">
+					<img src="assets/img/ambulance-gif.gif" class="img-fluid" height="110" width="110" style="margin-left: -10px">
+				</div>
+			</a>
+            <button class="navbar-toggler me-lg-0 me-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+			<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+				<div class="offcanvas-header justify-content-between">
+					<a class="navbar-brand logo-offcanva" href="https://www.bankersheart.com/default.aspx">
+						<picture>
+							<source srcset="assets/img/bankers-logo.webp" type="image/webp">
+							<source srcset="assets/img/bankers-logo.png" type="image/png">
+							<img class="img-fluid" src="assets/img/bankers-logo.png" width="150" alt="Bankers group of hospital logo">
+						</picture>
+					</a>
+					<a href="tel: +91 265 260 7777" class="d-block d-lg-none">
+						<div class=" mb-3" bis_skin_checked="1">
+							<img src="assets/img/ambulance-gif.gif" class="img-fluid" height="110" width="110" style="margin-left: -15px">
+						</div>
+					</a>
+					<button type="button" class="btn-close m-0" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+				</div>
+                <div class="offcanvas-body d-block">
+
+                    <div class="d-lg-block d-none">
+                        <div class="navbar-nav me-auto mb-2 mb-lg-0 flex-grow-1 justify-content-end text-center py-lg-3 links-gap">
+
+                            <div class="row">
+                                <%--<marquee>--%>
+                                <asp:Repeater ID="rptVadodara" runat="server">
+                                    <ItemTemplate>
+                                        <div class="col-lg-6 col-xl-7 text-center content-bot">
+                                            <marquee>
+                                                <p class="no-wrap mb-0 me-xl-5 redine-con"><%# Eval("Title") %><%--Redefining Healthcare through Innovative Technologies with--%></p>
+                                            </marquee>
+                                        </div>
+                                    </ItemTemplate>
+                                </asp:Repeater>
+                                <%--</marquee>--%>
+                                <div class="col-lg-6 col-xl-5 d-lg-flex align-items-center justify-content-end">
+                                    <div class="pe-lg-3 content-bots">
+                                        <a href="career.aspx" class="btn-grey btn-blue">Career</a>
+                                    </div>
+
+                                    <div>
+                                        <a href="https://www.bankersheart.com/appointment-bankers-group-of-hospitals.aspx" class="btn-theme btn-blue">Make An Appointment </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="border-line d-lg-block d-none" />
+
+                    <ul class="navbar-nav flex-grow-1 justify-content-end text-center">
+                        <li class="nav-item dropdown pe-lg-1 pe-xl-4">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Hospitals
+                            </a>
+                            <ul class="dropdown-menu text-lg-start text-center">
+                                <li><a class="dropdown-item" href="https://www.bankersheart.com/bankers-superspeciality-hospital-manjalpur-vadodara.aspx">Bankers Superspeciality Hospital,
+                                    <br class="d-sm-none d-block" />
+                                    Manjalpur - Vadodara</a></li>
+                                <li><a class="dropdown-item" href="https://www.bankersheart.com/bankers-heart-institute-old-padra-road-vadodara.aspx">Bankers Heart Institute,
+                                    <br class="d-sm-none d-block" />
+                                    Old Padra Road - Vadodara</a></li>
+                                <li><a class="dropdown-item" href="https://www.bankersheart.com/bankers-heart-multispeciality-hospital-warasia-vadodara.aspx">Bankers Heart and Multi Specialty Hospital,
+                                    <br class="d-lg-none d-block" />
+                                    Warasia - Vadodara </a></li>
+                                <li><a class="dropdown-item" href="https://www.bankersheart.com/bankers-heart-institute-surat.aspx">Bankers Heart Institute, Opp. Lakeview
+                                    <br class="d-sm-none d-block" />
+                                    Garden - Surat</a></li>
+                                <li><a class="dropdown-item" href="https://www.bankersheart.com/centers-bankers-group-of-hospitals.aspx">Our Centers</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown pe-lg-1 pe-xl-4">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Education
+                            </a>
+                            <ul class="dropdown-menu text-lg-start text-center">
+                                <li><a class="dropdown-item" href="https://www.bankersheart.com/educations.aspx">PGDCC & DNB Cardiology</a></li>
+                                <li><a class="dropdown-item" href="https://www.bankersheart.com/educations.aspx">Bankers Nursing & Technical Institute</a></li>
+                                <li><a class="dropdown-item" href="https://www.bankersheart.com/cme-journal-club.aspx">CME and Journal Club</a></li>
+                                <li><a class="dropdown-item" href="https://www.bankersheart.com/interesting-cases.aspx">Interesting Cases</a></li>
+                                <li><a class="dropdown-item" href="https://www.bankersheart.com/cardcon.aspx">CardCon</a></li>
+                                <%--<li><a class="dropdown-item" href="#">Case Study</a></li>--%>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown pe-lg-1 pe-xl-4">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Patient Care & Services
+                            </a>
+                            <ul class="dropdown-menu text-lg-start text-center">
+                                <li><a class="dropdown-item" href="https://www.bankersheart.com/admission-process.aspx">Admission Process</a></li>
+                                <li><a class="dropdown-item" href="https://www.bankersheart.com/international-patients.aspx">International Patients</a></li>
+                                <li><a class="dropdown-item" href="https://www.bankersheart.com/citizen-charter.aspx">Citizen’s Charter</a></li>
+                                <li><a class="dropdown-item" href="https://www.bankersheart.com/visitior-guidelines.aspx">Visitor Guidelines</a></li>
+                                <li><a class="dropdown-item" href="https://www.bankersheart.com/health-check-up-plans.aspx">Health Check Up Plans</a></li>
+                                <li><a class="dropdown-item" href="https://www.bankersheart.com/membership-cards.aspx">Membership Cards</a></li>
+
+                                <li><a class="dropdown-item" href="what-our-patients-say.aspx">Testimonials</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown pe-lg-1 pe-xl-4">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Media
+                            </a>
+                            <ul class="dropdown-menu text-lg-start text-center">
+                                <li><a class="dropdown-item" href="https://www.bankersheart.com/media-press-release.aspx">Press Releases</a></li>
+                                <li><a class="dropdown-item" href="https://www.bankersheart.com/events-at-bankers.aspx">Events at Bankers</a></li>
+                                <li><a class="dropdown-item" href="https://www.bankersheart.com/news-at-bankers.aspx">News at Bankers</a></li>
+                                <%-- <li><a class="dropdown-item" href="#">Virtual Gallery</a></li>--%>
+                                <li><a class="dropdown-item" href="https://www.bankersheart.com/media-download.aspx">Downloads</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown pe-lg-1 pe-xl-4">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">CSR
+                            </a>
+                            <ul class="dropdown-menu text-lg-start text-center">
+                                <li><a class="dropdown-item" href="https://www.bankersheart.com/yash-public-charitable-trust.aspx">Yash Public Charitable Trust</a></li>
+                                <li><a class="dropdown-item" href="https://www.bankersheart.com/medical-camp.aspx">Medical Camps</a></li>
+                                <%-- <li><a class="dropdown-item" href="exhibitions.aspx">Exhibitions</a></li>--%>
+                                <li><a class="dropdown-item" href="https://www.bankersheart.com/csr-activity.aspx">CSR Activity</a></li>
+                                <%-- <li><a class="dropdown-item" href="assets/pdf/Composition-of-the-CSR-Committee.pdf" target="_blank">CSR Composition</a></li>--%>
+                                <li><a class="dropdown-item" href="assets/pdf/CSR-Policy-BANKERS-CARDIOLOGY.pdf" target="_blank">CSR Policy</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown pe-xl-4">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">About Us
+                            </a>
+                            <ul class="dropdown-menu text-lg-start text-center">
+                                <li><a class="dropdown-item" href="https://www.bankersheart.com/about-bankers-group-of-hospitals.aspx">Bankers Hospitals</a></li>
+                                <li><a class="dropdown-item" href="https://www.bankersheart.com/ceo-message-bankers-group-of-hospitals.aspx">CEO's Message</a></li>
+                                <li><a class="dropdown-item" href="https://www.bankersheart.com/director-message.aspx">Director's Message</a></li>
+                                <li><a class="dropdown-item" href="https://www.bankersheart.com/commitment-to-quality.aspx">Commitment to Quality</a></li>
+                                <li><a class="dropdown-item" href="https://www.bankersheart.com/achievements-awards.aspx">Achievements and Awards</a></li>
+                                <li><a class="dropdown-item" href="https://www.bankersheart.com/meet-our-doctors.aspx">Meet our Doctors</a></li>
+                                <li><a class="dropdown-item" href="https://www.bankersheart.com/empanelment-bankers-group-of-hospitals.aspx">Empanelment</a></li>
+                                <%--<li><a class="dropdown-item" href="our-blog.aspx">Blog</a></li>--%>
+                                <li><a class="dropdown-item" href="https://www.bankersheart.com/all-services.aspx">Our Services</a></li>
+                                <li><a class="dropdown-item" href="https://www.bankersheart.com/history-bankers-group-of-hospitals.aspx">Our History</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="https://www.bankersheart.com/contact-bankers-group-of-hospitals.aspx">Contact Us</a>
+                        </li>
+                    </ul>
+
+                    <div class="navbar-nav me-auto mb-2 mb-lg-0 flex-grow-1 justify-content-end text-center py-lg-3 links-gap d-lg-none d-block mt-lg-0 mt-3">
+
+                        <div class="row">
+                            <%--<div class="col-lg-5 text-center content-bot">
+                                <p class="no-wrap mb-0 me-xl-5">Redefining Healthcare through Innovative Technologies with</p>
+                            </div>--%>
+                            <div class="col-lg-7 d-lg-flex align-items-center justify-content-end">
+                                <div class="pe-lg-3 content-bots">
+                                    <a href="https://www.bankersheart.com/career.aspx" class="btn-grey btn-blue">Career</a>
+                                </div>
+
+                                <div>
+                                    <a href="https://www.bankersheart.com/appointment-bankers-group-of-hospitals.aspx" class="btn-theme btn-blue">Make An Appointment </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>

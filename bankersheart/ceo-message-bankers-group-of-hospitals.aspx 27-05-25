@@ -1,0 +1,76 @@
+﻿<%@ Page Title="CEO’s Message | Bankers Group of Hospitals" Language="C#" MasterPageFile="~/bankers.Master" AutoEventWireup="true" CodeBehind="ceo-message-bankers-group-of-hospitals.aspx.cs" Inherits="bankersheart.ceo_message_bankers_group_of_hospitals" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <meta name="description" content="Discover the vision of Bankers Group of Hospitals from our CEO. With a legacy in cardiac excellence and expanding into multi-specialty and oncology care, we are dedicated to advanced treatments, compassionate care, and elevating healthcare standards in India." />
+
+    <style>
+        .bs_2 {
+            box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+            background: #f7f7f7;
+        }
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+    <section id="inner-banner" class="content-down">
+        <div class="container">
+            <div class="row">
+                <div class="banner-heading">
+                    <h2 class="text-white text-center mb-0">CEO's Message</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--CHAIRMAN-MESSAGE-->
+    <section id="hospital-details" class="py-5">
+        <div class="container py-lg-4">
+            <div class="blog-container bs_2 px-5 py-5 text-lg-start text-center">
+                <div class="inner-img mb-lg-0 mb-4">
+                    <div class="text-lg-end text-center">
+                        <picture>
+                            <source srcset="assets/img/bankers-group-of-hospitals-logo.webp" type="image/webp">
+                            <source srcset="assets/img/bankers-group-of-hospitals-logo.png" type="image/png">
+                            <img class="img-fluid  rounded-4 mb-3" src="assets/img/bankers-group-of-hospitals-logo.png" alt="bankers-group-of-hospitals-logo">
+                        </picture>
+                        <%--                        <h6 class="fw-semibold text-black text-center">Dr. Yash Banker</h6>--%>
+                    </div>
+
+                </div>
+                <div class="blogs-content">
+                    <i class="fa fa-quote-left text-red fs-1 mb-2" aria-hidden="true"></i>
+                    <p class="pt-4">Welcome to the Bankers Group of Hospitals. As CEO, I am immensely proud of the journey we have undertaken since our inception, driven by a steadfast commitment to elevating healthcare standards in India. </p>
+                    <p>
+                        Our legacy began with a singular focus on cardiac care, and we have since established ourselves as leaders in this field, excelling in both Vadodara and Surat. We have consistently strived to provide the most advanced cardiac treatments, ensuring our patients receive world-class care right here in Gujarat.
+                    </p>
+                    <p class=" text-blue">
+                        Building upon this foundation, we have expanded our services to encompass comprehensive multi-specialty care. Our hospitals now offer a wide range of medical disciplines, with particular emphasis on our rapidly advancing oncology department. We are dedicated to providing holistic and cutting-edge treatments to patients facing complex medical challenges.
+                    </p>
+                    <p>
+                        At the heart of our philosophy lies a profound belief in the synergy of advanced technology and dedicated human touch. We understand that every patient is unique, and we are committed to providing personalized care that addresses not only their medical needs but also their emotional and psychological well-being. Our team of highly skilled professionals is passionate about delivering compassionate and empathetic care, ensuring that each patient feels valued and supported throughout their healthcare journey.
+                    </p>
+                    <p>
+                        Our vision extends beyond the walls of our hospitals. We are deeply committed to improving the overall healthcare landscape in India and making it world-class. This commitment is reflected in our ongoing investments in research, innovation, and training. We are determined to bring the latest advancements in medical technology and best practices to our communities.
+                    </p>
+                    <p>
+                        Furthermore, we recognize our responsibility to give back to the society we serve. Our robust Corporate Social Responsibility (CSR) programs are driven by a genuine passion to make a positive impact on the lives of those less fortunate. We believe that access to quality healthcare is a fundamental right, and we are dedicated to bridging the gap and ensuring that everyone has the opportunity to lead a healthy and fulfilling life.
+                    </p>
+                    <p>
+                        We are continuously striving to improve and innovate, and we are grateful for the trust that our patients and the community have placed in us. We are dedicated to building a healthier future for all.
+                    </p>
+                    <p>Thank you for visiting our website and for considering Bankers Group of Hospitals for your healthcare needs.</p>
+                    <div class="text-end">
+                        <i class="fa fa-quote-right text-red fs-1 me-5" aria-hidden="true"></i>
+                    </div>
+                    <p class="mb-1">Sincerely,</p>
+                    <p class="fw-semibold mb-1 text-black">Dr. Yash Banker</p>
+                    <p class="fw-semibold text-black">CEO, Bankers Group of Hospitals</p>
+                </div>
+
+
+            </div>
+
+        </div>
+    </section>
+
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="extrajs" runat="server">
+</asp:Content>

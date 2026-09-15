@@ -1,0 +1,81 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/bankers.Master" AutoEventWireup="true" CodeBehind="medical-camp-details.aspx.cs" Inherits="bankersheart.medical_camp_details" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style>
+        .custom-center-label {
+    text-align: center !important;
+    display: block; /* Makes the label block-level, ensuring it takes up full width */
+    width: 100%; /* Optional, but ensures it spans the full width of the parent */
+}
+
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+      <section id="inner-banner" class="content-down">
+        <div class="container">
+            <div class="row">
+                <div class="banner-heading">
+                    <h2 class="text-white text-center mb-0">Medical Camp</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+<div id="events-release">
+    <div class="container py-5">
+        <div class="row py-5">
+             <div class="row py-5">
+ <%--   <p class="text-center"> 
+        Mega Cardiac Camp.. At BhaadBhunja Song ash More Than 100 Patients
+    </p>--%>
+                 <p class="text-center">
+        <asp:Label ID="lblCampDescription" runat="server" CssClass="custom-center-label"></asp:Label>
+    </p>
+    <asp:Repeater ID="rpt_MedicalCamps" runat="server">
+        <ItemTemplate>
+            <div class="col-lg-3 col-sm-6 pt-5">
+                <div class="press-box h-100">
+              <a href='<%# ResolveUrl("~/poweradmin/webfiles/MedicalCamp/" + Eval("Medical_CampImage")) %>' data-fancybox="galler">
+      <picture>
+          <source srcset='<%# ResolveUrl("~/poweradmin/webfiles/MedicalCamp/") + Eval("Medical_CampImage") %>' type="image/webp">
+          <source srcset='<%# ResolveUrl("~/poweradmin/webfiles/MedicalCamp/") + Eval("Medical_CampImage") %>' type="image/png">
+          <img class="img-fluid rounded-4 media-img roun"
+              src='<%# ResolveUrl("~/poweradmin/webfiles/MedicalCamp/") + Eval("Medical_CampImage") %>'
+              alt='<%# Eval("title") %>'>
+      </picture>
+  </a>
+<%--                    <a href="<%# ResolveUrl("~/poweradmin/webfiles/MedicalCamp/" + Eval("image"))  %>" data-fancybox="galler"></a>--%>
+                </div>
+            </div>
+        </ItemTemplate>
+    </asp:Repeater>
+</div>
+
+
+       <%--     <asp:Repeater ID="rpt_MedicalCamps" runat="server">
+                <ItemTemplate>
+                    <p class="text-center"><%# Eval("description") %></p>
+                    <div class="col-md-4 mb-4">
+                        <!-- Press Box for each medical camp -->
+                        <div class="press-box h-100">
+                            <!-- Link to the image (this will open the image in a fancybox) -->
+                            <a href='<%# ResolveUrl("~/poweradmin/webfiles/MedicalCamp/" + Eval("image")) %>' data-fancybox="galler">
+                                <picture>
+                                    <source srcset='<%# ResolveUrl("~/poweradmin/webfiles/MedicalCamp/") + Eval("image") %>' type="image/webp">
+                                    <source srcset='<%# ResolveUrl("~/poweradmin/webfiles/MedicalCamp/") + Eval("image") %>' type="image/png">
+                                    <img class="img-fluid p-3" 
+                                        src='<%# ResolveUrl("~/poweradmin/webfiles/MedicalCamp/") + Eval("image") %>' 
+                                        alt='<%# Eval("title") %>'>
+                                </picture>
+                            </a>
+                            <!-- Displaying the description -->
+                           
+                        </div>
+                    </div>
+                </ItemTemplate>
+            </asp:Repeater>--%>
+        </div>
+    </div>
+</div>
+
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="extrajs" runat="server">
+</asp:Content>

@@ -1,0 +1,68 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/bankers.Master" AutoEventWireup="true" CodeBehind="csr-activity-details.aspx.cs" Inherits="bankersheart.csr_activity_details" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+     <section id="inner-banner" class="content-down">
+        <div class="container">
+            <div class="row">
+                <div class="banner-heading">
+                    <h2 class="text-white text-center mb-0">CSR Activity at Bankers</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="csr-activity">
+        <div class="container py-5">
+            <div class="row py-5">
+                <p class="text-center">
+     <asp:Label ID="lblCampDescription" runat="server" CssClass="custom-center-label"></asp:Label>
+ </p>
+             <asp:Repeater ID="rptCSR_Activity" runat="server">
+     <ItemTemplate>
+         <div class="col-lg-3 col-sm-6 pt-5">
+             <div class="press-box h-100 text-center">
+                 <a href='<%# ResolveUrl("~/poweradmin/webfiles/CSR_Activity/" + Eval("CSR_ActivityImage")) %>' data-fancybox="galler">
+                     <picture>
+                         <source srcset='<%# ResolveUrl("~/poweradmin/webfiles/CSR_Activity/") + Eval("CSR_ActivityImage") %>' type="image/webp">
+                         <source srcset='<%# ResolveUrl("~/poweradmin/webfiles/CSR_Activity/") + Eval("CSR_ActivityImage") %>' type="image/png">
+                         <img class="img-fluid p-3 rounded-4 media-img"
+                             src='<%# ResolveUrl("~/poweradmin/webfiles/CSR_Activity/") + Eval("CSR_ActivityImage") %>'
+                             alt='<%# Eval("title") %>'>
+                     </picture>
+                 </a>
+             </div>
+         </div>
+     </ItemTemplate>
+ </asp:Repeater>
+                <%--  <p class="text-center"> 
+                    Mega  Cardiac Camp.. At BhaadBhunja Song ash More Than 100 Patients</p>
+
+                <div class="col-lg-3 col-sm-6  pt-5">
+                    <div class="press-box h-100">
+                       <a href="assets/img/press-relase-img.png" data-fancybox="galler">
+
+                       
+                         <picture>
+                            <source srcset="assets/img/press-relase-img.webp" type="image/webp">
+                            <source srcset="assets/img/press-relase-img.png" type="image/png">
+                            <img class="img-fluid p-3" src="assets/img/press-relase-img.png"  alt="Bankers group of hospital press release">
+                        </picture>
+                           </a>
+                        <a href="assets/img/press-relase-img-2.png" data-fancybox="galler"> </a>
+                        
+                    </div>
+                </div>--%>
+
+             
+
+              
+
+
+              
+            
+            </div>
+        </div>
+    </div>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="extrajs" runat="server">
+</asp:Content>

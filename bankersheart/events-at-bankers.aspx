@@ -1,0 +1,435 @@
+﻿<%@ Page Language="C#" MasterPageFile="~/bankers.Master" AutoEventWireup="true" CodeBehind="events-at-bankers.aspx.cs" Inherits="bankersheart.events_at_bankers" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <meta name="keywords" content="Vadodara hospital events, medical conferences Vadodara, Bankers Heart hospital news, Bankers Group medical events">
+    <meta id="metaDescription" runat="server" name="description" content="" />
+    <%--    <link rel="canonical" href="https://www.bankersheart.com/events-at-bankers" />--%>
+    <link id="canonicalLink" runat="server" />
+
+
+    <style>
+        .tittle-height {
+            height: 155px;
+        }
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+    <section id="inner-banner" class="content-down">
+        <div class="container">
+            <div class="row">
+                <div class="banner-heading">
+                    <asp:Literal ID="litHeading" runat="server"></asp:Literal>
+                    <h2 class="text-white text-center mb-0">Events at Bankers</h2>
+                    <h3></h3>
+                    <h4></h4>
+                    <h5></h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="events-bankers">
+        <div class="container py-5">
+            <div class="row py-5">
+                <div class="col-12">
+                    <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+                        <li class="nav-item nav-item-2" role="presentation">
+                            <%--                            <button class="nav-link active" id="events_tab" clientidmode="Static" runat="server" data-bs-toggle="tab" data-bs-target="#events" type="button" role="tab" aria-controls="home" aria-selected="true" onclick="btn_submit_Click">Event</button>--%>
+                            <button class="nav-link active" id="events_tab" clientidmode="Static" runat="server" data-bs-toggle="tab" data-bs-target="#events" type="button" role="tab" aria-controls="home" aria-selected="true" onserverclick="btn_submit_Clickevent">
+                                Event
+                            </button>
+
+                            <%--<asp:LinkButton CssClass="nav-link active" ID="events_tab" runat="server" data-bs-toggle="tab" data-bs-target="#events" type="button" role="tab" aria-controls="home" aria-selected="true">Event</asp:LinkButton>--%>
+                        </li>
+                        <li class="nav-item" role="presentation" style="">
+                            <button class="nav-link" id="lecture_tab" clientidmode="Static" runat="server" data-bs-toggle="tab" data-bs-target="#lecture" type="button" role="tab" aria-controls="profile" aria-selected="false" tabindex="-1" onserverclick="btn_submit_Clicklecture">Lecture</button>
+                        </li>
+                        <li class="nav-item" role="presentation" style="">
+                            <button class="nav-link" id="rally_tab" clientidmode="Static" runat="server" data-bs-toggle="tab" data-bs-target="#rally" type="button" role="tab" aria-controls="contact" aria-selected="false" tabindex="-1" onserverclick="btn_submit_Clickrally">Rally</button>
+                        </li>
+                        <li class="nav-item" role="presentation" style="">
+                            <button class="nav-link" id="conference_tab" clientidmode="Static" runat="server" data-bs-toggle="tab" data-bs-target="#conference" type="button" role="tab" aria-controls="contact" aria-selected="false" tabindex="-1" onserverclick="btn_submit_Clickconfernece">Conference</button>
+                        </li>
+                        <li class="nav-item" role="presentation" style="">
+                            <button class="nav-link" id="card_tab" clientidmode="Static" runat="server" data-bs-toggle="tab" data-bs-target="#card" type="button" role="tab" aria-controls="contact" aria-selected="false" tabindex="-1" onserverclick="btn_submit_Clickcardcon">Card Con</button>
+                        </li>
+
+
+                    </ul>
+                    <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Conditional">
+                        <ContentTemplate>
+                            <div class="tab-content py-3" id="myTabContent">
+                                <div class="tab-pane fade active show" id="events" runat="server" clientidmode="Static" role="tabpanel" aria-labelledby="events_tab">
+                                    <asp:ScriptManager ID="ScriptManager1" runat="server" />
+
+
+                                    <div class="row">
+                                        <asp:Repeater ID="rpt_MedicalCamps" runat="server">
+                                            <ItemTemplate>
+                                                <div class="col-lg-4 col-md-6 pt-5">
+                                                    <%--                                            <a href='events-at-bankers-details.aspx?titlelink=<%# Eval("titlelink") %>'>--%>
+                                                    <a href="<%# GetRouteUrl("event", new {titlelink=Eval("titlelink") }) %>">
+
+                                                        <div class="box-shadow-date text-center p-2 h-100">
+                                                            <div class="position-relative">
+                                                                <%-- <picture>
+                                         <source srcset="https://www.bankersheart.com/assets/img/events-bankers-img-1.webp" type="image/webp">
+                                         <source srcset="https://www.bankersheart.com/assets/img/events-bankers-img-1.png" type="image/png">
+                                         <img class="img-fluid  rounded-4" src="https://www.bankersheart.com/assets/img/events-bankers-img-1.png" alt="Blog-details">
+                                     </picture>--%>
+                                                                <picture>
+                                                                    <source srcset='<%# ResolveUrl("~/poweradmin/webfiles/EventsatBankersCategory/") + Eval("image") %>' type="image/webp">
+                                                                    <source srcset='<%# ResolveUrl("~/poweradmin/webfiles/EventsatBankersCategory/") + Eval("image") %>' type="image/png">
+                                                                    <img class="img-fluid rounded-4 media-img"
+                                                                        src='<%# ResolveUrl("~/poweradmin/webfiles/EventsatBankersCategory/") + Eval("image") %>'
+                                                                        alt='<%# Eval("title") %>'>
+                                                                </picture>
+                                                                <div class="ribbon ribbon-top-left">
+                                                                    <span class="avail"><%# Eval("EventsatBankers_Date", "{0:dd MMM yyyy}") %></span>
+
+                                                                </div>
+                                                                <%--                                         <p class="date-fix py-1 mb-0 px-3">17<br />sept</p>--%>
+                                                                <%--<p class="date-fix py-1 mb-0 px-3">
+                                                            <%# Convert.ToDateTime(Eval("EventsatBankers_Date")).ToString("dd") %><br />
+                                                            <%# Convert.ToDateTime(Eval("EventsatBankers_Date")).ToString("MMM") %>
+                                                        </p>--%>
+                                                            </div>
+                                                            <div class="pb-4 px-2">
+                                                                <div class="tittle-height">
+
+
+                                                                    <h6 class="pt-4  clr-black fw-semibold clamped-text"><%# Eval("title") %></h6>
+                                                                    <p class="clamped-text" style="text-align: justify; text-justify: inter-word;"><%# Eval("shortdescription") %></p>
+                                                                </div>
+                                                                <div class="mt-4">
+                                                                    <a href='<%# GetRouteUrl("event", new { titlelink = Eval("titlelink") }) %>' class="btn-theme btn-blue">Know More</a>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+
+                                                    </a>
+                                                </div>
+                                            </ItemTemplate>
+                                        </asp:Repeater>
+                                    </div>
+
+
+                                    <div class="row pt-5 mt-3 justify-content-center text-center">
+
+                                        <div class="col-12 carousal-arrow">
+                                            <div class="row pt-5 mt-3 justify-content-center text-center">
+                                                <asp:PlaceHolder ID="PaginationPlaceholder" runat="server"></asp:PlaceHolder>
+                                            </div>
+
+
+                                            <%--   <a href="#"><i class="fa fa-long-arrow-left "></i></a>
+
+                                    <a href="#" class="px-3">1</a>
+                                    <a href="#" class="px-3">2</a>
+
+                                    <a href="#"><i class="fa fa-long-arrow-right"></i></a>--%>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="lecture" runat="server" clientidmode="Static" role="tabpanel" aria-labelledby="lecture_tab">
+                                    <div class="row">
+                                        <asp:Repeater ID="rpt_Lectures" runat="server">
+                                            <ItemTemplate>
+                                                <div class="col-lg-4 col-md-6 pt-5">
+                                                    <%-- <a href='events-at-bankers-details.aspx?id=<%# Eval("id") %>'>--%>
+                                                    <a href="<%# GetRouteUrl("lecture", new {titlelink=Eval("titlelink") }) %>">
+
+                                                        <div class="box-shadow-date text-center p-2 h-100">
+                                                            <div class="position-relative">
+                                                                <%-- <picture>
+                                         <source srcset="https://www.bankersheart.com/assets/img/events-bankers-img-1.webp" type="image/webp">
+                                         <source srcset="https://www.bankersheart.com/assets/img/events-bankers-img-1.png" type="image/png">
+                                         <img class="img-fluid  rounded-4" src="https://www.bankersheart.com/assets/img/events-bankers-img-1.png" alt="Blog-details">
+                                     </picture>
+                                                                --%>
+                                                                <picture>
+                                                                    <source srcset='<%# ResolveUrl("~/poweradmin/webfiles/LecturesCategory/") + Eval("image") %>' type="image/webp">
+                                                                    <source srcset='<%# ResolveUrl("~/poweradmin/webfiles/LecturesCategory/") + Eval("image") %>' type="image/png">
+                                                                    <img class="img-fluid rounded-4 media-img"
+                                                                        src='<%# ResolveUrl("~/poweradmin/webfiles/LecturesCategory/") + Eval("image") %>'
+                                                                        alt='<%# Eval("title") %>'>
+                                                                </picture>
+                                                                <%--  <p class="date-fix py-1 mb-0 px-3">17<br />sept</p>
+                       
+                                         </div>
+                                     <div class="pb-4">
+                                         <h6 class="pt-5  clr-black fw-semibold clamped-text">Republic Day Celebration at Bankers Group</h6>
+                                         <div class="mt-4"><a href="https://www.bankersheart.com/events-at-bankers-details" class="btn-theme btn-blue">Know More</a></div>
+                                     
+                                     </div>--%>
+                                                                <div class="ribbon ribbon-top-left">
+                                                                    <span class="avail"><%# Eval("Lectures_Date", "{0:dd MMM yyyy}") %></span>
+
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="pb-4 px-2">
+                                                                <div class="tittle-height">
+
+
+                                                                    <h6 class="pt-4  clr-black fw-semibold clamped-text"><%# Eval("title") %></h6>
+                                                                    <p class="clamped-text" style="text-align: justify; text-justify: inter-word;"><%# Eval("shortdescription") %></p>
+                                                                </div>
+                                                                <div class="mt-4">
+                                                                    <%--                                                                    <a href='events-at-bankers-details.aspx?lectureid=<%# Eval("id") %>' class="btn-theme btn-blue">Know More</a>--%>
+                                                                    <a href='<%# GetRouteUrl("lecture", new { titlelink = Eval("titlelink") }) %>' class="btn-theme btn-blue">Know More</a>
+
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+
+                                                    </a>
+                                                </div>
+                                            </ItemTemplate>
+                                        </asp:Repeater>
+
+
+                                    </div>
+
+                                    <div class="row pt-5 mt-3 justify-content-center text-center">
+                                        <div class="row pt-5 mt-3 justify-content-center text-center">
+                                            <asp:PlaceHolder ID="PaginationLecturePlaceholder" runat="server"></asp:PlaceHolder>
+                                        </div>
+
+                                        <%--  <div class="col-12 carousal-arrow">
+                                    <a href="#"><i class="fa fa-long-arrow-left "></i></a>
+
+                                    <a href="#" class="px-3">1</a>
+                                    <a href="#" class="px-3">2</a>
+
+                                    <a href="#"><i class="fa fa-long-arrow-right"></i></a>
+                                </div>--%>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="Rally1" runat="server" clientidmode="Static" role="tabpanel" aria-labelledby="rally_tab">
+                                    <div class="row">
+                                        <asp:Repeater ID="Rally" runat="server">
+                                            <ItemTemplate>
+                                                <div class="col-lg-4 col-md-6 pt-5">
+                                                    <%--       <a href="<%=ConfigurationManager.AppSettings["siteurl"].ToString() %>events-at-bankers-details.aspx">--%>
+                                                    <a href="<%# GetRouteUrl("rally", new {titlelink=Eval("titlelink") }) %>">
+
+                                                        <div class="box-shadow-date text-center p-2 h-100">
+                                                            <div class="position-relative">
+                                                                <%--  <picture>
+                                         <source srcset="https://www.bankersheart.com/assets/img/events-bankers-img-1.webp" type="image/webp">
+                                         <source srcset="https://www.bankersheart.com/assets/img/events-bankers-img-1.png" type="image/png">
+                                         <img class="img-fluid  rounded-4" src="https://www.bankersheart.com/assets/img/events-bankers-img-1.png" alt="Blog-details">
+                                     </picture>--%>
+                                                                <picture>
+                                                                    <source srcset='<%# ResolveUrl("~/poweradmin/webfiles/RallyCategory/") + Eval("image") %>' type="image/webp">
+                                                                    <source srcset='<%# ResolveUrl("~/poweradmin/webfiles/RallyCategory/") + Eval("image") %>' type="image/png">
+                                                                    <img class="img-fluid rounded-4 media-img"
+                                                                        src='<%# ResolveUrl("~/poweradmin/webfiles/RallyCategory/") + Eval("image") %>'
+                                                                        alt='<%# Eval("title") %>'>
+                                                                </picture>
+
+
+                                                                <%--                                         <p class="date-fix py-1 mb-0 px-3">17<br />sept</p>
+                                                                --%>
+                                                                <div class="ribbon ribbon-top-left">
+                                                                    <span class="avail"><%# Eval("Rally_Date", "{0:dd MMM yyyy}") %></span>
+
+                                                                </div>
+                                                                <%--   <p class="date-fix py-1 mb-0 px-3">
+                                                            <%# Convert.ToDateTime(Eval("Rally_Date")).ToString("dd") %><br />
+                                                            <%# Convert.ToDateTime(Eval("Rally_Date")).ToString("MMM") %>
+                                                        </p>--%>
+                                                            </div>
+                                                            <%-- <div class="pb-4">
+                                                        <h6 class="pt-5  clr-black fw-semibold clamped-text">Republic Day Celebration at Bankers Group</h6>
+                                                        <div class="mt-4"><a href="https://www.bankersheart.com/events-at-bankers-details" class="btn-theme btn-blue">Know More</a></div>
+
+                                                    </div>--%>
+                                                            <div class="pb-4 px-2">
+                                                                <div class="tittle-height">
+                                                                    <h6 class="pt-4  clr-black fw-semibold clamped-text"><%# Eval("title") %></h6>
+                                                                    <p class="clamped-text" style="text-align: justify; text-justify: inter-word;"><%# Eval("shortdescription") %></p>
+                                                                </div>
+                                                                <div class="mt-4">
+                                                                    <a href='<%# GetRouteUrl("rally", new { titlelink = Eval("titlelink") }) %>' class="btn-theme btn-blue">Know More</a>
+                                                                </div>
+
+                                                            </div>
+
+
+                                                        </div>
+
+                                                    </a>
+                                                </div>
+                                            </ItemTemplate>
+                                        </asp:Repeater>
+                                    </div>
+
+                                    <div class="row pt-5 mt-3 justify-content-center text-center">
+
+                                        <div class="row pt-5 mt-3 justify-content-center text-center">
+                                            <asp:PlaceHolder ID="PaginationRallyPlaceholder" runat="server"></asp:PlaceHolder>
+                                        </div>
+                                        <%-- <div class="col-12 carousal-arrow">
+                                    <a href="#"><i class="fa fa-long-arrow-left "></i></a>
+
+                                    <a href="#" class="px-3">1</a>
+                                    <a href="#" class="px-3">2</a>
+
+                                    <a href="#"><i class="fa fa-long-arrow-right"></i></a>
+                                </div>--%>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="conference1" runat="server" clientidmode="Static" role="tabpanel" aria-labelledby="conference_tab">
+                                    <div class="row">
+                                        <asp:Repeater ID="Conference" runat="server">
+                                            <ItemTemplate>
+                                                <div class="col-lg-4 col-md-6 pt-5">
+                                                    <%--                                                    <a href="<%=ConfigurationManager.AppSettings["siteurl"].ToString() %>events-at-bankers-details.aspx">--%>
+                                                    <a href="<%# GetRouteUrl("conference", new {titlelink=Eval("titlelink") }) %>">
+
+                                                        <div class="box-shadow-date text-center p-2 h-100">
+                                                            <div class="position-relative">
+                                                                <%--  <picture>
+                                                    <source srcset="https://www.bankersheart.com/assets/img/events-bankers-img-1.webp" type="image/webp">
+                                                    <source srcset="https://www.bankersheart.com/assets/img/events-bankers-img-1.png" type="image/png">
+                                                    <img class="img-fluid  rounded-4" src="https://www.bankersheart.com/assets/img/events-bankers-img-1.png" alt="Blog-details">
+                                                </picture>--%>
+                                                                <picture>
+                                                                    <source srcset='<%# ResolveUrl("~/poweradmin/webfiles/ConferenceCategory/") + Eval("image") %>' type="image/webp">
+                                                                    <source srcset='<%# ResolveUrl("~/poweradmin/webfiles/ConferenceCategory/") + Eval("image") %>' type="image/png">
+                                                                    <img class="img-fluid rounded-4 media-img"
+                                                                        src='<%# ResolveUrl("~/poweradmin/webfiles/ConferenceCategory/") + Eval("image") %>'
+                                                                        alt='<%# Eval("title") %>'>
+                                                                </picture>
+                                                                <%-- <p class="date-fix py-1 mb-0 px-3">17<br />
+                                                    sept</p>--%>
+                                                                <div class="ribbon ribbon-top-left">
+                                                                    <span class="avail"><%# Eval("Conference_Date", "{0:dd MMM yyyy}") %></span>
+
+                                                                </div>
+                                                                <%--    <p class="date-fix py-1 mb-0 px-3">
+                                                            <%# Convert.ToDateTime(Eval("Conference_Date")).ToString("dd") %><br />
+                                                            <%# Convert.ToDateTime(Eval("Conference_Date")).ToString("MMM") %>
+                                                        </p>--%>
+                                                            </div>
+                                                            <%--<div class="pb-4">
+                                                <h6 class="pt-5  clr-black fw-semibold clamped-text">Republic Day Celebration at Bankers Group</h6>
+                                                <div class="mt-4"><a href="https://www.bankersheart.com/events-at-bankers-details" class="btn-theme btn-blue">Know More</a></div>
+
+                                            </div>--%>
+                                                            <div class="pb-4 px-2">
+                                                                <div class="tittle-height">
+                                                                    <h6 class="pt-4  clr-black fw-semibold clamped-text"><%# Eval("title") %></h6>
+                                                                    <p class="clamped-text" style="text-align: justify; text-justify: inter-word;"><%# Eval("shortdescription") %></p>
+                                                                </div>
+                                                                <div class="mt-4">
+                                                                    <a href='<%# GetRouteUrl("conference", new { titlelink = Eval("titlelink") }) %>' class="btn-theme btn-blue">Know More</a>
+                                                                </div>
+
+                                                            </div>
+
+
+                                                        </div>
+
+                                                    </a>
+                                                </div>
+                                            </ItemTemplate>
+                                        </asp:Repeater>
+                                    </div>
+
+                                    <div class="row pt-5 mt-3 justify-content-center text-center">
+                                        <div class="row pt-5 mt-3 justify-content-center text-center">
+                                            <asp:PlaceHolder ID="PaginationConferencePlaceholder" runat="server"></asp:PlaceHolder>
+                                        </div>
+                                        <%--                    <div class="col-12 carousal-arrow">
+                        <a href="#"><i class="fa fa-long-arrow-left "></i></a>
+
+                        <a href="#" class="px-3">1</a>
+                        <a href="#" class="px-3">2</a>
+
+                        <a href="#"><i class="fa fa-long-arrow-right"></i></a>
+                    </div>--%>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="card" runat="server" clientidmode="Static" role="tabpanel" aria-labelledby="card_tab">
+
+                                    <div class="row justify-content-center d-flex pt-5">
+
+                                        <div class="col-lg-10">
+                                            <asp:Repeater ID="PlayCard" runat="server">
+                                                <ItemTemplate>
+                                                    <div class="text-center">
+
+
+                                                        <%--   <picture>
+                                            <source srcset="https://www.bankersheart.com/assets/img/Cardcon.webp" type="image/webp">
+                                            <source srcset="https://www.bankersheart.com/assets/img/Cardcon.jpg" type="image/png">
+                                            <img class="img-fluid  rounded-4" src="https://www.bankersheart.com/assets/img/Cardcon.jpg" alt="Blog-details">
+                                        </picture>--%>
+                                                        <picture>
+                                                            <source srcset='<%# ResolveUrl("~/poweradmin/webfiles/PlayCard/") + Eval("image") %>' type="image/webp">
+                                                            <source srcset='<%# ResolveUrl("~/poweradmin/webfiles/PlayCard/") + Eval("image") %>' type="image/png">
+                                                            <img class="img-fluid rounded-4"
+                                                                src='<%# ResolveUrl("~/poweradmin/webfiles/PlayCard/") + Eval("image") %>'
+                                                                alt='<%# Eval("title") %>'>
+                                                        </picture>
+
+                                                    </div>
+                                                    <div class="pt-3 ck-content" style="text-align: justify; text-justify: inter-word;">
+                                                        <%# Eval("description") %>
+                                                    </div>
+
+
+
+                                                    <%--  <p class="pt-3">
+                                        <b>Banker's Group Of Hospitals</b> is successfuly organizing Cardiac Conferences since 2005.
+                                        This is our humble attempt towards clinical cardiology training and updates.
+                                    </p>
+                                    <p>
+                                        <b>The Bankers Group of Hospitals</b> has been organizing a symposium to discuss various cardiological advances,
+                                        as well as challenges, since many years. The aim of this Cardiological Conference is to provide a platform
+                                        for cardiologists, cardiac surgeons and doctors of other specialities to deliberate over various topics pertaining 
+                                        to cardiac health.
+                                    </p>
+                                    <p>
+                                        <b>The CardCon 2015</b> aimed at studying the gaps in clinical cardiology and trying to arrive at a 
+                                        solution to bridge those gaps. This year's conference was attended by over 650 doctors from Gujarat, Madhya Pradesh and Uttar Pradesh. 
+                                        The conference covered basic subjects like emergencies, ECGs, Echocardiography and the daily clinical challenges faced by the surgeons.
+                                        Renowned surgeons and doctors shared their real life experiences and learnings with other participants of the conference.
+                                        The enthused crowd appreciated each session organized by the hospital and there were lively discussions throughout the conference.
+                                    </p>
+                                    <p>
+                                        This year's CardCon felicitated Dr Darshan Banker and his outstanding academic performance. It is a matter
+                                        of great pride for us that his article has been published in the most prestigious medical journal, The New 
+                                        England Journal of Medicine.
+                                    </p>--%>
+                                                </ItemTemplate>
+                                            </asp:Repeater>
+
+                                        </div>
+
+
+                                    </div>
+
+
+                                </div>
+
+
+                            </div>
+                        </ContentTemplate>
+                    </asp:UpdatePanel>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="extrajs" runat="server">
+</asp:Content>

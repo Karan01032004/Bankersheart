@@ -1,0 +1,109 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="footer.ascx.cs" Inherits="bankersheart.includes.footer" %>
+<section id="footer">
+    <div class="container padding-top padding-bottom">
+        <div class="row align-items-center justify-content-center">
+            <div class="col-lg-4 col-sm-6 align-items-center  mb-sm-0 mb-4">
+                <div class="row align-items-center  ps-sm-0 ps-4">
+                    <div class="col-3 icon-size">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-9 ps-0">
+                        <p class="text-white fw-semibold ps-3 mb-0">
+                            Near Tagore nagar, Old Padra Road, Vadodara-15, Gujarat, India
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-4 col-sm-6 ps-lg-5 align-items-center  mb-sm-0 mb-4">
+                <div class="row align-items-center ps-xl-5 ps-4">
+                    <div class="col-3 icon-size">
+                        <i class="fa fa-phone p-0" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-9">
+                        <a href="tel:+91 265 2607777" class="fw-semibold">+91 265 2607777</a><br />
+                        <a href="tel:+91 265 2324004" class="fw-semibold">+91 265 2324004</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-4 col-md-6 ps-lg-5 pt-lg-0 pt-sm-5">
+                <div class="row align-items-center ps-xl-5 ps-lg-4 ps-sm-0 ps-4">
+                    <div class="col-3 icon-size">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-9">
+                        <a href="mailto:info@bankersheart.com" class="fw-semibold">info@bankersheart.com</a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <hr class="mt-md-5 mt-4 mb-3" style="color: #fff; border-top: 2px solid #fff;" />
+        <div class="row justify-content-xl-between justify-content-center text-sm-start text-center">
+            <div class="col-lg-3 col-sm-6 pt-4 ">
+                <h4 class=" fw-semibold">Our Services</h4>
+                <ul class="lh-lg">
+                    <li><a href="#">Non Invasive Diagnostic Services</a></li>
+                    <li><a href="#">Interventional Cardiology</a></li>
+                    <li><a href="#">Cardiac Surgery</a></li>
+                    <li><a href="#">Medical Support</a></li>
+                    <li><a href="#">MA Yojana</a></li>
+                </ul>
+            </div>
+
+            <div class=" col-lg-3 col-sm-6  pt-4 ">
+                <h4 class=" fw-semibold">About Us</h4>
+                <ul class="lh-lg">
+                    <li><a href="about-bankers-group-of-hospitals.aspx">Bankers Hospitals</a></li>
+                    <li><a href="founder-message.aspx">Founder's  Message</a></li>
+                    <li><a href="about-bankers-group-of-hospitals.aspx#contact-details">Vision & Mission</a></li>
+                    <li><a href="commitment-to-quality.aspx">Commitment to Quality</a></li>
+                    <li><a href="achievements-awards.aspx">Achievements and Awards</a></li>
+                    <li><a href="meet-our-doctors.aspx">Meet our Doctors</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-sm-6 pt-4 ">
+                <h4 class=" fw-semibold">Media</h4>
+                <ul class="lh-lg">
+                    <li><a href="media-press-release.aspx">Press Releases</a></li>
+                    <li><a href="events-at-bankers.aspx">Events at Bankers</a></li>
+                    <li><a href="news-at-bankers.aspx">News at Bankers</a></li>
+                    <li><a href="#">Virtual Gallery</a></li>
+                    <li><a href="media-download.aspx">Downloads</a></li>
+
+                </ul>
+            </div>
+
+            <div class="col-lg-4 col-sm-6 pt-4 ps-lg-5">
+                <h4 class=" fw-semibold">Education</h4>
+                <ul class="lh-lg">
+                    <li><a href="pgdcc.aspx">PGDCC, DNb Cardiology + 1 new course</a></li>
+                    <li><a href="#">Bankers Nursing Institute</a></li>
+                    <li><a href="#">Bankers Technical Institute</a></li>
+                    <li><a href="cme-journal-club.aspx">CME and Journal Club</a></li>
+                    <li><a href="interesting-cases.aspx">Interesting Cases</a></li>
+                    <li><a href="cardcon.aspx">CardCon</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <div class="py-2 border-top border-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 text-center text-lg-start">
+                    <p class="m-0">Copyright &#169; 2025 Bankers Group of Hospitals. All Rights Reserved. | <a class="sitemap" href="sitemap.html">Sitemap</a></p>
+                </div>
+                <div class="col-lg-4 text-lg-end text-center">
+                    <p class="m-0">Website Design by <a href="https://www.dotsandcoms.in/" target="_blank">D&C</a></p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>

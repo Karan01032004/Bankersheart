@@ -1,0 +1,165 @@
+﻿<%@ Page Title="Healthcare Exhibitions | Bankers Group of Hospitals" Language="C#" MasterPageFile="~/bankers.Master" AutoEventWireup="true" CodeBehind="exhibitions.aspx.cs" Inherits="bankersheart.exhibitions" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <meta name="description" content="Explore healthcare exhibitions by Bankers Group of Hospitals, showcasing medical advancements, innovative treatments, and community health initiatives for better patient care.">
+    <link rel="canonical" href="https://www.bankersheart.com/exhibitions" />
+    <meta property="og:title" content="Healthcare Exhibitions | Bankers Group of Hospitals" />
+    <meta property="og:description" content="Explore healthcare exhibitions by Bankers Group of Hospitals, showcasing medical advancements, innovative treatments, and community health initiatives for better patient care." />
+    <meta property="og:url" content="https://www.bankersheart.com/exhibitions" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Bankers Group of Hospitals" />
+    <meta property="og:image" content="https://www.bankersheart.com/bankers-group-of-hospitals-og.png" />
+    <meta property="og:image:alt" content="Healthcare Exhibitions by Bankers Group of Hospitals" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Healthcare Exhibitions | Bankers Group of Hospitals" />
+    <meta name="twitter:description" content="Explore healthcare exhibitions by Bankers Group of Hospitals, showcasing medical advancements, innovative treatments, and community health initiatives for better patient care." />
+    <meta name="twitter:image" content="https://www.bankersheart.com/bankers-group-of-hospitals-og.png" />
+    <meta name="twitter:image:alt" content="Healthcare Exhibitions by Bankers Group of Hospitals" />
+    <meta name="twitter:site" content="@BankersHospitals" />
+
+    <style>
+        .tittle-height {
+            height: 140px;
+        }
+
+        @media(max-width:1200px) and (min-width:992px) {
+            .tittle-height {
+                height: 150px;
+            }
+        }
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+    <section id="inner-banner" class="content-down">
+        <div class="container">
+            <div class="row">
+                <div class="banner-heading">
+                    <h1 class="text-white h2 text-center mb-0">Exhibitions <%--<span class="position-absolute invisible">Bankers</span>--%></h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="medical-camp">
+        <div class="container pt-5">
+            <div class="row justify-content-center d-flex pt-5">
+                <div class="col-10 text-center">
+                    <picture>
+                        <source srcset="<%=ConfigurationManager.AppSettings["siteurl"].ToString() %>assets/img/csr-exhibition-img.webp" type="image/webp">
+                        <source srcset="<%=ConfigurationManager.AppSettings["siteurl"].ToString() %>assets/img/csr-exhibition-img.png" type="image/png">
+                        <img class="img-fluid  rounded-4" src="<%=ConfigurationManager.AppSettings["siteurl"].ToString() %>assets/img/csr-exhibition-img.png" alt="Medical Camps">
+                    </picture>
+                    <h2 class="invisible position-absolute">Grand Heart Exhibition</h2>
+                    <h3></h3>
+                    <h4></h4>
+                    <h5></h5>
+                    <p class="pt-3">
+                        Bankers Heart Institute was inaugurated on a magnificent scale in March 2004, presenting a grand Heart Exhibition. 
+                        Posters on Heart, Hypertension, DM, Diet, Exercise, yoga, General health etc were exhibited in the exhibition. We are well equipped 
+                        with a full collection of posters, brochure, and Audio-Visual presentations. On regular intervals we visit Schools, Colleges,
+                        Corporate, Senior Citizen Organizations, peripheral towns of Baroda bring forward our presentations and exhibit our collection.
+                        Our goal is to reach the most educated individual as well as to the underprivileged and less educated individual group of the society.
+                        Keeping this in mind we have our exhibition material in English, Hindi & Gujarati.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="csr-bankers-section">
+        <div class="container py-5">
+
+            <div class="row">
+                <asp:Repeater ID="rpt_Exhibitions" runat="server">
+                    <ItemTemplate>
+                        <div class="col-lg-4 col-md-6 pt-5">
+                            <a href='<%# GetRouteUrl("exhibitions", new { titlelink = Eval("titlelink") }) %>'>
+                                <div class="box-shadow-date text-center p-2 h-100">
+                                    <div class="position-relative">
+                                        <picture>
+                                            <source srcset='<%# ResolveUrl("~/poweradmin/webfiles/ExhibitionCategory/") + Eval("image") %>' type="image/webp">
+                                            <source srcset='<%# ResolveUrl("~/poweradmin/webfiles/ExhibitionCategory/") + Eval("image") %>' type="image/png">
+                                            <img class="img-fluid rounded-4 media-img"
+                                                src='<%# ResolveUrl("~/poweradmin/webfiles/ExhibitionCategory/") + Eval("image") %>'
+                                                alt='<%# Eval("title") %>'>
+                                        </picture>
+                                        <div class="ribbon ribbon-top-left">
+                                            <span class="avail"><%# Eval("Exhibition_Date", "{0:dd MMM yyyy}") %></span>
+
+                                        </div>
+                                        <%--<p class="date-fix py-1 mb-0 px-3">
+                                            <%# Convert.ToDateTime(Eval("Exhibition_Date")).ToString("dd") %><br />
+                                            <%# Convert.ToDateTime(Eval("Exhibition_Date")).ToString("MMM") %>
+                                        </p>--%>
+                                    </div>
+                                    <div class="pb-4 px-2">
+                                        <div class="tittle-height">
+
+
+                                            <h6 class="pt-4 clr-black fw-semibold clamped-text">
+                                                <%# Eval("title") %>
+                                            <p class="clamped-text"><%# Eval("shortdescription") %></p>
+                                        </div>
+
+                                        </h6>
+                                        <div class="mt-4">
+                                            <a href='<%# GetRouteUrl("exhibitions", new { titlelink = Eval("titlelink") }) %>' class="btn-theme btn-blue">Know More</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </a>
+                        </div>
+                    </ItemTemplate>
+                </asp:Repeater>
+            </div>
+            <div class="row pt-5 mt-3 justify-content-center text-center">
+                <asp:PlaceHolder ID="PaginationExhibitionPlaceholder" runat="server"></asp:PlaceHolder>
+            </div>
+
+            <%--    <div class="row">
+                             <div class="col-lg-4 col-md-6 pt-5">
+                                 <a href="https://www.bankersheart.com/exhibitions-details">
+                                 <div class="box-shadow-date text-center p-3 h-100">
+                                     <div class="position-relative">
+                                     <picture>
+                                         <source srcset="https://www.bankersheart.com/assets/img/events-bankers-img-1.webp" type="image/webp">
+                                         <source srcset="https://www.bankersheart.com/assets/img/events-bankers-img-1.png" type="image/png">
+                                         <img class="img-fluid  rounded-4" src="https://www.bankersheart.com/assets/img/events-bankers-img-1.png" alt="Blog-details">
+                                     </picture>
+                            
+                                         <p class="date-fix py-1 mb-0 px-3">17<br />sept</p>
+                       
+                                         </div>
+                                     <div class="pb-4">
+                                         <h6 class="pt-5  clr-black fw-semibold clamped-text">Swine Flu and Health Awareness</h6>
+                                         <div class="mt-4"><a href="https://www.bankersheart.com/exhibitions-details" class="btn-theme btn-blue">Know More</a></div>
+                                     
+                                     </div>
+                                     
+                                 </div>
+
+                                     </a>
+                             </div>
+                            
+                         </div>--%>
+
+            <%--<div class="row pt-5 mt-3 justify-content-center text-center">
+              
+                    <div class="col-12 carousal-arrow">
+                    <a href="#" ><i class="fa fa-long-arrow-left "></i></a>
+
+                     <a href="#" class="px-3 active" >1</a>
+                        <a href="#" class="px-3">2</a>
+
+                   <a href="#"> <i class="fa fa-long-arrow-right"></i></a>
+                </div>
+                
+            </div>--%>
+        </div>
+
+    </div>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="extrajs" runat="server">
+</asp:Content>

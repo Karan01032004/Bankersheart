@@ -1,0 +1,163 @@
+﻿using System;
+using System.Configuration;
+using System.Data.SqlClient;
+using System.Net;
+using System.Net.Mail;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace bankersheart
+{
+    public partial class contact_bankers_group_of_hospitals : System.Web.UI.Page
+    {
+        protected void btnSubmit_Click(object sender, EventArgs e)
+        {
+            if (Page.IsValid) // Ensure all validations have passed
+            {
+                if (this.Session["CaptchaImageText"] == null || txtCaptcha.Text.ToLower() != this.Session["CaptchaImageText"].ToString().ToLower())
+                {
+                    // If CAPTCHA validation fails, display an error message and stop execution
+                    lblERR.Text = "Invalid Captcha Code Entered.";
+                    string script = @"<script>window.location.href = '#targetSection';</script>";
+                    ClientScript.RegisterStartupScript(GetType(), "ScrollToSection", script);
+                    return; // Stop further execution
+                }
+                string userIpAddress = GetIpAddress();
+                lblERR.Text = "";
+                string strQuery = "INSERT INTO ContactUs (firstname, email,Message, phoneno,added_date,modified_ip) VALUES " +
+                                 "(@FirstName, @Email, @Message,@PhoneNo,SYSDATETIMEOFFSET(),@ModifiedIP)";
+
+                using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Connection"].ConnectionString))
+                {
+                    conn.Open();
+                    using (SqlCommand cmd = new SqlCommand(strQuery, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@FirstName", txtName.Text);
+                        cmd.Parameters.AddWithValue("@Email", txtEmail.Text);
+                        cmd.Parameters.AddWithValue("@phoneno", txtMobile.Text);
+                        cmd.Parameters.AddWithValue("@Message", txtMessage.Text);
+                        // Convert to your time zone (IST = UTC +5:30, adjust as needed)
+                        DateTime localTime = TimeZoneInfo.ConvertTimeBySystemTimeZoneId(DateTime.UtcNow, "India Standard Time");
+
+                        cmd.Parameters.AddWithValue("@AddedDate", localTime);
+
+
+                        // Get the user's IP address
+                        string userIP = HttpContext.Current.Request.UserHostAddress;
+                        cmd.Parameters.AddWithValue("@ModifiedIP", userIP);
+
+
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+
+                #region Send Email
+                string StrMailBody = GetMailTemplates("maintemplates\\Contact.htm");
+                StrMailBody = StrMailBody.Replace("_ContactName_", txtName.Text);
+                StrMailBody = StrMailBody.Replace("_Email_", txtEmail.Text);
+                StrMailBody = StrMailBody.Replace("_Mobile_", txtMobile.Text);
+                StrMailBody = StrMailBody.Replace("_Message_", txtMessage.Text);
+                StrMailBody = StrMailBody.Replace("_IP_ADDRESS_", userIpAddress); // Add IP address
+                StrMailBody = StrMailBody.Replace("_DATE_", DateTime.Now.ToString("dd-MM-yyyy"));
+
+                try
+                {
+                    MailToSendSite(ConfigurationManager.AppSettings["ContactEmail"].ToString(),
+                        "Contact enquiry from " + txtName.Text, txtEmail.Text, StrMailBody, null, null,
+                        ConfigurationManager.AppSettings["ContactEmail"].ToString(), txtEmail.Text); // User's email as Reply-To
+
+                    Response.Redirect("thank-you.html");
+                }
+                catch (Exception ex)
+                {
+                    lblERR.Text = "Error sending email: " + ex.Message;
+                }
+                #endregion
+            }
+        }
+
+        private string GetIpAddress()
+        {
+            string ipAddress = Request.ServerVariables["HTTP_X_FORWARDED_FOR"];
+            if (string.IsNullOrEmpty(ipAddress))
+            {
+                ipAddress = Request.ServerVariables["REMOTE_ADDR"];
+            }
+            return ipAddress;
+        }
+
+        public string GetMailTemplates(string templatePath)
+        {
+            string mailTemplate = "";
+            if (System.IO.File.Exists(GetRootPath() + templatePath))
+            {
+                mailTemplate = System.IO.File.ReadAllText(GetRootPath() + templatePath);
+            }
+            return mailTemplate;
+        }
+
+        public static string GetRootPath()
+        {
+            string completePath = HttpContext.Current.Server.MapPath(HttpContext.Current.Request.ApplicationPath).Replace("/", "\\");
+            string rootPath = completePath + "\\";
+            return rootPath;
+        }
+
+        public static int MailToSendSite(string tomail, string mailsubject, string frommail, string bodymail, string ccmail, string bccmail, string fromname, string replyto)
+        {
+            try
+            {
+                ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls
+                                            | SecurityProtocolType.Tls11
+                                            | SecurityProtocolType.Tls12;
+
+                string HostName = ConfigurationManager.AppSettings["HostName"].ToString();
+                string User = ConfigurationManager.AppSettings["UserName"].ToString();
+                string password = ConfigurationManager.AppSettings["Password"].ToString();
+
+                if (string.IsNullOrEmpty(tomail))
+                    tomail = ConfigurationManager.AppSettings["ContactEmail"].ToString();
+                if (string.IsNullOrEmpty(frommail))
+                    frommail = ConfigurationManager.AppSettings["UserName"].ToString();
+
+                SmtpClient smtpClientC = new SmtpClient();
+                MailMessage objMailC = new MailMessage();
+                MailAddress objMailC_fromaddress = new MailAddress(frommail, fromname);
+                MailAddress objMailC_toaddress = new MailAddress(tomail);
+                MailAddress objMailC_replyto = new MailAddress(replyto); // Set user's email as Reply-To
+
+                objMailC.From = objMailC_fromaddress;
+                objMailC.To.Add(objMailC_toaddress);
+                objMailC.ReplyToList.Clear();
+                objMailC.ReplyToList.Add(objMailC_replyto);
+
+                objMailC.IsBodyHtml = true;
+                objMailC.Subject = mailsubject;
+                objMailC.Body = bodymail;
+
+                if (!string.IsNullOrEmpty(ccmail))
+                {
+                    objMailC.CC.Add(ccmail);
+                }
+
+                if (!string.IsNullOrEmpty(bccmail))
+                {
+                    objMailC.Bcc.Add(bccmail);
+                }
+
+                smtpClientC.Host = HostName;
+                smtpClientC.Port = 587;
+                smtpClientC.EnableSsl = true;
+                smtpClientC.UseDefaultCredentials = false;
+                smtpClientC.Credentials = new NetworkCredential(User, password);
+                smtpClientC.Send(objMailC);
+                return 1;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+    }
+}

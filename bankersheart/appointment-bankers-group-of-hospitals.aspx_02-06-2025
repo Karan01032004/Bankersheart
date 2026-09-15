@@ -1,0 +1,203 @@
+﻿<%@ Page Title="Book an Appointment | Bankers Group of Hospitals" Language="C#" MasterPageFile="~/bankers.Master" AutoEventWireup="true" CodeBehind="appointment-bankers-group-of-hospitals.aspx.cs" Inherits="bankersheart.appointment_bankers_group_of_hospitals" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
+    <meta name="description" content="Schedule your consultation with leading specialists at Bankers Group of Hospitals. Choose from our superspeciality, cardiac, and multispeciality centers for expert, compassionate care.">
+
+
+    <style>
+        .form-select, label {
+            color: #3E3E3E !important;
+        }
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+    <section id="inner-banner" class="content-down">
+        <div class="container">
+            <div class="row">
+                <div class="banner-heading">
+                    <h2 class="text-white text-center mb-0">Appointment</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact-form">
+        <div class="container py-5">
+            <div class="row justify-content-center py-5">
+                <div class="col-lg-8 col-md-10 col-sm-11">
+                    <div class="bg_contact px-2 px-sm-4 py-5 rounded-3">
+                        <h3 class="text-center text-black">Book Appointments Today!</h3>
+
+                        <div class="mt-5">
+                            <div class="row g-md-3">
+                                <div class="col-md-6 mb-3">
+                                    <div class="form-floating">
+                                        <asp:DropDownList ID="ddlHospital" runat="server" CssClass="form-select form-control py-3" AppendDataBoundItems="true" AutoPostBack="true" OnSelectedIndexChanged="ddlHospital_SelectedIndexChanged">
+                                        </asp:DropDownList>
+                                        <%--  <label for="ddlHospital">Hospital Name</label>--%>
+                                        <asp:RequiredFieldValidator ID="rfvHospital" runat="server"
+                                            ControlToValidate="ddlHospital"
+                                            InitialValue=""
+                                            Display="Dynamic"
+                                            CssClass="text-danger"
+                                            ErrorMessage="Hospital name is required.">
+                                        </asp:RequiredFieldValidator>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+                                    <div class="form-floating">
+                                        <asp:DropDownList ID="ddlDoctor" runat="server" CssClass="form-select form-control py-3" AppendDataBoundItems="true">
+                                        </asp:DropDownList>
+
+                                        <%-- <label for="ddlDoctor">Doctor Name</label>--%>
+                                        <asp:RequiredFieldValidator ID="rfvDoctor" runat="server"
+                                            ControlToValidate="ddlDoctor"
+                                            InitialValue=""
+                                            Display="Dynamic"
+                                            CssClass="text-danger"
+                                            ErrorMessage="Doctor name is required.">
+                                        </asp:RequiredFieldValidator>
+                                    </div>
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <div class="form-floating">
+                                        <%--<input type="text" class="form-control" id="Patient-Name" name="patient_name" placeholder="Patient Name" required>
+										<label for="Patient-Name">Patient Name</label>--%>
+                                        <asp:TextBox ID="txtPatientName" runat="server" CssClass="form-control" placeholder="Patient Name" oninput="removeHttpHttps(this)"></asp:TextBox>
+                                        <label for="txtPatientName">Patient Name</label>
+                                        <asp:RequiredFieldValidator ID="rfvPatientName" runat="server" ControlToValidate="txtPatientName" Display="Dynamic" CssClass="text-danger" ErrorMessage="Patient name is required."></asp:RequiredFieldValidator>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+
+                        <div class="row g-md-3">
+                            <div class="col-md mb-3">
+                                <div class="form-floating">
+                                    <%--	<input type="text" class="form-control" id="mobile" name="mobile" placeholder="Mobile no." required>
+										<label for="mobile">Mobile No.</label>--%>
+                                    <asp:TextBox ID="txtMobile" runat="server" CssClass="form-control" placeholder="Mobile No." oninput="removeHttpHttps(this)"></asp:TextBox>
+                                    <label for="txtMobile">Mobile No.</label>
+                                    <asp:RequiredFieldValidator ID="rfvMobile" runat="server" ControlToValidate="txtMobile" Display="Dynamic" CssClass="text-danger" ErrorMessage="Mobile number is required."></asp:RequiredFieldValidator>
+                                    <asp:RegularExpressionValidator ID="revMobile" runat="server" ControlToValidate="txtMobile" Display="Dynamic" CssClass="text-danger" ErrorMessage="Enter a valid 10-digit mobile number." ValidationExpression="^[0-9]{10}$"></asp:RegularExpressionValidator>
+                                </div>
+                            </div>
+                            <div class="col-md mb-3">
+                                <div class="form-floating">
+                                    <%--		<input type="email" class="form-control" id="Email" name="email" placeholder="name@example.com" required>
+										<label for="Email">Email Address</label>--%>
+                                    <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" placeholder="name@example.com"></asp:TextBox>
+                                    <label for="txtEmail">Email Address</label>
+                                    <asp:RequiredFieldValidator ID="rfvEmail" runat="server" ControlToValidate="txtEmail" Display="Dynamic" CssClass="text-danger" ErrorMessage="Email is required."></asp:RequiredFieldValidator>
+                                    <asp:RegularExpressionValidator ID="revEmail" runat="server" ControlToValidate="txtEmail" Display="Dynamic" CssClass="text-danger" ErrorMessage="Enter a valid email address." ValidationExpression="^[\w\.-]+@[\w\.-]+\.[a-zA-Z]{2,}$"></asp:RegularExpressionValidator>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row g-2 mb-3">
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <%--	<textarea class="form-control" id="Address" name="address" placeholder="Address" style="height: 100px" required></textarea>
+										<label for="Address">Address</label>--%>
+                                    <asp:TextBox ID="txtAddress" runat="server" CssClass="form-control" TextMode="MultiLine" placeholder="Address" oninput="removeHttpHttps(this)"></asp:TextBox>
+                                    <label for="txtAddress">Address</label>
+                                    <asp:RequiredFieldValidator ID="rfvAddress" runat="server" ControlToValidate="txtAddress" Display="Dynamic" CssClass="text-danger" ErrorMessage="Address is required."></asp:RequiredFieldValidator>
+                                </div>
+                            </div>
+                        </div>
+                        <section id="targetSection">
+                            <div class="row g-md-3">
+                                <div class="col-md mb-3">
+                                    <div class="form-floating">
+                                        <%--		<input type="date" class="form-control" id="Date" name="date" required>
+										<label for="Date">Date</label>--%>
+                                        <asp:TextBox ID="txtDate" runat="server" CssClass="form-control" TextMode="Date"></asp:TextBox>
+                                        <label for="txtDate">Date</label>
+                                        <asp:RequiredFieldValidator ID="rfvDate" runat="server" ControlToValidate="txtDate" Display="Dynamic" CssClass="text-danger" ErrorMessage="Date is required."></asp:RequiredFieldValidator>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-md mb-3">
+                                    <div class="form-floating">
+                                        <%--			<input type="time" class="form-control" id="Time" name="time" required>
+										<label for="Time">Time</label>--%>
+                                        <asp:TextBox ID="txtTime" runat="server" CssClass="form-control" TextMode="Time"></asp:TextBox>
+                                        <label for="txtTime">Time</label>
+                                        <asp:RequiredFieldValidator ID="rfvTime" runat="server" ControlToValidate="txtTime" Display="Dynamic" CssClass="text-danger" ErrorMessage="Time is required."></asp:RequiredFieldValidator>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </section>
+                        <div class="row g-2 mb-3">
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <%--										<textarea class="form-control" id="Disease-Details" name="disease_details" placeholder="Disease Details" style="height: 100px" required></textarea>
+										<label for="Disease-Details">Disease Details</label>--%>
+                                    <asp:TextBox ID="txtDiseaseDetails" runat="server" CssClass="form-control" TextMode="MultiLine" placeholder="Mention your Symptoms" oninput="removeHttpHttps(this)"></asp:TextBox>
+                                    <label for="txtDiseaseDetails">Mention your Symptoms</label>
+                                    <asp:RequiredFieldValidator ID="rfvDiseaseDetails" runat="server" ControlToValidate="txtDiseaseDetails" Display="Dynamic" CssClass="text-danger" ErrorMessage="Symptoms details are required."></asp:RequiredFieldValidator>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row align-items-center">
+
+
+                            <div class="col-md-8 mb-3">
+                                <div class="form-floating">
+                                    <%--										<input type="text" class="form-control" id="captch" name="cptc" placeholder="Enter captch" required>--%>
+                                    <asp:TextBox ID="txtCaptcha" CssClass="form-control" runat="server" placeholder="Enter Captcha*" oninput="removeHttpHttps(this)"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="rfvCaptcha" runat="server" ControlToValidate="txtCaptcha" ErrorMessage="Captcha is required." CssClass="text-danger" Display="Dynamic"></asp:RequiredFieldValidator>
+
+                                    <asp:Label ID="lblERR" runat="server" ForeColor="Red"></asp:Label>
+                                    <label for="captch">Enter captcha</label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 mb-3">
+                                <div class="">
+                                    <img src="CImage.aspx" id="capimg" alt="captcha" />
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-4 text-lg-start text-center">
+                            <%--								<button type="submit" class="btn-theme btn-blue d-block">Submit</button>--%>
+                            <asp:Button ID="btnSubmit" runat="server" CssClass="btn-theme btn-blue d-lg-block" Text="Submit" OnClick="btnsubmit_Click" />
+
+                        </div>
+
+                    </div>
+                    <asp:Label ID="lblMessage" runat="server" ForeColor="Red"></asp:Label>
+
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+    </section>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="extrajs" runat="server">
+       <script>
+       function removeHttpHttps(textbox) {
+           var currentValue = textbox.value;
+
+           // Regular expression to match "http", "https", "www", or domain-like patterns
+           var urlPattern = /\b(http|https|www|localhost|www\.|[a-zA-Z0-9\-]+\.[a-zA-Z]{2,})\b/gi;
+
+           // Replace detected patterns with an empty string
+           textbox.value = currentValue.replace(urlPattern, "");
+       }
+       </script>
+</asp:Content>

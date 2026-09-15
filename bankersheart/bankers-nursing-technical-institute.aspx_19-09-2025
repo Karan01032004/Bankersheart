@@ -1,0 +1,107 @@
+﻿<%@ Page Title="Bankers Nursing & Technical Institute" Language="C#" MasterPageFile="~/bankers.Master" AutoEventWireup="true" CodeBehind="bankers-nursing-technical-institute.aspx.cs" Inherits="bankersheart.bankers_nursing_technical_institute" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+      <meta name="description" content="Bankers Nursing & Technical Institute offers specialized nursing and technical training programs, equipping students with clinical expertise, hands-on experience, and advanced medical knowledge for a successful healthcare career.">
+    <style>
+        .nursing-size{
+            height:340px;
+            object-fit:cover;
+            width:100%;
+        }
+        @media(max-width:768px){
+             .nursing-size{
+            height:250px;
+            object-fit:cover;
+            width:100%;
+        }
+        }
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+     <section id="inner-banner" class="content-down">
+        <div class="container">
+            <div class="row">
+                <div class="banner-heading">
+                    						<h1 class="sr-only">Bankers Nursing Institute</h1>
+
+                    <h2 class="text-white text-center mb-0">Bankers Nursing & Technical Institute</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="nursing-institute">
+        <div class="container py-5">
+            <div class="row pb-5">
+                <div class="col-lg-6 pt-5">
+                    <a href="assets/img/NarsingInstitue-img.webp" data-fancybox="galle1">
+                        <div class="press-box h-100 ">
+                    <picture>
+                        <source srcset="assets/img/bankers-nursing-img-1.webp" type="image/webp">
+                        <source srcset="assets/img/bankers-nursing-img-1.jpg" type="image/png">
+                        <img class="img-fluid nursing-size" src="assets/img/bankers-nursing-img-1.jpg" alt="Deluxe Room">
+                    </picture>
+                            <div class="bg-red py-3 px-2 h-100">
+                            <p class="text-center text-white mb-0">Bachelor of Science in Nursing (BSc Nursing) is 
+                                an undergraduate degree program designed to prepare students for a career in nursing. 
+                                It combines theoretical knowledge with practical training to develop competent and compassionate 
+                                nursing professionals</p>
+                        </div>
+                            </div>
+                        </a>
+                </div>
+                <div class="col-lg-6 pt-5">
+                    <a href="assets/img/NarsingInstitue-img.webp" data-fancybox="galle2">
+                           <div class="press-box h-100">
+                     <picture>
+                        <source srcset="assets/img/bankers-nursing-img-2.webp" type="image/webp">
+                        <source srcset="assets/img/bankers-nursing-img-2.jpg" type="image/png">
+                        <img class="img-fluid nursing-size" src="assets/img/bankers-nursing-img-2.jpg" alt="Deluxe Room">
+                    </picture>
+                               <div class="bg-red py-3 px-2 h-100">
+                            <p class="text-center text-white mb-0">Bachelor of Science in Nursing (BSc Nursing) is 
+                                an undergraduate degree program designed to prepare students for a career in nursing. 
+                                It combines theoretical knowledge with practical training to develop competent and compassionate 
+                                nursing professionals</p>
+                        </div>
+                               </div>
+                        </a>
+                </div>
+                <div class="col-lg-6 pt-5">
+                    <a href="assets/img/NarsingInstitue-img.webp" data-fancybox="galle3">
+                        <div class="press-box h-100">
+                       <picture>
+                        <source srcset="assets/img/bankers-nursing-img-3.webp" type="image/webp">
+                        <source srcset="assets/img/bankers-nursing-img-3.jpg" type="image/png">
+                        <img class="img-fluid nursing-size" src="assets/img/bankers-nursing-img-3.jpg" alt="Deluxe Room">
+                    </picture>
+                            <div class="bg-red py-3 px-2 h-100">
+                            <p class="text-center text-white mb-0">Bachelor of Science in Nursing (BSc Nursing) is 
+                                an undergraduate degree program designed to prepare students for a career in nursing. 
+                                It combines theoretical knowledge with practical training to develop competent and compassionate 
+                                nursing professionals</p>
+                        </div>
+                            </div>
+                        </a>
+                </div>
+                <div class="col-lg-6 pt-5">
+                    <a href="assets/img/NarsingInstitue-img.webp" data-fancybox="galle4">
+                        <div class="press-box h-100">
+                    <picture>
+                        <source srcset="assets/img/bankers-nursing-img-4.webp" type="image/webp">
+                        <source srcset="assets/img/bankers-nursing-img-4.jpg" type="image/png">
+                        <img class="img-fluid nursing-size" src="assets/img/bankers-nursing-img-4.jpg" alt="Deluxe Room">
+                    </picture>
+                            <div class="bg-red py-3 px-2 h-100">
+                            <p class="text-center text-white mb-0">This year, there is a very relevant theme on 
+                                the occasion of the 7th International yoga day- "Yoga for wellness”. In this pandemic, 
+                                individual or society is not only affected physically but there is also an impact on mental 
+                                health with grief, losses and restrictions.</p>
+                        </div>
+                            </div>
+                        </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="extrajs" runat="server">
+</asp:Content>

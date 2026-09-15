@@ -1,0 +1,188 @@
+﻿<%@ Page Title="Bankers Group of Hospitals | Gujarat Healthcare" Language="C#" MasterPageFile="~/bankers.Master" AutoEventWireup="true" CodeBehind="about-bankers-group-of-hospitals.aspx.cs" Inherits="bankersheart.about_bankers_group_of_hospitals" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
+	<meta name="description" content="Bankers Group of Hospitals' CSR policy promotes healthcare, education, and sustainability to support community development.">
+<meta name="keywords" content="CSR policy, community welfare, healthcare access, education support, environmental sustainability, corporate social responsibility, Bankers Group of Hospitals">
+<link rel="canonical" href="https://www.bankersheart.com/csr-policy">
+	<style>
+		@media (min-width: 992px) { /* Apply styles on large screens and above */
+			#hospital_details_2 .inner-img {
+				float: left;
+				margin-right: 20px; /* Adjust spacing */
+				max-width: 40%; /* Control image width */
+			}
+
+			#hospital_details_2 .blogs-content {
+				overflow: hidden; /* Prevent content wrapping issues */
+			}
+		}
+
+		@media (max-width: 991px) { /* For tablets & mobiles */
+			#hospital_details_2 .inner-img {
+				float: none;
+				max-width: 100%; /* Full width on smaller screens */
+				margin: 0 auto 20px; /* Center image with bottom margin */
+				display: block;
+			}
+		}
+
+		.list_ul {
+			list-style: disc;
+			padding-left: 20px
+		}
+	</style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+
+
+	<section id="inner-banner" class="content-down">
+		<div class="container">
+			<div class="row">
+				<div class="banner-heading">
+					<h2 class="text-white text-center mb-0">About Us</h2>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="hospital-details" class="py-5">
+		    <asp:Repeater ID="rpt_data" runat="server">
+<ItemTemplate>
+		 <p class="clamped-text"><%# Eval("description") %></p>
+		     </ItemTemplate>
+</asp:Repeater>
+<%--		<div class="container py-lg-4">
+			<div class="blog-container text-lg-start text-center pt-lg-3">
+				<h3 class="clr-black fw-bold d-lg-none d-block">About Bankers Group of Hospitals</h3>
+				<div class="inner-img mb-lg-0 mb-4">
+					<picture>
+						<source srcset="assets/img/About-Bankers-Group-of-Hospitals.webp" type="image/webp">
+						<source srcset="assets/img/About-Bankers-Group-of-Hospitals.png" type="image/png">
+						<img class="img-fluid  rounded-4" src="assets/img/About-Bankers-Group-of-Hospitals.png" alt="Blog-details">
+					</picture>
+				</div>
+				<div class="blogs-content">
+					<h3 class="clr-black fw-bold d-lg-block d-none mb-4">About Bankers Group of Hospitals</h3>
+
+
+					<p>
+						Established in 2004, the Bankers Group has expanded from a single, cardiac specialty hospital to 4 multi-specialty hospitals. Built with the clear vision to provide the most advanced, technological medical care at an affordable price, has helped shape the values on which the hospital
+is built.
+					</p>
+					<p>
+						The journey over the last 11 years has been phenomenally rewarding. Bankers Group of Hospitals began with Dr Parul and Dr Darshan Banker’s concept of creating a single institute that could test, diagnose, treat and rehabilitate all patients with cardiac diseases. Bankers Heart Institute, Vadodara was launched as a super specialty, tertiary care heart center in the year 2004. Subsequently, Bankers Heart Institute was launched in Surat and Bankers Heart and Multi-Specialty Hospital in Warasia, Vadodara. We are now confidently treading on the path of adding more multi specialty hospitals to our group to ensure we provide our patients with the best care.
+					</p>
+					<p>
+						Our staff is trained on an on-going basis to ensure they are up to date with the latest processes. We conduct monthly trainings for all levels of staff to ensure compliance of our very strict quality standards, ethics and morals. They receive periodic training in life-saving courses such as CPR, First Aid etc. Our senior team ensures that our front desk is aware of the sensitivity of situations that they might be faced with and are given instructions, and training, if necessary to handle them with courtesy and care.
+					</p>
+				</div>
+
+
+			</div>
+
+		</div>--%>
+	</section>
+
+	<section id="hospital_details_2" class="pb-5">
+		<div class="container pb-lg-4">
+			<div class="blog-container text-lg-start text-center pt-lg-3">
+				<div class="inner-img mb-lg-0 mb-4 float-lg-start me-lg-4">
+					<picture>
+						<source srcset="assets/img/Continuous-Medical-Education.webp" type="image/webp">
+						<source srcset="assets/img/Continuous-Medical-Education.png" type="image/png">
+						<img class="img-fluid rounded-4" src="assets/img/Continuous-Medical-Education.png" alt="Continuous Medical Education">
+					</picture>
+				</div>
+				<div class="blogs-content">
+
+					<p>
+						Continuous Medical Education forms an important chapter in our books. We take pride in organizing monthly, and in some cases weekly, talks and discussions that benefit doctors and allow them to discuss the latest advances. We also started the Bankers Nursing Institute and Bankers Technical Institute to educate and train support staff with the Banker’s quality.
+					</p>
+					<p>
+						Helping those who are in need is very important and a cause very close to our founders’ hearts. Camps, exhibitions and talks are held on a weekly basis across Gujarat and India to bring the best medical facilities to those who cannot afford it or who may not have access to it. To know more about our CSR activities, please visit our page.				
+					</p>
+					<p>
+						Our aim is to Redefine Healthcare through innovative technologies but with a human touch and our entire Bankers Group of Hospitals team works towards this aim every single day.				
+					</p>
+				</div>
+
+
+
+			</div>
+
+		</div>
+	</section>
+
+
+	<section id="contact-details" class="my-lg-5 mb-lg-0 mb-5">
+		<div class="container py-lg-5 mt-lg-5">
+		<h3 class="text-center mb-0 clr-black mt-lg-5">Our Mission is Growth <br /> Our Vision is Sustainability</h3>
+			<div class="row pt-5">
+				<div class="col-lg-4 col-sm-6 mb-4">
+					<div class="shadow h-100 rounded-bottom-3 text-center">
+						<h6 class="mb-0 px-3 py-3 bg-red text-white text-center rounded-top-3">Mission</h6>
+						<div class="p-3 ">
+							<picture>
+								<source srcset="assets/img/mission.webp" type="image/webp">
+								<source srcset="assets/img/mission.png" type="image/png">
+								<img class="img-fluid  rounded-4 pt-3" src="assets/img/mission.png" alt="Mission" width="70" height="70">
+							</picture>
+
+							<p class="mt-3 mb-0">
+								Redefining Healthcare through Innovative Technologies with dedicated Human Touch.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-sm-6 mb-4">
+					<div class="shadow h-100 rounded-bottom-3 text-center">
+						<h6 class="mb-0 px-3 py-3 bg-red text-white text-center rounded-top-3">Vision</h6>
+						<div class="p-3 ">
+							<picture>
+								<source srcset="assets/img/vision.webp" type="image/webp">
+								<source srcset="assets/img/vision.png" type="image/png">
+								<img class="img-fluid  rounded-4 pt-3" src="assets/img/vision.png" alt="Vision" width="70" height="70">
+							</picture>
+
+							<p class="mt-3 mb-0">
+								One man One vision,
+								<br />
+								One heart One mission…
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-sm-6 mb-4">
+					<div class="shadow h-100 rounded-bottom-3 text-center">
+						<h6 class="mb-0 px-3 py-3 bg-red text-white text-center rounded-top-3">Values</h6>
+						<div class="p-3 ">
+							<picture>
+								<source srcset="assets/img/values.webp" type="image/webp">
+								<source srcset="assets/img/values.png" type="image/png">
+								<img class="img-fluid  rounded-4 pt-3" src="assets/img/values.png" alt="Values" width="70" height="70">
+							</picture>
+
+							<ul class="mt-3 mb-0 text-start list_ul">
+								<li>Patients Satisfaction.
+								</li>
+								<li>Highest Standard of Quality Care.
+								</li>
+								<li>Culture of World Class Performance
+								</li>
+								<li>Innovation & Change
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+	</section>
+
+
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="extrajs" runat="server">
+</asp:Content>

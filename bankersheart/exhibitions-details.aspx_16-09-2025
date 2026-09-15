@@ -1,0 +1,51 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/bankers.Master" AutoEventWireup="true" CodeBehind="Exhibitions-details.aspx.cs" Inherits="bankersheart.Exhibitions_details" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+     <section id="inner-banner" class="content-down">
+        <div class="container">
+            <div class="row">
+                <div class="banner-heading">
+                    <h2 class="text-white text-center mb-0">Exhibitions</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="events-release">
+        <div class="container py-5">
+            <div class="row py-5">
+<p class="text-center">
+                         <asp:Label ID="lblCampDescription" runat="server" CssClass="custom-center-label"></asp:Label>
+
+    </p>
+                <asp:Repeater ID="rptExhibitions" runat="server">
+        <ItemTemplate>
+            <div class="col-lg-3 col-sm-6 pt-5">
+                <div class="press-box h-100 text-center">
+                                    <a href='<%# ResolveUrl("~/poweradmin/webfiles/Exhibition/" + Eval("ExhibitionImage")) %>' data-fancybox="galler">
+    <picture>
+        <source srcset='<%# ResolveUrl("~/poweradmin/webfiles/Exhibition/") + Eval("ExhibitionImage") %>' type="image/webp">
+        <source srcset='<%# ResolveUrl("~/poweradmin/webfiles/Exhibition/") + Eval("ExhibitionImage") %>' type="image/png">
+        <img class="img-fluid p-3 rounded-4 media-img" 
+            src='<%# ResolveUrl("~/poweradmin/webfiles/Exhibition/") + Eval("ExhibitionImage") %>' 
+            alt='<%# Eval("title") %>'>
+    </picture>
+</a>
+                </div>
+            </div>
+        </ItemTemplate>
+    </asp:Repeater>
+
+               
+
+       
+
+
+              
+            
+            </div>
+        </div>
+    </div>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="extrajs" runat="server">
+</asp:Content>

@@ -1,0 +1,1520 @@
+﻿<%@ Page Title="Advanced Cardiac & Multi-Specialty Healthcare | Bankers Group" Language="C#" MaintainScrollPositionOnPostback="true" MasterPageFile="~/bankers.Master" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="bankersheart._default" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
+    <meta name="description" content="Bankers Group operates 4 multi-specialty hospitals, offering cardiac care, 
+          surgeries, diagnostics, and health check-ups, ensuring affordable, advanced medical services.">
+    <style>
+        .owl-carousel .owl-nav.disabled, .owl-carousel .owl-dots.disabled {
+            display: block !important;
+        }
+
+        #insurence img {
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        }
+
+        .content-home-down {
+            padding: 160px 0 0 0;
+        }
+
+        @media(max-width: 1200px) {
+            .content-home-down {
+                padding: 190px 0 0 0;
+            }
+        }
+
+        .form-control:focus {
+            border: 1px solid #CD0001;
+            box-shadow: unset;
+            color: #CD0001;
+        }
+
+        .bg-red {
+            background: #CD0001;
+            padding: 65px 20px 0px 20px;
+        }
+
+        @media(max-width: 1450px) and (min-width: 992px) {
+            .bg-red h6 {
+                font-size: 16px !important;
+            }
+        }
+
+        #book-appointment .bg-red h3 a {
+            font-size: clamp(24px, 4vw, 30px);
+            font-weight: 500;
+        }
+
+        .btn-white {
+            color: #CD0001;
+            padding: 15px 30px;
+            background: #FFFFFF;
+            border-radius: 5px;
+            transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+            outline: 2px solid #CD0001;
+            outline-offset: -5px;
+        }
+
+
+            .btn-white:hover {
+                background: #000000; /* Darker background on hover */
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+                color: #fff !important;
+            }
+
+        .bgs-grey {
+            background: #F1F1F1;
+            border: 2px solid #CD0001;
+            padding: 35px 37px 45px 39px;
+        }
+
+        @media(max-width: 992px) {
+            .bg-red {
+                padding: 32px 20px 29px 15px;
+            }
+
+            .content-home-down {
+                padding: 105px 0 0 0;
+            }
+        }
+
+        @media(max-width: 576px) {
+            .bgs-grey {
+                padding: 25px 10px 35px 10px;
+            }
+        }
+
+        #bankers-services {
+            background: url('assets/img/services-bg.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .bg-redish {
+            background: #CD0001;
+            border-end-start-radius: 10px;
+            border-end-end-radius: 10px;
+            padding: 14px 0px 14px 0;
+        }
+
+        .border-red {
+            border: 1px solid #CD0001;
+        }
+
+            .border-red h6 {
+                color: #3E3E3E;
+            }
+
+        .owl-prev:hover, .owl-next:hover {
+            background: none !important;
+        }
+
+        .owl-prev {
+            position: absolute;
+            top: -78px;
+            right: 65px;
+        }
+
+        .owl-next {
+            position: absolute;
+            top: -78px;
+            right: 13px;
+        }
+
+        @media (max-width: 576px) {
+            .owl-prev, .owl-next {
+                display: none !important;
+            }
+        }
+
+        .testimonail-bg {
+            background: url(assets/img/testimonial-bg.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+
+        .text-grey {
+            color: #3E3E3E !important;
+        }
+
+        .bg-comment {
+            background: url('assets/img/comment-icon.svg');
+            background-repeat: no-repeat;
+            background-position: 2% 0%;
+            background-size: 13%;
+        }
+
+        #bg-cmt {
+            background: url('assets/img/comment-icon-2.svg');
+            background-repeat: no-repeat;
+            background-position: 100% 100%;
+            background-size: 13%;
+        }
+
+        .color-yellow {
+            color: #ffd800;
+        }
+
+        .content-top {
+            margin-top: -100px;
+        }
+
+        @media(max-width: 992px) {
+            .content-top {
+                margin-top: -45px;
+            }
+        }
+
+        .img-small {
+            width: 300px;
+            margin: auto;
+            object-fit: contain;
+        }
+
+        @media(max-width:769px) {
+            .img-small {
+                width: 240px;
+                margin: auto;
+                object-fit: contain;
+            }
+        }
+
+        /*  .sticky-social-icon {
+            position: fixed;
+            right: 10px;
+            top: 53%;
+            transform: translateY(-50%);
+            z-index: 1000;
+        }
+
+        .icon-bg {
+            background: #3E3E3E;
+            padding: 12px 11px 10px 15px;
+            border-radius: 5px;
+            transition: 0.3s ease-in-out;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+            .icon-bg:hover {
+                background: #CD0001;
+            }
+
+        @media(max-width: 768px) {
+            .sticky-social-icon {
+                display: none;
+            }
+        }*/
+
+        .text-black {
+            color: #252525 !important;
+        }
+
+        #about-bankers-heart ul {
+            list-style: none; /* Remove default bullets */
+            padding-left: 0;
+        }
+
+            #about-bankers-heart ul li {
+                position: relative;
+                padding-left: 30px; /* Adjust spacing */
+            }
+
+                #about-bankers-heart ul li::before {
+                    content: "";
+                    background: url('assets/img/points-icon.svg') no-repeat center;
+                    background-size: contain;
+                    width: 20px; /* Adjust icon size */
+                    height: 20px;
+                    position: absolute;
+                    left: 0;
+                    top: 4px; /* Adjust alignment */
+                }
+
+        .banner-size {
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .blog-height {
+            height: 480px;
+        }
+
+
+
+        .tittle-height {
+            height: 180px;
+        }
+
+        @media(max-width:576px) {
+            .tittle-height {
+                height: 160px;
+            }
+        }
+
+        @media(max-width:992px) {
+            #testimonial-comment .btn-theme {
+                padding: 15px 17px !important;
+            }
+        }
+
+        @media(max-width:576px) {
+            #testimonial-comment .btn-theme {
+                padding: 15px 12px !important;
+            }
+        }
+
+        .social-responsi-icon {
+            width: 98px;
+            height: 85px;
+        }
+
+        .content-downs-up {
+            margin-top: 165px;
+        }
+
+        @media(max-width:992px) {
+            .social-responsi-icon {
+                width: 80px;
+                height: 82px;
+            }
+
+            .content-downs-up {
+                margin-top: 96px !important;
+            }
+        }
+
+        @media(max-width:576px) {
+            .social-responsi-icon {
+                width: 60px;
+                height: 60px;
+            }
+        }
+
+        .form-select, label {
+            color: #3E3E3E !important;
+        }
+
+        .img-small-size {
+            height: 300px;
+            object-fit: contain;
+        }
+
+        @media(max-width:768px) {
+            .img-small-size {
+                height: 200px;
+                object-fit: contain;
+            }
+        }
+
+        #testimonial-comment .clamped-text {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-line-clamp: 5;
+        }
+
+        #insurence .owl-nav {
+            display: none !important;
+        }
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+    <%--<div class="sticky-social-icon">
+        <a href="#" target="_blank">
+            <div class="icon-bg mb-3">
+                <i class="fa fa-phone text-white fs-4" aria-hidden="true"></i>
+            </div>
+        </a>
+        <a href="#" target="_blank">
+            <div class="icon-bg mb-3">
+                <i class="fa fa-facebook text-white fs-4" aria-hidden="true"></i>
+            </div>
+        </a>
+        <a href="#" target="_blank">
+            <div class="icon-bg mb-3">
+                <i class="fa fa-instagram text-white fs-4" aria-hidden="true"></i>
+            </div>
+        </a>
+        <a href="#" target="_blank">
+            <div class="icon-bg mb-3">
+                <i class="fa fa-linkedin text-white fs-4" aria-hidden="true"></i>
+            </div>
+        </a>
+        <a href="#" target="_blank">
+            <div class="icon-bg mb-3">
+                <i class="fa fa-search text-white fs-4" aria-hidden="true"></i>
+            </div>
+        </a>
+    </div>--%>
+
+    <section id="hero-home-section">
+        <div class="container">
+            <div class="row align-items-center py-5 text-lg-start text-center content-downs-up">
+                <asp:Repeater ID="rptbanner" runat="server">
+                    <ItemTemplate>
+                        <%# Eval("description") %>
+                    </ItemTemplate>
+                </asp:Repeater>
+                <%--  <div class="col-lg-6 mb-lg-0 mb-5">
+                    <h6 class="mb-3 mt-3 text_shadow text-red">WE TRACK CARE OF YOUR HEALTH</h6>
+                    <h1 class="text-black">A Family of Hospitals for <span class="text-red">Your Family.</span></h1>
+                    <h6 class="pb-4 mt-3 text_shadow">Our is to deliver the highest quality healthcare services. We believe that everyone deserves access to excellent medical care without compromising on quality.</h6>
+                    <div>
+                        <a href="about-bankers-group-of-hospitals.aspx" class="btn-theme">Know More</a>
+                    </div>
+                </div>--%>
+
+                <div class="col-lg-6 d-lg-block d-none">
+                    <div class="row">
+                        <asp:Repeater ID="rptVadodara" runat="server">
+                            <ItemTemplate>
+                                <div class="col-sm-6 mb-4">
+                                    <a href="bankers-heart-institute-old-padra-road-vadodara.aspx">
+                                        <div class="bg-red rounded-4 text-center p-xxl-2 p-lg-1 p-2 h-100">
+                                            <%-- <picture>
+                                        <source srcset="assets/img/bankers-heart-institute-img.webp" type="image/webp">
+                                        <source srcset="assets/img/bankers-heart-institute-img.png" type="image/png">
+                                        <img class="img-fluid rounded-4 mb-3" src="assets/img/bankers-heart-institute-img.png" alt="bankers-heart-institute-img">
+                                    </picture>--%>
+                                            <picture>
+                                                <source srcset='<%# ResolveUrl("~/poweradmin/webfiles/Hospitals/") + Eval("image") %>' type="image/webp">
+                                                <source srcset='<%# ResolveUrl("~/poweradmin/webfiles/Hospitals/") + Eval("image") %>' type="image/png">
+                                                <img class="img-fluid rounded-4 mb-3 banner-size"
+                                                    src='<%# ResolveUrl("~/poweradmin/webfiles/Hospitals/") + Eval("image") %>'
+                                                    alt='<%# Eval("title") %>'>
+                                            </picture>
+                                            <h6 class="text-white">Bankers Heart Institute,Op Road, Vadodara</h6>
+                                        </div>
+                                    </a>
+                                </div>
+
+                            </ItemTemplate>
+                        </asp:Repeater>
+
+                        <asp:Repeater ID="rptwarasia" runat="server">
+                            <ItemTemplate>
+                                <div class="col-sm-6 mb-4">
+                                    <a href="bankers-heart-multispeciality-hospital-warasia-vadodara.aspx">
+                                        <div class="bg-red rounded-4 text-center p-xxl-2 p-lg-1 p-2 h-100">
+                                            <%-- <picture>
+                                        <source srcset="assets/img/bankers-heart-multi-specialty-hospital-img.webp" type="image/webp">
+                                        <source srcset="assets/img/bankers-heart-multi-specialty-hospital-img.png" type="image/png">
+                                        <img class="img-fluid rounded-4 mb-3" src="assets/img/bankers-heart-multi-specialty-hospital-img.png" alt="bankers-heart-institute-img">
+                                    </picture>--%>
+                                            <picture>
+                                                <source srcset='<%# ResolveUrl("~/poweradmin/webfiles/Hospitals/") + Eval("image") %>' type="image/webp">
+                                                <source srcset='<%# ResolveUrl("~/poweradmin/webfiles/Hospitals/") + Eval("image") %>' type="image/png">
+                                                <img class="img-fluid rounded-4 mb-3 banner-size"
+                                                    src='<%# ResolveUrl("~/poweradmin/webfiles/Hospitals/") + Eval("image") %>'
+                                                    alt='<%# Eval("title") %>'>
+                                            </picture>
+                                            <h6 class="text-white">Bankers Heart & Multi Specialty Hospital, Warasia, Vadodara</h6>
+                                        </div>
+                                    </a>
+                                </div>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                        <asp:Repeater ID="rptmanjalpur" runat="server">
+                            <ItemTemplate>
+
+                                <div class="col-sm-6 mb-4">
+                                    <a href="bankers-superspeciality-hospital-manjalpur-vadodara.aspx">
+                                        <div class="bg-red rounded-4 text-center p-xxl-2 p-lg-1 p-2 h-100">
+                                            <%--  <picture>
+                                        <source srcset="assets/img/bankers-super-speciality-hospital-img.webp" type="image/webp">
+                                        <source srcset="assets/img/bankers-super-speciality-hospital-img.png" type="image/png">
+                                        <img class="img-fluid rounded-4 mb-3" src="assets/img/bankers-super-speciality-hospital-img.png" alt="bankers-super-speciality-hospital-img">
+                                    </picture>--%>
+                                            <picture>
+                                                <source srcset='<%# ResolveUrl("~/poweradmin/webfiles/Hospitals/") + Eval("image") %>' type="image/webp">
+                                                <source srcset='<%# ResolveUrl("~/poweradmin/webfiles/Hospitals/") + Eval("image") %>' type="image/png">
+                                                <img class="img-fluid rounded-4 mb-3 banner-size"
+                                                    src='<%# ResolveUrl("~/poweradmin/webfiles/Hospitals/") + Eval("image") %>'
+                                                    alt='<%# Eval("title") %>'>
+                                            </picture>
+                                            <h6 class="text-white">Bankers Superspeciality Hospital, Manjalpur, Vadodara</h6>
+                                        </div>
+                                    </a>
+                                </div>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                        <asp:Repeater ID="rptsurat" runat="server">
+                            <ItemTemplate>
+                                <div class="col-sm-6 mb-4">
+                                    <a href="bankers-heart-institute-surat.aspx">
+                                        <div class="bg-red rounded-4 text-center p-xxl-2 p-lg-1 p-2 h-100">
+                                            <%--  <picture>
+                                        <source srcset="assets/img/bankers-heart-institutes-umra-img.webp" type="image/webp">
+                                        <source srcset="assets/img/bankers-heart-institutes-umra-img.png" type="image/png">
+                                        <img class="img-fluid rounded-4 mb-3" src="assets/img/bankers-heart-institutes-umra-img.png" alt="bankers-heart-institutes-umra-img">
+                                    </picture>--%>
+                                            <picture>
+                                                <source srcset='<%# ResolveUrl("~/poweradmin/webfiles/Hospitals/") + Eval("image") %>' type="image/webp">
+                                                <source srcset='<%# ResolveUrl("~/poweradmin/webfiles/Hospitals/") + Eval("image") %>' type="image/png">
+                                                <img class="img-fluid rounded-4 mb-3 banner-size"
+                                                    src='<%# ResolveUrl("~/poweradmin/webfiles/Hospitals/") + Eval("image") %>'
+                                                    alt='<%# Eval("title") %>'>
+                                            </picture>
+                                            <h6 class="text-white">Bankers Heart Institute, Umra, Surat</h6>
+                                        </div>
+                                    </a>
+                                </div>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 d-lg-none d-block">
+                    <div class="owl-carousel owl-theme">
+                        <div class="item">
+                            <asp:Repeater ID="vadodara" runat="server">
+                                <ItemTemplate>
+
+                                    <a href="bankers-heart-institute.aspx">
+                                        <div class="bg-red rounded-4 text-center p-xxl-2 p-lg-1 p-2 h-100">
+                                            <%-- <picture>
+                                        <source srcset="assets/img/bankers-heart-institute-img.webp" type="image/webp">
+                                        <source srcset="assets/img/bankers-heart-institute-img.png" type="image/png">
+                                        <img class="img-fluid rounded-4 mb-3" src="assets/img/bankers-heart-institute-img.png" alt="bankers-heart-institute-img">
+                                    </picture>--%>
+                                            <picture>
+                                                <source srcset='<%# ResolveUrl("~/poweradmin/webfiles/Hospitals/") + Eval("image") %>' type="image/webp">
+                                                <source srcset='<%# ResolveUrl("~/poweradmin/webfiles/Hospitals/") + Eval("image") %>' type="image/png">
+                                                <img class="img-fluid rounded-4 mb-3 banner-size"
+                                                    src='<%# ResolveUrl("~/poweradmin/webfiles/Hospitals/") + Eval("image") %>'
+                                                    alt='<%# Eval("title") %>'>
+                                            </picture>
+                                            <h6 class="text-white">Bankers Heart Institute<br />
+                                                Op Road, Vadodara</h6>
+                                        </div>
+                                    </a>
+
+
+                                </ItemTemplate>
+                            </asp:Repeater>
+                        </div>
+                        <div class="item">
+                            <asp:Repeater ID="warasia" runat="server">
+                                <ItemTemplate>
+
+                                    <a href="bankers-heart-multispeciality-hospital.aspx">
+                                        <div class="bg-red rounded-4 text-center p-xxl-2 p-lg-1 p-2 h-100">
+                                            <%-- <picture>
+                                        <source srcset="assets/img/bankers-heart-multi-specialty-hospital-img.webp" type="image/webp">
+                                        <source srcset="assets/img/bankers-heart-multi-specialty-hospital-img.png" type="image/png">
+                                        <img class="img-fluid rounded-4 mb-3" src="assets/img/bankers-heart-multi-specialty-hospital-img.png" alt="bankers-heart-institute-img">
+                                    </picture>--%>
+                                            <picture>
+                                                <source srcset='<%# ResolveUrl("~/poweradmin/webfiles/Hospitals/") + Eval("image") %>' type="image/webp">
+                                                <source srcset='<%# ResolveUrl("~/poweradmin/webfiles/Hospitals/") + Eval("image") %>' type="image/png">
+                                                <img class="img-fluid rounded-4 mb-3 banner-size"
+                                                    src='<%# ResolveUrl("~/poweradmin/webfiles/Hospitals/") + Eval("image") %>'
+                                                    alt='<%# Eval("title") %>'>
+                                            </picture>
+                                            <h6 class="text-white">Bankers Heart & Multi Specialty Hospital<br />
+                                                Warasia, Vadodara</h6>
+                                        </div>
+                                    </a>
+
+                                </ItemTemplate>
+                            </asp:Repeater>
+                        </div>
+                        <div class="item">
+                            <asp:Repeater ID="manjalpur" runat="server">
+                                <ItemTemplate>
+
+
+                                    <a href="bankers-superspeciality-hospital.aspx">
+                                        <div class="bg-red rounded-4 text-center p-xxl-2 p-lg-1 p-2 h-100">
+                                            <%--  <picture>
+                                        <source srcset="assets/img/bankers-super-speciality-hospital-img.webp" type="image/webp">
+                                        <source srcset="assets/img/bankers-super-speciality-hospital-img.png" type="image/png">
+                                        <img class="img-fluid rounded-4 mb-3" src="assets/img/bankers-super-speciality-hospital-img.png" alt="bankers-super-speciality-hospital-img">
+                                    </picture>--%>
+                                            <picture>
+                                                <source srcset='<%# ResolveUrl("~/poweradmin/webfiles/Hospitals/") + Eval("image") %>' type="image/webp">
+                                                <source srcset='<%# ResolveUrl("~/poweradmin/webfiles/Hospitals/") + Eval("image") %>' type="image/png">
+                                                <img class="img-fluid rounded-4 mb-3 banner-size"
+                                                    src='<%# ResolveUrl("~/poweradmin/webfiles/Hospitals/") + Eval("image") %>'
+                                                    alt='<%# Eval("title") %>'>
+                                            </picture>
+                                            <h6 class="text-white">Bankers Superspeciality Hospital<br />
+                                                Manjalpur, Vadodara</h6>
+                                        </div>
+                                    </a>
+
+                                </ItemTemplate>
+                            </asp:Repeater>
+                        </div>
+                        <div class="item">
+                            <asp:Repeater ID="surat" runat="server">
+                                <ItemTemplate>
+
+                                    <a href="bankers-heart-institute-surat.aspx">
+                                        <div class="bg-red rounded-4 text-center p-xxl-2 p-lg-1 p-2 h-100">
+                                            <%--  <picture>
+                                        <source srcset="assets/img/bankers-heart-institutes-umra-img.webp" type="image/webp">
+                                        <source srcset="assets/img/bankers-heart-institutes-umra-img.png" type="image/png">
+                                        <img class="img-fluid rounded-4 mb-3" src="assets/img/bankers-heart-institutes-umra-img.png" alt="bankers-heart-institutes-umra-img">
+                                    </picture>--%>
+                                            <picture>
+                                                <source srcset='<%# ResolveUrl("~/poweradmin/webfiles/Hospitals/") + Eval("image") %>' type="image/webp">
+                                                <source srcset='<%# ResolveUrl("~/poweradmin/webfiles/Hospitals/") + Eval("image") %>' type="image/png">
+                                                <img class="img-fluid rounded-4 mb-3 banner-size"
+                                                    src='<%# ResolveUrl("~/poweradmin/webfiles/Hospitals/") + Eval("image") %>'
+                                                    alt='<%# Eval("title") %>'>
+                                            </picture>
+                                            <h6 class="text-white">Bankers Heart Institute<br />
+                                                Umra, Surat</h6>
+                                        </div>
+                                    </a>
+
+                                </ItemTemplate>
+                            </asp:Repeater>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="book-appointment">
+        <div class="container py-5">
+            <div class="row py-lg-4 ">
+
+                <div class="col-xxl-4 col-lg-5 mb-lg-0 mb-4">
+                    <div class="bg-red rounded-3 h-100">
+                        <div class="d-flex align-items-center justify-content-lg-start justify-content-center">
+                            <div>
+                                <img src="assets/img/emergency-cases-icon.svg" class="img-fluid pe-lg-4 pe-3" alt="emergency-cases-icon" />
+                            </div>
+                            <div>
+                                <h5 class="text-white mb-0">Emergency Cases</h5>
+                                <h3><a class="text-white" href="tel:+912652607777">+91 265 260 7777</a></h3>
+                            </div>
+                        </div>
+                        <p class="text-white mb-4 pb-3 mt-2 text-lg-start text-center">In emergency situations, quick and decisive action is absolutely crucial. First and foremost, stay calm and composed to think clearly. Assess the situation carefully to determine the severity of the emergency. Immediately call for help by contacting the appropriate emergency services. </p>
+                        <div class="pb-4 text-lg-start text-center">
+                            <a href="contact-bankers-group-of-hospitals.aspx" class="btn-white">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xxl-8 col-lg-7">
+                    <div class="bgs-grey rounded-3">
+                        <h2 class="mb-4 text-black text-lg-start text-center">Book Appointments Today!</h2>
+                        <div class="row">
+
+                            <div class="col-lg-4 col-sm-6 mb-lg-4 mb-3">
+                                <div class="form-floating">
+                                    <%--  <input type="text" class="form-control border-0" id="name" name="name" placeholder="Name">
+                                    <label for="Name">Name</label>--%>
+                                    <asp:TextBox ID="txtName" runat="server" CssClass="form-control border-0" placeholder="Name"></asp:TextBox>
+                                    <label for="txtName">Name</label>
+                                    <asp:RequiredFieldValidator ID="rfvName" runat="server" ControlToValidate="txtName" ErrorMessage="Name is required." CssClass="text-danger" Display="Dynamic"></asp:RequiredFieldValidator>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-sm-6 mb-lg-4 mb-3">
+                                <div class="form-floating">
+                                    <%--                                    <input type="text" class="form-control border-0" id="phone_num" name="phone" placeholder="Phone No.">
+                                    <label for="Phone">Phone No.</label>--%>
+                                    <asp:TextBox ID="txtPhone" runat="server" CssClass="form-control border-0" placeholder="Phone No."></asp:TextBox>
+                                    <label for="txtPhone">Phone No.</label>
+                                    <asp:RequiredFieldValidator ID="rfvPhone" runat="server" ControlToValidate="txtPhone" ErrorMessage="Phone number is required." CssClass="text-danger" Display="Dynamic"></asp:RequiredFieldValidator>
+                                    <asp:RegularExpressionValidator ID="revPhone" runat="server" ControlToValidate="txtPhone" ValidationExpression="^\d{10}$" ErrorMessage="Enter a valid 10-digit phone number." CssClass="text-danger" Display="Dynamic"></asp:RegularExpressionValidator>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-sm-6 mb-lg-4 mb-3">
+                                <div class="form-floating">
+                                    <%--           <input type="text" class="form-control border-0" id="email" name="email" placeholder="Email">
+                                    <label for="Email">Email</label>--%>
+                                    <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control border-0" placeholder="Email"></asp:TextBox>
+                                    <label for="txtEmail">Email</label>
+                                    <asp:RequiredFieldValidator ID="rfvEmail" runat="server" ControlToValidate="txtEmail" ErrorMessage="Email is required." CssClass="text-danger" Display="Dynamic"></asp:RequiredFieldValidator>
+                                    <asp:RegularExpressionValidator ID="revEmail" runat="server" ControlToValidate="txtEmail" ValidationExpression="^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$" ErrorMessage="Enter a valid email address." CssClass="text-danger" Display="Dynamic"></asp:RegularExpressionValidator>
+                                </div>
+                            </div>
+
+                            <div class="col-xxl-6 col-sm-6 mb-lg-4 mb-3">
+                                <div class="form-floating">
+                                    <asp:DropDownList ID="ddlHospital" onchange="SetScrollPosition(this.id);" runat="server" CssClass="form-select form-control py-3" AppendDataBoundItems="true" AutoPostBack="true" OnSelectedIndexChanged="ddlHospital_SelectedIndexChanged">
+                                    </asp:DropDownList>
+                                    <%--<label for="ddlHospital">Hospital Name</label>--%>
+                                    <asp:RequiredFieldValidator ID="rfvHospital" runat="server"
+                                        ControlToValidate="ddlHospital"
+                                        InitialValue=""
+                                        Display="Dynamic"
+                                        CssClass="text-danger"
+                                        ErrorMessage="Hospital name is required.">
+                                    </asp:RequiredFieldValidator>
+                                    <%-- <select class="form-select py-0" aria-label="Select Department">
+                                        <option value="" selected="" disabled="">Select Department</option>
+                                        <option value="Cardiology">Cardiology</option>
+                                        <option value="Neurology">Neurology</option>
+                                        <option value="Orthopedics">Orthopedics</option>
+                                        <option value="Pediatrics">Pediatrics</option>
+                                        <option value="Dermatology">Dermatology</option>
+                                    </select>--%>
+                                    <%--<label for="Department">Select Department</label>--%>
+                                </div>
+                            </div>
+                            <asp:HiddenField ID="hfScrollPosition" runat="server" />
+
+                            <div class="col-xxl-6 col-sm-6 mb-lg-4 mb-3">
+                                <div class="form-floating">
+                                    <asp:DropDownList ID="ddlDoctor" runat="server" CssClass="form-select form-control py-3" AppendDataBoundItems="true">
+                                    </asp:DropDownList>
+
+                                    <%--<label for="ddlDoctor">Doctor Name</label>--%>
+                                    <asp:RequiredFieldValidator ID="rfvDoctor" runat="server"
+                                        ControlToValidate="ddlDoctor"
+                                        InitialValue=""
+                                        Display="Dynamic"
+                                        CssClass="text-danger"
+                                        ErrorMessage="Doctor name is required.">
+                                    </asp:RequiredFieldValidator>
+                                    <%-- <select class="form-select py-0" aria-label="Doctor">
+                                        <option value="" selected="" disabled="">Select Doctor</option>
+                                        <option value="Dr. A. Mehta (Cardiology)">Dr. A. Mehta (Cardiology)</option>
+                                        <option value="Dr. B. Sharma (Neurology)">Dr. B. Sharma (Neurology)</option>
+                                        <option value="Dr. C. Patel (Orthopedics)">Dr. C. Patel (Orthopedics)</option>
+                                        <option value="Dr. D. Verma (Pediatrics)">Dr. D. Verma (Pediatrics)</option>
+                                        <option value="Dr. E. Kapoor (Dermatology)">Dr. E. Kapoor (Dermatology)</option>
+                                    </select>--%>
+                                    <%--  <label for="Doctor">Select Doctor</label>--%>
+                                </div>
+                            </div>
+
+
+
+                            <div class="col-xxl-6 col-lg-12 col-sm-6 mb-lg-4 mb-3">
+                                <section id="targetSection">
+                                    <div class="row">
+                                        <div class="col-sm-6 mb-sm-0 mb-3">
+                                            <div class="form-floating">
+                                                <asp:TextBox ID="txtDate" runat="server" CssClass="form-control" TextMode="Date"></asp:TextBox>
+                                                <label for="txtDate">Date</label>
+                                                <asp:RequiredFieldValidator ID="rfvDate" runat="server" ControlToValidate="txtDate" Display="Dynamic" CssClass="text-danger" ErrorMessage="Date is required."></asp:RequiredFieldValidator>
+                                                <%-- <select class="form-select py-0" aria-label="Doctor">
+                                                <option value="" selected="" disabled="">Date</option>
+                                                <option value="2025-02-06">February 6, 2025</option>
+                                                <option value="2025-02-07">February 7, 2025</option>
+                                                <option value="2025-02-08">February 8, 2025</option>
+                                                <option value="2025-02-09">February 9, 2025</option>
+                                            </select>--%>
+                                                <%-- <label for="Date">Date</label>--%>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-floating">
+                                                <asp:TextBox ID="txtTime" runat="server" CssClass="form-control" TextMode="Time"></asp:TextBox>
+                                                <label for="txtTime">Time</label>
+                                                <asp:RequiredFieldValidator ID="rfvTime" runat="server" ControlToValidate="txtTime" Display="Dynamic" CssClass="text-danger" ErrorMessage="Time is required."></asp:RequiredFieldValidator>
+                                                <%--  <select class="form-select py-0" aria-label="Time">
+                                                <option value="" selected="" disabled="">Time</option>
+                                                <option value="09:00 AM">09:00 AM</option>
+                                                <option value="10:30 AM">10:30 AM</option>
+                                                <option value="02:00 PM">02:00 PM</option>
+                                                <option value="04:15 PM">04:15 PM</option>
+                                            </select>--%>
+                                                <%--  <label for="Time">Time</label>--%>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+
+                            <div class="col-xxl-3 col-lg-6 mb-lg-4  mb-3">
+                                <div class="form-floating">
+                                    <%--        <input type="text" class="form-control border-0" id="captcha" name="captcha" placeholder="captcha">
+                                    <label for="captcha">Enter Captcha</label>--%>
+                                    <asp:TextBox ID="txtCaptcha" runat="server" CssClass="form-control border-0" placeholder="Enter Captcha"></asp:TextBox>
+                                    <label for="txtCaptcha">Enter Captcha</label>
+                                    <asp:RequiredFieldValidator ID="rfvCaptcha" runat="server" ControlToValidate="txtCaptcha" ErrorMessage="Captcha is required." CssClass="text-danger" Display="Dynamic"></asp:RequiredFieldValidator>
+                                    <asp:Label ID="lblMessage" runat="server" ForeColor="Red"></asp:Label>
+                                    <asp:Label ID="lblERR" runat="server" ForeColor="Red"></asp:Label>
+
+
+                                </div>
+                            </div>
+
+                            <div class="col-xxl-3 col-lg-6 mb-lg-4 mt-2 mb-3">
+                                <div class="form-floating">
+                                    <img src="CImage.aspx" id="capimg" alt="captcha" style="margin-left: 10px" />
+
+                                    <%--  <input type="text" class="form-control border-0" id="captcha_solve" name="captcha_solve" disabled placeholder="2+10">
+                                    <label for="captcha">2 + 10</label>--%>
+                                </div>
+                            </div>
+
+                            <div class="mt-4 text-lg-start text-center">
+                                <asp:Button ID="btnSubmit" runat="server" CssClass="btn-theme btn-blue d-lg-block" Text="Make An Appoinment" OnClick="btnsubmit_Click" />
+
+                                <%--                                <a href="#" class="btn-theme">Make An Appoinment </a>--%>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about-bankers-heart">
+        <div class="container py-5">
+            <div class="row pb-lg-4 text-lg-start text-center">
+                <div class="col-lg-6">
+                    <h6 class="text-red fw-medium">ABOUT BANKERS HEART</h6>
+                    <h2 class="text-black">Few Reason Why You Should
+                        <br class="d-lg-block d-none" />
+                        Choose Us</h2>
+                    <picture>
+                        <source srcset="assets/img/About-Bankers-Group-of-Hospitals.webp" type="image/webp">
+                        <source srcset="assets/img/About-Bankers-Group-of-Hospitals.png" type="image/png">
+                        <img src="assets/img/About-Bankers-Group-of-Hospitals.png" class="img-fluid d-lg-none d-block py-4 img-small" alt="About-Bankers-Group-of-Hospitals">
+                    </picture>
+                    <p>Established in 2004, the Bankers Group has expanded from a single, cardiac specialty hospital to 4 multi-specialty hospitals. Built with the clear vision to provide the most advanced, technological medical care at an affordable price has helped shape the values on which the hospital is built.</p>
+                    <ul class="lh-lg text-start">
+                        <li>To provide state of the art Cardiac centre for diagnosis, management and prevention of heart diseases.</li>
+                        <li>To provide medical education, awareness regarding Cardiac problems and its prevention.</li>
+                        <li>To provide advanced medical facilities at affordable cost.</li>
+                    </ul>
+                    <div class="mt-4 pt-3"><a href="about-bankers-group-of-hospitals.aspx" class="btn-theme">Know More</a></div>
+                </div>
+                <div class="col-lg-6 d-lg-block d-none">
+                    <picture>
+                        <source srcset="assets/img/About-Bankers-Group-of-Hospitals.webp" type="image/webp">
+                        <source srcset="assets/img/About-Bankers-Group-of-Hospitals.png" type="image/png">
+                        <img src="assets/img/About-Bankers-Group-of-Hospitals.png" class="img-fluid" alt="About-Bankers-Group-of-Hospitals">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="bankers-services">
+        <div class="container py-5">
+            <div class="row py-lg-4 text-center">
+                <h6 class="text-white mb-3">OUR SERVICES</h6>
+                <h2 class="text-white mb-4">We Serve in Different Areas for Our Patients</h2>
+
+
+
+                <div class="col-lg-4 col-sm-6 mb-4 d-lg-block d-none">
+                    <a href="all-services.aspx">
+                        <picture>
+                            <source srcset="assets/img/Medical-Services-Bankers.webp" type="image/webp">
+                            <source srcset="assets/img/Medical-Services-Bankers.png" type="image/png">
+                            <img class="img-fluid" src="assets/img/Medical-Services-Bankers.png" alt="Medical Services">
+                        </picture>
+                        <div class="bg-redish">
+                            <h6 class="text-white mb-0">Medical Services</h6>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4 d-lg-block d-none">
+                    <a href="assets/pdf/CSR-Policy-BANKERS-CARDIOLOGY.pdf" target="_blank">
+                        <picture>
+                            <source srcset="assets/img/CSR-Banker.webp" type="image/webp">
+                            <source srcset="assets/img/CSR-Banker.png" type="image/png">
+                            <img class="img-fluid" src="assets/img/CSR-Banker.png" alt="CSR">
+                        </picture>
+                        <div class="bg-redish">
+                            <h6 class="text-white mb-0">CSR</h6>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4 d-lg-block d-none">
+                    <a href="all-services.aspx" target="_blank">
+
+                        <picture>
+                            <source srcset="assets/img/PMJAY-Maa-Yojna-Bankers.webp" type="image/webp">
+                            <source srcset="assets/img/PMJAY-Maa-Yojna-Bankers.png" type="image/png">
+                            <img class="img-fluid" src="assets/img/PMJAY-Maa-Yojna-Bankers.png" alt="PMJAY - Maa Yojna">
+                        </picture>
+                        <div class="bg-redish">
+                            <h6 class="text-white mb-0">PMJAY - Maa Yojna</h6>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4 d-lg-block d-none">
+                    <a href="https://swajan.in/" target="_blank">
+                        <picture>
+                            <source srcset="assets/img/Senior-Care-Bankers.webp" type="image/webp">
+                            <source srcset="assets/img/Senior-Care-Bankers.png" type="image/png">
+                            <img class="img-fluid" src="assets/img/Senior-Care-Bankers.png" alt="Senior Care">
+                        </picture>
+                        <div class="bg-redish">
+                            <h6 class="text-white mb-0">Senior Care</h6>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-sm-6 mb-4 d-lg-block d-none">
+                    <a href="educations.aspx">
+                        <picture>
+                            <source srcset="assets/img/education-bankers.webp" type="image/webp">
+                            <source srcset="assets/img/education-bankers.png" type="image/png">
+                            <img class="img-fluid" src="assets/img/education-bankers.png" alt="Education">
+                        </picture>
+                        <div class="bg-redish">
+                            <h6 class="text-white mb-0">Education</h6>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-sm-6 mb-4 d-lg-block d-none">
+                    <a href="all-services.aspx">
+                        <picture>
+                            <source srcset="assets/img/medical-checkup-bankers.webp" type="image/webp">
+                            <source srcset="assets/img/medical-checkup-bankers.png" type="image/png">
+                            <img class="img-fluid" src="assets/img/medical-checkup-bankers.png" alt="Medical Checkup ">
+                        </picture>
+                        <div class="bg-redish">
+                            <h6 class="text-white mb-0">Medical Checkup </h6>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row d-lg-none d-block">
+                <div class="owl-carousel owl-theme">
+                    <div class="item">
+                        <a href="all-services.aspx">
+                            <picture>
+                                <source srcset="assets/img/Medical-Services-Bankers.webp" type="image/webp">
+                                <source srcset="assets/img/Medical-Services-Bankers.png" type="image/png">
+                                <img class="img-fluid" src="assets/img/Medical-Services-Bankers.png" alt="health-check-up-plans-img">
+                            </picture>
+                            <div class="bg-redish">
+                                <h6 class="text-white mb-0 text-center">Medical Services</h6>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="assets/pdf/CSR-Policy-BANKERS-CARDIOLOGY.pdf" target="_blank">
+                            <picture>
+                                <source srcset="assets/img/CSR-Banker.webp" type="image/webp">
+                                <source srcset="assets/img/CSR-Banker.png" type="image/png">
+                                <img class="img-fluid" src="assets/img/CSR-Banker.png" alt="CSR">
+                            </picture>
+                            <div class="bg-redish">
+                                <h6 class="text-white mb-0 text-center">CSR</h6>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <picture>
+                            <source srcset="assets/img/PMJAY-Maa-Yojna-Bankers.webp" type="image/webp">
+                            <source srcset="assets/img/PMJAY-Maa-Yojna-Bankers.png" type="image/png">
+                            <img class="img-fluid" src="assets/img/PMJAY-Maa-Yojna-Bankers.png" alt="MA-yojana-img">
+                        </picture>
+                        <div class="bg-redish">
+                            <h6 class="text-white mb-0 text-center">PMJAY - Maa Yojna</h6>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <a href="https://swajan.in/" target="_blank">
+                            <picture>
+                                <source srcset="assets/img/Senior-Care-Bankers.webp" type="image/webp">
+                                <source srcset="assets/img/Senior-Care-Bankers.png" type="image/png">
+                                <img class="img-fluid" src="assets/img/Senior-Care-Bankers.png" alt="Senior Care">
+                            </picture>
+                            <div class="bg-redish">
+                                <h6 class="text-white mb-0 text-center">Senior Care</h6>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="item">
+                        <a href="educations.aspx">
+                            <picture>
+                                <source srcset="assets/img/education-bankers.webp" type="image/webp">
+                                <source srcset="assets/img/education-bankers.png" type="image/png">
+                                <img class="img-fluid" src="assets/img/education-bankers.png" alt="Education">
+                            </picture>
+                            <div class="bg-redish">
+                                <h6 class="text-white mb-0 text-center">Education</h6>
+                            </div>
+                        </a>
+
+
+                    </div>
+                    <div class="item">
+                        <a href="all-services.aspx">
+                            <picture>
+                                <source srcset="assets/img/medical-checkup-bankers.webp" type="image/webp">
+                                <source srcset="assets/img/medical-checkup-bankers.png" type="image/png">
+                                <img class="img-fluid" src="assets/img/medical-checkup-bankers.png" alt="medical-support-img">
+                            </picture>
+                            <div class="bg-redish">
+                                <h6 class="text-white mb-0 text-center">Medical Checkup </h6>
+                            </div>
+                        </a>
+
+
+                    </div>
+
+
+
+                </div>
+            </div>
+
+
+
+        </div>
+    </section>
+
+    <section id="social-responsibility">
+        <div class="container py-5">
+            <div class="row py-lg-4">
+                <h6 class="text-center text-red fw-medium">CORPORATE SOCIAL RESPONSIBILITY</h6>
+                <h2 class="text-center text-black mb-lg-5 mb-4">Innovative Approaches to CSR in the Modern Era</h2>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <a href="yash-public-charitable-trust.aspx">
+                        <div class="border-red rounded-4">
+                            <div class="d-flex align-items-center">
+                                <img src="assets/img/yash-charitable-trust-icon.svg" class="img-fluid social-responsi-icon pe-lg-4 pe-2  rounded-4" alt="yash-charitable-trust-icon" />
+                                <h6 class="mb-0">Yash Public Charitable Trust</h6>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <a href="medical-camp.aspx">
+                        <div class="border-red rounded-4">
+                            <div class="d-flex align-items-center">
+                                <img src="assets/img/medical-camps-img.svg" class="img-fluid social-responsi-icon pe-lg-4 pe-2  rounded-4" alt="medical-camps-img" />
+                                <h6 class="mb-0">Medical Camps</h6>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <a href="exhibitions.aspx">
+                        <div class="border-red rounded-4">
+                            <div class="d-flex align-items-center">
+                                <img src="assets/img/exhibitions-icon.svg" class="img-fluid social-responsi-icon pe-lg-4 pe-2  rounded-4" alt="exhibitions-icon" />
+                                <h6 class="mb-0">Exhibitions</h6>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <a href="csr-activity.aspx">
+                        <div class="border-red rounded-4">
+                            <div class="d-flex align-items-center">
+                                <img src="assets/img/CSR-activity-at-bankers-icon.svg" class="img-fluid social-responsi-icon pe-lg-4 pe-2  rounded-4" alt="CSR-activity-at-bankers-icon" />
+                                <h6 class="mb-0">CSR Activity at Bankers</h6>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <a href="assets/pdf/Composition-of-the-CSR-Committee.pdf" target="_blank">
+                        <div class="border-red rounded-4">
+                            <div class="d-flex align-items-center">
+                                <img src="assets/img/CSR-composition-icon.svg" class="img-fluid social-responsi-icon pe-lg-4 pe-2  rounded-4" alt="CSR-composition-icon" />
+                                <h6 class="mb-0">CSR Composition</h6>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <a href="assets/pdf/CSR-Policy-BANKERS-CARDIOLOGY.pdf" target="_blank">
+                        <div class="border-red rounded-4">
+                            <div class="d-flex align-items-center">
+                                <img src="assets/img/CSR-policy-img.svg" class="img-fluid social-responsi-icon pe-lg-4 pe-2  rounded-4" alt="CSR-policy-img" />
+                                <h6 class="mb-0">CSR Policy</h6>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonial-comment">
+        <div class="testimonail-bg text-sm-start text-center">
+            <div class="container py-5">
+                <div class="row py-lg-5">
+                    <h5 class="text-white">Testimonial</h5>
+                    <h2 class="text-white mb-4">What Patients Say About Us.</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="container content-top pb-5 text-lg-start text-center">
+            <div id="carousel" class="owl-carousel owl-theme">
+                <asp:Repeater ID="PatientSay" runat="server">
+                    <ItemTemplate>
+                        <div class="item pb-lg-5">
+                            <div class="bg-white p-3 rounded-4 bg-comment mb-3 shadow">
+                                <div id="bg-cmt">
+                                    <p class="text-grey mb-0  "><i class="clamped-text"><%# Eval("description") %></i></p>
+                                </div>
+                            </div>
+
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="row align-items-center w-100">
+                                    <div class="col-10 ps-3">
+                                        <div>
+                                            <h6 class="text-black mb-0"><%# Eval("title") %></h6>
+                                            <i class="fa fa-star color-yellow" aria-hidden="true"></i>
+                                            <i class="fa fa-star color-yellow" aria-hidden="true"></i>
+                                            <i class="fa fa-star color-yellow" aria-hidden="true"></i>
+                                            <i class="fa fa-star color-yellow" aria-hidden="true"></i>
+                                            <i class="fa fa-star color-yellow" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-2">
+                                        <a href="#" class="text-red open-modal"
+                                            data-title='<%# Eval("title") %>'
+                                            data-image='<%# ResolveUrl("~/poweradmin/webfiles/PatientsSay/") + Eval("image") %>'>
+                                            <i class="fa fa-eye fs-4" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </ItemTemplate>
+                </asp:Repeater>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog-and-articles" class="d-none">
+        <div class="container pb-5">
+            <div class="row pb-lg-4 text-sm-start text-center">
+                <h6 class="text-red fw-medium">BLOG & ARTICLES</h6>
+                <h2 class="text-black mb-4">Latest Press Releases</h2>
+
+                <div id="carousel" class="owl-carousel owl-theme">
+                    <asp:Repeater ID="rpt_MedicalCamps" runat="server">
+                        <ItemTemplate>
+                            <div class="item pb-3 blog-height">
+                                <a href='blog-details.aspx?id=<%# Eval("id") %>'>
+                                    <div class="box-shadow-date text-center p-3 h-100">
+                                        <div class="position-relative">
+                                            <%--  <picture>
+                                        <source srcset="assets/img/events-bankers-img-1.webp" type="image/webp">
+                                        <source srcset="assets/img/events-bankers-img-1.png" type="image/png">
+                                        <img class="img-fluid  rounded-4" src="assets/img/events-bankers-img-1.png" alt="Blog-details">
+                                    </picture>--%>
+                                            <picture>
+                                                <source srcset='<%# ResolveUrl("~/poweradmin/webfiles/BlogManagement/") + Eval("image") %>' type="image/webp">
+                                                <source srcset='<%# ResolveUrl("~/poweradmin/webfiles/BlogManagement/") + Eval("image") %>' type="image/png">
+                                                <img class="img-fluid  rounded-4 media-img"
+                                                    src='<%# ResolveUrl("~/poweradmin/webfiles/BlogManagement/") + Eval("image") %>'
+                                                    alt='<%# Eval("title") %>'>
+                                            </picture>
+
+                                            <%--                                    <p class="date-fix py-1 mb-0 px-3">
+                                        17<br />
+                                        sept
+                                    </p>--%>
+                                            <p class="date-fix py-1 mb-0 px-3">
+                                                <%# Convert.ToDateTime(Eval("Blog_Date")).ToString("dd") %><br />
+                                                <%# Convert.ToDateTime(Eval("Blog_Date")).ToString("MMM") %>
+                                            </p>
+
+                                        </div>
+                                        <%-- <div class="pb-4">
+                                    <h6 class="pt-5  clr-black fw-semibold clamped-text">Republic Day Celebration at Bankers Group</h6>
+                                    <div class="mt-4"><a href="blog-details.aspx" class="btn-theme btn-blue">Know More</a></div>
+                                </div>--%>
+                                        <div class="pb-4 tittle-height">
+                                            <h6 class="pt-5  clr-black fw-semibold clamped-text"><%# Eval("title") %></h6>
+                                            <p class="clamped-text"><%# Eval("summary") %></p>
+                                            <%-- <div class="mt-4"><a href="blog-details.aspx" class="btn-theme btn-blue">Know More</a></div>--%>
+                                        </div>
+                                        <a href='blog-details.aspx?id=<%# Eval("id") %>' class="btn-theme btn-blue">Know More</a>
+
+                                    </div>
+
+                                </a>
+                            </div>
+
+
+                        </ItemTemplate>
+                    </asp:Repeater>
+
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Modal (Moved Outside Repeater) -->
+    <div class="modal" id="patientModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 id="modalTitle" class="modal-title"></h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body m-auto">
+                    <img id="modalImage" class="img-fluid circle-img" src="" alt="">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-theme btn-blue" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <section id="bankers-doctors-expert-team">
+        <div class="container pb-5">
+            <div class="row pb-lg-4 align-items-center text-lg-start text-center">
+                <div class="col-lg-7">
+                    <h6 class="text-red fw-medium">MEET OUR DOCTORS</h6>
+                    <h2 class="text-black">Meet Our Expert Team of Doctors Dedicated to Your Health and Well-Being</h2>
+                    <picture>
+                        <source srcset="assets/img/doctors-imgs.webp" type="image/webp">
+                        <source srcset="assets/img/doctors-imgs.png" type="image/png">
+                        <img src="assets/img/doctors-imgs.png" class="img-fluid rounded-4 mb-3 shadow d-lg-none d-block py-lg-5 img-small-size m-auto" alt="doctors-imgs">
+                    </picture>
+                    <p>
+                        Our team of highly skilled and compassionate doctors is dedicated to providing exceptional care tailored to your unique health needs. With a focus on your well-being, we are committed to delivering personalized treatment, expert advice, and ongoing support to help you achieve optimal health and vitality.
+                    </p>
+                    <div class="mt-4 pt-3 mb-4">
+                        <a href="meet-our-doctors.aspx" class="btn-theme">Know More</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mx-auto d-lg-block d-none">
+                    <picture>
+                        <source srcset="assets/img/bankers-group-of-hospitals-logo.webp" type="image/webp">
+                        <source srcset="assets/img/bankers-group-of-hospitals-logo.png" type="image/png">
+                        <img class="img-fluid mb-3 " src="assets/img/bankers-group-of-hospitals-logo.png" alt="highly skilled and compassionate doctors">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div id="insurence" class="my-5">
+
+        <div class="container ">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-md-6 col-sm-7 text-sm-start text-center">
+                    <h6 class="text-red fw-medium text-uppercase ">MEET OUR Partners</h6>
+                    <h2 class="clr-black fw-semibold ">Empanelment</h2>
+                </div>
+                <div class="col-xl-2 col-md-3 col-sm-4 mt-sm-0 mt-3 text-sm-end text-center">
+                    <a href="empanelment-bankers-group-of-hospitals.aspx" class="btn-theme">View More</a>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-12 pt-3">
+                    <div class="owl-carousel owl-theme">
+                        <asp:Repeater ID="rptinsurence" runat="server">
+                            <ItemTemplate>
+                                <div class="item my-4 mx-1">
+                                    <%--        <picture>
+                        <source srcset="assets/img/insurence-logo-1.webp" type="image/webp">
+                        <source srcset="assets/img/insurence-logo-1.png" type="image/png">
+                        <img class="img-fluid p-3" src="assets/img/insurence-logo-1.png" alt="medical-support-img">
+
+                    </picture>--%>
+                                    <picture>
+                                        <source srcset='<%# ResolveUrl("~/poweradmin/webfiles/insurance_partners/") + Eval("image") %>' type="image/webp">
+                                        <source srcset='<%# ResolveUrl("~/poweradmin/webfiles/insurance_partners/") + Eval("image") %>' type="image/png">
+                                        <img class="img-fluid p-2"
+                                            src='<%# ResolveUrl("~/poweradmin/webfiles/insurance_partners/") + Eval("image") %>'
+                                            alt='<%# Eval("title") %>'>
+                                    </picture>
+                                </div>
+                            </ItemTemplate>
+                        </asp:Repeater>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="extrajs" runat="server">
+    <script type="text/javascript">
+        window.onload = function () {
+            var scrollElement = document.getElementById('<%= hfScrollPosition.ClientID %>').value;
+            if (scrollElement) {
+                var element = document.getElementById(scrollElement);
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    element.focus();  // Focus bhi karega
+                }
+            }
+        };
+
+        function SetScrollPosition(elementId) {
+            document.getElementById('<%= hfScrollPosition.ClientID %>').value = elementId;
+        }
+    </script>
+
+
+
+    <script>
+        $('#insurence .owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: false,
+            dots: true,
+            navText: [
+                '<img src="assets/img/left-arrow.svg" class="custom-nav-icon" alt="Left Arrow">',
+                '<img src="assets/img/right-arrow.svg" class="custom-nav-icon" alt="Right Arrow">'
+            ],
+            responsive: {
+                0: {
+                    items: 2,
+                    nav: false,
+                    autoplay: true,
+                    autoplayTimeout: 3000,
+                },
+                576: {
+                    items: 3,
+                    nav: false,
+                    autoplay: true,
+                    autoplayTimeout: 3000
+                },
+                768: {
+                    items: 4,
+                    nav: false,
+                    autoplay: true,
+
+                    autoplayTimeout: 3000,
+                },
+                992: {
+                    items: 6,
+                    autoplay: true,
+                    nav: false,
+                    autoplayTimeout: 3000,
+
+                },
+                1200: {
+                    items: 7,
+                    autoplay: false,
+                    nav: false,
+                    dots: false,
+                    loop: false
+                }
+            }
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll('.open-modal').forEach(function (element) {
+                element.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    let title = this.getAttribute('data-title');
+                    let image = this.getAttribute('data-image');
+
+                    document.getElementById('modalTitle').innerText = title;
+                    document.getElementById('modalImage').setAttribute('src', image);
+                    document.getElementById('modalImage').setAttribute('alt', title);
+
+                    var myModal = new bootstrap.Modal(document.getElementById('patientModal'));
+                    myModal.show();
+                });
+            });
+        });
+    </script>
+    <script>
+        $('#blog-and-articles .owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: false,
+            dots: true,
+            navText: [
+                '<img src="assets/img/left-arrow.svg" class="custom-nav-icon" alt="Left Arrow">',
+                '<img src="assets/img/right-arrow.svg" class="custom-nav-icon" alt="Right Arrow">'
+            ],
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: false,
+                    autoplay: true,
+                    autoplayTimeout: 3000,
+                },
+                576: {
+                    items: 2,
+                    nav: false,
+                    autoplay: true,
+                    autoplayTimeout: 3000
+                },
+                768: {
+                    items: 2,
+                    nav: false,
+                    autoplay: true,
+                    autoplayTimeout: 3000,
+                },
+                992: {
+                    items: 3,
+                    autoplay: true,
+                    autoplayTimeout: 3000,
+
+                },
+                1200: {
+                    items: 3,
+                    autoplay: true,
+                    autoplayTimeout: 3000,
+                }
+            }
+        });
+
+        $('#testimonial-comment .owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: false,
+            dots: false,
+            navText: [
+                '<img src="assets/img/left-white-arrow.svg" class="custom-nav-icon" alt="Left Arrow">',
+                '<img src="assets/img/right-white-arrow.svg" class="custom-nav-icon" alt="Right Arrow">'
+            ],
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: false,
+                    autoplay: true,
+                    autoplayTimeout: 3000,
+                },
+                576: {
+                    items: 1,
+                    nav: false,
+                    autoplay: true,
+                    autoplayTimeout: 3000
+                },
+                768: {
+                    items: 2,
+                    nav: false,
+                    autoplay: true,
+                    autoplayTimeout: 3000,
+                },
+                992: {
+                    items: 2,
+                    autoplay: true,
+                    autoplayTimeout: 3000,
+
+                },
+                1200: {
+                    items: 3,
+                    autoplay: false,
+                    autoplayTimeout: 3000,
+                },
+                1400: {
+                    items: 3,
+                    autoplay: false,
+                    autoplayTimeout: 3000,
+                }
+            }
+        });
+        $('#bankers-services .owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: false,
+            dots: true,
+            navText: [
+                '<img src="assets/img/left-arrow.svg" class="custom-nav-icon" alt="Left Arrow">',
+                '<img src="assets/img/right-arrow.svg" class="custom-nav-icon" alt="Right Arrow">'
+            ],
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: false,
+                    autoplay: true,
+                    autoplayTimeout: 3000,
+                },
+                576: {
+                    items: 2,
+                    nav: false,
+                    autoplay: true,
+                    autoplayTimeout: 3000
+                },
+                768: {
+                    items: 2,
+                    nav: false,
+                    autoplay: true,
+                    autoplayTimeout: 3000,
+                },
+                992: {
+                    items: 3,
+                    autoplay: true,
+                    autoplayTimeout: 3000,
+
+                },
+                1200: {
+                    items: 3,
+                    autoplay: true,
+                    autoplayTimeout: 3000,
+                }
+            }
+        });
+
+        $('#hero-home-section .owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: false,
+            dots: true,
+            navText: [
+                '<img src="assets/img/left-arrow.svg" class="custom-nav-icon" alt="Left Arrow">',
+                '<img src="assets/img/right-arrow.svg" class="custom-nav-icon" alt="Right Arrow">'
+            ],
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: false,
+                    autoplay: true,
+                    autoplayTimeout: 3000,
+                },
+                576: {
+                    items: 2,
+                    nav: false,
+                    autoplay: true,
+                    autoplayTimeout: 3000
+                },
+                768: {
+                    items: 2,
+                    nav: false,
+                    autoplay: true,
+                    autoplayTimeout: 3000,
+                },
+                992: {
+                    items: 2,
+                    autoplay: true,
+                    autoplayTimeout: 3000,
+
+                },
+                1200: {
+                    items: 3,
+                    autoplay: true,
+                    autoplayTimeout: 3000,
+                }
+            }
+        });
+
+    </script>
+
+
+</asp:Content>

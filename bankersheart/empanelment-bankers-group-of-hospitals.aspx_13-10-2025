@@ -1,0 +1,501 @@
+﻿<%@ Page Title="Empanelment with Bankers Group of Hospitals" Language="C#" MasterPageFile="~/bankers.Master" AutoEventWireup="true" CodeBehind="empanelment-bankers-group-of-hospitals.aspx.cs" Inherits="bankersheart.empanelment_bankers_group_of_hospitals" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+<meta name="keywords" content="Medical insurance network, empanelled hospitals, insurance tie-ups, healthcare partnerships, cashless treatment empanelment, Bankers Heart Institute empanelment">
+<meta name="description" content="Empanel with Bankers Group of Hospitals for hassle-free insurance and TPA services, offering cashless treatment and quality healthcare.">
+<link rel="canonical" href="https://www.bankersheart.com/empanelment-bankers-group-of-hospitals" />    <style>
+        .list_disc {
+            list-style: disc;
+            padding-left: 30px;
+        }
+
+        @media(max-width: 768px) {
+            .list_disc {
+                list-style: disc;
+                padding-left: 23px;
+            }
+        }
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+
+    <section id="inner-banner" class="content-down">
+        <div class="container">
+            <div class="row">
+                <div class="banner-heading">
+                    <h1 class=sr-only> Empanelment with Bankers Group of Hospitals</h1>
+                    <h2 class="text-white text-center mb-0">Empanelment</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="events-at-bankers" class="py-5">
+        <div class="container py-lg-5 py-4">
+
+            <ul class="nav nav-tabs justify-content-center" id="insuranceTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="mediclaim-tab" data-bs-toggle="tab" data-bs-target="#mediclaim"
+                        type="button" role="tab" aria-controls="mediclaim" aria-selected="true">
+                        MEDICLAIM</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="corporate-tab" data-bs-toggle="tab" data-bs-target="#corporate"
+                        type="button" role="tab" aria-controls="corporate" aria-selected="false">
+                        CORPORATE</button>
+                </li>
+            </ul>
+
+            <div class="tab-content mt-lg-4 mt-5" id="insuranceTabsContent">
+
+                <div class="tab-pane fade show active" id="mediclaim" role="tabpanel" aria-labelledby="mediclaim-tab">
+
+                    <h3 class="clr-black fw-semibold">OP ROAD</h3>
+                    <div class="row mt-4">
+                        <div class="col-lg-4">
+                            <ul class="list_disc">
+                                <li>The New India Assurance Company Ltd (PSU)</li>
+                                <li>United India Insurance Company Ltd (PSU)</li>
+                                <li>The Oriental Insurance Company Ltd (PSU)</li>
+                                <li>Aditya Birla Health Insurance Co Ltd</li>
+                                <li>Bajaj Allianz General Insurance Co Ltd</li>
+                                <li>Chola MS General Insurance Co Ltd</li>
+                                <li>Future Generali India Insurance Co Ltd</li>
+                                <li>Go Digit General Insurance Co Ltd</li>
+                                <li>HDFC Ergo General Insurance Co Ltd</li>
+                                <li>ICICI Lombard General Insurance Co Ltd</li>
+                                <li>IFFCO TOKIO General Insurance Co Ltd</li>
+                                <li>Liberty General Insurance Co Ltd</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4">
+                            <ul class="list_disc">
+                                <li>Manipal Cigna Health Insurance Co Ltd</li>
+                                <li>NAVI General Insurance Limited</li>
+                                <li>SBI General Insurance Co Ltd</li>
+                                <li>Star Health & Allied Insurance Co Ltd</li>
+                                <li>TATA AIG General Insurance Co Ltd</li>
+                                <li>Universal Sompo General Insurance Co Ltd</li>
+                                <li>Anmol Medicare Insurance TPA Ltd</li>
+                                <li>East West Assistant Insurance TPA Ltd (VOLO)</li>
+                                <li>Ericson Insurance TPA Pvt Ltd</li>
+                                <li>Family Health Plan Insurance TPA Limited</li>
+                                <li>Genins India Insurance TPA Limited</li>
+                                <li>Health India Insurance TPA Services Pvt Ltd</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4">
+                            <ul class="list_disc">
+                                <li>Health Insurance TPA of India Limited</li>
+                                <li>Heritage Health Insurance TPA Pvt Ltd</li>
+                                <li>MDIndia Health Insurance TPA Pvt Ltd</li>
+                                <li>Medsave Insurance TPA Ltd</li>
+                                <li>Medi Assist Insurance TPA Private Limited</li>
+                                <li>Paramount Health Services & Insurance TPA Pvt Ltd</li>
+                                <li>Raksha Health Insurance TPA Private Limited</li>
+                                <li>Vipul MedCorp TPA Pvt Ltd</li>
+                                <li>Vidal Health Insurance TPA Private Limited</li>
+                                <li>Reliance General Insurance Co Ltd</li>
+                                <li>ICICI Prudential Life Insurance Co Ltd</li>
+                            </ul>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-lg-4">
+                                <h6 class="mt-4"><b>International TPA's</b></h6>
+                                <ul class="list_disc">
+                                    <li>Asia Rescue & Medical Services Pvt Ltd (ARMS)</li>
+                                    <li>East West Rescue Pvt Ltd</li>
+                                    <li>eExpedise Healthcare Services Pvt Ltd</li>
+                                    <li>Enfinity Health Services Private Limited</li>
+                                    <li>Allianz Partners</li>
+                                    <li>Paramount Travel & Health Insurance TPA Ltd</li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-4">
+                                <h6 class="mt-4"><b>Treatment on Finance or Credit Facility</b></h6>
+                                <ul class="list_disc">
+                                    <li>Bajaj Finserv Ltd</li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+                    <h3 class="clr-black fw-semibold mt-5">Manjalpur.
+                    </h3>
+                    <div class="row mt-4">
+                        <div class="col-lg-4">
+                            <ul class="list_disc">
+                                <li>The New India Assurance Company Ltd (PSU)</li>
+                                <li>United India Insurance Company Ltd (PSU)</li>
+                                <li>The Oriental Insurance Company Ltd (PSU)</li>
+                                <li>Aditya Birla Health Insurance Co Ltd</li>
+                                <li>Bajaj Allianz General Insurance Co Ltd</li>
+                                <li>Chola MS General Insurance Co Ltd</li>
+                                <li>Future Generali India Insurance Co Ltd</li>
+                                <li>Go Digit General Insurance Co Ltd</li>
+                                <li>HDFC Ergo General Insurance Co Ltd</li>
+                                <li>ICICI Lombard General Insurance Co Ltd</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4">
+                            <ul class="list_disc">
+                                <li>IFFCO TOKIO General Insurance Co Ltd</li>
+                                <li>Liberty General Insurance Co Ltd</li>
+                                <li>Manipal Cigna Health Insurance Co Ltd</li>
+                                <li>NAVI General Insurance Limited</li>
+                                <li>SBI General Insurance Co Ltd</li>
+                                <li>Star Health & Allied Insurance Co Ltd</li>
+                                <li>TATA AIG General Insurance Co Ltd</li>
+                                <li>Universal Sompo General Insurance Co Ltd</li>
+                                <li>Anmol Medicare Insurance TPA Ltd</li>
+                                <li>East West Assistant Insurance TPA Ltd (VOLO)</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4">
+                            <ul class="list_disc">
+                                <li>Ericson Insurance TPA Pvt Ltd</li>
+                                <li>Family Health Plan Insurance TPA Limited</li>
+                                <li>Genins India Insurance TPA Limited</li>
+                                <li>Health India Insurance TPA Services Pvt Ltd</li>
+                                <li>Health Insurance TPA of India Limited</li>
+                                <li>Heritage Health Insurance TPA Pvt Ltd</li>
+                                <li>MDIndia Health Insurance TPA Pvt Ltd</li>
+                                <li>Medsave Insurance TPA Ltd</li>
+                                <li>Medi Assist Insurance TPA Private Limited</li>
+                                <li>Reliance General Insurance Co Ltd</li>
+                            </ul>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-lg-4">
+                                <h6 class="mt-4"><b>International TPA's</b></h6>
+                                <ul class="list_disc">
+                                    <li>Asia Rescue & Medical Services Pvt Ltd (ARMS)</li>
+                                    <li>East West Rescue Pvt Ltd</li>
+                                    <li>eExpedise Healthcare Services Pvt Ltd</li>
+                                    <li>Enfinity Health Services Private Limited</li>
+                                    <li>Allianz Partners</li>
+                                    <li>Paramount Travel & Health Insurance TPA Ltd</li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-4">
+                                <h6 class="mt-4"><b>Treatment on Finance or Credit Facility</b></h6>
+                                <ul class="list_disc">
+                                    <li>Bajaj Finserv Ltd</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <h3 class="clr-black fw-semibold mt-5">Warasia</h3>
+                    <div class="row mt-4">
+                        <div class="col-lg-4">
+                            <ul class="list_disc">
+                                <li>The New India Assurance Company Ltd (PSU)</li>
+                                <li>United India Insurance Company Ltd (PSU)</li>
+                                <li>The Oriental Insurance Company Ltd (PSU)</li>
+                                <li>Aditya Birla Health Insurance Co Ltd</li>
+                                <li>Bajaj Allianz General Insurance Co Ltd</li>
+                                <li>Chola MS General Insurance Co Ltd</li>
+                                <li>Future Generali India Insurance Co Ltd</li>
+                                <li>Go Digit General Insurance Co Ltd</li>
+                                <li>HDFC Ergo General Insurance Co Ltd</li>
+                                <li>ICICI Lombard General Insurance Co Ltd</li>
+                                <li>IFFCO TOKIO General Insurance Co Ltd</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4">
+                            <ul class="list_disc">
+                                <li>Liberty General Insurance Co Ltd</li>
+                                <li>Manipal Cigna Health Insurance Co Ltd</li>
+                                <li>NAVI General Insurance Limited</li>
+                                <li>SBI General Insurance Co Ltd</li>
+                                <li>Star Health & Allied Insurance Co Ltd</li>
+                                <li>TATA AIG General Insurance Co Ltd</li>
+                                <li>Anmol Medicare Insurance TPA Ltd</li>
+                                <li>East West Assistant Insurance TPA Ltd</li>
+                                <li>East West Assistant Insurance TPA Ltd (VOLO)</li>
+                                <li>Family Health Plan Insurance TPA Limited</li>
+                                <li>Genins India Insurance TPA Limited</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4">
+                            <ul class="list_disc">
+                                <li>Health India Insurance TPA Services Pvt Ltd</li>
+                                <li>Health Insurance TPA of India Limited</li>
+                                <li>Heritage Health Insurance TPA Pvt Ltd</li>
+                                <li>MDIndia Health Insurance TPA Pvt Ltd</li>
+                                <li>Medsave Insurance TPA Ltd</li>
+                                <li>Medi Assist Insurance TPA Private Limited</li>
+                                <li>Paramount Health Services & Insurance TPA Pvt Ltd</li>
+                                <li>Raksha Health Insurance TPA Private Limited</li>
+                                <li>Vipul MedCorp TPA Pvt Ltd</li>
+                                <li>Vidal Health Insurance TPA Private Limited</li>
+                            </ul>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-lg-4">
+                                <h6 class="mt-4"><b>International TPA's</b></h6>
+                                <ul class="list_disc">
+                                    <li>Asia Rescue & Medical Services Pvt Ltd (ARMS)</li>
+                                    <li>East West Rescue Pvt Ltd</li>
+                                    <li>eExpedise Healthcare Services Pvt Ltd</li>
+                                    <li>Enfinity Health Services Private Limited</li>
+                                    <li>Allianz Partners</li>
+                                    <li>Paramount Travel & Health Insurance TPA Ltd</li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-4">
+                                <h6 class="mt-4"><b>Treatment on Finance or Credit Facility</b></h6>
+                                <ul class="list_disc">
+                                    <li>Bajaj Finserv Ltd</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <h3 class="clr-black fw-semibold mt-5">Surat</h3>
+
+                    <div class="row mt-4">
+                        <div class="col-lg-4">
+                            <ul class="list_disc">
+                                <li>The New India Assurance Company Ltd (PSU)</li>
+                                <li>United India Insurance Company Ltd (PSU)</li>
+                                <li>The Oriental Insurance Company Ltd (PSU)</li>
+                                <li>Aditya Birla Health Insurance Co. Ltd.</li>
+                                <li>Bajaj Allianz General Insurance Co. Ltd.</li>
+                                <li>Care Health Insurance Co. Ltd.</li>
+                                <li>Chola MS General Insurance Co. Ltd.</li>
+                                <li>East West Assist Insurance TPA Ltd.</li>
+                                <li>Ericson Insurance TPA Pvt. Ltd.</li>
+                                <li>Family Health Plan Insurance Co. Ltd. (FHPL)</li>
+                                <li>Genins India TPA Ltd.</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4">
+                            <ul class="list_disc">
+                                <li>Go Digit Insurance Co. Ltd.</li>
+                                <li>HDFC Ergo General Insurance Co. Ltd.</li>
+                                <li>Health India TPA Services Pvt. Ltd.</li>
+                                <li>Health Insurance TPA of India - (HITPA)</li>
+                                <li>Heritage Health Insurance TPA Pvt. Ltd.</li>
+                                <li>ICICI Lombard General Insurance Co. Ltd.</li>
+                                <li>IFFCO Tokio General Insurance Co. Ltd.</li>
+                                <li>Liberty General Insurance Co. Ltd.</li>
+                                <li>Manipal Cigna Health Insurance Co. Ltd.</li>
+                                <li>Maxbupa Health Insurance Co. Ltd.</li>
+                                <li>MDIndia Healthcare Services (TPA) Pvt. Ltd.</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4">
+                            <ul class="list_disc">
+                                <li>Medi Assist India TPA Pvt. Ltd.</li>
+                                <li>Medsave Healthcare (TPA) Ltd.</li>
+                                <li>Paramount Health Services (TPA) Pvt. Ltd</li>
+                                <li>Raksha TPA Pvt. Ltd.</li>
+                                <li>Reliance General Insurance Co. Ltd.</li>
+                                <li>SBI General Insurance Co. Ltd.</li>
+                                <li>Star Health And Allied Insurance Co. Ltd.</li>
+                                <li>TATA AIG General Insurance Co. Ltd.</li>
+                                <li>Universal Sompo General Insurance Co. Ltd.</li>
+                                <li>Vidal Health Insurance Co. Ltd.</li>
+                                <li>Vipul MedCorp Pvt. Ltd.</li>
+                            </ul>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-lg-4">
+                                <h6 class="mt-4"><b>International TPA's</b></h6>
+                                <ul class="list_disc">
+                                    <li>Asia Rescue & Medical Services Pvt Ltd (ARMS)</li>
+                                    <li>East West Rescue Pvt Ltd</li>
+                                    <li>eExpedise Healthcare Services Pvt Ltd</li>
+                                    <li>Enfinity Health Services Private Limited</li>
+                                    <li>Allianz Partners</li>
+                                    <li>Paramount Travel & Health Insurance TPA Ltd</li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-4">
+                                <h6 class="mt-4"><b>Treatment on Finance or Credit Facility</b></h6>
+                                <ul class="list_disc">
+                                    <li>Bajaj Finserv Ltd</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="tab-pane fade" id="corporate" role="tabpanel" aria-labelledby="corporate-tab">
+
+                    <h3 class="clr-black fw-semibold">OP. ROAD</h3>
+
+                    <div class="row mt-4">
+                        <div class="col-lg-4">
+                            <ul class="list_disc">
+                                <li>ESIS/ESIC</li>
+                                <li>BSNL</li>
+                                <li>EIL (ENGINEERS INDIA LTD.)</li>
+                                <li>VADODARA MAHANAGAR SEVA SADAN</li>
+                                <li>MGVCL (MADHYA GUJARAT VIJ CO. LTD.)</li>
+                                <li>DGVCL (DAKSHIN GUJARAT VIJ CO. LTD.)</li>
+                                <li>UGVCL (UTTAR GUJARAT VIJ CO. LTD.)</li>
+                                <li>PGVCL (PASCHIM GUJARAT VIJ CO. LTD.)</li>
+                                <li>GETCO (GUJARAT ENERGY TRANSMISSION CORP. LTD.)</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4">
+                            <ul class="list_disc">
+                                <li>GSECL (GUJARAT STATE ELECTRICITY CORP. LTD.)</li>
+                                <li>GUVNL (GUJARAT URJA VIKAS NIGAM LTD.)</li>
+                                <li>ONGC (BARODA)</li>
+                                <li>ONGC (ANKLESHWAR)</li>
+                                <li>IOCL (INDIAN OIL CORPORATION LTD. (GUJARAT REFINERY))</li>
+                                <li>GNFC</li>
+                                <li>GACL (BARODA & DAHEJ)</li>
+                                <li>RELIANCE INDUSTRIES LTD</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4">
+                            <ul class="list_disc">
+                                <li>APOLLO TYRES LTD.</li>
+                                <li>AFRICON CONSULTANT</li>
+                                <li>STATE BANK OF INDIA</li>
+                                <li>BHARAT PETROLEUM CORPORATION LTD.</li>
+                                <li>BHEL</li>
+                                <li>EXEMED PHARMACEUTICALS</li>
+                                <li>NATIONAL HIGH SPEED RAIL CORPORATION</li>
+                                <li>DEEPAK NITRITE LIMITED</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h3 class="clr-black fw-semibold mt-5">Manjalpur</h3>
+
+                    <div class="row mt-4">
+                        <div class="col-lg-4">
+                            <ul class="list_disc">
+                                <li>GUJARAT GOVT.</li>
+                                <li>MA YOJANA (GUJARAT GOVT. - BPL)</li>
+                                <li>AIRPORT AUTHORITY OF INDIA</li>
+                                <li>MP GOVT.</li>
+                                <li>MP BPL</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4">
+                            <ul class="list_disc">
+                                <li>ONGC (BARODA)</li>
+                                <li>ONGC (ANKLESHWAR)</li>
+                                <li>GNFC</li>
+                                <li>GACL (BARODA & DAHEJ)</li>
+                                <li>APOLLO TYRES LTD.</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4">
+                            <ul class="list_disc">
+                                <li>AFRICON CONSULTANT</li>
+                                <li>STATE BANK OF INDIA</li>
+                                <li>GAIL (GAS AUTHORITY OF INDIA LTD.)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <h3 class="clr-black fw-semibold mt-5">Warasia.</h3>
+
+                    <div class="row mt-4">
+                        <div class="col-lg-4">
+                            <ul class="list_disc">
+                                <li>GUJARAT GOVT.</li>
+                                <li>MA YOJANA (GUJARAT GOVT. - BPL)</li>
+                                <li>AIRPORT AUTHORITY OF INDIA</li>
+                                <li>MP GOVT.</li>
+                                <li>MP BPL</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4">
+                            <ul class="list_disc">
+                                <li>ONGC (BARODA)</li>
+                                <li>ONGC (ANKLESHWAR)</li>
+                                <li>GNFC</li>
+                                <li>GACL (BARODA & DAHEJ)</li>
+                                <li>APOLLO TYRES LTD.</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4">
+                            <ul class="list_disc">
+                                <li>AFRICON CONSULTANT</li>
+                                <li>STATE BANK OF INDIA</li>
+                                <li>GAIL (GAS AUTHORITY OF INDIA LTD.)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <h3 class="clr-black fw-semibold mt-5">Surat.</h3>
+
+                    <div class="row mt-4">
+                        <div class="col-lg-4">
+                            <ul class="list_disc">
+                                <li>AFRICON CONSULTANT</li>
+                                <li>AIRPORT AUTHORITY OF INDIA</li>
+                                <li>BHARAT PETROLEUM CORPORATION LTD.</li>
+                                <li>Central Gov. Scheme for Retired Employee</li>
+                                <li>Colourtex Industries Pvt. Ltd.</li>
+                                <li>DGVCL (DAKSHIN GUJARAT VIJ CO. LTD.)</li>
+                                <li>Ferro Scrap Nigam Ltd.</li>
+                                <li>GACL (BARODA & DAHEJ)</li>
+                                <li>GETCO (GUJARAT ENERGY TRANSMISSION CORP. LTD.)</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4">
+                            <ul class="list_disc">
+                                <li>GNFC Ltd. (Bharuch)</li>
+                                <li>GSECL (GUJARAT STATE ELECTRICITY CORP. LTD.)</li>
+                                <li>GUJARAT GOVT.</li>
+                                <li>Gujarat Mineral Dev Corp Ltd. (GMDC)</li>
+                                <li>GUVNL (GUJARAT URJA VIKAS NIGAM LTD.)</li>
+                                <li>Krishak Bharti Co-operative (Kribhco)</li>
+                                <li>MA YOJANA (GUJARAT GOVT. - BPL)</li>
+                                <li>MGVCL (MADHYA GUJARAT VIJ CO. LTD.)</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4">
+                            <ul class="list_disc">
+                                <li>Oil & Natural Gas Corp Ltd. (Surat & Ankleshwar)</li>
+                                <li>ONGC Petro Additions Ltd. (OPAL)</li>
+                                <li>PGVCL (PASCHIM GUJARAT VIJ CO. LTD.)</li>
+                                <li>RELIANCE INDUSTREIS LTD - HAJIRA</li>
+                                <li>STATE BANK OF INDIA</li>
+                                <li>SVNIT</li>
+                                <li>UGVCL (UTTAR GUJARAT VIJ CO. LTD.)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="extrajs" runat="server">
+</asp:Content>

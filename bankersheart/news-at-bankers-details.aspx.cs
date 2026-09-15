@@ -1,0 +1,89 @@
+﻿using bankersheart.App_Code;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace bankersheart
+{
+    public partial class news_at_bankers_details : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!IsPostBack)
+            {
+                string titlelink = Page.RouteData.Values["titlelink"] as string;
+                if (!string.IsNullOrEmpty(titlelink))
+                {
+        
+                    Bindexhibition(titlelink);   // Now handles lecture titlelink too
+                                                 // Dynamic H1
+                    litHeading.Text = $"<h1 class='sr-only'>Bankers News - {titlelink}</h1>";
+                }
+
+
+
+                else
+                {
+                    Response.Redirect("default.aspx");
+                }
+            }
+        }
+
+        //private void Bindexhibition()
+        //{
+        //    string query = "SELECT e.id AS NewsatBankersId,e.title,e.description,e.shortdescription,e.NewsatBankers_Date,i.image AS NewsatBankersImage " +
+        //        "FROM [bankers_usr].[NewsatBankers] e " +
+        //        "LEFT JOIN [bankers_usr].[NewsatBankers_Images] i ON e.id = i.NewsatBankers_id " +
+        //        "WHERE e.id =" + Request.QueryString["id"];  // Ensure only images for the correct exhibition are retrieved
+
+        //    DataTable dt = new DAL().GetDataTable(query, CommandType.Text, null);
+
+        //    // Bind data to the Repeater
+        //    rptExhibitions.DataSource = dt;
+        //    rptExhibitions.DataBind();
+
+        //    // Display the description if data exists
+        //    if (dt.Rows.Count > 0)
+        //    {
+        //        lblCampDescription.Text = dt.Rows[0]["description"].ToString();
+        //    }
+        //}
+        private void Bindexhibition(string titlelink)
+        {
+            string query = @"
+        SELECT e.id AS NewsatBankersId, e.title, e.description, e.shortdescription, e.NewsatBankers_Date, i.image AS NewsatBankersImage,e.Browsertitle,
+       e.MetaTag
+        FROM [bankers_usr].[NewsatBankers] e
+        LEFT JOIN [bankers_usr].[NewsatBankers_Images] i ON e.id = i.NewsatBankers_id
+        WHERE e.titlelink = @titlelink";
+
+            SqlParameter[] parameters = new SqlParameter[]
+            {
+        new SqlParameter("@titlelink", SqlDbType.NVarChar) { Value = titlelink }
+            };
+
+            DataTable dt = new DAL().GetDataTable(query, CommandType.Text, parameters);
+            rptExhibitions.DataSource = dt;
+            rptExhibitions.DataBind();
+
+            if (dt.Rows.Count > 0)
+            {
+                lblCampDescription.Text = dt.Rows[0]["description"].ToString();
+                // Set browser title
+                Page.Title = dt.Rows[0]["Browsertitle"].ToString();
+
+                // Inject the full <meta> HTML as-is into the page <head>
+                string metaHtml = dt.Rows[0]["MetaTag"].ToString();
+                Page.Header.Controls.Add(new LiteralControl(metaHtml));
+            }
+        }
+
+
+
+    }
+}

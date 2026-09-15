@@ -1,0 +1,53 @@
+﻿using bankersheart.App_Code;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace bankersheart
+{
+    public partial class medical_camp_details : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!IsPostBack)
+            {
+                if (Request.QueryString["id"] != null)
+                {
+                    rpt_MedicalCamps.DataSource = null;
+                    rpt_MedicalCamps.DataBind();
+                    Bindexhibition();
+                }
+                else
+                {
+                    Response.Redirect("default.aspx");
+                }
+            }
+        }
+
+        private void Bindexhibition()
+        {
+            string query = "SELECT e.id AS Medical_CampId,e.title,e.description,e.shortdescription,e.Camp_Date,i.image AS Medical_CampImage " +
+                "FROM [bankers_usr].[Medical_Camp] e " +
+                "LEFT JOIN [bankers_usr].[Medical_Camp_Images] i ON e.id = i.Medical_Camp_id " +
+                "WHERE e.id =" + Request.QueryString["id"];  // Ensure only images for the correct exhibition are retrieved
+
+            DataTable dt = new DAL().GetDataTable(query, CommandType.Text, null);
+
+            // Bind data to the Repeater
+            rpt_MedicalCamps.DataSource = dt;
+            rpt_MedicalCamps.DataBind();
+
+            // Display the description if data exists
+            if (dt.Rows.Count > 0)
+            {
+                lblCampDescription.Text = dt.Rows[0]["description"].ToString();
+            }
+        }
+
+
+    }
+}

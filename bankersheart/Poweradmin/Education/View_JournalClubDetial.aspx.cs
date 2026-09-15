@@ -1,0 +1,111 @@
+﻿using bankersheart.App_Code;
+using System;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace bankersheart.Poweradmin.Education
+{
+    public partial class View_JournalClubDetial : System.Web.UI.Page
+    {
+        string TableName = "[bankers_usr].[JournalClubDetial]";
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (Session["user_id"] == null)
+            {
+                Response.Redirect(ConfigurationManager.AppSettings["cmspath"].ToString() + "default.aspx");
+            }
+            else
+            {
+                if (!String.IsNullOrEmpty(Request.QueryString["msg"]))
+                {
+                    ltr_Success.Text = Request.QueryString["msg"].ToString();
+                    div_Success.Visible = true;
+                }
+                if (!Page.IsPostBack)
+                {
+                    fill_data();
+                }
+            }
+        }
+
+        private void fill_data()
+        {
+            string query = "select * from " + TableName + " order by id desc";
+            DataTable dt = new DAL().GetDataTable(query, CommandType.Text, null);
+
+            rpt_data.DataSource = dt;
+            rpt_data.DataBind();
+        }
+
+        public string GetYouTubeIframeSrc(object youtubeUrl)
+        {
+            if (youtubeUrl != null)
+            {
+                string url = youtubeUrl.ToString().Trim();
+
+                // Check if the URL is in the "embed" format
+                if (url.Contains("youtube.com/embed/"))
+                {
+                    // Extract video ID from the "embed" URL format
+                    string videoId = url.Substring(url.LastIndexOf("/") + 1);
+                    return "https://www.youtube.com/embed/" + videoId;
+                }
+                // Check if the URL is in the "watch" format
+                else if (url.Contains("youtube.com/watch?v="))
+                {
+                    // Extract video ID from the "watch" URL format
+                    var queryParams = System.Web.HttpUtility.ParseQueryString(new Uri(url).Query);
+                    string videoId = queryParams["v"];
+                    if (!string.IsNullOrEmpty(videoId))
+                    {
+                        return "https://www.youtube.com/embed/" + videoId;
+                    }
+                }
+                // Check if the URL is in the "youtu.be" format
+                else if (url.Contains("youtu.be/"))
+                {
+                    // Extract video ID from the "youtu.be" URL format
+                    string videoId = url.Substring(url.LastIndexOf("/") + 1);
+                    return "https://www.youtube.com/embed/" + videoId;
+                }
+            }
+
+            return ""; // Return empty if the URL is invalid or no ID is found
+        }
+
+
+        protected void rpt_data_ItemCommand(object source, RepeaterCommandEventArgs e)
+        {
+            int rowIndex = int.Parse(e.CommandArgument.ToString());
+            HiddenField hdnID = (HiddenField)rpt_data.Items[rowIndex].FindControl("hdnID");
+            TextBox txt_displayorder = (TextBox)rpt_data.Items[rowIndex].FindControl("txt_displayorder");
+
+            if (e.CommandName == "edit")
+            {
+                Response.Redirect("Manage_JournalClubDetial.aspx?id=" + hdnID.Value);
+            }
+
+            if (e.CommandName == "delete")
+            {
+                string sQuery = @"delete from [bankers_usr].[JournalClubDetial] where id='" + hdnID.Value + "'";
+                new DAL().ExecuteNonQuery(sQuery, CommandType.Text, null);
+
+                ltr_Success.Text = "Journal Club Detial deleted.";
+                div_Success.Visible = true;
+
+                fill_data();
+            }
+
+        }
+
+        protected void rpt_data_ItemDataBound(object sender, RepeaterItemEventArgs e)
+        {
+
+        }
+    }
+}
