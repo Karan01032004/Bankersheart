@@ -30,9 +30,15 @@
     </section>
 
     <section id="hospital-details" class="py-5">
-        <asp:Repeater ID="PlayCard" runat="server">
+         <asp:Repeater ID="PlayCard" runat="server">
             <ItemTemplate>
                 <div class="container py-lg-4">
+                    <div class="mb-5 d-lg-flex align-items-center justify-content-center">
+                        <div>
+                            <a href="https://www.bankersheart.com/cardcon-registration" class="btn-theme btn-blue">CardCon 2026 </a>
+                        </div>
+                    </div>
+
                     <div class="blog-container text-lg-start text-center pt-lg-3">
 
                         <div class="inner-img mb-lg-0 mb-4">

@@ -82,3 +82,45 @@ C:\Drashti Backup\2026\New\working_banker\working_banker\Bankersheart\bankershea
 C:\Drashti Backup\2026\New\working_banker\working_banker\Bankersheart\bankersheart\bankersheart\obj\Debug\bankersh.82D985E9.Up2Date
 C:\Drashti Backup\2026\New\working_banker\working_banker\Bankersheart\bankersheart\bankersheart\obj\Debug\bankersheart.dll
 C:\Drashti Backup\2026\New\working_banker\working_banker\Bankersheart\bankersheart\bankersheart\obj\Debug\bankersheart.pdb
+C:\Users\DNC\Desktop\mvc\bankers heart git\bankersheart\bin\bankersheart.dll.config
+C:\Users\DNC\Desktop\mvc\bankers heart git\bankersheart\bin\bankersheart.dll
+C:\Users\DNC\Desktop\mvc\bankers heart git\bankersheart\bin\bankersheart.pdb
+C:\Users\DNC\Desktop\mvc\bankers heart git\bankersheart\bin\roslyn\csc.exe
+C:\Users\DNC\Desktop\mvc\bankers heart git\bankersheart\bin\roslyn\csc.exe.config
+C:\Users\DNC\Desktop\mvc\bankers heart git\bankersheart\bin\roslyn\csc.rsp
+C:\Users\DNC\Desktop\mvc\bankers heart git\bankersheart\bin\roslyn\csi.exe
+C:\Users\DNC\Desktop\mvc\bankers heart git\bankersheart\bin\roslyn\csi.exe.config
+C:\Users\DNC\Desktop\mvc\bankers heart git\bankersheart\bin\roslyn\csi.rsp
+C:\Users\DNC\Desktop\mvc\bankers heart git\bankersheart\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\DNC\Desktop\mvc\bankers heart git\bankersheart\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\DNC\Desktop\mvc\bankers heart git\bankersheart\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\DNC\Desktop\mvc\bankers heart git\bankersheart\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\DNC\Desktop\mvc\bankers heart git\bankersheart\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\DNC\Desktop\mvc\bankers heart git\bankersheart\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\DNC\Desktop\mvc\bankers heart git\bankersheart\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\DNC\Desktop\mvc\bankers heart git\bankersheart\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\DNC\Desktop\mvc\bankers heart git\bankersheart\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\DNC\Desktop\mvc\bankers heart git\bankersheart\bin\roslyn\Microsoft.Managed.Core.CurrentVersions.targets
+C:\Users\DNC\Desktop\mvc\bankers heart git\bankersheart\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\DNC\Desktop\mvc\bankers heart git\bankersheart\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\DNC\Desktop\mvc\bankers heart git\bankersheart\bin\roslyn\System.Buffers.dll
+C:\Users\DNC\Desktop\mvc\bankers heart git\bankersheart\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\DNC\Desktop\mvc\bankers heart git\bankersheart\bin\roslyn\System.Memory.dll
+C:\Users\DNC\Desktop\mvc\bankers heart git\bankersheart\bin\roslyn\System.Numerics.Vectors.dll
+C:\Users\DNC\Desktop\mvc\bankers heart git\bankersheart\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\DNC\Desktop\mvc\bankers heart git\bankersheart\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\DNC\Desktop\mvc\bankers heart git\bankersheart\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\DNC\Desktop\mvc\bankers heart git\bankersheart\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\DNC\Desktop\mvc\bankers heart git\bankersheart\bin\roslyn\vbc.exe
+C:\Users\DNC\Desktop\mvc\bankers heart git\bankersheart\bin\roslyn\vbc.exe.config
+C:\Users\DNC\Desktop\mvc\bankers heart git\bankersheart\bin\roslyn\vbc.rsp
+C:\Users\DNC\Desktop\mvc\bankers heart git\bankersheart\bin\roslyn\VBCSCompiler.exe
+C:\Users\DNC\Desktop\mvc\bankers heart git\bankersheart\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\DNC\Desktop\mvc\bankers heart git\bankersheart\bin\System.ValueTuple.dll
+C:\Users\DNC\Desktop\mvc\bankers heart git\bankersheart\bin\System.Memory.dll
+C:\Users\DNC\Desktop\mvc\bankers heart git\bankersheart\bin\System.Numerics.Vectors.dll
+C:\Users\DNC\Desktop\mvc\bankers heart git\bankersheart\obj\Debug\bankersheart.csproj.AssemblyReference.cache
+C:\Users\DNC\Desktop\mvc\bankers heart git\bankersheart\obj\Debug\bankersheart.csproj.CoreCompileInputs.cache
+C:\Users\DNC\Desktop\mvc\bankers heart git\bankersheart\obj\Debug\bankersh.82D985E9.Up2Date
+C:\Users\DNC\Desktop\mvc\bankers heart git\bankersheart\obj\Debug\bankersheart.dll
+C:\Users\DNC\Desktop\mvc\bankers heart git\bankersheart\obj\Debug\bankersheart.pdb

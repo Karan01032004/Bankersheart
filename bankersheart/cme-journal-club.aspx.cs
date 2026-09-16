@@ -39,7 +39,7 @@ namespace bankersheart
                 canonicalLink.Attributes["href"] = "https://www.bankersheart.com/cme-journal-club"; // base URL only
 
                 // --- SEO Meta Tags ---
-                string baseTitle = "Journal Club Awards";
+                string baseTitle = "Advanced Interventional Cardiology Education in Vadodara";
                 string baseKeywords = "awards, journal club, research, publications";
                 string baseDescription = "Explore the latest updates and recognitions from our Journal Club.";
 

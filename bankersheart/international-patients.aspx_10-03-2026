@@ -1,0 +1,95 @@
+﻿<%@ Page Title="International Patient Cardiac Care in Gujarat – Heart Surgery Support" Language="C#" MasterPageFile="~/bankers.Master" AutoEventWireup="true" CodeBehind="international-patients.aspx.cs" Inherits="bankersheart.international_patients" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <meta name="keywords" content="International Patient Cardiac Care in Gujarat, Expert Cardiac Surgery Services in Gujarat, Best heart hospital in Vadodara, Advanced Interventional Cardiology in Vadodara, Heart Transplant Hospital in Vadodara">
+    <meta name="description" content="Complete assistance for international cardiac patients, including heart surgery, interventional cardiology, rehabilitation, and emergency care across Gujarat.">
+    <link rel="canonical" href="https://www.bankersheart.com/international-patients" />
+    <meta property="og:title" content="International Patients | Bankers Heart Institute, Vadodara – Cardiac Care in India" />
+    <meta property="og:description" content="Bankers Heart Institute in Vadodara offers seamless cardiac care and full support for international patients seeking treatment in India." />
+    <meta property="og:url" content="https://www.bankersheart.com/international-patients" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Bankers Group of Hospitals" />
+    <meta property="og:image" content="https://www.bankersheart.com/bankers-group-of-hospitals-og.png" />
+    <meta property="og:image:alt" content="International Cardiac Care at Bankers Heart Institute" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="International Patients | Bankers Heart Institute, Vadodara – Cardiac Care in India" />
+    <meta name="twitter:description" content="Bankers Heart Institute in Vadodara offers seamless cardiac care and full support for international patients seeking treatment in India." />
+    <meta name="twitter:image" content="https://www.bankersheart.com/bankers-group-of-hospitals-og.png" />
+    <meta name="twitter:image:alt" content="International Cardiac Care at Bankers Heart Institute" />
+    <meta name="twitter:site" content="@BankersHospitals" />
+
+    <style>
+        @media(min-width:992px) {
+            #hospital-details .inner-img {
+                float: right;
+                width: 35%;
+                min-width: 300px;
+                margin-left: 90px;
+            }
+        }
+    </style>
+    <style>
+        .blogs-content p {
+            text-align: justify; /* Align both left and right edges */
+            text-justify: inter-word; /* Proper spacing between words */
+        }
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+    <section id="inner-banner" class="content-down">
+        <div class="container">
+            <div class="row">
+                <div class="banner-heading">
+                    <h1 class="h2 text-white text-center mb-0">International Patients</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="hospital-details" class="py-5">
+        <div class="container py-lg-4">
+            <div class="blog-container text-lg-start text-center pt-lg-3">
+                <%--<h2 class="clr-black fw-bold d-lg-none d-block pb-3">International Patients</h2>--%>
+                <div class="inner-img ">
+                    <picture>
+                        <source srcset="https://www.bankersheart.com/assets/img/international-patients-img.webp" type="image/webp">
+                        <source srcset="https://www.bankersheart.com/assets/img/international-patients-img.png" type="image/png">
+                        <img class="img-fluid  rounded-4 mb-4" src="https://www.bankersheart.com/assets/img/international-patients-img.png" alt="International Patients">
+                    </picture>
+                </div>
+                <div class="blogs-content">
+                    <h2 class="clr-black fw-bold d-lg-block d-none">International Patient</h2>
+                    <h3></h3>
+                    <h4></h4>
+                    <h5></h5>
+
+                    <p>
+                        We have a special team to look after the needs of International Patients and make
+                        their stay comfortable while making them feel at home. Our team themselves go to 
+                        the airport to receive patient. We can arrange to send a life support ambulance
+                        incase the patient needs it. International patients are looked after by specially
+                        trained nurses, and support staff for any special requirements like accommodation 
+                        for the Companion, Shopping, Interpreters, Currency Exchange, Tourism Packages etc.
+                    </p>
+                    <p>
+                        We have dedicated prayer rooms in all our hospitals for relatives of our patients.
+                        One of our key new features is wi-fi connectivity and tele medicine systems. We 
+                        can also arrange for audio and video tele conferences. With these facilities the
+                        patients can stay connected with their loved ones and share their progress from
+                        their own bed.
+                    </p>
+                    <div class="pt-4 mb-5">
+                        <a href="<%=ConfigurationManager.AppSettings["siteurl"].ToString() %>appointment-bankers-group-of-hospitals" class="btn-theme btn-blue">Book An Appointment </a>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </section>
+
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="extrajs" runat="server">
+</asp:Content>

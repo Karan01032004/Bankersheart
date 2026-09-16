@@ -1,10 +1,10 @@
-﻿<%@ Page Title="CSR Policy | Bankers Group of Hospitals" Language="C#" MasterPageFile="~/bankers.Master" AutoEventWireup="true" CodeBehind="csr-policy.aspx.cs" Inherits="bankersheart.csr_policy" %>
+﻿<%@ Page Title="CSR Policy – Best Heart Hospital & Cardiac Care in Vadodara" Language="C#" MasterPageFile="~/bankers.Master" AutoEventWireup="true" CodeBehind="csr-policy.aspx.cs" Inherits="bankersheart.csr_policy" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
 
-    <meta name="description" content="Bankers Group of Hospitals' CSR policy promotes healthcare, education, and sustainability to support community development.">
-    <meta name="keywords" content="CSR policy, community welfare, healthcare access, education support, environmental sustainability, corporate social responsibility, Bankers Group of Hospitals">
+    <meta name="description" content="Our CSR policy promotes accessible cardiac care, emergency support, interventional cardiology services, and rehabilitation programs for communities.">
+    <meta name="keywords" content="Best heart hospital in Vadodara, Heart hospital with ICU in Gujarat, Best emergency hospital for heart, Comprehensive Cardiac Rehabilitation Center Vadodara, Advanced Interventional Cardiology in Vadodara">
     <link rel="canonical" href="https://www.bankersheart.com/csr-policy">
     <style>
         iframe {

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Poweradmin/bankersheartMaster.Master" ValidateRequest="false" AutoEventWireup="true" CodeBehind="Manage_EventsatBankers.aspx.cs" Inherits="bankersheart.Poweradmin.Media.EventsatBankers.Manage_EventsatBankers" %>
+﻿<%@ Page Title="" Language="C#" enableEventValidation="true" MasterPageFile="~/Poweradmin/bankersheartMaster.Master" ValidateRequest="false" AutoEventWireup="true" CodeBehind="Manage_EventsatBankers.aspx.cs" Inherits="bankersheart.Poweradmin.Media.EventsatBankers.Manage_EventsatBankers" %>
 
 
 

@@ -71,7 +71,7 @@
                             </a>
                             <ul class="dropdown-menu text-lg-start text-center">
                                 <li>
-                                    <a class="dropdown-item" href="https://www.bankersheart.com/bankers-superspeciality-hospital-manjalpur-vadodara">Manjalpur &#9632; Vadodara &#9632;
+                                    <a class="dropdown-item" href="https://www.bankersheart.com/best-multispeciality-hospital-manjalpur-vadodara">Manjalpur &#9632; Vadodara &#9632;
                                         <br class="d-sm-none d-block" />
                                         Bankers Superspeciality Hospital
                                     </a>
@@ -79,7 +79,7 @@
 
 
                                 <li>
-                                    <a class="dropdown-item" href="https://www.bankersheart.com/bankers-heart-institute-old-padra-road-vadodara">Old Padra Road  &#9632; Vadodara  &#9632;<br class="d-sm-none d-block" />
+                                    <a class="dropdown-item" href="https://www.bankersheart.com/top-10-hospital-old-padra-road-vadodara">Old Padra Road  &#9632; Vadodara  &#9632;<br class="d-sm-none d-block" />
                                         Bankers Heart Institute
                                     </a>
                                 </li>
@@ -90,7 +90,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="https://www.bankersheart.com/bankers-heart-institute-surat">Opp. Lakeview Garden  &#9632; Surat  &#9632;<br class="d-sm-none d-block" />
+                                    <a class="dropdown-item" href="https://www.bankersheart.com/heart-specialist-in-surat">Opp. Lakeview Garden  &#9632; Surat  &#9632;<br class="d-sm-none d-block" />
                                         Bankers Heart Institute
                                     </a>
                                 </li>

@@ -51,10 +51,10 @@
             <div class="col-lg-3 col-sm-5 pt-4 ">
                 <h6 class="text-white fw-semibold h4">Hospital location @</h6>
                 <ul class="lh-lg">
-                    <li><a href="https://www.bankersheart.com/bankers-superspeciality-hospital-manjalpur-vadodara">Manjalpur - Vadodara</a></li>
-                    <li><a href="https://www.bankersheart.com/bankers-heart-institute-old-padra-road-vadodara">Old Padra Road - Vadodara</a></li>
+                    <li><a href="https://www.bankersheart.com/best-multispeciality-hospital-manjalpur-vadodara">Manjalpur - Vadodara</a></li>
+                    <li><a href="https://www.bankersheart.com/top-10-hospital-old-padra-road-vadodara">Old Padra Road - Vadodara</a></li>
                     <li><a href="https://www.bankersheart.com/bankers-heart-multispeciality-hospital-warasia-vadodara">Warasia - Vadodara</a></li>
-                    <li><a href="https://www.bankersheart.com/bankers-heart-institute-surat">Opp. Lakeview Garden - Surat</a></li>
+                    <li><a href="https://www.bankersheart.com/heart-specialist-in-surat">Opp. Lakeview Garden - Surat</a></li>
 
                 </ul>
             </div>
@@ -117,7 +117,7 @@
                     <p class="m-0">Copyright &#169; 2026 Bankers Group of Hospitals. All Rights Reserved. | <a class="sitemap" href="https://www.bankersheart.com/sitemap.html">Sitemap</a></p>
                 </div>
                 <div class="col-lg-4 text-lg-end text-center">
-                    <p class="m-0">Website Design by <a href="https://www.dotsandcoms.in/" target="_blank">D&C</a></p>
+                    <p class="m-0">Website Design by <a href="https://www.dotsandcoms.in/" target="_blank">Dots and Coms</a></p>
 
                 </div>
             </div>

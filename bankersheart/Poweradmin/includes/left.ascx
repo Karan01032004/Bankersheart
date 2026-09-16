@@ -301,6 +301,14 @@
                     <span class="selected"></span>
                 </a>
             </li>
+
+             <li class="nav-item start" id="cardcon">
+     <a href="javascript:void(0)" onclick="location.href='<%= ConfigurationManager.AppSettings["cmspath"] + "ViewCardcon" %>'" class="nav-link nav-toggle">
+         <i class="icon-layers"></i>
+         <span class="title">Cardcon Registration</span>
+         <span class="selected"></span>
+     </a>
+ </li>
           
             <%--    <li class="nav-item start " id="li_investor">
                 <a href="javascript:;" class="nav-link nav-toggle">

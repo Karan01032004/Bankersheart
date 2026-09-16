@@ -1,19 +1,19 @@
-﻿<%@ Page Title="Bankers Heart Institute Surat" Language="C#" MasterPageFile="~/bankers.Master" AutoEventWireup="true" CodeBehind="bankers-heart-institute-surat.aspx.cs" Inherits="bankersheart.bankers_heart_institute_surat" %>
+﻿<%@ Page Title="Heart Specialist in Vadodara & Advanced Cardiac Care" Language="C#" MasterPageFile="~/bankers.Master" AutoEventWireup="true" CodeBehind="bankers-heart-institute-surat.aspx.cs" Inherits="bankersheart.bankers_heart_institute_surat" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-<meta name="keywords" content="Bankers Heart Institute, 24X7 Emergency Cardiac Care, Siemens Catheterization Lab, Colour Doppler Machine Surat, Pathology Radiology Ambulance Surat">
-<meta name="description" content="Expert heart care in Surat with modern ICUs, advanced diagnostics, and affordable cardiac treatments at Bankers Heart Institute.">
-	<link rel="canonical" href="https://www.bankersheart.com/bankers-heart-institute-surat" />
-	<meta property="og:title" content="Bankers Heart Institute, Surat | Advanced & Affordable Cardiac Care" />
-	<meta property="og:description" content="Expert heart care in Surat with modern ICUs, advanced diagnostics, and affordable cardiac treatments at Bankers Heart Institute." />
-	<meta property="og:url" content="https://www.bankersheart.com/bankers-heart-institute-surat" />
+<meta name="keywords" content="Heart Specialist in Vadodara, Best Hospital in Vadodara, Best Heart Hospital in Vadodara, Cardiologist in Vadodara, Heart Doctor in Vadodara, Cardiology Hospital in Vadodara, Cardiac Care Hospital Vadodara">
+<meta name="description" content="Bankers Heart Institute provides expert heart specialists, advanced cardiology treatments, cardiac surgery, preventive heart care, and emergency cardiac services with state-of-the-art facilities. ">
+	<link rel="canonical" href="https://www.bankersheart.com/heart-specialist-in-surat" />
+	<meta property="og:title" content="Heart Specialist in Vadodara & Advanced Cardiac Care" />
+	<meta property="og:description" content="Bankers Heart Institute provides expert heart specialists, advanced cardiology treatments, cardiac surgery, preventive heart care, and emergency cardiac services with state-of-the-art facilities. " />
+	<meta property="og:url" content="https://www.bankersheart.com/heart-specialist-in-surat" />
 	<meta property="og:type" content="website" />
 	<meta property="og:site_name" content="Bankers Group of Hospitals" />
 	<meta property="og:image" content="https://www.bankersheart.com/bankers-group-of-hospitals-og.png" />
 	<meta property="og:image:alt" content="Bankers Heart Institute in Surat - Advanced Cardiac Care" />
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="Bankers Heart Institute, Surat | Advanced & Affordable Cardiac Care" />
-	<meta name="twitter:description" content="Expert heart care in Surat with modern ICUs, advanced diagnostics, and affordable cardiac treatments at Bankers Heart Institute." />
+	<meta name="twitter:title" content="Heart Specialist in Vadodara & Advanced Cardiac Care" />
+	<meta name="twitter:description" content="Bankers Heart Institute provides expert heart specialists, advanced cardiology treatments, cardiac surgery, preventive heart care, and emergency cardiac services with state-of-the-art facilities. " />
 	<meta name="twitter:image" content="https://www.bankersheart.com/bankers-group-of-hospitals-og.png" />
 	<meta name="twitter:image:alt" content="Bankers Heart Institute in Surat - Advanced Cardiac Care" />
 	<meta name="twitter:site" content="@BankersHospitals" />

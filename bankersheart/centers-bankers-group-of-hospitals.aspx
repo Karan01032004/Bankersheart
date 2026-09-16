@@ -80,7 +80,7 @@
                                 </div>
                                 <div class="col-9 ps-0">
                                     <p class="ps-3 mb-0">
-                                        Every Monday 11 am to 2 pm
+                                        Every Monday, Wednesday & Friday - 1 pm to 4 pm
                                     </p>
                                 </div>
                             </div>
@@ -90,7 +90,7 @@
 
                 <div class="col-lg-4 col-sm-6 mb-4">
                     <div class="shadow h-100 rounded-bottom-3">
-                        <h6 class="mb-0 px-3 py-3 bg-red text-white text-center rounded-top-3 h_contact">Bharuch, Ankleshwar &  Karjan Centre</h6>
+                        <h6 class="mb-0 px-3 py-3 bg-red text-white text-center rounded-top-3 h_contact">Bharuch Centre</h6>
                         <div class="p-3 ">
                             <div class="row align-items-center mb-4 ps-lg-3 mx-0">
                                 <div class="col-3 icon-size ">
@@ -98,7 +98,7 @@
                                 </div>
                                 <div class="col-9 ps-0">
                                     <p class=" ps-3 mb-0">
-                                        Mr. Kaushal Shah
+                                        Mr. Hardik Modi
                                     </p>
                                 </div>
                             </div>
@@ -108,7 +108,7 @@
                                 </div>
                                 <div class="col-9 ps-0">
                                     <p class=" ps-3 mb-0">
-                                        <a href="tel:++91  98989 94011" class="pe-sm-3">+91  98989 94011</a>
+                                        <a href="tel:+91  70430 74880" class="pe-sm-3">+91  70430 74880</a>
 
                                     </p>
 
@@ -120,7 +120,7 @@
                                 </div>
                                 <div class="col-9 ps-0">
                                     <p class="ps-3 mb-0">
-                                        Every Tuesday Bharuch & Ankleshwar 11 am to 2 pm and Karjan - 3 pm to 5 pm
+                                        Every Tuesday - 11 am to 2 pm
                                     </p>
                                 </div>
                             </div>
@@ -137,7 +137,7 @@
                                 </div>
                                 <div class="col-9 ps-0">
                                     <p class=" ps-3 mb-0">
-                                        Mr. Hardik Shah								
+                                        Mr. Hardik Modi								
                                     </p>
                                 </div>
                             </div>
@@ -147,7 +147,7 @@
                                 </div>
                                 <div class="col-9 ps-0">
                                     <p class=" ps-3 mb-0">
-                                        <a href="tel:+91  98989 94011" class="pe-sm-3">+91  98989 94011</a>
+                                        <a href="tel:+91  70430 74880" class="pe-sm-3">+91  70430 74880</a>
 
                                     </p>
 
@@ -166,7 +166,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-6 mb-4">
+             <!--   <div class="col-lg-4 col-sm-6 mb-4">
                     <div class="shadow h-100 rounded-bottom-3">
                         <h6 class="mb-0 px-3 py-3 bg-red text-white text-center rounded-top-3 h_contact">Lunawada & Balashinor Centre</h6>
                         <div class="p-3 ">
@@ -205,10 +205,10 @@ to 1 pm and Balashinor - 3 pm to 4 pm
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --> 
                 <div class="col-lg-4 col-sm-6 mb-4">
                     <div class="shadow h-100 rounded-bottom-3">
-                        <h6 class="mb-0 px-3 py-3 bg-red text-white text-center rounded-top-3 h_contact">Bodeli & Dabhoi Centre</h6>
+                        <h6 class="mb-0 px-3 py-3 bg-red text-white text-center rounded-top-3 h_contact">Bodeli Centre</h6>
                         <div class="p-3 ">
                             <div class="row align-items-center mb-4 ps-lg-3 mx-0">
                                 <div class="col-3 icon-size ">
@@ -238,14 +238,14 @@ to 1 pm and Balashinor - 3 pm to 4 pm
                                 </div>
                                 <div class="col-9 ps-0">
                                     <p class="ps-3 mb-0">
-                                        Every Thursday 4 pm to 6 pm
+                                        Every Thursday 11 am to 2 pm
                                     </p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-6 mb-4">
+              <!-- <div class="col-lg-4 col-sm-6 mb-4">
                     <div class="shadow h-100 rounded-bottom-3">
                         <h6 class="mb-0 px-3 py-3 bg-red text-white text-center rounded-top-3 h_contact">Rajpipla Centre</h6>
                         <div class="p-3 ">
@@ -283,7 +283,7 @@ to 1 pm and Balashinor - 3 pm to 4 pm
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> 
                 <div class="col-lg-4 col-sm-6 mb-4">
                     <div class="shadow h-100 rounded-bottom-3">
                         <h6 class="mb-0 px-3 py-3 bg-red text-white text-center rounded-top-3 h_contact">Godhra & Halol Centre</h6>
@@ -323,10 +323,10 @@ and Halol - 3 pm to 4 pm
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <div class="col-lg-4 col-sm-6 mb-4">
                     <div class="shadow h-100 rounded-bottom-3">
-                        <h6 class="mb-0 px-3 py-3 bg-red text-white text-center rounded-top-3 h_contact">Ratlam & Javra Centre</h6>
+                        <h6 class="mb-0 px-3 py-3 bg-red text-white text-center rounded-top-3 h_contact">Ratlam Centre</h6>
                         <div class="p-3 ">
                             <div class="row align-items-center mb-4 ps-lg-3 mx-0">
                                 <div class="col-3 icon-size ">
@@ -356,7 +356,7 @@ and Halol - 3 pm to 4 pm
                                 </div>
                                 <div class="col-9 ps-0">
                                     <p class="ps-3 mb-0">
-                                        1st & 3rd Saturday 11 am to 2 pm
+                                        1st & 3rd Saturday 10 am to 1 pm
                                     </p>
                                 </div>
                             </div>
@@ -373,7 +373,7 @@ and Halol - 3 pm to 4 pm
                                 </div>
                                 <div class="col-9 ps-0">
                                     <p class=" ps-3 mb-0">
-                                        Mr. Hardik Shah								
+                                        Mr. Kaushal Shah								
                                     </p>
                                 </div>
                             </div>
@@ -383,7 +383,7 @@ and Halol - 3 pm to 4 pm
                                 </div>
                                 <div class="col-9 ps-0">
                                     <p class=" ps-3 mb-0">
-                                        <a href="tel:+91  70430 74880" class="pe-sm-3">+91  70430 74880</a>
+                                        <a href="tel:+91  98989 94011" class="pe-sm-3">+91  98989 94011</a>
 
                                     </p>
 
@@ -395,7 +395,7 @@ and Halol - 3 pm to 4 pm
                                 </div>
                                 <div class="col-9 ps-0">
                                     <p class="ps-3 mb-0">
-                                        2nd & 4th Saturday 11 am to 2 pm								
+                                        2nd & 4th Saturday 11 am to 1 pm								
                                     </p>
                                 </div>
                             </div>

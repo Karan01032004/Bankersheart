@@ -23,8 +23,42 @@ namespace bankersheart
 
         protected void Application_BeginRequest(object sender, EventArgs e)
         {
+            string rawUrl = Request.RawUrl.ToLower();
 
+            // Block malformed or duplicated protocol URLs
+            if (rawUrl.Contains("https:/") || rawUrl.Contains("http:/"))
+            {
+                Response.Clear();
+                Response.StatusCode = 400;
+                Response.End();
+                return;
+            }
+
+            // Block common SQL injection probes (scanner traffic)
+            string[] sqlPatterns =
+           {
+    " select ",
+    " union ",
+    " chr(",
+    " msysaccessobjects",
+    " information_schema",
+    " tdesencrypt",
+    ";"
+};
+
+
+            foreach (string pattern in sqlPatterns)
+            {
+                if (rawUrl.Contains(pattern))
+                {
+                    Response.Clear();
+                    Response.StatusCode = 400;
+                    Response.End();
+                    return;
+                }
+            }
         }
+
 
         protected void Application_AuthenticateRequest(object sender, EventArgs e)
         {
@@ -33,6 +67,21 @@ namespace bankersheart
 
         protected void Application_Error(object sender, EventArgs e)
         {
+            Exception ex = Server.GetLastError();
+
+            // Ignore bad requests & SQL injection probes
+            if (ex is HttpException httpEx && httpEx.GetHttpCode() == 400)
+            {
+                Server.ClearError();
+                return;
+            }
+
+            if (ex is System.Data.SqlClient.SqlException)
+            {
+                Server.ClearError();
+                Response.StatusCode = 500;
+                return;
+            }
             HttpUnhandledException httpUnhandledException = new HttpUnhandledException(Server.GetLastError().Message, Server.GetLastError());
 
             Application["Exception"] = HttpContext.Current.Server.GetLastError();

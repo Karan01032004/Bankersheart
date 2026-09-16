@@ -1,10 +1,10 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/bankers.Master" AutoEventWireup="true" CodeBehind="bankers-heart-multispeciality-hospital-warasia-vadodara.aspx.cs" Inherits="bankersheart.bankers_heart_multispeciality_hospital_warasia_vadodara" %>
+﻿<%@ Page Title="Top Hospital in Vadodara | Best Multispeciality Hospital" Language="C#" MasterPageFile="~/bankers.Master" AutoEventWireup="true" CodeBehind="bankers-heart-multispeciality-hospital-warasia-vadodara.aspx.cs" Inherits="bankersheart.bankers_heart_multispeciality_hospital_warasia_vadodara" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <meta name="keywords" content="Modular operation theatre, infection control hospital, cardiac intensive care unit, healthcare technology, advanced healthcare systems, multi-specialty hospital Vadodara">
-    <meta name="description" content="Bankers Heart and Multispecialty Hospital in Vadodara delivers advanced cardiac care and a state-of-the-art ICU.">
+    <meta name="keywords" content="Best Hospital in Vadodara, Best Heart Hospital in Vadodara, Top Hospital in Vadodara, Multispeciality, Hospital in Vadodara, Cardiac Care Hospital Vadodara, Best Cardiologist in Vadodara, Heart Specialist in Vadodara">
+    <meta name="description" content="Looking for the best hospital in Vadodara? Bankers Heart & Multispeciality Hospital, Warasia offers advanced cardiac care, heart surgery, ICU, diagnostics, emergency services, and expert specialists.">
     <link rel="canonical" href="https://www.bankersheart.com/bankers-heart-multispeciality-hospital-warasia-vadodara" />
-    <meta property="og:title" content="Bankers Heart & Multispecialty Hospital, Warasia, Vadodara | Advanced Cardiac & Critical Care" />
-    <meta property="og:description" content="Bankers Heart and Multispecialty Hospital in Vadodara delivers advanced cardiac care and a state-of-the-art ICU." />
+    <meta property="og:title" content="Top Hospital in Vadodara | Best Multispeciality Hospital" />
+    <meta property="og:description" content="Looking for the best hospital in Vadodara? Bankers Heart & Multispeciality Hospital, Warasia offers advanced cardiac care, heart surgery, ICU, diagnostics, emergency services, and expert specialists." />
     <meta property="og:url" content="https://www.bankersheart.com/bankers-heart-multispeciality-hospital-warasia-vadodara" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Bankers Group of Hospitals" />
@@ -12,8 +12,8 @@
     <meta property="og:image:alt" content="Bankers Heart & Multispecialty Hospital in Warasia, Vadodara" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Bankers Heart & Multispecialty Hospital, Warasia, Vadodara | Advanced Cardiac & Critical Care" />
-    <meta name="twitter:description" content="Bankers Heart and Multispecialty Hospital in Vadodara delivers advanced cardiac care and a state-of-the-art ICU." />
+    <meta name="twitter:title" content="Top Hospital in Vadodara | Best Multispeciality Hospital" />
+    <meta name="twitter:description" content="Looking for the best hospital in Vadodara? Bankers Heart & Multispeciality Hospital, Warasia offers advanced cardiac care, heart surgery, ICU, diagnostics, emergency services, and expert specialists." />
     <meta name="twitter:image" content="https://www.bankersheart.com/bankers-group-of-hospitals-og.png" />
     <meta name="twitter:image:alt" content="Bankers Heart & Multispecialty Hospital in Warasia, Vadodara" />
     <meta name="twitter:site" content="@BankersHospitals" />
@@ -25,6 +25,7 @@
    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+
     <section id="inner-banner" class="content-down">
         <div class="container">
             <div class="row">
@@ -34,8 +35,6 @@
             </div>
         </div>
     </section>
-
-
 
     <asp:Repeater ID="rptHospitals" runat="server">
         <ItemTemplate>
@@ -247,7 +246,7 @@
                 <h2 class="clr-black fw-bold text-center">Other Location</h2>
                 <div class="col-lg-4 col-sm-6 pt-4">
                     <div class="press-box h-100">
-                        <a href="<%=ConfigurationManager.AppSettings["siteurl"].ToString() %>bankers-heart-institute-old-padra-road-vadodara">
+                        <a href="<%=ConfigurationManager.AppSettings["siteurl"].ToString() %>top-10-hospital-old-padra-road-vadodara">
                             <picture>
                                 <source srcset="https://www.bankersheart.com/assets/img/heart-institute-img.webp" type="image/webp">
                                 <source srcset="https://www.bankersheart.com/assets/img/heart-institute-img.png" type="image/png">
@@ -264,7 +263,7 @@
                 </div>
                 <div class="col-lg-4 col-sm-6 pt-4">
                     <div class="press-box h-100">
-                        <a href="<%=ConfigurationManager.AppSettings["siteurl"].ToString() %>bankers-superspeciality-hospital-manjalpur-vadodara">
+                        <a href="<%=ConfigurationManager.AppSettings["siteurl"].ToString() %>best-multispeciality-hospital-manjalpur-vadodara">
                             <picture>
                                 <source srcset="https://www.bankersheart.com/assets/img/bankers-super-hospital-majalpur.webp" type="image/webp">
                                 <source srcset="https://www.bankersheart.com/assets/img/bankers-super-hospital-majalpur.png" type="image/png">
@@ -281,7 +280,7 @@
 
                 <div class="col-lg-4 col-sm-6 pt-4">
                     <div class="press-box h-100">
-                        <a href="<%=ConfigurationManager.AppSettings["siteurl"].ToString() %>bankers-heart-institute-surat">
+                        <a href="<%=ConfigurationManager.AppSettings["siteurl"].ToString() %>heart-specialist-in-surat">
                             <picture>
                                 <source srcset="https://www.bankersheart.com/assets/img/bankers-heart-hospital-surat.webp" type="image/webp">
                                 <source srcset="https://www.bankersheart.com/assets/img/bankers-heart-hospital-surat.png" type="image/png">

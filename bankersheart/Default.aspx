@@ -20,6 +20,7 @@
 	<meta name="twitter:image" content="https://www.bankersheart.com/bankers-group-of-hospitals-og.png" />
 	<meta name="twitter:image:alt" content="Bankers Group of Hospitals – Advanced Healthcare in India" />
 	<meta name="twitter:site" content="@BankersHospitals" />
+	
 
 	<style>
         .owl-carousel .owl-nav.disabled, .owl-carousel .owl-dots.disabled {
@@ -393,7 +394,7 @@
                         <asp:Repeater ID="rptVadodara" runat="server">
                             <ItemTemplate>
                                 <div class="col-sm-6 mb-4">
-                                    <a href="<%=ConfigurationManager.AppSettings["siteurl"].ToString() %>bankers-heart-institute-old-padra-road-vadodara">
+                                    <a href="<%=ConfigurationManager.AppSettings["siteurl"].ToString() %>top-10-hospital-old-padra-road-vadodara">
                                         <div class="bg-red rounded-4 text-center p-xxl-2 p-lg-1 p-2 h-100">
                                             <%-- <picture>
                                         <source srcset="assets/img/bankers-heart-institute-img.webp" type="image/webp">
@@ -442,7 +443,7 @@
                             <ItemTemplate>
 
                                 <div class="col-sm-6 mb-4">
-                                    <a href="<%=ConfigurationManager.AppSettings["siteurl"].ToString() %>bankers-superspeciality-hospital-manjalpur-vadodara">
+                                    <a href="<%=ConfigurationManager.AppSettings["siteurl"].ToString() %>best-multispeciality-hospital-manjalpur-vadodara">
                                         <div class="bg-red rounded-4 text-center p-xxl-2 p-lg-1 p-2 h-100">
                                             <%--  <picture>
                                         <source srcset="assets/img/bankers-super-speciality-hospital-img.webp" type="image/webp">
@@ -465,7 +466,7 @@
                         <asp:Repeater ID="rptsurat" runat="server">
                             <ItemTemplate>
                                 <div class="col-sm-6 mb-4">
-                                    <a href="<%=ConfigurationManager.AppSettings["siteurl"].ToString() %>bankers-heart-institute-surat">
+                                    <a href="<%=ConfigurationManager.AppSettings["siteurl"].ToString() %>heart-specialist-in-surat">
                                         <div class="bg-red rounded-4 text-center p-xxl-2 p-lg-1 p-2 h-100">
                                             <%--  <picture>
                                         <source srcset="assets/img/bankers-heart-institutes-umra-img.webp" type="image/webp">
@@ -494,7 +495,7 @@
                             <asp:Repeater ID="vadodara" runat="server">
                                 <ItemTemplate>
 
-                                    <a href="<%=ConfigurationManager.AppSettings["siteurl"].ToString() %>bankers-heart-institute-old-padra-road-vadodara">
+                                    <a href="<%=ConfigurationManager.AppSettings["siteurl"].ToString() %>top-10-hospital-old-padra-road-vadodara">
                                         <div class="bg-red rounded-4 text-center p-xxl-2 p-lg-1 p-2 h-100">
                                             <%-- <picture>
                                         <source srcset="assets/img/bankers-heart-institute-img.webp" type="image/webp">
@@ -548,7 +549,7 @@
                                 <ItemTemplate>
 
 
-                                    <a href="<%=ConfigurationManager.AppSettings["siteurl"].ToString() %>bankers-superspeciality-hospital-manjalpur-vadodara">
+                                    <a href="<%=ConfigurationManager.AppSettings["siteurl"].ToString() %>best-multispeciality-hospital-manjalpur-vadodara">
                                         <div class="bg-red rounded-4 text-center p-xxl-2 p-lg-1 p-2 h-100">
                                             <%--  <picture>
                                         <source srcset="assets/img/bankers-super-speciality-hospital-img.webp" type="image/webp">
@@ -574,7 +575,7 @@
                             <asp:Repeater ID="surat" runat="server">
                                 <ItemTemplate>
 
-                                    <a href="<%=ConfigurationManager.AppSettings["siteurl"].ToString() %>bankers-heart-institute-surat">
+                                    <a href="<%=ConfigurationManager.AppSettings["siteurl"].ToString() %>heart-specialist-in-surat">
                                         <div class="bg-red rounded-4 text-center p-xxl-2 p-lg-1 p-2 h-100">
                                             <%--  <picture>
                                         <source srcset="assets/img/bankers-heart-institutes-umra-img.webp" type="image/webp">
@@ -1600,6 +1601,230 @@
         });
     });
 </script>
+   <style>
+
+    .cardcon-popup-overlay {
+        position: fixed;
+        inset: 0;
+
+        z-index: 99999;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 15px;
+
+        background: rgba(0, 0, 0, 0.65);
+
+        box-sizing: border-box;
+    }
+
+    .cardcon-popup {
+        position: relative;
+
+        width: 100%;
+        max-width: 500px;
+
+        background: transparent;
+
+        border-radius: 4px;
+
+        overflow: visible;
+
+        box-sizing: border-box;
+    }
+
+    .cardcon-popup picture,
+    .cardcon-popup img {
+        display: block;
+
+        width: 100%;
+        height: auto;
+    }
+
+    .cardcon-popup img {
+        border-radius: 4px;
+    }
+
+    .cardcon-popup-close {
+        position: absolute;
+
+        top: -12px;
+        right: -12px;
+
+        width: 30px;
+        height: 30px;
+
+        padding: 0;
+
+        border: 0;
+        border-radius: 50%;
+
+        background: rgba(0, 0, 0, 0.75);
+
+        color: #ffffff;
+
+        font-size: 22px;
+        font-weight: 500;
+
+        line-height: 28px;
+
+        text-align: center;
+
+        cursor: pointer;
+
+        z-index: 20;
+
+        transition:
+            background 0.25s ease,
+            transform 0.25s ease;
+    }
 
 
+    .cardcon-popup-close:hover {
+        background: rgba(0, 0, 0, 0.95);
+
+        transform: scale(1.05);
+    }
+
+    @media (max-width: 767px) {
+
+        .cardcon-popup-overlay {
+            padding: 15px;
+        }
+
+
+        .cardcon-popup {
+            max-width: 450px;
+        }
+
+
+        .cardcon-popup-close {
+            top: -10px;
+            right: -10px;
+
+            width: 28px;
+            height: 28px;
+
+            font-size: 20px;
+            line-height: 26px;
+        }
+
+    }
+
+    @media (max-width: 480px) {
+
+        .cardcon-popup-overlay {
+            padding: 12px;
+        }
+
+
+        .cardcon-popup {
+            max-width: 100%;
+        }
+
+
+        .cardcon-popup-close {
+            top: -8px;
+            right: -8px;
+
+            width: 26px;
+            height: 26px;
+
+            font-size: 19px;
+            line-height: 24px;
+        }
+
+    }
+
+</style>
+
+
+<div id="cardconRegistrationPopup"
+    class="cardcon-popup-overlay">
+
+    <div class="cardcon-popup"
+        onclick="event.stopPropagation();">
+
+        <button type="button"
+            class="cardcon-popup-close"
+            aria-label="Close"
+            onclick="closeCardconPopup();">
+
+            &times;
+
+        </button>
+
+        <a href="https://www.bankersheart.com/cardcon-registration"
+            target="_self"
+            aria-label="CardCon Registration">
+
+            <picture>
+
+                <source
+                    srcset="https://www.bankersheart.com/assets/img/cardcon-landing-pop-up-img.webp"
+                    type="image/webp">
+
+                <source
+                    srcset="https://www.bankersheart.com/assets/img/cardcon-landing-pop-up-img.png"
+                    type="image/png">
+
+                <img
+                    src="https://www.bankersheart.com/assets/img/cardcon-landing-pop-up-img.png"
+                    alt="CardCon Registration Open">
+
+            </picture>
+
+        </a>
+
+    </div>
+
+</div>
+
+
+<script type="text/javascript">
+
+    function closeCardconPopup() {
+
+        var popup =
+            document.getElementById("cardconRegistrationPopup");
+
+        if (popup) {
+
+            popup.style.display = "none";
+
+        }
+
+    }
+
+    window.addEventListener("load", function () {
+
+        var popup =
+            document.getElementById("cardconRegistrationPopup");
+
+        if (popup) {
+
+            popup.style.display = "flex";
+
+        }
+
+    });
+
+
+    var cardconOverlay =
+        document.getElementById("cardconRegistrationPopup");
+
+
+    if (cardconOverlay) {
+
+        cardconOverlay.addEventListener("click", function () {
+
+            closeCardconPopup();
+
+        });
+
+    }
+
+</script>
 </asp:Content>

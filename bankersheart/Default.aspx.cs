@@ -68,7 +68,7 @@ namespace bankersheart
         }
         private void BindVadodara()
         {
-            string query = @"SELECT id,title, image FROM [bankers_usr].[Hospitals]
+            string query = @"SELECT id,title, image  FROM [bankers_usr].[Hospitals]
                WHERE title = 'Bankers Heart Institute, Vadodara' 
                ORDER BY added_date DESC";
 
@@ -82,7 +82,8 @@ namespace bankersheart
         }
         private void Mobilevadodara()
         {
-            string query = @"SELECT id,title, image FROM [bankers_usr].[Hospitals]
+            string query = @"SELECT id,title, image 
+               FROM [bankers_usr].[Hospitals]
                WHERE title = 'Bankers Heart Institute, Vadodara' 
                ORDER BY added_date DESC";
 

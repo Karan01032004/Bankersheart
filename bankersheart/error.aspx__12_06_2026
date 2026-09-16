@@ -1,0 +1,377 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/bankers.Master" AutoEventWireup="true" CodeBehind="error.aspx.cs" Inherits="bankersheart.error" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+      <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bankers</title>
+  <link rel="apple-touch-icon" sizes="57x57" href="https://www.bankersheart.com/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="https://www.bankersheart.com/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="https://www.bankersheart.com/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://www.bankersheart.com/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="https://www.bankersheart.com/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="https://www.bankersheart.com/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="https://www.bankersheart.com/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://www.bankersheart.com/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://www.bankersheart.com/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="https://www.bankersheart.com/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://www.bankersheart.com/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="https://www.bankersheart.com/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://www.bankersheart.com/favicon-16x16.png">
+  <link rel="manifest" href="https://www.bankersheart.com/manifest.json">
+  <link rel="canonical" href="https://www.bankersheart.com/error">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <!--<link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
+  <link href="https://www.bankersheart.com/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+  <link href="https://www.bankersheart.com/assets/css/base.css" rel="stylesheet" />
+  <link href="https://www.bankersheart.com/assets/animation/aos.css" rel="stylesheet" />
+  <link href="https://www.bankersheart.com/assets/css/owl.carousel.min.css" rel="stylesheet" />
+  <link href="https://www.bankersheart.com/assets/css/owl.theme.default.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" rel="stylesheet" />
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
+     
+    <section id="inner-banner" class="content-down">
+        <div class="container">
+            <div class="row">
+                <div class="banner-heading">
+                    <h2 class="text-white text-center mb-0">404</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="thank-you" class="py-5 my-5">
+        <div class="container">
+            <div class="row">
+                <h1>Sorry, the file you requested was not found!</h1>
+                <div class="col-12">
+                    <a href="https://www.bankersheart.com/"><h3>Home</h3></a>
+                    <p>
+                        At Bankers Group of Hospitals, we are committed to delivering exceptional healthcare services with a patient-first
+                        approach. Our team of skilled medical professionals, state-of-the-art facilities, and advanced technology ensure
+                        high-quality treatment for every individual. We believe in accessible, affordable, and world-class medical care,
+                        ensuring your family's health and well-being remain our top priority.
+                    </p>
+
+                    <h2 class="text-black">Hospitals</h2>
+                    <div class="ps-3 pt-3">
+                        <a href="https://www.bankersheart.com/bankers-superspeciality-hospital-manjalpur-vadodara"><h3>Bankers Superspeciality Hospital, Manjalpur</h3></a>
+                        <p>
+                            Bankers Superspeciality Hospital offers advanced medical care with cutting-edge technology and
+                            expert specialists. We are dedicated to providing world-class treatment for all your healthcare needs.
+                        </p>
+                        <a href="https://www.bankersheart.com/bankers-heart-institute-old-padra-road-vadodara"><h3>Bankers Heart Institute, Vadodara</h3></a>
+                        <p>
+                            Bankers Heart Institute provides advanced cardiac care with expert specialists and cutting-edge technology.
+                            We are committed to delivering the best heart health services for a healthier future.
+                        </p>
+                        <a href="https://www.bankersheart.com/bankers-heart-multispeciality-hospital-warasia-vadodara"><h3>Bankers Heart and Multi Specialty Hospital, Warasia</h3></a>
+                        <p>
+                            Providing expert cardiac and multispeciality care with advanced technology and compassionate treatment.
+                            Your health is our priority, ensuring excellence in every medical service we offer.
+                        </p>
+                        <a href="https://www.bankersheart.com/bankers-heart-institute-surat"><h3>Bankers Heart Institute, Surat</h3></a>
+                        <p>
+                            Delivering advanced cardiac care in Surat with expert specialists and state-of-the-art technology.
+                            Committed to excellence in heart health for a stronger, healthier future.
+                        </p>
+                        <a href="https://www.bankersheart.com/centers-bankers-group-of-hospitals"><h3>Our Centers</h3></a>
+                        <p>
+                            Bankers Group of Hospitals operates multiple centers, providing expert medical care across various
+                            specialties. With advanced technology and skilled professionals, we ensure the best healthcare services for all.
+                        </p>
+                    </div>
+
+                    <h2 class="text-black">Education</h2>
+                    <div class="ps-3 pt-3">
+                        <a href="https://www.bankersheart.com/pgdcc"><h3>PGDCC, DNB Cardiology</h3></a>
+                        <p>
+                            Bankers Heart Institute offers a PGDCC Fellowship in Non-Invasive Cardiology, approved by Texila American University, to train MBBS graduates in clinical cardiology, diagnosis, and prevention of heart diseases with advanced facilities and expert guidance.
+                        </p>
+                        <a href="https://www.bankersheart.com/bankers-nursing-technical-institute"><h3>Bankers Nursing & Technical Institute</h3></a>
+                        <p>
+                            Bankers Nursing & Technical Institute provides advanced training in nursing and healthcare technology, equipping students with clinical expertise, hands-on experience, and industry-ready skills for a successful medical career.
+                        </p>
+                        <a href="https://www.bankersheart.com/cme-journal-club"><h3>CME and Journal Club</h3></a>
+                        <p>
+                            Bankers Heart Institute hosts CME programs and a weekly Journal Club, fostering medical learning through expert discussions, research updates, and case studies to enhance clinical knowledge.
+                        </p>
+                        <a href="https://www.bankersheart.com/interesting-cases"><h3>Interesting Cases</h3></a>
+                        <p>
+                            Explore unique and complex medical cases at Bankers Heart Institute, showcasing advanced diagnostics, innovative treatments, and expert insights in patient care and cardiology.
+                        </p>
+                        <a href="https://www.bankersheart.com/cardcon"><h3>CardCon</h3></a>
+                        <p>
+                            Bankers Group of Hospitals organizes CardCon, an annual cardiology conference bringing together leading cardiologists, surgeons, and healthcare experts to discuss advancements, challenges, and innovations in cardiac care.
+                        </p>
+                    </div>
+
+                    <h2 class="text-black">Patient Care & Services</h2>
+                    <div class="ps-3 pt-3">
+                        <a href="https://www.bankersheart.com/admission-process"><h3>Admission Process</h3></a>
+                        <p>
+                            Our seamless admission process ensures quick and hassle-free hospital entry. Our team guides you
+                            through every step, from documentation to room allocation, ensuring a smooth and comfortable experience.
+                        </p>
+                        <a href="https://www.bankersheart.com/international-patients"><h3>International Patients</h3></a>
+                        <p>
+                            We provide world-class medical care for international patients with personalized assistance, visa support,
+                            travel guidance, and advanced treatments, ensuring a seamless healthcare experience in India.
+                        </p>
+                        <a href="https://www.bankersheart.com/citizen-charter"><h3>Citizen’s Charter</h3></a>
+                        <p>
+                            Our Citizen Charter reflects our commitment to patient rights, quality healthcare, transparency,
+                            and ethical medical practices. We ensure compassionate, efficient, and patient-centric services for all.
+                        </p>
+                        <a href="https://www.bankersheart.com/visitior-guidelines"><h3>Visitor Guidelines</h3></a>
+                        <p>
+                            Bankers Group of Hospitals has set visitor guidelines to ensure a safe and comfortable environment
+                            for patients. Follow our visiting hours, hygiene protocols, and hospital policies for a smooth visit.
+                        </p>
+                        <a href="https://www.bankersheart.com/health-check-up-plans"><h3>Health Check Up Plans</h3></a>
+                        <p>
+                            Our comprehensive health check-up plans are designed for early detection and prevention.
+                            With advanced diagnostics and expert care, we help you stay proactive about your health and well-being.
+                        </p>
+                        <a href="https://www.bankersheart.com/membership-cards"><h3>Membership Cards</h3></a>
+                        <p>
+                            Bankers Group of Hospitals offers exclusive membership cards with priority services, healthcare discounts,
+                            and personalized medical benefits, ensuring quality care and convenience for members.
+                        </p>
+                        <a href="https://www.bankersheart.com/empanelment-bankers-group-of-hospitals"><h3>Empanelment</h3></a>
+                        <p>
+                            We are empaneled with leading insurance providers and corporate organizations, ensuring seamless
+                            cashless treatments and hassle-free healthcare access for patients under various health schemes.
+                        </p>
+                        <a href="https://www.bankersheart.com/what-our-patients-say"><h3>Testimonials</h3></a>
+                        <p>
+                            Discover patient testimonials at Bankers Group of Hospitals, where individuals share their experiences
+                            of exceptional healthcare, advanced treatments, and compassionate medical care
+                        </p>
+                    </div>
+
+
+                    <h2 class="text-black">Media</h2>
+                    <div class="ps-3 pt-3">
+                        <a href="https://www.bankersheart.com/media-press-release"><h3>Press Releases</h3></a>
+                        <p>
+                            Stay updated with the latest news, events, and achievements of Bankers Group of Hospitals.
+                            Explore our media coverage, press releases, and healthcare advancements making a difference.
+                        </p>
+                        <a href="https://www.bankersheart.com/events-at-bankers"><h3>Events at Bankers</h3></a>
+                        <p>
+                            Stay updated with the latest medical events, conferences, and healthcare workshops organized by
+                            Bankers Group of Hospitals, featuring expert discussions and advancements in patient care.
+                        </p>
+                        <a href="https://www.bankersheart.com/news-at-bankers"><h3>News at Bankers</h3></a>
+                        <p>
+                            Get the latest updates, medical advancements, and hospital events from Bankers Group of Hospitals. Stay informed about our initiatives, patient success stories, and healthcare innovations.
+                        </p>
+                        <a href="https://www.bankersheart.com/media-download"><h3>Downloads</h3></a>
+                        <p>
+                            Download press kits, brochures, and official media resources from Bankers Group of Hospitals.
+                            Stay updated with the latest hospital news, events, and healthcare materials.
+                        </p>
+
+                    </div>
+
+                    <h2 class="text-black">CSR</h2>
+                    <div class="ps-3 pt-3">
+                        <a href="https://www.bankersheart.com/yash-public-charitable-trust"><h3>Yash Public Charitable Trust</h3></a>
+                        <p>
+                            Dedicated to providing quality healthcare for all, Yash Public Charitable Trust supports medical aid,
+                            community health programs, and initiatives to make healthcare accessible and affordable.
+                        </p>
+                        <a href="https://www.bankersheart.com/medical-camp"><h3>Medical Camps</h3></a>
+                        <p>
+                            Bankers Group of Hospitals organizes medical camps to provide free health check-ups, screenings,
+                            and essential medical services, ensuring quality healthcare reaches underserved communities.
+                        </p>
+                        <a href="https://www.bankersheart.com/exhibitions"><h3>Exhibitions</h3></a>
+                        <p>
+                            Bankers Group of Hospitals actively participates in healthcare exhibitions, showcasing medical advancements, innovative treatments, and our commitment to excellence in patient care.
+                        </p>
+                        <a href="https://www.bankersheart.com/csr-activity"><h3>CSR Activity</h3></a>
+                        <p>
+                            Bankers Group of Hospitals is dedicated to CSR initiatives, including medical camps, health awareness programs, and community welfare activities, ensuring accessible healthcare for all.
+                        </p>
+
+                        <a href="https://www.bankersheart.com/assets/pdf/composition-of-the-csr-committee.pdf" target="_blank"><h3>CSR Composition</h3></a>
+                        <p>
+                            Our CSR Committee is dedicated to driving social responsibility initiatives, ensuring ethical healthcare practices, and contributing to community welfare through impactful programs and initiatives.
+                        </p>
+                        <a href="https://www.bankersheart.com/assets/pdf/csr-policy-bankers-cardiology.pdf" target="_blank"><h3>CSR Policy</h3></a>
+                        <p>
+                            Bankers Group of Hospitals' CSR Policy outlines its commitment to healthcare accessibility, community welfare, and social responsibility through medical camps, awareness programs, and outreach initiatives.
+                        </p>
+
+                    </div>
+
+
+                    <h2 class="text-black">About Us</h2>
+                    <div class="ps-3 pt-3">
+                        <a href="https://www.bankersheart.com/about-bankers-group-of-hospitals"><h3>About Us</h3></a>
+                        <p>
+                            Bankers Group of Hospitals, established in 2004, has grown from a cardiac specialty hospital to 4 multi-specialty hospitals, offering advanced medical care, innovative treatments, and community healthcare initiatives with a commitment to excellence.
+                        </p>
+                        <a href="https://www.bankersheart.com/ceo-message-bankers-group-of-hospitals"><h3>Founder Message</h3></a>
+                        <p>
+                            At Bankers Group of Hospitals, our mission is to provide compassionate, high-quality healthcare accessible to all. We are dedicated to innovation, excellence, and patient-centered care.
+                        </p>
+                        <a href="https://www.bankersheart.com/commitment-to-quality"><h3>Commitment to Quality</h3></a>
+                        <p>
+                            Bankers Group of Hospitals is committed to delivering high-quality healthcare through advanced technology, patient safety measures, continuous medical training, and strict quality standards to ensure excellence in patient care.
+                        </p>
+                        <a href="https://www.bankersheart.com/achievements-awards"><h3>Achievements and Awards</h3></a>
+                        <p>
+                            Bankers Group of Hospitals has been recognized for excellence in healthcare, earning prestigious awards for medical innovation, patient care, and community service, reflecting our commitment to quality.
+                        </p>
+
+                        <a href="https://www.bankersheart.com/meet-our-doctors"><h3>Meet our Doctors</h3></a>
+                        <p>
+                            Meet the expert doctors at Bankers Group of Hospitals, dedicated to providing personalized
+                            treatment, advanced medical care, and compassionate support for your health and well-being.
+                        </p>
+
+                        <a href="https://www.bankersheart.com/our-blog"><h3>Our Blogs</h3></a>
+
+                        <p>
+                            Stay informed with expert insights, health tips, and the latest medical advancements. Our blog covers a wide range of healthcare topics to help you make informed health decisions.
+                        </p>
+
+
+
+                    </div>
+
+
+                    <a href="https://www.bankersheart.com/contact-bankers-group-of-hospitals"><h3>Contact Us</h3></a>
+                    <p>
+                        Get in touch with Bankers Group of Hospitals for appointments, inquiries, and healthcare assistance.
+                        Our team is here to provide the best medical support and guidance for your needs.
+                    </p>
+
+                    <div class="row">
+                        <div class="col-md-6 pt-3">
+                            <h3>Old Padra Road - Vadodara</h3>
+
+                            <p><b> Address:</b> Near Tagore Nagar, Old Padra Road,<br /> Vadodara - 390015 Gujarat, India</p>
+                            <p>
+                                <b>Phone no.:</b>
+                                <a href="tel:+91 265 2607777">+91 265 2607777</a><br class="d-md-none d-inline-block" /> <a href="tel:+91 265 2324004" class="ps-md-3">+91 265 2324004</a><br />
+                                <a href="tel:+91 98985 40444">+91 98985 40444</a><br class="d-md-none d-inline-block" /> <a href="tel:+91 265 2320404" class="ps-md-3">+91 265 2320404</a>
+
+                            </p>
+                            <p>
+                                <b> Email:</b> <a href="mailto:info@bankersheart.com">info@bankersheart.com</a>
+                            </p>
+
+
+                        </div>
+                        <div class="col-md-6 pt-3">
+                            <h3>Manjalpur - Vadodara</h3>
+                            <p><b>Address:</b> Opp. Mahalaxmi Party Plot, Tulsidham-GIDC Road<br /> Manjalpur, Vadodara - 390011, Gujarat, India</p>
+                            <p>
+                                <b>Phone no.:</b>     <a href="tel:+91 265 2602602">+91 265 2602602</a><br class="d-md-none d-inline-block" />
+                                <a href="tel:+91 63549 13343" class="ps-md-3">+91 63549 13335</a>
+                            </p>
+                            <p>
+                                <b> Email:</b> <a href="mailto:bsh@bankersheart.com ">bsh@bankersheart.com </a>
+                            </p>
+
+
+                        </div>
+
+                        <div class="col-md-6 pt-3">
+                            <h3>Warasia - Vadodara</h3>
+                            <p><b>Address:</b> Harni - Warasia Ring Road, Warasia, <br class="d-lg-inline-block d-none" /> Vadodara – 390006, Gujarat, India</p>
+                            <p>
+                                <b>Phone no.:</b>     <a href="tel:+91 265 2607777">+91 265 2607777</a><br class="d-md-none d-inline-block" /> <a href="tel:+91 265 2324004" class="ps-md-3">+91 265 2324004</a><br />
+                                <a href="tel:+91 98985 40444">+91 98985 40444</a><br class="d-md-none d-inline-block" /> <a href="tel:+91 265 2320404" class="ps-md-3">+91 265 2320404</a>
+
+                            </p>
+                            <p>
+                                <b> Email:</b> <a href="mailto:bhmh@bankersheart.com ">bhmh@bankersheart.com </a>
+                            </p>
+
+
+                        </div>
+                        <div class="col-md-6 pt-3">
+                            <h3>Surat</h3>
+                            <p><b>Address:</b> Opp. Lakeview Garden, Floral Park, Umra,  <br class="d-lg-inline-block d-none" /> Surat - 395007, Gujarat - India</p>
+                            <p>
+                                <b>Phone no.:</b><a href="tel:+91 261 2293000">+91 261 2293000</a><br class="d-md-none d-inline-block" />
+                                <a href="tel:+91 265 2252123" class="ps-md-3">+91 265 2252123</a><br />
+                                <a href="tel:+91 85111 74111">+91 85111 74111</a>
+                            </p>
+                            <p>
+                                <b> Email:</b> <a href="mailto:surat@bankersheart.com ">surat@bankersheart.com</a>
+                            </p>
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="extrajs" runat="server">
+       <script src="https://www.bankersheart.com/assets/js/jquery.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+           integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+   <!--<%--
+   <script src="https://www.bankersheart.com/assets/bootstrap/js/bootstrap.bundle.min.js"></script>--%>-->
+   <script src="https://www.bankersheart.com/assets/animation/aos.js"></script>
+   <script src="https://www.bankersheart.com/assets/js/owl.carousel.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+   <script>
+       window.addEventListener("scroll", function () {
+           const navbar = document.querySelector(".navbar");
+           if (window.scrollY > 50) {
+               navbar.classList.add("fixed");
+           } else {
+               navbar.classList.remove("fixed");
+           }
+       });
+   </script>
+   <script>
+       window.addEventListener("scroll", function () {
+           var header = document.getElementById("header");
+           if (window.scrollY > 40) { // Adjust this value as needed
+               header.classList.add("sticky");
+           } else {
+               header.classList.remove("sticky");
+           }
+       });
+   </script>
+   <script>
+       var current_url = window.location.pathname.substring(window.location.pathname.lastIndexOf('/') + 1);
+
+       jQuery(function ($) {
+           var path = window.location.href;
+
+           $(".home_default").removeClass('active');
+
+           $('.nav-link, .dropdown-item ,#footer ul li a').each(function () {
+               if (this.href === path) {
+                   $(this).addClass('active');
+                   $(this).closest('.dropdown').find('.dropdown-toggle').addClass('active');
+               }
+           });
+
+           if (current_url === '') {
+               $(".home_link").addClass('active');
+           }
+       });
+   </script>
+   <script>
+       Fancybox.bind("[data-fancybox]", {
+           // Your custom options
+       });
+   </script>
+</asp:Content>

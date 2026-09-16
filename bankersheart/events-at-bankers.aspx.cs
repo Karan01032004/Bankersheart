@@ -75,7 +75,7 @@ namespace bankersheart
                 if (Request.QueryString.Count == 0)
                 {
                     BindAwards(pageIndex);
-                    pageTitle = "Events at Bankers";
+                    pageTitle = "Best Cardiac Care Centre in Vadodara for Medical Events";
                     h1Text = "Event at Bankers";
                     pageDescription = "Discover the latest events at Bankers Group of Hospitals, including cultural celebrations, medical conferences, and community outreach initiatives in Vadodara.";
                 }
@@ -86,7 +86,7 @@ namespace bankersheart
                     {
                         case "event":
                             BindAwards(pageIndex);
-                            pageTitle = "Events at Bankers";
+                            pageTitle = "Best Cardiac Care Centre in Vadodara for Medical Events";
                             h1Text = "Eventss at Bankers";
                             pageDescription = "Discover the latest events at Bankers Group of Hospitals in Vadodara.";
                             if (pageIndex > 1)
@@ -159,7 +159,7 @@ namespace bankersheart
             }
             Response.Redirect("events-at-bankers.aspx?c=event&page=1");
             //BindAwards(pageIndex);
-        }  
+        }
         protected void btn_submit_Clicklecture(object sender, EventArgs e)
         {
             int lecturePageIndex = 1;
@@ -180,7 +180,7 @@ namespace bankersheart
             }
             Response.Redirect("events-at-bankers.aspx?c=rally&rallypage=1");
             //BindRally(rallyPageIndex);
-        }    
+        }
         protected void btn_submit_Clickconfernece(object sender, EventArgs e)
         {
             int conferencePageIndex = 1;
@@ -204,14 +204,14 @@ namespace bankersheart
             conference1.Attributes.Add("class", "tab-pane fade ");
             lecture_tab.Attributes.Add("class", "nav-link ");
             lecture.Attributes.Add("class", "tab-pane fade");
-           
+
 
         }
         private void BindAwards(int pageIndex)
         {
             int pageSize = 9; // Display only 3 records per page
             int startRow = (pageIndex - 1) * pageSize;
-     
+
             string query = $@"
         WITH Events_CTE AS
         (
@@ -308,7 +308,7 @@ namespace bankersheart
         {
             int pageSize = 9; // Display only 3 records per page
             int startRow = (pageIndex - 1) * pageSize;
- 
+
             string query = $@"
     WITH Lectures_CTE AS
     (
@@ -381,7 +381,7 @@ namespace bankersheart
         {
             int pageSize = 9; // Display only 3 records per page
             int startRow = (pageIndex - 1) * pageSize;
-    
+
             string query = $@"
     WITH Rally_CTE AS
     (
@@ -458,7 +458,7 @@ namespace bankersheart
         {
             int pageSize = 9; // Display only 3 records per page
             int startRow = (pageIndex - 1) * pageSize;
-       
+
             string query = $@"
     WITH Conference_CTE AS
     (

@@ -1,8 +1,8 @@
-﻿<%@ Page Title="CSR Activities | Bankers Group of Hospitals" Language="C#" MasterPageFile="~/bankers.Master" AutoEventWireup="true" CodeBehind="csr-activity.aspx.cs" Inherits="bankersheart.csr_activity" %>
+﻿<%@ Page Title="CSR Activity – Heart Surgery & Cardiac Support in Gujarat" Language="C#" MasterPageFile="~/bankers.Master" AutoEventWireup="true" CodeBehind="csr-activity.aspx.cs" Inherits="bankersheart.csr_activity" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
-    <meta name="keywords" content="healthcare CSR initiatives, free medical services, community health programs, rural health outreach, underprivileged healthcare access">
+    <meta name="keywords" content="Heart Surgery Hospital in Vadodara, Expert Cardiac Surgery Services in Gujarat, Cardiology Hospital in Gujarat, Heart Transplant Hospital in Vadodara, International Patient Cardiac Care in Gujarat">
     <link id="canonicalLink" runat="server" />
     <style>
         .tittle-height {

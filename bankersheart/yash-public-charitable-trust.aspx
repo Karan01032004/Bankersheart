@@ -1,9 +1,9 @@
-﻿<%@ Page Title="Yash Public Charitable Trust | Bankers Heart" Language="C#" MasterPageFile="~/bankers.Master" AutoEventWireup="true" CodeBehind="yash-public-charitable-trust.aspx.cs" Inherits="bankersheart.yash_public_charitable_trust" %>
+﻿<%@ Page Title="Yash Public Charitable Trust – Best Cardiac Care Centre in Vadodara" Language="C#" MasterPageFile="~/bankers.Master" AutoEventWireup="true" CodeBehind="yash-public-charitable-trust.aspx.cs" Inherits="bankersheart.yash_public_charitable_trust" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
-    <meta name="description" content="Yash Public Charitable Trust offers healthcare, education, and community welfare programs to support underprivileged communities.">
-    <meta name="keywords" content="Yash Public Charitable Trust, Bankers Heart CSR, medical camps, community welfare, disaster relief, educational support, women empowerment, Multi-specialty Hospital Gujarat">
+    <meta name="description" content="Yash Public Charitable Trust supports cardiac patients with care programs, rehabilitation access, and community health help across Vadodara and Gujarat.">
+    <meta name="keywords" content="Best Cardiac Care Centre in Vadodara, Cardiology Hospital in Gujarat, Comprehensive Cardiac Rehabilitation Center Vadodara, Best heart hospital in Vadodara, Heart hospital with ICU in Gujarat">
     <link rel="canonical" href="https://www.bankersheart.com/yash-public-charitable-trust">
     <style>
         iframe {

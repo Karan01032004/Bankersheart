@@ -58,16 +58,11 @@ namespace bankersheart
      "~/interesting-case-details.aspx"
  );
 
-            //routes.MapPageRoute(
-            //        "exhibitions",
-            //        "{titlelink}",
-            //        "~/exhibitions-details.aspx"
-            //       );
             routes.MapPageRoute(
-    "exhibitions",
-    "exhibitions/{titlelink}",
-    "~/exhibitions-details.aspx"
-);
+                    "exhibitions",
+                    "{titlelink}",
+                    "~/exhibitions-details.aspx"
+                   );
         }
     }
 }

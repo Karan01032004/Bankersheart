@@ -1,19 +1,21 @@
-﻿<%@ Page Title="Bankers Heart Institute | Expert Cardiac Care Vadodara" Language="C#" MasterPageFile="~/bankers.Master" AutoEventWireup="true" CodeBehind="bankers-heart-institute-old-padra-road-vadodara.aspx.cs" Inherits="bankersheart.bankers_heart_institutes" %>
+﻿<%@ Page Title="Top 10 Hospital in Vadodara | Best Heart Hospital in Vadodara" Language="C#" MasterPageFile="~/bankers.Master" AutoEventWireup="true" CodeBehind="bankers-heart-institute-old-padra-road-vadodara.aspx.cs" Inherits="bankersheart.bankers_heart_institutes" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <meta name="keywords" content="Bankers Heart Institute, Cardiac Care, Heart Care Centre, Cardiac surgery, ICCU Vadodara, Anti-bacterial walls ICU, Affordable Heart Surgery India">
-    <meta name="description" content="Bankers Heart Institute in Vadodara offers specialized cardiac care, heart surgeries, and an advanced ICU for comprehensive heart disease treatment.">
-    <link rel="canonical" href="https://www.bankersheart.com/bankers-heart-institute-old-padra-road-vadodara" />
-    <meta property="og:title" content="Bankers Heart Institute, Old Padra Road, Vadodara | Advanced Cardiac Surgery & ICU" />
-    <meta property="og:description" content="Bankers Heart Institute in Vadodara offers specialized cardiac care, heart surgeries, and an advanced ICU for comprehensive heart disease treatment." />
-    <meta property="og:url" content="https://www.bankersheart.com/bankers-heart-institute-old-padra-road-vadodara" />
+    <meta name="keywords" content="Top 10 Hospital in Vadodara, Best Hospital in Vadodara, Top Hospital in Vadodara, Best Heart Hospital in Vadodara, Cardiology Hospital in Vadodara, Heart Specialist in Vadodara">
+    <meta name="description" content="Bankers Heart Institute is recognized among the top 10 hospitals in Vadodara, offering advanced cardiac care, angioplasty, heart surgery, diagnostics, ICU, and 24/7 emergency services. ">
+
+    <link rel="canonical" href="https://www.bankersheart.com/top-10-hospital-old-padra-road-vadodara " />
+
+    <meta property="og:title" content="Top 10 Hospital in Vadodara | Best Heart Hospital in Vadodara" />
+    <meta property="og:description" content="Bankers Heart Institute is recognized among the top 10 hospitals in Vadodara, offering advanced cardiac care, angioplasty, heart surgery, diagnostics, ICU, and 24/7 emergency services. " />
+    <meta property="og:url" content="https://www.bankersheart.com/top-10-hospital-old-padra-road-vadodara " />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Bankers Group of Hospitals" />
     <meta property="og:image" content="https://www.bankersheart.com/bankers-group-of-hospitals-og.png" />
     <meta property="og:image:alt" content="Bankers Heart Institute in Vadodara - Cardiac Care & ICU" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Bankers Heart Institute, Old Padra Road, Vadodara | Advanced Cardiac Surgery & ICU" />
-    <meta name="twitter:description" content="Bankers Heart Institute in Vadodara offers specialized cardiac care, heart surgeries, and an advanced ICU for comprehensive heart disease treatment." />
+    <meta name="twitter:title" content="Top 10 Hospital in Vadodara | Best Heart Hospital in Vadodara" />
+    <meta name="twitter:description" content="Bankers Heart Institute is recognized among the top 10 hospitals in Vadodara, offering advanced cardiac care, angioplasty, heart surgery, diagnostics, ICU, and 24/7 emergency services. " />
     <meta name="twitter:image" content="https://www.bankersheart.com/bankers-group-of-hospitals-og.png" />
     <meta name="twitter:image:alt" content="Bankers Heart Institute in Vadodara - Cardiac Care & ICU" />
     <meta name="twitter:site" content="@BankersHospitals" />

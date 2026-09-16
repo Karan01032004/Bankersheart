@@ -1,20 +1,21 @@
-﻿<%@ Page Title="Bankers Hospital | Advanced ICU, ECMO, Dialysis Center" Language="C#" MasterPageFile="~/bankers.Master" AutoEventWireup="true" CodeBehind="bankers-superspeciality-hospital-manjalpur-vadodara.aspx.cs" Inherits="bankersheart.bankers_superspeciality_hospitals" %>
+﻿<%@ Page Title="Top Multispeciality Hospital in Vadodara | Multispeciality Hospital" Language="C#" MasterPageFile="~/bankers.Master" AutoEventWireup="true" CodeBehind="bankers-superspeciality-hospital-manjalpur-vadodara.aspx.cs" Inherits="bankersheart.bankers_superspeciality_hospitals" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <meta name="keywords" content="Bankers Superspecialist Hospital, Cardiac Care Center India, trauma care hospital Vadodara, 3D Echo Cardiography, digital X-ray hospital, nephrology hospital Vadodara">
-    <meta name="description" content="Bankers Superspecialist Hospital offers expert ICU, ECMO, Cathlab, dialysis, emergency care, and advanced surgeries in Vadodara.">
-    <link rel="canonical" href="https://www.bankersheart.com/bankers-superspeciality-hospital-manjalpur-vadodara" />
-    <meta property="og:title" content="Bankers Superspecialist Hospital, Manjalpur, Vadodara | Advanced Multispecialty & Emergency Care" />
-    <meta property="og:description" content="Bankers Superspecialist Hospital offers expert ICU, ECMO, Cathlab, dialysis, emergency care, and advanced surgeries in Vadodara." />
-    <meta property="og:url" content="https://www.bankersheart.com/bankers-superspeciality-hospital-manjalpur-vadodara" />
+    <meta name="keywords" content="Best Multispeciality Hospital, Top Multispeciality Hospital, Heart Transplant Hospital in Vadodara, Best emergency hospital for heart, Heart Transplant Hospital in Vadodara ">
+    <meta name="description" content="Best multispeciality hospital in Vadodara offering expert healthcare, advanced ICU, cardiac care, dialysis, surgery, diagnostics, and emergency services. ">
+
+    <link rel="canonical" href="https://www.bankersheart.com/best-multispeciality-hospital-manjalpur-vadodara" />
+    <meta property="og:title" content="Top Multispeciality Hospital in Vadodara | Multispeciality Hospital" />
+    <meta property="og:description" content="Best multispeciality hospital in Vadodara offering expert healthcare, advanced ICU, cardiac care, dialysis, surgery, diagnostics, and emergency services." />
+    <meta property="og:url" content="https://www.bankersheart.com/best-multispeciality-hospital-manjalpur-vadodara" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Bankers Group of Hospitals" />
     <meta property="og:image" content="https://www.bankersheart.com/bankers-group-of-hospitals-og.png" />
     <meta property="og:image:alt" content="Bankers Superspecialist Hospital in Manjalpur, Vadodara" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Bankers Superspecialist Hospital, Manjalpur, Vadodara | Advanced Multispecialty & Emergency Care" />
-    <meta name="twitter:description" content="Bankers Superspecialist Hospital offers expert ICU, ECMO, Cathlab, dialysis, emergency care, and advanced surgeries in Vadodara." />
+    <meta name="twitter:title" content="Top Multispeciality Hospital in Vadodara | Multispeciality Hospital" />
+    <meta name="twitter:description" content="Best multispeciality hospital in Vadodara offering expert healthcare, advanced ICU, cardiac care, dialysis, surgery, diagnostics, and emergency services." />
     <meta name="twitter:image" content="https://www.bankersheart.com/bankers-group-of-hospitals-og.png" />
     <meta name="twitter:image:alt" content="Bankers Superspecialist Hospital in Manjalpur, Vadodara" />
     <meta name="twitter:site" content="@BankersHospitals" />
@@ -31,7 +32,7 @@
         <div class="container">
             <div class="row">
                 <div class="banner-heading">
-                    <h1 class="text-white h2 text-center mb-0">Bankers Superspeciality Hospital, Manjalpur - Vadodara</h1>
+                    <h1 class="h2 mb-0 text-center text-white">Bankers Superspeciality Hospital, Manjalpur - Vadodara</h1>
                 </div>
             </div>
         </div>
@@ -40,14 +41,14 @@
     <asp:Repeater ID="rptHospitals" runat="server">
         <ItemTemplate>
             <section id="hospital-details" class="py-5">
-                <div class="container py-lg-4">
-                    <div class="blog-container text-lg-start text-center pt-lg-3">
+                <div class="py-lg-4 container">
+                    <div class="blog-container text-lg-start pt-lg-3 text-center">
                         <%--<h2 class="clr-black fw-bold d-lg-none">Bankers Superspeciality Hospital, Manjalpur</h2>--%>
                         <div class="inner-img mb-lg-0 mb-4">
                             <%-- <picture>
                         <source srcset="https://www.bankersheart.com/assets/img/hospital-manjalpura-img.webp" type="image/webp">
                         <source srcset="https://www.bankersheart.com/assets/img/hospital-manjalpura-img.png" type="image/png">
-                        <img class="img-fluid  rounded-4" src="https://www.bankersheart.com/assets/img/hospital-manjalpura-img.png" alt="Blog-details">
+                        <img class="img-fluid rounded-4" src="https://www.bankersheart.com/assets/img/hospital-manjalpura-img.png" alt="Blog-details">
                     </picture>--%>
                             <div class="text-lg-end text-center">
                                 <picture>
@@ -90,19 +91,19 @@
                                                 <%--  <picture>
                                         <source srcset="https://www.bankersheart.com/assets/img/multi-delux-room.webp" type="image/webp">
                                         <source srcset="https://www.bankersheart.com/assets/img/multi-delux-room.png" type="image/png">
-                                        <img class="img-fluid  facilities-img-size" src="https://www.bankersheart.com/assets/img/multi-delux-room.png" alt="Deluxe Room">
+                                        <img class="img-fluid facilities-img-size" src="https://www.bankersheart.com/assets/img/multi-delux-room.png" alt="Deluxe Room">
                                     </picture>--%>
                                                 <picture>
                                                     <source srcset='<%# ResolveUrl("~/poweradmin/webfiles/Facility/") + Eval("image") %>' type="image/webp">
                                                     <source srcset='<%# ResolveUrl("~/poweradmin/webfiles/Facility/") + Eval("image") %>' type="image/png">
-                                                    <img class="img-fluid  facilities-img-size"
+                                                    <img class="img-fluid facilities-img-size"
                                                         src='<%# ResolveUrl("~/poweradmin/webfiles/Facility/") + Eval("image") %>'
                                                        alt='<%# Eval("title") + " " + String.Format("{0:D2}", Container.ItemIndex + 1) + " - Bankers Heart Institute" %>'>
                                                 </picture>
                                             </a>
 
-                                            <div class="bg-red py-3 px-2 h-100">
-                                                <p class="text-center text-white text-capitaize mb-0"><%# Eval("title") %></p>
+                                            <div class="bg-red h-100 px-2 py-3">
+                                                <p class="text-capitaize mb-0 text-center text-white"><%# Eval("title") %></p>
                                             </div>
 
                                         </div>
@@ -147,14 +148,14 @@
                     </div>
                 </div>
 
-                <div class="col-lg-6 contact-details px-0 mt-lg-0 mt-5">
+                <div class="col-lg-6 contact-details mt-lg-0 mt-5 px-0">
 
-                    <h4 class="fw-semibold text-center bg-red text-white py-3">Contact Details</h4>
-                    <div class="text-center mt-3 mb-2">
+                    <h4 class="fw-semibold bg-red py-3 text-center text-white">Contact Details</h4>
+                    <div class="mb-2 mt-3 text-center">
                         <strong>Manjalpur – Vadodara
                             Bankers Superspeciality Hospital</strong>
                     </div>
-                    <div class="row pt-3 align-items-center px-sm-0 px-2">
+                    <div class="row align-items-center px-sm-0 px-2 pt-3">
                         <div class="col-2 text-center">
                             <picture>
                                 <source srcset="https://www.bankersheart.com/assets/img/red-location-icon.svg" type="image/webp">
@@ -170,7 +171,7 @@
                         </div>
                     </div>
 
-                    <div class="row pt-3 align-items-center px-sm-0 px-2">
+                    <div class="row align-items-center px-sm-0 px-2 pt-3">
                         <div class="col-2 text-center">
                             <picture>
                                 <source srcset="https://www.bankersheart.com/assets/img/red-call-icon.svg" type="image/webp">
@@ -184,7 +185,7 @@
                             <a href="tel:+91 63549 13343" class="ps-md-3">+91 63549 13335</a>
                         </div>
                     </div>
-                    <div class="row pt-3 align-items-center mb-2 px-sm-0 px-2">
+                    <div class="row align-items-center px-sm-0 mb-2 px-2 pt-3">
                         <div class="col-2 text-center">
                             <picture>
                                 <source srcset="https://www.bankersheart.com/assets/img/email-icon-img.svg" type="image/webp">
@@ -197,12 +198,12 @@
 
                         </div>
                     </div>
-                    <div class="my-5 ps-3 text-lg-start text-center">
+                    <div class="text-lg-start my-5 ps-3 text-center">
                         <a href="appointment-bankers-group-of-hospitals" class="btn-theme btn-blue">Make An Appoinment </a>
                     </div>
                     <div>
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3692.3756489526154!2d73.19295847506817!3d22.263755779712945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fc5d2e126dceb%3A0x30bedb3d568bb95b!2sBANKERS%20SUPERSPECIALITY%20HOSPITAL!5e0!3m2!1sen!2sin!4v1738307192691!5m2!1sen!2sin"
-                            width="100%" height="196" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            width="100%" height="400" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
 
 
@@ -223,11 +224,11 @@
                             <picture>
                                 <source srcset="https://www.bankersheart.com/assets/img/heart-institute-img.webp" type="image/webp">
                                 <source srcset="https://www.bankersheart.com/assets/img/heart-institute-img.png" type="image/png">
-                                <img class="img-fluid  facilities-img-size" src="https://www.bankersheart.com/assets/img/heart-institute-img.png" alt="Bankers Heart Institute">
+                                <img class="img-fluid facilities-img-size" src="https://www.bankersheart.com/assets/img/heart-institute-img.png" alt="Bankers Heart Institute">
                             </picture>
 
-                            <div class="bg-red py-3 px-2 h-100">
-                                <h6 class="text-center text-white mb-0">Bankers Heart Institute<br />
+                            <div class="bg-red h-100 px-2 py-3">
+                                <h6 class="mb-0 text-center text-white">Bankers Heart Institute<br />
                                     Op Road, Vadodara</h6>
                             </div>
                         </a>
@@ -240,11 +241,11 @@
                             <picture>
                                 <source srcset="https://www.bankersheart.com/assets/img/heart-hospital-img.webp" type="image/webp">
                                 <source srcset="https://www.bankersheart.com/assets/img/heart-hospital-img.png" type="image/png">
-                                <img class="img-fluid  facilities-img-size" src="https://www.bankersheart.com/assets/img/heart-hospital-img.png" alt="Bankers Heart & Multi Specialty">
+                                <img class="img-fluid facilities-img-size" src="https://www.bankersheart.com/assets/img/heart-hospital-img.png" alt="Bankers Heart & Multi Specialty">
                             </picture>
 
-                            <div class="bg-red py-3 px-2 h-100">
-                                <h6 class="text-center text-white mb-0">Bankers Heart & Multi Specialty
+                            <div class="bg-red h-100 px-2 py-3">
+                                <h6 class="mb-0 text-center text-white">Bankers Heart & Multi Specialty
 Hospital, Warasia, Vadodara</h6>
                             </div>
                         </a>
@@ -258,11 +259,11 @@ Hospital, Warasia, Vadodara</h6>
                             <picture>
                                 <source srcset="https://www.bankersheart.com/assets/img/bankers-heart-hospital-surat.webp" type="image/webp">
                                 <source srcset="https://www.bankersheart.com/assets/img/bankers-heart-hospital-surat.png" type="image/png">
-                                <img class="img-fluid  facilities-img-size" src="https://www.bankersheart.com/assets/img/bankers-heart-hospital-surat.png" alt="Bankers Heart & Multi Specialty">
+                                <img class="img-fluid facilities-img-size" src="https://www.bankersheart.com/assets/img/bankers-heart-hospital-surat.png" alt="Bankers Heart & Multi Specialty">
                             </picture>
 
-                            <div class="bg-red py-3 px-2 h-100">
-                                <h6 class="text-center text-white mb-0">Bankers Heart Institute<br />
+                            <div class="bg-red h-100 px-2 py-3">
+                                <h6 class="mb-0 text-center text-white">Bankers Heart Institute<br />
                                     Umra, Surat</h6>
                             </div>
                         </a>

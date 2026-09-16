@@ -27,13 +27,13 @@
 
                     <h2 class="text-black fs-3">Hospitals</h2>
                     <div class="ps-3 pt-3">
-                        <a href="https://www.bankersheart.com/bankers-superspeciality-hospital-manjalpur-vadodara">
+                        <a href="https://www.bankersheart.com/best-multispeciality-hospital-manjalpur-vadodara">
                             <h3 class="fw-semibold fs-4 text-black">Bankers Superspeciality Hospital, Manjalpur</h3>
                         </a>
                         <p>
                             Bankers’ Super speciality Hospital, located in Manjalpur, delivers advanced, patient-focused healthcare with state-of-the-art facilities and highly skilled specialists. From diagnosis to recovery, our team is committed to offering world-class treatment across a wide range of specialties, backed by the latest medical technology. Whether you're seeking expert consultations, surgical care, or comprehensive health management, our Manjalpur centre provides trusted, quality care tailored to your needs.
                         </p>
-                        <a href="https://www.bankersheart.com/bankers-heart-institute-old-padra-road-vadodara">
+                        <a href="https://www.bankersheart.com/top-10-hospital-old-padra-road-vadodara">
                             <h3 class="fw-semibold fs-4 text-black">Bankers Heart Institute, Vadodara</h3>
                         </a>
                         <p>
@@ -45,7 +45,7 @@
                         <p>
                             Bankers Heart and Multi-Specialty Hospital in Warasia offers specialized cardiac and multi-specialty care, combining advanced technology with compassionate treatment. Our dedicated team of medical professionals focuses on providing the highest standards of care, ensuring that your health is prioritized in every aspect of our service. From routine check-ups to complex procedures, we are committed to delivering excellence in every treatment we provide.
                         </p>
-                        <a href="https://www.bankersheart.com/bankers-heart-institute-surat">
+                        <a href="https://www.bankersheart.com/heart-specialist-in-surat">
                             <h3 class="fw-semibold fs-4 text-black">Bankers Heart Institute, Surat</h3>
                         </a>
                         <p>

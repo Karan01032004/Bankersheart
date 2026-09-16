@@ -68,7 +68,7 @@ namespace bankersheart.Poweradmin.CSR.Exhibition
                 new DAL().ExecuteNonQuery(deleteImagesQuery, CommandType.Text, imageDeleteParameters);
 
                 // Then, delete the record from EventsatBankers table
-                string deleteQuery = @"DELETE FROM Exhibition WHERE id = @id";
+                string deleteQuery = @"DELETE FROM [bankers_usr].[Exhibition] WHERE id = @id";
                 SqlParameter[] deleteParameters = {
             new SqlParameter("@id", SqlDbType.Int) { Value = idToDelete }
         };

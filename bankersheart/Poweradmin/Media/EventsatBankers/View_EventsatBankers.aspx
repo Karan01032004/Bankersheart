@@ -64,8 +64,9 @@
                 </li>
             </ul>
         </div>
-        <asp:LinkButton ID="Awards_Achivement" runat="server" class="btn sbold white btn-sm" PostBackUrl="~/PowerAdmin/Media/EventsatBankers/Manage_EventsatBankers.aspx"><i class="fa fa-plus"></i> Add Events at Bankers</asp:LinkButton>
-    </div>
+       <asp:LinkButton ID="Awards_Achivement" runat="server" class="btn sbold white btn-sm" PostBackUrl="~/PowerAdmin/Media/EventsatBankers/Manage_EventsatBankers.aspx"><i class="fa fa-plus"></i> Add Events at Bankers</asp:LinkButton>
+    
+</div>
     <%--  <div class="tools">
                             <a href="javascript:;" class="collapse" data-original-title="" title=""> </a>
                             <a href="#portlet-config" data-toggle="modal" class="config" data-original-title="" title=""> </a>

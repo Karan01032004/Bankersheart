@@ -18,8 +18,8 @@
             object-fit:cover;
             width:100%;
         }
-        }
-    </style>--%>
+        }--%>
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     <section id="inner-banner" class="content-down">

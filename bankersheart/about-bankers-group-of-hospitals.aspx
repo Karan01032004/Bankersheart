@@ -170,9 +170,9 @@ We are committed to serving the community through health camps, education progra
 						<h6 class="mb-0 px-3 py-3 bg-red text-white text-center rounded-top-3">Vision</h6>
 						<div class="p-3 ">
 							<picture>
-								<source srcset="https://www.bankersheart.com/assets/img/bankers-hospital-vision-top-hospital-vadodara.webp" type="image/webp">
-								<source srcset="https://www.bankersheart.com/assets/img/bankers-hospital-vision-top-hospital-vadodara.png" type="image/png">
-								<img class="img-fluid  rounded-4 pt-3" src="https://www.bankersheart.com/assets/img/bankers-hospital-vision-top-hospital-vadodara.png" alt="Vision of Bankers Heart Institute – leading heart surgery hospital Vadodara" width="70" height="70" loading="lazy">
+								<source srcset="https://www.bankersheart.com/assets/img/vision.webp" type="image/webp">
+								<source srcset="https://www.bankersheart.com/assets/img/vision.png" type="image/png">
+								<img class="img-fluid  rounded-4 pt-3" src="https://www.bankersheart.com/assets/img/vision.png" alt="One man One vision" width="70" height="70" loading="lazy">
 							</picture>
 
 							<p class="mt-3 mb-0">
@@ -188,9 +188,9 @@ We are committed to serving the community through health camps, education progra
 						<h6 class="mb-0 px-3 py-3 bg-red text-white text-center rounded-top-3">Values</h6>
 						<div class="p-3 ">
 							<picture>
-								<source srcset="https://www.bankersheart.com/assets/img/bankers-hospital-values-best-hospital-vadodara.webp" type="image/webp">
-								<source srcset="https://www.bankersheart.com/assets/img/bankers-hospital-values-best-hospital-vadodara.png" type="image/png">
-								<img class="img-fluid  rounded-4 pt-3" src="https://www.bankersheart.com/assets/img/bankers-hospital-values-best-hospital-vadodara.png" alt="Core values of Bankers Heart Institute – patient care at a best heart hospital Vadodara" width="70" height="70" loading="lazy">
+								<source srcset="https://www.bankersheart.com/assets/img/values.webp" type="image/webp">
+								<source srcset="https://www.bankersheart.com/assets/img/values.png" type="image/png">
+								<img class="img-fluid  rounded-4 pt-3" src="https://www.bankersheart.com/assets/img/values.png" alt="One heart One mission" width="70" height="70" loading="lazy">
 							</picture>
 
 							<ul class="mt-3 mb-0 text-start list_ul">

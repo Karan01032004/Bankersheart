@@ -105,7 +105,7 @@
                                         <%# GenerateHospitalLinks(Eval("HospitalNames").ToString()) %>
                                     </ul>
                                     <%--                            <li><a href="bankers-superspeciality-hospital-manjalpur-vadodara.aspx#heading0"> <%# Eval("HospitalName") %></a></li>
-<%--                            <li><a href="bankers-heart-institute-old-padra-road-vadodara.aspx#heading0">Bankers Heart Institute, Old Padra Road - Vadodara</a></li>
+<%--                            <li><a href="top-10-hospital-old-padra-road-vadodara.aspx#heading0">Bankers Heart Institute, Old Padra Road - Vadodara</a></li>
                             <li><a href="bankers-heart-multispeciality-hospital-warasia-vadodara.aspx#heading0">Bankers Heart and Multi Specialty Hospital, Warasia - Vadodara</a></li>--%>
                                     <%--   <li>Bankers Heart Institute, Surat - 395007, Gujarat, India</li>--%>
                                 </div>

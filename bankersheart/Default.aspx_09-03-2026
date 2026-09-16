@@ -1572,6 +1572,35 @@
         });
 
     </script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const dateInput = document.getElementById("<%= txtDate.ClientID %>");
+
+        if (!dateInput) return;
+
+        // Today's date (00:00)
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+
+        const yyyy = today.getFullYear();
+        const mm = String(today.getMonth() + 1).padStart(2, '0');
+        const dd = String(today.getDate()).padStart(2, '0');
+
+        // Disable past dates (today allowed)
+        dateInput.min = `${yyyy}-${mm}-${dd}`;
+
+        // Extra safety: prevent manual past-date entry
+        dateInput.addEventListener("change", function () {
+            const selected = new Date(this.value);
+            selected.setHours(0, 0, 0, 0);
+
+            if (selected < today) {
+                alert("Past dates are not allowed.");
+                this.value = "";
+            }
+        });
+    });
+</script>
 
 
 </asp:Content>

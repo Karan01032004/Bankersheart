@@ -1,14 +1,15 @@
 ﻿using bankersheart.App_Code;
-using ImageProcessor.Plugins.WebP.Imaging.Formats;
 using ImageProcessor;
+using ImageProcessor.Plugins.WebP.Imaging.Formats;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
-using System.Data.SqlClient;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -213,10 +214,12 @@ namespace bankersheart.Poweradmin.CSR.Exhibition
             }
 
             // Insert new record into `Medical_Camp`
-            string query = @"INSERT INTO " + TableName + " (title, shortdescription, description, Exhibition_Date, added_date, added_ip, image)   VALUES(@Title, @ShortDescription, @Description, @EventsatBankersDate, @AddedDate, @AddedIP, @Image); SELECT SCOPE_IDENTITY(); ";
+            string query = @"INSERT INTO " + TableName + " (title,titlelink, shortdescription, description, Exhibition_Date, added_date, added_ip, image)   VALUES(@Title,@titlelink, @ShortDescription, @Description, @EventsatBankersDate, @AddedDate, @AddedIP, @Image); SELECT SCOPE_IDENTITY(); ";
 
             SqlParameter[] parameters = {
         new SqlParameter("@Title", SqlDbType.NVarChar) { Value = txt_Title.Text.Replace("'", "''") },
+                new SqlParameter("@titlelink", SqlDbType.NVarChar) { Value = Regex.Replace(txt_Title.Text, @"[^0-9a-zA-Z]+", "-").ToLower()},
+
         new SqlParameter("@ShortDescription", SqlDbType.NVarChar) { Value = txt_ShortDescription.Text.Replace("'", "''") },
         new SqlParameter("@Description", SqlDbType.NVarChar) { Value = txt_description.Text.Replace("'", "''") },
         new SqlParameter("@EventsatBankersDate", SqlDbType.Date) { Value = ParseDate(txt_CampDate.Text) },
@@ -345,6 +348,8 @@ namespace bankersheart.Poweradmin.CSR.Exhibition
             // Update the Medical_Camp record
             string query = @"UPDATE " + TableName + " SET " +
                            "title=@Title, " +
+                           "titlelink=@Titlelink, " +
+
                            "description=@Description, " +
                            "shortdescription=@ShortDescription, " +
                            "Exhibition_Date=@CampDate, " +
@@ -362,6 +367,8 @@ namespace bankersheart.Poweradmin.CSR.Exhibition
             List<SqlParameter> parameters = new List<SqlParameter>
     {
         new SqlParameter("@Title", SqlDbType.NVarChar) { Value = txt_Title.Text.Replace("'", "''") },
+               new SqlParameter("@titlelink", SqlDbType.NVarChar) { Value = Regex.Replace(txt_Title.Text, @"[^0-9a-zA-Z]+", "-").ToLower()},
+
         new SqlParameter("@Description", SqlDbType.NVarChar) { Value = txt_description.Text.Replace("'", "''") },
         new SqlParameter("@ShortDescription", SqlDbType.NVarChar) { Value = txt_ShortDescription.Text.Replace("'", "''") },
         new SqlParameter("@CampDate", SqlDbType.Date) { Value = ParseDate(txt_CampDate.Text) },

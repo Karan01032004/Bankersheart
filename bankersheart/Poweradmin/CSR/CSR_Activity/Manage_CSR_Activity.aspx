@@ -317,5 +317,47 @@
     });
 </script>
 
+<script type="text/javascript">
+    $(document).ready(function () {
 
+        var maxFileSize = 5 * 1024 * 1024; // 5 MB
+
+        function validateFileSize(input) {
+
+            if (!input.files || input.files.length === 0) {
+                return true;
+            }
+
+            for (var i = 0; i < input.files.length; i++) {
+
+                var file = input.files[i];
+
+                if (file.size > maxFileSize) {
+
+                    alert(
+                        "File '" + file.name +
+                        "' is larger than 5 MB.\n\n" +
+                        "Please select a file smaller than or equal to 5 MB."
+                    );
+
+                    input.value = "";
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        // CSR Category Image
+        $('#<%= Category.ClientID %>').on('change', function () {
+            validateFileSize(this);
+        });
+
+        // CSR Gallery Images
+        $('#<%= fpbannerimage.ClientID %>').on('change', function () {
+            validateFileSize(this);
+        });
+
+    });
+</script>
 </asp:Content>

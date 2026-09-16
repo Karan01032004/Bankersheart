@@ -1,6 +1,10 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/bankers.Master" AutoEventWireup="true" CodeBehind="events-at-bankers.aspx.cs" Inherits="bankersheart.events_at_bankers" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
+    <title>Best Cardiac Care Centre in Vadodara for Medical Events
+    </title>
+
     <meta name="keywords" content="Vadodara hospital events, medical conferences Vadodara, Bankers Heart hospital news, Bankers Group medical events">
     <meta id="metaDescription" runat="server" name="description" content="" />
     <%--    <link rel="canonical" href="https://www.bankersheart.com/events-at-bankers" />--%>
@@ -35,6 +39,7 @@
                     <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
                         <li class="nav-item nav-item-2" role="presentation">
                             <%--                            <button class="nav-link active" id="events_tab" clientidmode="Static" runat="server" data-bs-toggle="tab" data-bs-target="#events" type="button" role="tab" aria-controls="home" aria-selected="true" onclick="btn_submit_Click">Event</button>--%>
+                           
                             <button class="nav-link active" id="events_tab" clientidmode="Static" runat="server" data-bs-toggle="tab" data-bs-target="#events" type="button" role="tab" aria-controls="home" aria-selected="true" onserverclick="btn_submit_Clickevent">
                                 Event
                             </button>

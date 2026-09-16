@@ -29,7 +29,6 @@ namespace bankersheart
 
                     if (Application["actualerrorpage"].ToString().IndexOf("Validation of viewstate MAC failed") <= 0 && Application["errorurl"].ToString().IndexOf("ScriptResource.axd") <= 0 && Application["errorurl"].ToString().IndexOf("WebResource.axd") <= 0 && Application["actualerrorpage"].ToString().IndexOf("The state information is invalid for this page and might be corrupted") <= 0)
                         MailToSendSite("testing@yourwebsitepreview.com", "Error in bankersheart", "forms@yourwebsitepreview.com", mbody.ToString(), null, null, "bankersheart");
-                        //MailToSendSite("drashti@dotscoms.com", "Error in bankersheart", "forms@yourwebsitepreview.com", mbody.ToString(), null, null, "bankersheart");
                     //testing@yourwebsitepreview.com
                 }
                 catch (Exception ex)

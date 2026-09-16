@@ -58,12 +58,12 @@
 
                     <h2 class="text-black">Hospitals</h2>
                     <div class="ps-3 pt-3">
-                        <a href="https://www.bankersheart.com/bankers-superspeciality-hospital-manjalpur-vadodara"><h3>Bankers Superspeciality Hospital, Manjalpur</h3></a>
+                        <a href="https://www.bankersheart.com/best-multispeciality-hospital-manjalpur-vadodara"><h3>Bankers Superspeciality Hospital, Manjalpur</h3></a>
                         <p>
                             Bankers Superspeciality Hospital offers advanced medical care with cutting-edge technology and
                             expert specialists. We are dedicated to providing world-class treatment for all your healthcare needs.
                         </p>
-                        <a href="https://www.bankersheart.com/bankers-heart-institute-old-padra-road-vadodara"><h3>Bankers Heart Institute, Vadodara</h3></a>
+                        <a href="https://www.bankersheart.com/top-10-hospital-old-padra-road-vadodara"><h3>Bankers Heart Institute, Vadodara</h3></a>
                         <p>
                             Bankers Heart Institute provides advanced cardiac care with expert specialists and cutting-edge technology.
                             We are committed to delivering the best heart health services for a healthier future.
@@ -73,7 +73,7 @@
                             Providing expert cardiac and multispeciality care with advanced technology and compassionate treatment.
                             Your health is our priority, ensuring excellence in every medical service we offer.
                         </p>
-                        <a href="https://www.bankersheart.com/bankers-heart-institute-surat"><h3>Bankers Heart Institute, Surat</h3></a>
+                        <a href="https://www.bankersheart.com/heart-specialist-in-surat"><h3>Bankers Heart Institute, Surat</h3></a>
                         <p>
                             Delivering advanced cardiac care in Surat with expert specialists and state-of-the-art technology.
                             Committed to excellence in heart health for a stronger, healthier future.
