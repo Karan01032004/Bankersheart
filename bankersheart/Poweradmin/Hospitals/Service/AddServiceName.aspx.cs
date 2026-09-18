@@ -1,11 +1,12 @@
 ﻿using bankersheart.App_Code;
-using ImageProcessor.Plugins.WebP.Imaging.Formats;
+using ImageMagick;
 using ImageProcessor;
+using ImageProcessor.Plugins.WebP.Imaging.Formats;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
-using System.Data.SqlClient;
 using System.Data;
+using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.Web;
@@ -83,26 +84,55 @@ namespace bankersheart.Poweradmin.Hospitals.Service
                 string fileName = Path.GetFileName(uploadedFile.FileName);
                 string FileExtension = fileName.Substring(fileName.LastIndexOf('.') + 1).ToLower();
 
+                //if (FileExtension == "png" || FileExtension == "jpg" || FileExtension == "jpeg")
+                //{
+                //    string filepath = "~/poweradmin/WebFiles/Service/" + fileName;
+                //    uploadedFile.SaveAs(MapPath(filepath));
+                //    uploadedFileNames.Add(fileName);
+
+                //    // Convert to WebP format
+                //    string webpimagesPath = Path.Combine(Server.MapPath("~/poweradmin/WebFiles/Service/"));
+                //    string webPFileName = Path.GetFileNameWithoutExtension(fileName.Split('.')[0].ToString()) + ".webp";
+                //    string webPImagePath = Path.Combine(webpimagesPath, webPFileName);
+
+                //    using (var webPFileStream = new FileStream(webPImagePath, FileMode.Create))
+                //    {
+                //        using (ImageFactory imageFactory = new ImageFactory(preserveExifData: false))
+                //        {
+                //            imageFactory.Load(uploadedFile.InputStream)
+                //                        .Format(new WebPFormat())
+                //                        .Quality(80)
+                //                        .Save(webPFileStream);
+                //        }
+                //    }
+                //}
+                //else
+                //{
+                //    flag = 1;
+                //    ltr_Error.Text = "Upload Only png, jpg or jpeg files.";
+                //    div_Error.Visible = true;
+                //    return;
+                //}
                 if (FileExtension == "png" || FileExtension == "jpg" || FileExtension == "jpeg")
                 {
-                    string filepath = "~/poweradmin/WebFiles/Service/" + fileName;
-                    uploadedFile.SaveAs(MapPath(filepath));
+                    string folderPath = Server.MapPath("~/poweradmin/WebFiles/Service/");
+                    string originalFilePath = Path.Combine(folderPath, fileName);
+
+                    // 1. Original file save karo
+                    uploadedFile.SaveAs(originalFilePath);
                     uploadedFileNames.Add(fileName);
 
-                    // Convert to WebP format
-                    string webpimagesPath = Path.Combine(Server.MapPath("~/poweradmin/WebFiles/Service/"));
-                    string webPFileName = Path.GetFileNameWithoutExtension(fileName.Split('.')[0].ToString()) + ".webp";
-                    string webPImagePath = Path.Combine(webpimagesPath, webPFileName);
+                    // 2. WebP file path prepare karo
+                    string webPFileName = Path.GetFileNameWithoutExtension(fileName) + ".webp";
+                    string webPImagePath = Path.Combine(folderPath, webPFileName);
 
-                    using (var webPFileStream = new FileStream(webPImagePath, FileMode.Create))
+                    // 3. Magick.NET se WebP convert karo
+                    using (var image = new MagickImage(originalFilePath))
                     {
-                        using (ImageFactory imageFactory = new ImageFactory(preserveExifData: false))
-                        {
-                            imageFactory.Load(uploadedFile.InputStream)
-                                        .Format(new WebPFormat())
-                                        .Quality(80)
-                                        .Save(webPFileStream);
-                        }
+                        image.Format = MagickFormat.WebP;
+                        image.Quality = 80;
+                        image.Strip(); // Metadata/EXIF remove karne ke liye
+                        image.Write(webPImagePath);
                     }
                 }
                 else
@@ -155,24 +185,52 @@ namespace bankersheart.Poweradmin.Hospitals.Service
                 fileName = fpbannerimage.FileName;
                 string FileExtension = fileName.Substring(fileName.LastIndexOf('.') + 1).ToLower();
 
+                //if (FileExtension == "png" || FileExtension == "jpg" || FileExtension == "jpeg")
+                //{
+                //    string filepath = "~/poweradmin/WebFiles/Service/" + fileName;
+                //    fpbannerimage.SaveAs(MapPath(filepath));
+
+                //    string webpimagesPath = Path.Combine(Server.MapPath("~/poweradmin/WebFiles/Service/"));
+                //    string webPFileName = Path.GetFileNameWithoutExtension(fileName.Split('.')[0].ToString()) + ".webp";
+                //    string webPImagePath = Path.Combine(webpimagesPath, webPFileName);
+
+                //    using (var webPFileStream = new FileStream(webPImagePath, FileMode.Create))
+                //    {
+                //        using (ImageFactory imageFactory = new ImageFactory(preserveExifData: false))
+                //        {
+                //            imageFactory.Load(fpbannerimage.FileContent)
+                //                        .Format(new WebPFormat())
+                //                        .Quality(80)
+                //                        .Save(webPFileStream);
+                //        }
+                //    }
+                //}
+                //else
+                //{
+                //    flag = 1;
+                //    ltr_Error.Text = "Upload Only png, jpg or jpeg files.";
+                //    div_Error.Visible = true;
+                //    return;
+                //}
                 if (FileExtension == "png" || FileExtension == "jpg" || FileExtension == "jpeg")
                 {
-                    string filepath = "~/poweradmin/WebFiles/Service/" + fileName;
-                    fpbannerimage.SaveAs(MapPath(filepath));
+                    string folderPath = Server.MapPath("~/poweradmin/WebFiles/Service/");
+                    string originalFilePath = Path.Combine(folderPath, fileName);
 
-                    string webpimagesPath = Path.Combine(Server.MapPath("~/poweradmin/WebFiles/Service/"));
-                    string webPFileName = Path.GetFileNameWithoutExtension(fileName.Split('.')[0].ToString()) + ".webp";
-                    string webPImagePath = Path.Combine(webpimagesPath, webPFileName);
+                    // 1. Original file save karo
+                    fpbannerimage.SaveAs(originalFilePath);
 
-                    using (var webPFileStream = new FileStream(webPImagePath, FileMode.Create))
+                    // 2. WebP destination path banao
+                    string webPFileName = Path.GetFileNameWithoutExtension(fileName) + ".webp";
+                    string webPImagePath = Path.Combine(folderPath, webPFileName);
+
+                    // 3. Magick.NET se WebP convert karo
+                    using (var image = new MagickImage(originalFilePath))
                     {
-                        using (ImageFactory imageFactory = new ImageFactory(preserveExifData: false))
-                        {
-                            imageFactory.Load(fpbannerimage.FileContent)
-                                        .Format(new WebPFormat())
-                                        .Quality(80)
-                                        .Save(webPFileStream);
-                        }
+                        image.Format = MagickFormat.WebP;
+                        image.Quality = 80;
+                        image.Strip(); // Metadata/EXIF remove karne ke liye
+                        image.Write(webPImagePath);
                     }
                 }
                 else

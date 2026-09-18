@@ -11,6 +11,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using ImageMagick;
 
 namespace bankersheart.Poweradmin.Awards_Achivement
 {
@@ -98,16 +99,28 @@ namespace bankersheart.Poweradmin.Awards_Achivement
                     string webPFileName = Path.GetFileNameWithoutExtension(fileName) + ".webp";
                     string webPImagePath = Path.Combine(webpimagesPath, webPFileName);
 
-                    using (var webPFileStream = new FileStream(webPImagePath, FileMode.Create))
+                    fpbannerimage.FileContent.Position = 0;
+                    using (var image = new MagickImage(fpbannerimage.FileContent))
                     {
-                        using (ImageFactory imageFactory = new ImageFactory(preserveExifData: false))
-                        {
-                            imageFactory.Load(uploadedFile.InputStream)
-                                        .Format(new WebPFormat())
-                                        .Quality(80)
-                                        .Save(webPFileStream);
-                        }
+                        image.Format = MagickFormat.WebP;
+                        image.Quality = 80;
+
+                        // Optional: Strip metadata/EXIF to minimize file size
+                        image.Strip();
+
+                        image.Write(webPImagePath);
                     }
+
+                    //using (var webPFileStream = new FileStream(webPImagePath, FileMode.Create))
+                    //{
+                    //    using (ImageFactory imageFactory = new ImageFactory(preserveExifData: false))
+                    //    {
+                    //        imageFactory.Load(uploadedFile.InputStream)
+                    //                    .Format(new WebPFormat())
+                    //                    .Quality(80)
+                    //                    .Save(webPFileStream);
+                    //    }
+                    //}
                 }
                 else
                 {
@@ -157,15 +170,26 @@ namespace bankersheart.Poweradmin.Awards_Achivement
                     string webPFileName = Path.GetFileNameWithoutExtension(fileName) + ".webp";
                     string webPImagePath = Path.Combine(webpimagesPath, webPFileName);
 
-                    using (var webPFileStream = new FileStream(webPImagePath, FileMode.Create))
+                    //using (var webPFileStream = new FileStream(webPImagePath, FileMode.Create))
+                    //{
+                    //    using (ImageFactory imageFactory = new ImageFactory(preserveExifData: false))
+                    //    {
+                    //        imageFactory.Load(fpbannerimage.FileContent)
+                    //                    .Format(new WebPFormat())
+                    //                    .Quality(80)
+                    //                    .Save(webPFileStream);
+                    //    }
+                    //}
+                    fpbannerimage.FileContent.Position = 0;
+                    using (var image = new MagickImage(fpbannerimage.FileContent))
                     {
-                        using (ImageFactory imageFactory = new ImageFactory(preserveExifData: false))
-                        {
-                            imageFactory.Load(fpbannerimage.FileContent)
-                                        .Format(new WebPFormat())
-                                        .Quality(80)
-                                        .Save(webPFileStream);
-                        }
+                        image.Format = MagickFormat.WebP;
+                        image.Quality = 80;
+
+                        // Optional: Strip metadata/EXIF to minimize file size
+                        image.Strip();
+
+                        image.Write(webPImagePath);
                     }
                 }
                 else

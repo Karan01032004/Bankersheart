@@ -1,18 +1,19 @@
 ﻿using bankersheart.App_Code;
-using ImageProcessor.Plugins.WebP.Imaging.Formats;
+using ImageMagick;
 using ImageProcessor;
+using ImageProcessor.Plugins.WebP.Imaging.Formats;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
-using System.Data.SqlClient;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Text.RegularExpressions;
 
 namespace bankersheart.Poweradmin.CSR.CSR_Activity
 {
@@ -200,13 +201,24 @@ namespace bankersheart.Poweradmin.CSR.CSR_Activity
                 Category.PostedFile.SaveAs(fullPathOriginal);
 
                 // Convert to WebP
-                using (ImageFactory imageFactory = new ImageFactory(preserveExifData: false))
+                //using (ImageFactory imageFactory = new ImageFactory(preserveExifData: false))
+                //{
+                //    imageFactory.Load(fullPathOriginal)
+                //                .Format(new WebPFormat())
+                //                .Quality(100)
+                //                .Save(fullPathWebP);
+                //}
+
+                // 2. Convert to WebP using Magick.NET
+                using (var image = new MagickImage(fullPathOriginal))
                 {
-                    imageFactory.Load(fullPathOriginal)
-                                .Format(new WebPFormat())
-                                .Quality(100)
-                                .Save(fullPathWebP);
+                    image.Format = MagickFormat.WebP;
+                    image.Quality = 100; // Original code ke according 100 rakha hai
+                    image.Strip();       // preserveExifData: false ka replacement
+
+                    image.Write(fullPathWebP);
                 }
+
 
                 // Assign filename for DB insertion (store only original file name, as WebP will be inferred)
                 categoryImageFileName = categoryFileName + categoryFileExtension;
@@ -331,13 +343,23 @@ namespace bankersheart.Poweradmin.CSR.CSR_Activity
                 Category.PostedFile.SaveAs(fullPathOriginal);
 
                 // Convert to WebP
-                using (ImageFactory imageFactory = new ImageFactory(preserveExifData: false))
+                //using (ImageFactory imageFactory = new ImageFactory(preserveExifData: false))
+                //{
+                //    imageFactory.Load(fullPathOriginal)
+                //                .Format(new WebPFormat())
+                //                .Quality(100)
+                //                .Save(fullPathWebP);
+                //}
+
+                using (var image = new MagickImage(fullPathOriginal))
                 {
-                    imageFactory.Load(fullPathOriginal)
-                                .Format(new WebPFormat())
-                                .Quality(100)
-                                .Save(fullPathWebP);
+                    image.Format = MagickFormat.WebP;
+                    image.Quality = 80; // WebP ke liye 80-85 best balance deta hai, agar exact purana chahiye to 100 rakh sakte ho
+                    image.Strip();      // preserveExifData: false ki jagah metadata remove karne ke liye
+
+                    image.Write(fullPathWebP);
                 }
+
 
                 // Assign filename for DB insertion (store only original file name, as WebP will be inferred)
                 categoryImageFileName = categoryFileName + categoryFileExtension;

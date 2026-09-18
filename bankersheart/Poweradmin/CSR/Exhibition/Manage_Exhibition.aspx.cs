@@ -1,4 +1,5 @@
 ﻿using bankersheart.App_Code;
+using ImageMagick;
 using ImageProcessor;
 using ImageProcessor.Plugins.WebP.Imaging.Formats;
 using System;
@@ -201,14 +202,21 @@ namespace bankersheart.Poweradmin.CSR.Exhibition
                 Category.PostedFile.SaveAs(fullPathOriginal);
 
                 // Convert to WebP
-                using (ImageFactory imageFactory = new ImageFactory(preserveExifData: false))
+                //using (ImageFactory imageFactory = new ImageFactory(preserveExifData: false))
+                //{
+                //    imageFactory.Load(fullPathOriginal)
+                //                .Format(new WebPFormat())
+                //                .Quality(100)
+                //                .Save(fullPathWebP);
+                //}
+                using (var image = new MagickImage(fullPathOriginal))
                 {
-                    imageFactory.Load(fullPathOriginal)
-                                .Format(new WebPFormat())
-                                .Quality(100)
-                                .Save(fullPathWebP);
-                }
+                    image.Format = MagickFormat.WebP;
+                    image.Quality = 80; // Standard WebP quality (80-85 recommended for web, 100 agar exact lossless chahiye)
+                    image.Strip();      // Metadata/EXIF remove karne ke liye
 
+                    image.Write(fullPathWebP);
+                }
                 // Assign filename for DB insertion (store only original file name, as WebP will be inferred)
                 categoryImageFileName = categoryFileName + categoryFileExtension;
             }
@@ -331,12 +339,20 @@ namespace bankersheart.Poweradmin.CSR.Exhibition
                 Category.PostedFile.SaveAs(fullPathOriginal);
 
                 // Convert to WebP
-                using (ImageFactory imageFactory = new ImageFactory(preserveExifData: false))
+                //using (ImageFactory imageFactory = new ImageFactory(preserveExifData: false))
+                //{
+                //    imageFactory.Load(fullPathOriginal)
+                //                .Format(new WebPFormat())
+                //                .Quality(100)
+                //                .Save(fullPathWebP);
+                //}
+                using (var image = new MagickImage(fullPathOriginal))
                 {
-                    imageFactory.Load(fullPathOriginal)
-                                .Format(new WebPFormat())
-                                .Quality(100)
-                                .Save(fullPathWebP);
+                    image.Format = MagickFormat.WebP;
+                    image.Quality = 80; // WebP optimize karne ke liye (ya 100 agar exact same quality chahiye)
+                    image.Strip();      // Metadata/EXIF strip karne ke liye
+
+                    image.Write(fullPathWebP);
                 }
 
                 // Assign filename for DB insertion (store only original file name, as WebP will be inferred)

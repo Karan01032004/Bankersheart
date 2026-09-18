@@ -37,13 +37,15 @@ namespace bankersheart
             string query = "SELECT e.id AS ExhibitionId, e.title, e.description, e.Exhibition_Date, i.image AS ExhibitionImage " +
                            "FROM [bankers_usr].[Exhibition] e " +
                            "LEFT JOIN [bankers_usr].[Exhibition_Images] i ON e.id = i.Exhibition_id " +
-                           " WHERE e.titlelink = @titlelink";
-            SqlParameter[] parameters = new SqlParameter[]
-         {
-        new SqlParameter("@titlelink", SqlDbType.NVarChar) { Value = titlelink }
-         };
+                           "WHERE e.titlelink = @titlelink";
 
-            DataTable dt = new DAL().GetDataTable(query, CommandType.Text, null);
+            SqlParameter[] parameters = new SqlParameter[]
+            {
+        new SqlParameter("@titlelink", SqlDbType.NVarChar) { Value = titlelink }
+            };
+
+            // 'null' ko replace karke 'parameters' pass karein
+            DataTable dt = new DAL().GetDataTable(query, CommandType.Text, parameters);
 
             rptExhibitions.DataSource = dt;
             rptExhibitions.DataBind();
@@ -53,34 +55,33 @@ namespace bankersheart
                 string exhibitionTitle = dt.Rows[0]["title"].ToString();
                 string exhibitionDesc = dt.Rows[0]["description"].ToString();
 
-                // ✅ Page Title
+                // Page Title
                 Page.Title = exhibitionTitle + " - Bankers Heart";
 
-                // ✅ Meta Description → "description - title"
+                // Meta Description
                 HtmlMeta metaDescription = new HtmlMeta();
                 metaDescription.Name = "description";
-                metaDescription.Content =exhibitionTitle;
+                metaDescription.Content = exhibitionTitle;
                 Page.Header.Controls.Add(metaDescription);
 
-                // ✅ Meta Keywords (you can improve keywords logic if needed)
+                // Meta Keywords
                 HtmlMeta metaKeywords = new HtmlMeta();
                 metaKeywords.Name = "keywords";
                 metaKeywords.Content = exhibitionTitle + ", Exhibition, Events, Bankers Heart";
                 Page.Header.Controls.Add(metaKeywords);
 
-                // ✅ Canonical
+                // Canonical
                 HtmlLink canonical = new HtmlLink();
                 canonical.Attributes.Add("rel", "canonical");
                 canonical.Href = Request.Url.AbsoluteUri;
                 Page.Header.Controls.Add(canonical);
 
-                // ✅ H1 and description label
-                // ✅ H1 and description label (with Bankers Heart appended)
+                // H1 and description label
                 pageH1.InnerText = exhibitionTitle + " | Bankers Heart";
                 lblCampDescription.Text = exhibitionDesc;
             }
         }
 
 
-        }
+    }
 }

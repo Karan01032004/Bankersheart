@@ -12,6 +12,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using ImageMagick;
 
 namespace bankersheart.Poweradmin.BlogManagement
 {
@@ -112,16 +113,27 @@ namespace bankersheart.Poweradmin.BlogManagement
                     string webPFileName = Path.GetFileNameWithoutExtension(fileName) + ".webp";
                     string webPImagePath = Path.Combine(webpimagesPath, webPFileName);
 
-                    using (var webPFileStream = new FileStream(webPImagePath, FileMode.Create))
+                    uploadedFile.InputStream.Position = 0;
+
+                    // 4. Magick.NET se WebP convert karo
+                    using (var image = new MagickImage(uploadedFile.InputStream))
                     {
-                        using (ImageFactory imageFactory = new ImageFactory(preserveExifData: false))
-                        {
-                            imageFactory.Load(uploadedFile.InputStream)
-                                        .Format(new WebPFormat())
-                                        .Quality(80)
-                                        .Save(webPFileStream);
-                        }
+                        image.Format = MagickFormat.WebP;
+                        image.Quality = 80;
+                        image.Strip(); // EXIF metadata remove karne ke liye
+                        image.Write(webPImagePath);
                     }
+
+                    //using (var webPFileStream = new FileStream(webPImagePath, FileMode.Create))
+                    //{
+                    //    using (ImageFactory imageFactory = new ImageFactory(preserveExifData: false))
+                    //    {
+                    //        imageFactory.Load(uploadedFile.InputStream)
+                    //                    .Format(new WebPFormat())
+                    //                    .Quality(80)
+                    //                    .Save(webPFileStream);
+                    //    }
+                    //}
                 }
                 else
                 {
@@ -262,15 +274,25 @@ namespace bankersheart.Poweradmin.BlogManagement
                     string webPFileName = Path.GetFileNameWithoutExtension(fileName.Split('.')[0].ToString()) + ".webp";
                     string webPImagePath = Path.Combine(webpimagesPath, webPFileName);
 
-                    using (var webPFileStream = new FileStream(webPImagePath, FileMode.Create))
+                    //using (var webPFileStream = new FileStream(webPImagePath, FileMode.Create))
+                    //{
+                    //    using (ImageFactory imageFactory = new ImageFactory(preserveExifData: false))
+                    //    {
+                    //        imageFactory.Load(new Bitmap(fpbannerimage.FileContent))
+                    //                    .Format(new WebPFormat())
+                    //                    .Quality(80)
+                    //                    .Save(webPFileStream);
+                    //    }
+                    //}
+                    fpbannerimage.FileContent.Position = 0;
+
+                    // 4. Magick.NET se WebP convert karo
+                    using (var image = new MagickImage(fpbannerimage.FileContent))
                     {
-                        using (ImageFactory imageFactory = new ImageFactory(preserveExifData: false))
-                        {
-                            imageFactory.Load(new Bitmap(fpbannerimage.FileContent))
-                                        .Format(new WebPFormat())
-                                        .Quality(80)
-                                        .Save(webPFileStream);
-                        }
+                        image.Format = MagickFormat.WebP;
+                        image.Quality = 80;
+                        image.Strip(); // EXIF metadata remove karne ke liye
+                        image.Write(webPImagePath);
                     }
                 }
                 else

@@ -1,18 +1,19 @@
 ﻿using bankersheart.App_Code;
-using ImageProcessor.Plugins.WebP.Imaging.Formats;
+using ImageMagick;
 using ImageProcessor;
+using ImageProcessor.Plugins.WebP.Imaging.Formats;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
-using System.Data.SqlClient;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using MySql.Data.MySqlClient;
 
 
 namespace bankersheart.Poweradmin.Media.Virtual_Gallery
@@ -143,26 +144,49 @@ namespace bankersheart.Poweradmin.Media.Virtual_Gallery
                     string fileName = Path.GetFileName(uploadedFile.FileName);
                     string FileExtension = fileName.Substring(fileName.LastIndexOf('.') + 1).ToLower();
 
+                    //if (FileExtension == "png" || FileExtension == "jpg" || FileExtension == "jpeg")
+                    //{
+                    //    string filepath = "~/poweradmin/WebFiles/InfrastructureGallery/" + fileName;
+                    //    uploadedFile.SaveAs(MapPath(filepath));
+                    //    uploadedFileNames.Add(fileName);
+
+                    //    // Convert to WebP format
+                    //    string webpimagesPath = Path.Combine(Server.MapPath("~/poweradmin/WebFiles/InfrastructureGallery/"));
+                    //    string webPFileName = Path.GetFileNameWithoutExtension(fileName.Split('.')[0].ToString()) + ".webp";
+                    //    string webPImagePath = Path.Combine(webpimagesPath, webPFileName);
+
+                    //    using (var webPFileStream = new FileStream(webPImagePath, FileMode.Create))
+                    //    {
+                    //        using (ImageFactory imageFactory = new ImageFactory(preserveExifData: false))
+                    //        {
+                    //            imageFactory.Load(uploadedImage)
+                    //                        .Format(new WebPFormat())
+                    //                        .Quality(80)
+                    //                        .Save(webPFileStream);
+                    //        }
+                    //    }
+                    //}
                     if (FileExtension == "png" || FileExtension == "jpg" || FileExtension == "jpeg")
                     {
-                        string filepath = "~/poweradmin/WebFiles/InfrastructureGallery/" + fileName;
-                        uploadedFile.SaveAs(MapPath(filepath));
+                        string folderPath = Server.MapPath("~/poweradmin/WebFiles/InfrastructureGallery/");
+                        string originalFilePath = Path.Combine(folderPath, fileName);
+
+                        // 1. Save original file
+                        uploadedFile.SaveAs(originalFilePath);
                         uploadedFileNames.Add(fileName);
 
-                        // Convert to WebP format
-                        string webpimagesPath = Path.Combine(Server.MapPath("~/poweradmin/WebFiles/InfrastructureGallery/"));
-                        string webPFileName = Path.GetFileNameWithoutExtension(fileName.Split('.')[0].ToString()) + ".webp";
-                        string webPImagePath = Path.Combine(webpimagesPath, webPFileName);
+                        // 2. Setup WebP file path
+                        string webPFileName = Path.GetFileNameWithoutExtension(fileName) + ".webp";
+                        string webPImagePath = Path.Combine(folderPath, webPFileName);
 
-                        using (var webPFileStream = new FileStream(webPImagePath, FileMode.Create))
+                        // 3. Convert to WebP using Magick.NET
+                        using (var image = new MagickImage(originalFilePath))
                         {
-                            using (ImageFactory imageFactory = new ImageFactory(preserveExifData: false))
-                            {
-                                imageFactory.Load(uploadedImage)
-                                            .Format(new WebPFormat())
-                                            .Quality(80)
-                                            .Save(webPFileStream);
-                            }
+                            image.Format = MagickFormat.WebP;
+                            image.Quality = 80;
+                            image.Strip(); // Metadata/EXIF strip karne ke liye
+
+                            image.Write(webPImagePath);
                         }
                     }
                     else
@@ -239,25 +263,47 @@ namespace bankersheart.Poweradmin.Media.Virtual_Gallery
                     fileName = fpbannerimage.FileName;
                     string FileExtension = fileName.Substring(fileName.LastIndexOf('.') + 1).ToLower();
 
+                    //if (FileExtension == "png" || FileExtension == "jpg" || FileExtension == "jpeg")
+                    //{
+                    //    string filepath = "~/poweradmin/WebFiles/InfrastructureGallery/" + fileName;
+                    //    fpbannerimage.SaveAs(MapPath(filepath));
+
+                    //    // Convert to WebP format
+                    //    string webpimagesPath = Path.Combine(Server.MapPath("~/poweradmin/WebFiles/InfrastructureGallery/"));
+                    //    string webPFileName = Path.GetFileNameWithoutExtension(fileName.Split('.')[0].ToString()) + ".webp";
+                    //    string webPImagePath = Path.Combine(webpimagesPath, webPFileName);
+
+                    //    using (var webPFileStream = new FileStream(webPImagePath, FileMode.Create))
+                    //    {
+                    //        using (ImageFactory imageFactory = new ImageFactory(preserveExifData: false))
+                    //        {
+                    //            imageFactory.Load(uploadedImage)
+                    //                        .Format(new WebPFormat())
+                    //                        .Quality(80)
+                    //                        .Save(webPFileStream);
+                    //        }
+                    //    }
+                    //}
                     if (FileExtension == "png" || FileExtension == "jpg" || FileExtension == "jpeg")
                     {
-                        string filepath = "~/poweradmin/WebFiles/InfrastructureGallery/" + fileName;
-                        fpbannerimage.SaveAs(MapPath(filepath));
+                        string folderPath = Server.MapPath("~/poweradmin/WebFiles/InfrastructureGallery/");
+                        string originalFilePath = Path.Combine(folderPath, fileName);
 
-                        // Convert to WebP format
-                        string webpimagesPath = Path.Combine(Server.MapPath("~/poweradmin/WebFiles/InfrastructureGallery/"));
-                        string webPFileName = Path.GetFileNameWithoutExtension(fileName.Split('.')[0].ToString()) + ".webp";
-                        string webPImagePath = Path.Combine(webpimagesPath, webPFileName);
+                        // 1. Save original file
+                        fpbannerimage.SaveAs(originalFilePath);
 
-                        using (var webPFileStream = new FileStream(webPImagePath, FileMode.Create))
+                        // 2. Setup WebP file path
+                        string webPFileName = Path.GetFileNameWithoutExtension(fileName) + ".webp";
+                        string webPImagePath = Path.Combine(folderPath, webPFileName);
+
+                        // 3. Convert to WebP using Magick.NET
+                        using (var image = new MagickImage(originalFilePath))
                         {
-                            using (ImageFactory imageFactory = new ImageFactory(preserveExifData: false))
-                            {
-                                imageFactory.Load(uploadedImage)
-                                            .Format(new WebPFormat())
-                                            .Quality(80)
-                                            .Save(webPFileStream);
-                            }
+                            image.Format = MagickFormat.WebP;
+                            image.Quality = 80;
+                            image.Strip(); // Metadata/EXIF strip karne ke liye
+
+                            image.Write(webPImagePath);
                         }
                     }
                     else

@@ -1,18 +1,19 @@
 ﻿using bankersheart.App_Code;
-using ImageProcessor.Plugins.WebP.Imaging.Formats;
+using ImageMagick;
 using ImageProcessor;
+using ImageProcessor.Plugins.WebP.Imaging.Formats;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Data.SqlClient;
-using System.Text.RegularExpressions;
 
 namespace bankersheart.Poweradmin.CSR.MedicalCamp
 {
@@ -202,12 +203,20 @@ namespace bankersheart.Poweradmin.CSR.MedicalCamp
                 Category.PostedFile.SaveAs(fullPathOriginal);
 
                 // Convert to WebP
-                using (ImageFactory imageFactory = new ImageFactory(preserveExifData: false))
+                //using (ImageFactory imageFactory = new ImageFactory(preserveExifData: false))
+                //{
+                //    imageFactory.Load(fullPathOriginal)
+                //                .Format(new WebPFormat())
+                //                .Quality(100)
+                //                .Save(fullPathWebP);
+                //}
+                using (var image = new MagickImage(fullPathOriginal))
                 {
-                    imageFactory.Load(fullPathOriginal)
-                                .Format(new WebPFormat())
-                                .Quality(100)
-                                .Save(fullPathWebP);
+                    image.Format = MagickFormat.WebP;
+                    image.Quality = 80; // 80-85 recommended for web; 100 agar exact same quality chahiye
+                    image.Strip();      // Metadata/EXIF remove karne ke liye
+
+                    image.Write(fullPathWebP);
                 }
 
                 // Assign filename for DB insertion (store only original file name, as WebP will be inferred)
@@ -332,12 +341,21 @@ namespace bankersheart.Poweradmin.CSR.MedicalCamp
                 Category.PostedFile.SaveAs(fullPathOriginal);
 
                 // Convert to WebP
-                using (ImageFactory imageFactory = new ImageFactory(preserveExifData: false))
+                //using (ImageFactory imageFactory = new ImageFactory(preserveExifData: false))
+                //{
+                //    imageFactory.Load(fullPathOriginal)
+                //                .Format(new WebPFormat())
+                //                .Quality(100)
+                //                .Save(fullPathWebP);
+                //}
+
+                using (var image = new MagickImage(fullPathOriginal))
                 {
-                    imageFactory.Load(fullPathOriginal)
-                                .Format(new WebPFormat())
-                                .Quality(100)
-                                .Save(fullPathWebP);
+                    image.Format = MagickFormat.WebP;
+                    image.Quality = 80; // 80-85 recommended for web; 100 agar exact same quality chahiye
+                    image.Strip();      // Metadata/EXIF remove karne ke liye
+
+                    image.Write(fullPathWebP);
                 }
 
                 // Assign filename for DB insertion (store only original file name, as WebP will be inferred)

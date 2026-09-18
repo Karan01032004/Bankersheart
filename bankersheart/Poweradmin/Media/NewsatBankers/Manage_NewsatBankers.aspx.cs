@@ -1,21 +1,22 @@
 ﻿using bankersheart.App_Code;
-using ImageProcessor.Plugins.WebP.Imaging.Formats;
+using ImageMagick;
 using ImageProcessor;
+using ImageProcessor.Plugins.WebP.Imaging.Formats;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
-using System.Data.SqlClient;
 using System.Data;
+using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Text;
+using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Text;
-using Newtonsoft.Json;
-using System.Diagnostics;
-using System.Text.RegularExpressions;
 
 namespace bankersheart.Poweradmin.Media.NewsatBankers
 {
@@ -191,6 +192,41 @@ namespace bankersheart.Poweradmin.Media.NewsatBankers
             //    // Assign filename for DB insertion
             //    categoryImageFileName = categoryFileName;
             //}
+            //if (Category.HasFile)
+            //{
+            //    double fileSize = Category.PostedFile.ContentLength;
+
+            //    // Check file size
+            //    if (fileSize > maxFileSize)
+            //    {
+            //        ltr_Error.Text = "Category Image size has exceeded the maximum limit. Please upload an image below " + ConfigurationManager.AppSettings["MedicalCampImageSize"] + " MB.";
+            //        div_Error.Visible = true;
+            //        return;
+            //    }
+
+            //    string categoryFileName = Path.GetFileNameWithoutExtension(Category.PostedFile.FileName);
+            //    string categoryFileExtension = Path.GetExtension(Category.PostedFile.FileName);
+            //    string categoryFilePathOriginal = "~/poweradmin/WebFiles/NewsatBankersCategory/" + categoryFileName + categoryFileExtension;
+            //    string categoryFilePathWebP = "~/poweradmin/WebFiles/NewsatBankersCategory/" + categoryFileName + ".webp";
+
+            //    string fullPathOriginal = MapPath(categoryFilePathOriginal);
+            //    string fullPathWebP = MapPath(categoryFilePathWebP);
+
+            //    // Save original file
+            //    Category.PostedFile.SaveAs(fullPathOriginal);
+
+            //    // Convert to WebP
+            //    using (ImageFactory imageFactory = new ImageFactory(preserveExifData: false))
+            //    {
+            //        imageFactory.Load(fullPathOriginal)
+            //                    .Format(new WebPFormat())
+            //                    .Quality(100)
+            //                    .Save(fullPathWebP);
+            //    }
+
+            //    // Assign filename for DB insertion (store only original file name, as WebP will be inferred)
+            //    categoryImageFileName = categoryFileName + categoryFileExtension;
+            //}
             if (Category.HasFile)
             {
                 double fileSize = Category.PostedFile.ContentLength;
@@ -211,22 +247,22 @@ namespace bankersheart.Poweradmin.Media.NewsatBankers
                 string fullPathOriginal = MapPath(categoryFilePathOriginal);
                 string fullPathWebP = MapPath(categoryFilePathWebP);
 
-                // Save original file
+                // 1. Save original file
                 Category.PostedFile.SaveAs(fullPathOriginal);
 
-                // Convert to WebP
-                using (ImageFactory imageFactory = new ImageFactory(preserveExifData: false))
+                // 2. Convert to WebP using Magick.NET
+                using (var image = new MagickImage(fullPathOriginal))
                 {
-                    imageFactory.Load(fullPathOriginal)
-                                .Format(new WebPFormat())
-                                .Quality(100)
-                                .Save(fullPathWebP);
+                    image.Format = MagickFormat.WebP;
+                    image.Quality = 80; // Standard 80 for web (100 agar lossless chahiye)
+                    image.Strip();      // Metadata/EXIF remove karne ke liye
+
+                    image.Write(fullPathWebP);
                 }
 
                 // Assign filename for DB insertion (store only original file name, as WebP will be inferred)
                 categoryImageFileName = categoryFileName + categoryFileExtension;
             }
-
             // Insert new record into `Medical_Camp`
             string query = @"INSERT INTO " + TableName + " (Browsertitle, MetaTag,title,titlelink, shortdescription, description, NewsatBankers_Date, added_date, added_ip, image)   VALUES(@Browsertitle, @MetaTag,@Title,@titlelink, @ShortDescription, @Description, @EventsatBankersDate, @AddedDate, @AddedIP, @Image); SELECT SCOPE_IDENTITY(); ";
 
@@ -324,7 +360,43 @@ namespace bankersheart.Poweradmin.Media.NewsatBankers
             //    // Assign filename for DB update
             //    categoryImageFileName = categoryFileName;
             //}
-            if (Category.HasFile)
+            //if (Category.HasFile)
+            //{
+            //    double fileSize = Category.PostedFile.ContentLength;
+
+            //    // Check file size
+            //    if (fileSize > maxFileSize)
+            //    {
+            //        ltr_Error.Text = "Category Image size has exceeded the maximum limit. Please upload an image below " + ConfigurationManager.AppSettings["MedicalCampImageSize"] + " MB.";
+            //        div_Error.Visible = true;
+            //        return;
+            //    }
+
+            //    string categoryFileName = Path.GetFileNameWithoutExtension(Category.PostedFile.FileName);
+            //    string categoryFileExtension = Path.GetExtension(Category.PostedFile.FileName);
+            //    string categoryFilePathOriginal = "~/poweradmin/WebFiles/NewsatBankersCategory/" + categoryFileName + categoryFileExtension;
+            //    string categoryFilePathWebP = "~/poweradmin/WebFiles/NewsatBankersCategory/" + categoryFileName + ".webp";
+
+            //    string fullPathOriginal = MapPath(categoryFilePathOriginal);
+            //    string fullPathWebP = MapPath(categoryFilePathWebP);
+
+            //    // Save original file
+            //    Category.PostedFile.SaveAs(fullPathOriginal);
+
+            //    // Convert to WebP
+            //    using (ImageFactory imageFactory = new ImageFactory(preserveExifData: false))
+            //    {
+            //        imageFactory.Load(fullPathOriginal)
+            //                    .Format(new WebPFormat())
+            //                    .Quality(100)
+            //                    .Save(fullPathWebP);
+            //    }
+
+            //    // Assign filename for DB insertion (store only original file name, as WebP will be inferred)
+            //    categoryImageFileName = categoryFileName + categoryFileExtension;
+            //}
+         
+if (Category.HasFile)
             {
                 double fileSize = Category.PostedFile.ContentLength;
 
@@ -344,21 +416,23 @@ namespace bankersheart.Poweradmin.Media.NewsatBankers
                 string fullPathOriginal = MapPath(categoryFilePathOriginal);
                 string fullPathWebP = MapPath(categoryFilePathWebP);
 
-                // Save original file
+                // 1. Save original file
                 Category.PostedFile.SaveAs(fullPathOriginal);
 
-                // Convert to WebP
-                using (ImageFactory imageFactory = new ImageFactory(preserveExifData: false))
+                // 2. Convert to WebP using Magick.NET
+                using (var image = new MagickImage(fullPathOriginal))
                 {
-                    imageFactory.Load(fullPathOriginal)
-                                .Format(new WebPFormat())
-                                .Quality(100)
-                                .Save(fullPathWebP);
+                    image.Format = MagickFormat.WebP;
+                    image.Quality = 80; // Standard 80 for web (100 agar exact lossless chahiye)
+                    image.Strip();      // Metadata/EXIF remove karne ke liye
+
+                    image.Write(fullPathWebP);
                 }
 
                 // Assign filename for DB insertion (store only original file name, as WebP will be inferred)
                 categoryImageFileName = categoryFileName + categoryFileExtension;
             }
+
 
             string id = Request.QueryString["ID"].ToString();
 
